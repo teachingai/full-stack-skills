@@ -4,7 +4,7 @@ description: A comprehensive skill for initializing new DDD (Domain-Driven Desig
 license: Complete terms in LICENSE.txt
 ---
 
-# DDD Project Initialization and Structure Validation
+# DDD4j Project Initialization and Structure Validation
 
 ## When to use this skill
 
@@ -77,8 +77,8 @@ Use this skill whenever you need to:
    - Create basic directory structure with `src/main/java` and `src/test/java`
 
 5. **Save to project directory**:
-   - **Default location**: Save to `./ddd4j-project/` directory in the command execution directory
-   - **Directory creation**: Automatically create the directory if it doesn't exist
+   - **Default location**: Save directly to the command execution directory (same level as the command)
+   - **Directory creation**: Automatically create the project directory structure if it doesn't exist
    - **File naming**: Use descriptive names based on project type and module names
 
 ### For Existing Project Validation
@@ -110,24 +110,26 @@ Use this skill whenever you need to:
 
 When generating a project structure, follow this response structure:
 
-1. **Save the files first**: Create the project structure in `./ddd4j-project/` directory
-   - Create the `./ddd4j-project/` directory if it doesn't exist
-   - Generate all required files and directories
+1. **Save the files first**: Create the project structure directly in the command execution directory
+   - The project will be created at the same level as where the command is executed
+   - Generate all required files and directories (pom.xml, src/, etc.)
+   - Use the artifactId as the project root directory name
 
 2. **Inform the user**: Tell them where the files were saved
 
 3. **Display the structure**: Show the generated directory structure in a code block
 
 **Example Response Structure**:
-- First line: "I've created the DDD project structure and saved it to `./ddd4j-project/{project-name}/`."
+- First line: "I've created the DDD project structure and saved it to `./{artifactId}/` in the current directory."
 - Then show the structure wrapped in a code block:
   - Start with: three backticks + `text` + newline
   - Then the directory structure
   - End with: three backticks + newline
 
 **Critical Requirements**:
-- Always save project files to `./ddd4j-project/` directory in the command execution directory
-- Create the directory automatically if it doesn't exist
+- Always save project files directly to the command execution directory (same level)
+- Use artifactId as the project root directory name
+- Create the directory structure automatically if it doesn't exist
 - Generate complete project structure with all required files
 - Follow Maven and DDD conventions strictly
 

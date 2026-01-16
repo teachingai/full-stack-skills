@@ -18,8 +18,8 @@ from typing import Dict, List, Optional
 class DDDProjectInitializer:
     """DDD Project Initializer"""
     
-    def __init__(self, project_dir: str = "./ddd4j-project"):
-        self.project_dir = Path(project_dir)
+    def __init__(self, project_dir: str = "."):
+        self.project_dir = Path(project_dir).resolve()
         self.project_dir.mkdir(parents=True, exist_ok=True)
     
     def init_single_module(
