@@ -26,7 +26,7 @@ Claude Code 完全支持 Agent Skills 标准，可以直接使用 marketplace �
 
 **安装方式：**
 ```bash
-/plugin marketplace add teaching-ai/skills
+/plugin marketplace add https://github.com/teachingai/agent-skills.git
 /plugin install teaching-skills@teaching-ai-skills
 ```
 

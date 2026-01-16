@@ -37,10 +37,16 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 在 Claude Code 中运行以下命令，将本仓库注册为 Claude Code 的插件市场：
 
 ```
-/plugin marketplace add teaching-ai/skills
+/plugin marketplace add https://github.com/teachingai/agent-skills.git
 ```
 
-> **注意**: 请将 `teaching-ai/skills` 替换为您的实际 GitHub 仓库路径（格式：`用户名/仓库名`）
+![add_marketplace.png](./media/add_marketplace.png)
+
+或者使用简写形式：
+
+```
+/plugin marketplace add teachingai/agent-skills
+```
 
 #### 2. 安装插件
 
@@ -66,6 +72,8 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 /plugin install social-skills@teaching-ai-skills
 /plugin install utility-skills@teaching-ai-skills
 ```
+
+![install-teaching-ai-skills.png](media/install-teaching-ai-skills.png)
 
 #### 3. 使用技能
 
@@ -98,7 +106,7 @@ python convert_all.py ../skills ../adapters-output
 
 ## 可用插件和技能
 
-本仓库的技能按功能分为 7 个插件类别，共包含 23 个技能：
+本仓库的技能按功能分为 7 个插件类别，共包含 24 个技能：
 
 ### 1. teaching-skills（教学技能集合）
 
@@ -185,30 +193,43 @@ Markdown 相关技能集合，包括 Mermaid 图表绘制等。
 
 #### mermaid（Mermaid 图表绘制）
 
-创建各种类型的 Mermaid 图表，包括流程图、时序图、类图、状态图、甘特图等。
+创建各种类型的 Mermaid 图表，支持 23 种图表类型，包括流程图、时序图、类图、状态图、甘特图、架构图等。
 
 **使用示例：**
 - "使用 Mermaid 创建一个流程图"
 - "绘制一个系统架构的 C4 图"
 - "生成一个项目时间线的甘特图"
 - "创建一个用户旅程图"
+- "绘制一个类图展示系统设计"
+- "生成一个甘特图展示项目进度"
+- "创建一个思维导图整理知识点"
+- "绘制一个时序图展示系统交互"
 
-**支持的图表类型：**
-- 流程图（flowchart）
-- 时序图（sequence diagram）
-- 类图（class diagram）
-- 状态图（state diagram）
-- 实体关系图（ER diagram）
-- 用户旅程图（user journey）
-- 甘特图（Gantt chart）
-- 饼图（pie chart）
-- 象限图（quadrant chart）
-- Git 图（Git graph）
-- C4 架构图（C4 diagram）
-- 思维导图（mindmap）
-- 时间线图（timeline）
-- 桑基图（Sankey diagram）
-- 以及其他多种图表类型
+**支持的图表类型（共 23 种）：**
+
+1. **流程图（Flowchart）** - 展示流程、决策和过程
+2. **时序图（Sequence Diagram）** - 展示对象之间的交互顺序
+3. **类图（Class Diagram）** - 展示类、接口和它们之间的关系
+4. **状态图（State Diagram）** - 展示对象的状态转换
+5. **实体关系图（ER Diagram）** - 展示数据库实体和关系
+6. **用户旅程图（User Journey）** - 展示用户体验流程
+7. **甘特图（Gantt Chart）** - 展示项目时间线和任务进度
+8. **饼图（Pie Chart）** - 展示数据比例分布
+9. **象限图（Quadrant Chart）** - 展示二维数据分类
+10. **Git 图（Git Graph）** - 展示 Git 分支和提交历史
+11. **C4 架构图（C4 Diagram）** - 展示系统架构（Context、Container、Component、Deployment）
+12. **思维导图（Mindmap）** - 展示层次化信息结构
+13. **时间线图（Timeline）** - 展示事件的时间顺序
+14. **桑基图（Sankey Diagram）** - 展示流量和流向
+15. **架构图（Architecture Diagram）** - 展示系统架构和服务关系
+16. **块图（Block Diagram）** - 展示系统组件和连接
+17. **看板图（Kanban）** - 展示任务看板和工作流
+18. **数据包图（Packet Diagram）** - 展示网络数据包结构
+19. **雷达图（Radar Chart）** - 展示多维度数据对比
+20. **需求图（Requirement Diagram）** - 展示系统需求和关系
+21. **树状图（Treemap）** - 展示层次化数据
+22. **XY 图表（XY Chart）** - 展示二维数据关系
+23. **ZenUML 图（ZenUML Diagram）** - 使用 ZenUML 语法绘制 UML 图
 
 ### 4. development-skills（开发技能集合）
 
@@ -240,6 +261,48 @@ Markdown 相关技能集合，包括 Mermaid 图表绘制等。
 - "使用文档构建技能为我的项目生成 API 文档"
 - "创建一个用户使用手册"
 - "编写开发环境搭建指南"
+
+#### zh-product-doc-generator（项目文档生成技能）
+
+基于标准模板快速生成项目文档，包括产品调研、需求分析、PRD、架构设计、技术文档等 14 种项目交付文档模板。适用于软件开发项目的全生命周期文档生成，基于 DDD（领域驱动设计）和 COLA 架构思想。
+
+**使用示例：**
+- "使用项目文档生成技能，帮我生成一个 PRD 文档"
+- "基于模板生成系统架构设计文档，项目名称是 TeachingAI 教学平台"
+- "为我的项目生成全套文档，包括 PRD、架构设计、技术文档"
+- "生成一个产品调研文档"
+- "创建需求分析文档"
+- "生成领域模型说明文档"
+
+**支持的文档模板（共 14 种）：**
+
+**产品阶段文档：**
+1. **产品调研模板** - 市场调研、用户调研、竞品分析
+2. **需求调研模板** - 需求收集、用户访谈、需求整理
+3. **技术调研模板** - 技术选型、技术可行性分析、技术对比
+4. **需求分析模板** - 需求拆解、优先级排序、需求评审
+
+**设计阶段文档：**
+5. **PRD文档模板** - 产品需求文档，包含功能需求、用户故事、验收标准
+6. **视觉与交互 DNA 规范模板** - 设计语言、交互规范、视觉规范
+7. **UI 设计说明模板** - UI设计规范、组件库、设计系统
+
+**技术设计文档：**
+8. **领域模型说明模板** - DDD领域模型、实体、值对象、聚合
+9. **系统架构设计模板** - 技术架构、系统架构、部署架构
+10. **技术细分模板** - 接口设计、数据库设计、技术实现细节
+
+**测试与交付文档：**
+11. **功能提测模板** - 提测清单、测试环境、测试范围
+12. **测试结果模板** - 测试报告、缺陷统计、测试结论
+13. **上线通知模板** - 上线计划、上线检查清单、回滚方案
+14. **项目运维模板** - 运维手册、监控告警、故障处理
+
+**特点：**
+- 标准化结构，统一的文档格式和结构
+- 基于 DDD 和 COLA 架构思想
+- 全生命周期覆盖，从产品调研到项目运维
+- 易于定制，使用占位符便于替换
 
 #### mcp-builder（MCP 构建器）
 
@@ -375,6 +438,7 @@ Markdown 相关技能集合，包括 Mermaid 图表绘制等。
 │   │   ├── code-generator/
 │   │   ├── test-writer/
 │   │   ├── documentation-builder/
+│   │   ├── zh-product-doc-generator/
 │   │   ├── mcp-builder/
 │   │   ├── webapp-testing/
 │   │   ├── frontend-design/
@@ -509,7 +573,7 @@ git push
 
 ## 工作原理
 
-1. **Marketplace 注册**: 当您运行 `/plugin marketplace add teaching-ai/skills` 时，Claude Code 会：
+1. **Marketplace 注册**: 当您运行 `/plugin marketplace add https://github.com/teachingai/agent-skills.git` 时，Claude Code 会：
    - 从 GitHub 仓库获取 `.claude-plugin/marketplace.json` 文件
    - 解析 marketplace 配置
    - 将 marketplace 添加到可用列表

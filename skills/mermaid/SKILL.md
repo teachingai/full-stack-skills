@@ -36,7 +36,7 @@ To create a Mermaid diagram:
    - Quadrant chart/象限图 → `quadrantChart`
    - Requirement diagram/需求图 → `requirementDiagram`
    - Git graph/Git图 → `gitGraph`
-   - C4 diagram/C4图 → `C4Context` or other C4 types
+   - C4 diagram/C4图 → `C4Context`, `C4Container`, `C4Component`, `C4Deployment`, or `C4Dynamic`
    - Mindmap/思维导图 → `mindmap`
    - Timeline/时间线图 → `timeline`
    - ZenUML/禅UML → `zenuml`
@@ -45,9 +45,9 @@ To create a Mermaid diagram:
    - Block diagram/方块图 → `block`
    - Packet diagram/数据包图 → `packet`
    - Kanban/看板图 → `kanban`
-   - Architecture diagram/架构图 → `architecture-beta`
-   - Radar chart/雷达图 → `radar-beta`
-   - Treemap/树状图 → `treemap-beta`
+   - Architecture diagram/架构图 → `architecture-beta` (requires Mermaid v11.1.0+)
+   - Radar chart/雷达图 → `radar-beta` (requires Mermaid v11.1.0+)
+   - Treemap/树状图 → `treemap-beta` (requires Mermaid v11.1.0+)
 
 2. **Load the appropriate example file** from the `examples/` directory:
    - `examples/flowchart.md` - For flowcharts and process diagrams
@@ -76,11 +76,28 @@ To create a Mermaid diagram:
 
 3. **Follow the specific instructions** in that example file for syntax, structure, and best practices
 
-4. **Generate the Mermaid code** wrapped in a code block:
+   **Important Notes**:
+   - Beta diagram types (`architecture-beta`, `radar-beta`, `treemap-beta`) require Mermaid v11.1.0 or higher
+   - If the rendering environment doesn't support beta diagram types, use the flowchart alternatives provided in the example files
+   - Always check the example file for version compatibility notes and alternative syntax options
+
+4. **Generate the Mermaid code** wrapped in a Markdown code block with proper syntax highlighting:
+   
+   **IMPORTANT**: Always wrap the Mermaid code in a Markdown code block with `mermaid` language tag. This ensures the format is preserved when users copy the content.
+   
+   **Example format** (use actual Mermaid syntax, not placeholders):
    ```mermaid
-   <diagram-type>
-   ...diagram content...
+   flowchart TD
+       A[Start] --> B[Process]
+       B --> C[End]
    ```
+   
+   **Output Format Requirements**:
+   - Always use triple backticks (```) with `mermaid` language tag
+   - Never output raw Mermaid code without code block markers
+   - The code block must be complete and properly formatted
+   - Use actual valid Mermaid syntax, not placeholders like `<diagram-type>` or `...diagram content...`
+   - This ensures users can copy the code without losing formatting
 
 5. **Include styling and configuration** when needed:
    - Use `%%{ init: { theme: 'base' } }%%` for theme configuration
@@ -90,10 +107,77 @@ To create a Mermaid diagram:
 6. **Validate the syntax**:
    - Ensure all required elements are present
    - Check that relationships and connections are properly defined
-   - Verify date formats for Gantt charts
+   - Verify date formats for Gantt charts (YYYY-MM-DD)
    - Confirm data formats for charts (pie, quadrant, etc.)
+   - For ER diagrams: Use underscores instead of hyphens in entity names (e.g., `LINE_ITEM` not `LINE-ITEM`)
+   - For flowcharts: Avoid using "end" as a node label (use "End" or "END" instead)
+   - For class diagrams: Escape special characters in labels using backticks
+   - Check version compatibility for beta diagram types
+
+7. **Save the diagram to project directory**:
+   - **Default behavior**: When generating a Mermaid diagram, save it to the current project directory
+   - **Recommended locations**:
+     - `docs/diagrams/` - For documentation diagrams
+     - `docs/` - For general documentation
+     - `diagrams/` - For standalone diagram files
+     - Current directory (`.`) - If no specific directory structure exists
+   - **File naming**: Use descriptive names like `system-architecture.md`, `user-flow.md`, `database-schema.md`, etc.
+   - **File format**: Save as `.md` file with the Mermaid code block inside
+   - **Example**: If user requests a system architecture diagram, save it as `docs/diagrams/system-architecture.md` or `diagrams/system-architecture.md`
+   - **Ask if needed**: If the project structure is unclear, ask the user where they'd like the diagram saved, but default to creating a `docs/` or `diagrams/` directory if it doesn't exist
+
+**Output Format and File Saving**:
+
+When generating a diagram, follow this response structure:
+
+1. **Save the file first**: Create the diagram file in the project directory (e.g., `docs/diagrams/system-architecture.md`)
+
+2. **Inform the user**: Tell them where the file was saved
+
+3. **Display the diagram**: Show the Mermaid code in a properly formatted Markdown code block with `mermaid` language tag
+
+**Example Response Structure**:
+- First line: "I've created the Mermaid diagram and saved it to `docs/diagrams/system-architecture.md`."
+- Then show the diagram wrapped in a code block:
+  - Start with: three backticks + `mermaid` + newline
+  - Then the Mermaid code
+  - End with: three backticks + newline
+
+**Critical Requirements**:
+- The Mermaid code block MUST ALWAYS be properly formatted with triple backticks (```) and `mermaid` language tag
+- NEVER output raw Mermaid code without code block markers
+- The code block must be complete (opening and closing backticks)
+- This ensures users can copy the code without losing formatting
+- Always save the diagram file to the current project directory (default: `docs/diagrams/` or `diagrams/`)
 
 If the diagram type doesn't match any existing example, refer to the Mermaid documentation or ask the user for clarification about the desired visualization.
+
+## Version Compatibility
+
+Some diagram types have specific version requirements:
+
+- **Beta diagram types** (require Mermaid v11.1.0+):
+  - `architecture-beta` - Architecture diagrams
+  - `radar-beta` - Radar charts
+  - `treemap-beta` - Treemap diagrams
+
+- **Advanced features** (require specific versions):
+  - Participant types with JSON configuration: Mermaid v10.0.0+
+  - Actor creation/destruction: Mermaid v10.3.0+
+  - Edge IDs and curve styles: Mermaid v11.10.0+
+  - New shapes with `@{}` syntax: Mermaid v11.3.0+
+
+If a beta diagram type is not supported, the example files provide flowchart alternatives that work with all Mermaid versions.
+
+## Best Practices
+
+1. **Always use code blocks**: Wrap all Mermaid code in Markdown code blocks with `mermaid` language tag
+2. **Check compatibility**: Verify version requirements before using beta diagram types
+3. **Use alternatives**: When beta types aren't supported, use the provided flowchart alternatives
+4. **Follow naming conventions**: Avoid reserved keywords and special characters in node labels
+5. **Test syntax**: Validate diagram syntax before saving to ensure proper rendering
+6. **Organize files**: Save diagrams in appropriate directories (`docs/diagrams/` or `diagrams/`)
+7. **Use descriptive names**: Name diagram files clearly (e.g., `system-architecture.md`, `user-flow.md`)
 
 ## Keywords
 
