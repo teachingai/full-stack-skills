@@ -4,7 +4,7 @@ description: A comprehensive skill for initializing new DDD (Domain-Driven Desig
 license: Complete terms in LICENSE.txt
 ---
 
-# DDD Project Initialization and Structure Validation
+# DDD4j Project Initialization and Structure Validation
 
 ## When to use this skill
 

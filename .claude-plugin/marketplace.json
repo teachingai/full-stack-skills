@@ -50,6 +50,7 @@
       "skills": [
         "./skills/code-generator",
         "./skills/test-writer",
+        "./skills/ddd4j-project-builder",
         "./skills/documentation-builder",
         "./skills/zh-product-doc-generator",
         "./skills/mcp-builder",
