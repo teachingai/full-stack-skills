@@ -143,7 +143,7 @@ gantt
     Unit Testing :test1, after front1 back1, 15d
     Integration Testing :test2, after test1, 10d
     section Deployment
-    Production Deployment :milestone, deploy1, after test2, 1d
+    Production Deployment :milestone, deploy1, after test2, 0d
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)
