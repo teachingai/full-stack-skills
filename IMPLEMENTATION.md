@@ -13,7 +13,7 @@
 例如：
 ```
 /plugin marketplace add anthropics/skills
-/plugin marketplace add teaching-ai/skills
+/plugin marketplace add https://github.com/teachingai/agent-skills.git
 ```
 
 ### 2. 工作原理
@@ -142,7 +142,7 @@ license: 许可证信息（可选）
 
 ### 1. 创建 GitHub 仓库
 
-1. 在 GitHub 上创建新仓库（例如：`teaching-ai/skills`）
+1. 在 GitHub 上创建新仓库（例如：`teachingai/agent-skills`）
 2. 确保仓库是公开的（public），这样 Claude Code 才能访问
 
 ### 2. 创建目录结构
@@ -171,7 +171,7 @@ git push origin main
 ### 6. 在 Claude Code 中使用
 
 ```
-/plugin marketplace add teaching-ai/skills
+/plugin marketplace add https://github.com/teachingai/agent-skills.git
 ```
 
 ## 技术细节

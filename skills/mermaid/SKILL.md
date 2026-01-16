@@ -76,11 +76,23 @@ To create a Mermaid diagram:
 
 3. **Follow the specific instructions** in that example file for syntax, structure, and best practices
 
-4. **Generate the Mermaid code** wrapped in a code block:
+4. **Generate the Mermaid code** wrapped in a Markdown code block with proper syntax highlighting:
+   
+   **IMPORTANT**: Always wrap the Mermaid code in a Markdown code block with `mermaid` language tag. This ensures the format is preserved when users copy the content.
+   
+   **Example format** (use actual Mermaid syntax, not placeholders):
    ```mermaid
-   <diagram-type>
-   ...diagram content...
+   flowchart TD
+       A[Start] --> B[Process]
+       B --> C[End]
    ```
+   
+   **Output Format Requirements**:
+   - Always use triple backticks (```) with `mermaid` language tag
+   - Never output raw Mermaid code without code block markers
+   - The code block must be complete and properly formatted
+   - Use actual valid Mermaid syntax, not placeholders like `<diagram-type>` or `...diagram content...`
+   - This ensures users can copy the code without losing formatting
 
 5. **Include styling and configuration** when needed:
    - Use `%%{ init: { theme: 'base' } }%%` for theme configuration
@@ -92,6 +104,42 @@ To create a Mermaid diagram:
    - Check that relationships and connections are properly defined
    - Verify date formats for Gantt charts
    - Confirm data formats for charts (pie, quadrant, etc.)
+
+7. **Save the diagram to project directory**:
+   - **Default behavior**: When generating a Mermaid diagram, save it to the current project directory
+   - **Recommended locations**:
+     - `docs/diagrams/` - For documentation diagrams
+     - `docs/` - For general documentation
+     - `diagrams/` - For standalone diagram files
+     - Current directory (`.`) - If no specific directory structure exists
+   - **File naming**: Use descriptive names like `system-architecture.md`, `user-flow.md`, `database-schema.md`, etc.
+   - **File format**: Save as `.md` file with the Mermaid code block inside
+   - **Example**: If user requests a system architecture diagram, save it as `docs/diagrams/system-architecture.md` or `diagrams/system-architecture.md`
+   - **Ask if needed**: If the project structure is unclear, ask the user where they'd like the diagram saved, but default to creating a `docs/` or `diagrams/` directory if it doesn't exist
+
+**Output Format and File Saving**:
+
+When generating a diagram, follow this response structure:
+
+1. **Save the file first**: Create the diagram file in the project directory (e.g., `docs/diagrams/system-architecture.md`)
+
+2. **Inform the user**: Tell them where the file was saved
+
+3. **Display the diagram**: Show the Mermaid code in a properly formatted Markdown code block with `mermaid` language tag
+
+**Example Response Structure**:
+- First line: "I've created the Mermaid diagram and saved it to `docs/diagrams/system-architecture.md`."
+- Then show the diagram wrapped in a code block:
+  - Start with: three backticks + `mermaid` + newline
+  - Then the Mermaid code
+  - End with: three backticks + newline
+
+**Critical Requirements**:
+- The Mermaid code block MUST ALWAYS be properly formatted with triple backticks (```) and `mermaid` language tag
+- NEVER output raw Mermaid code without code block markers
+- The code block must be complete (opening and closing backticks)
+- This ensures users can copy the code without losing formatting
+- Always save the diagram file to the current project directory (default: `docs/diagrams/` or `diagrams/`)
 
 If the diagram type doesn't match any existing example, refer to the Mermaid documentation or ask the user for clarification about the desired visualization.
 

@@ -37,10 +37,14 @@ Many skills in this repo are open source (Apache 2.0). We've also included the d
 Run the following command in Claude Code to register this repository as a Claude Code plugin marketplace:
 
 ```
-/plugin marketplace add teaching-ai/skills
+/plugin marketplace add https://github.com/teachingai/agent-skills.git
 ```
 
-> **Note**: Replace `teaching-ai/skills` with your actual GitHub repository path (format: `username/repository-name`)
+Or use the short form:
+
+```
+/plugin marketplace add teachingai/agent-skills
+```
 
 #### 2. Install Plugins
 
@@ -498,7 +502,7 @@ The `.claude-plugin/marketplace.json` file defines the marketplace metadata and 
 
 ## How It Works
 
-1. **Marketplace Registration**: When you run `/plugin marketplace add teaching-ai/skills`, Claude Code will:
+1. **Marketplace Registration**: When you run `/plugin marketplace add https://github.com/teachingai/agent-skills.git`, Claude Code will:
    - Fetch the `.claude-plugin/marketplace.json` file from the GitHub repository
    - Parse the marketplace configuration
    - Add the marketplace to the available list

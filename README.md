@@ -37,10 +37,16 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 在 Claude Code 中运行以下命令，将本仓库注册为 Claude Code 的插件市场：
 
 ```
-/plugin marketplace add teaching-ai/skills
+/plugin marketplace add https://github.com/teachingai/agent-skills.git
 ```
 
-> **注意**: 请将 `teaching-ai/skills` 替换为您的实际 GitHub 仓库路径（格式：`用户名/仓库名`）
+![add_marketplace.png](./media/add_marketplace.png)
+
+或者使用简写形式：
+
+```
+/plugin marketplace add teachingai/agent-skills
+```
 
 #### 2. 安装插件
 
@@ -66,6 +72,8 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 /plugin install social-skills@teaching-ai-skills
 /plugin install utility-skills@teaching-ai-skills
 ```
+
+![install-teaching-ai-skills.png](media/install-teaching-ai-skills.png)
 
 #### 3. 使用技能
 
@@ -509,7 +517,7 @@ git push
 
 ## 工作原理
 
-1. **Marketplace 注册**: 当您运行 `/plugin marketplace add teaching-ai/skills` 时，Claude Code 会：
+1. **Marketplace 注册**: 当您运行 `/plugin marketplace add https://github.com/teachingai/agent-skills.git` 时，Claude Code 会：
    - 从 GitHub 仓库获取 `.claude-plugin/marketplace.json` 文件
    - 解析 marketplace 配置
    - 将 marketplace 添加到可用列表
