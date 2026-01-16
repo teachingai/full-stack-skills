@@ -106,7 +106,7 @@ python convert_all.py ../skills ../adapters-output
 
 ## 可用插件和技能
 
-本仓库的技能按功能分为 7 个插件类别，共包含 24 个技能：
+本仓库的技能按功能分为 7 个插件类别，共包含 25 个技能：
 
 ### 1. teaching-skills（教学技能集合）
 
@@ -304,6 +304,68 @@ Markdown 相关技能集合，包括 Mermaid 图表绘制等。
 - 全生命周期覆盖，从产品调研到项目运维
 - 易于定制，使用占位符便于替换
 
+#### ddd4j-project-builder（DDD 项目构建器）
+
+DDD（领域驱动设计）项目初始化和目录规范检查技能。支持三种项目类型：单体单模块、单体多模块、单体微服务。可以识别项目结构类型并验证目录规范是否符合 DDD、六边形架构、整洁架构和 COLA V5 标准。
+
+**使用示例：**
+- "使用 ddd4j-project-builder 初始化一个单体单模块的 DDD 项目"
+- "创建一个单体多模块项目，包含 api、order、payment 三个业务模块"
+- "初始化一个微服务架构项目，包含 user-service、order-service、product-service"
+- "检查现有项目的 DDD 结构是否符合规范"
+- "验证这个项目的目录结构是否符合 COLA V5 架构"
+- "识别这个项目是单体单模块还是单体多模块结构"
+
+**支持的项目类型：**
+
+1. **单体单模块（Single-Module Monolith）**
+   - 适用场景：中小型应用，单个业务领域，团队规模 5-15 人
+   - 特点：单一 Maven 模块，所有层在同一模块内
+   - 示例：`"初始化一个单体单模块项目，groupId=io.ddd4j.base, artifactId=ddd4j-order"`
+
+2. **单体多模块（Multi-Module Monolith）**
+   - 适用场景：中大型应用，多个业务域，团队规模 15-50 人
+   - 特点：多个 Maven 模块，按业务域划分，共享 common 模块
+   - 示例：`"创建一个单体多模块项目，包含 api、order、payment 模块"`
+
+3. **单体微服务（Microservices）**
+   - 适用场景：大型电商平台，多个业务域，团队规模 50+ 人
+   - 特点：每个服务独立部署，服务间通过 RPC 和消息队列通信
+   - 示例：`"初始化微服务项目，包含 user-service、order-service、product-service"`
+
+**支持的架构模式：**
+
+1. **DDD 经典分层架构** - interfaces → application → domain ← infrastructure
+2. **六边形架构（Hexagonal）** - 端口和适配器模式
+3. **整洁架构（Clean Architecture）** - 实体、用例、接口适配器
+4. **COLA V5** - Adapter → App → Domain ← Infrastructure
+
+**功能特性：**
+
+- **新项目初始化**：
+  - 自动生成完整的 Maven 项目结构
+  - 创建所有必需的目录和文件（pom.xml、package-info.java、.gitignore、LICENSE 等）
+  - 支持自定义 groupId、artifactId、version、packageBase
+  - 自动生成符合 DDD 规范的包结构
+
+- **旧项目规范检查**：
+  - 自动识别项目类型（单体单模块/单体多模块/微服务）
+  - 识别架构模式（DDD Classic/Hexagonal/Clean/COLA V5）
+  - 验证目录结构合规性
+  - 检查包命名规范
+  - 验证层依赖关系
+  - 生成详细的验证报告
+
+**输出位置：**
+- 所有生成的项目文件保存在 `./ddd4j-project/` 目录下
+
+**参考文档：**
+- 技能内置了完整的架构文档（docs/ 目录）：
+  - DDD 经典分层架构目录结构
+  - 六边形架构详细目录结构参考
+  - 整洁架构详细目录结构参考
+  - COLA V5 架构详细目录结构参考
+
 #### mcp-builder（MCP 构建器）
 
 帮助创建和配置 Model Context Protocol (MCP) 服务器。
@@ -439,6 +501,7 @@ Markdown 相关技能集合，包括 Mermaid 图表绘制等。
 │   │   ├── test-writer/
 │   │   ├── documentation-builder/
 │   │   ├── zh-product-doc-generator/
+│   │   ├── ddd4j-project-builder/
 │   │   ├── mcp-builder/
 │   │   ├── webapp-testing/
 │   │   ├── frontend-design/
