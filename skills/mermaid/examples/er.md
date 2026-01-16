@@ -84,9 +84,26 @@ erDiagram
 
 ```mermaid
 erDiagram
-    CUSTOMER[Cust] ||--o{ ORDER[Ord] : places
-    ORDER ||--|{ LINE-ITEM[Item] : contains
-    PRODUCT[Prod] ||--|{ LINE-ITEM : "ordered in"
+    CUSTOMER[Cust] {
+        int id PK
+        string name
+    }
+    ORDER[Ord] {
+        int id PK
+        date orderDate
+    }
+    LINE_ITEM[Item] {
+        int id PK
+        int quantity
+    }
+    PRODUCT[Prod] {
+        int id PK
+        string name
+    }
+    
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE_ITEM : contains
+    PRODUCT ||--|{ LINE_ITEM : "ordered in"
 ```
 
 ### Example (With Attribute Comments)

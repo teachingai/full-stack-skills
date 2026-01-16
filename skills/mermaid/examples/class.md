@@ -231,11 +231,11 @@ classDiagram
     }
     User <|-- Admin
 
-    classDef userClass fill:#e1f5ff,stroke:#333,stroke-width:2px;
-    classDef adminClass fill:#ff6b6b,stroke:#333,stroke-width:3px;
+    classDef userClass fill:#e1f5ff,stroke:#333,stroke-width:2px
+    classDef adminClass fill:#ff6b6b,stroke:#333,stroke-width:3px
 
-    cssClass "User" userClass;
-    cssClass "Admin" adminClass;
+    class User userClass
+    class Admin adminClass
 ```
 
 ### Example (Complex Class Diagram)

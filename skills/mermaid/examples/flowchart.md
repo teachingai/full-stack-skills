@@ -263,9 +263,9 @@ flowchart LR
     A[Start]
     B[Process]
     C[End]
-    A e1@-->|Step 1| B
-    B e2@-->|Step 2| C
+    A -->|Step 1|e1[ID] B
+    B -->|Step 2|e2[ID] C
 
-    e1@{ curve: stepBefore }
-    e2@{ curve: stepAfter }
+    e1.curve = "stepBefore"
+    e2.curve = "stepAfter"
 ```
