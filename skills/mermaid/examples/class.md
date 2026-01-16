@@ -1,6 +1,6 @@
 ## Instructions
 
-Class diagrams represent the structure of a system by showing classes, their attributes, methods, and relationships. In software engineering, a class diagram in the Unified Modeling Language (UML) is a type of static structure diagram that describes the structure of a system by showing the system's classes, their attributes, operations (or methods), and the relationships among objects.
+Class diagrams represent the structure of a system by showing classes, their attributes, methods, and relationships. The class diagram is the main building block of object-oriented modeling.
 
 ### Syntax
 
@@ -31,244 +31,411 @@ Class diagrams represent the structure of a system by showing classes, their att
 - Notes: `note for ClassName "note text"`
 - Styling: `style ClassName fill:#color,stroke:#color` or `classDef className fill:#color` and `cssClass "ClassName" className` or `ClassName:::className`
 
-Reference: [Mermaid Class Diagram Documentation](https://mermaid.ai/open-source/syntax/classDiagram.html)
+Reference: [Mermaid Class Diagram Documentation](https://mermaid.js.org/syntax/classDiagram.html)
 
 ### Example (Basic Class Diagram)
 
-```mermaid
-classDiagram
-    class Animal {
-        +String name
-        +int age
-        +eat()
-        +sleep()
-    }
-    class Dog {
-        +String breed
-        +bark()
-    }
-    class Cat {
-        +meow()
-    }
-
-    Animal <|-- Dog
-    Animal <|-- Cat
-```
-
-### Example (With Visibility and Methods)
+A simple class diagram showing classes with members and relationships:
 
 ```mermaid
+---
+title: Animal example
+---
 classDiagram
-    class BankAccount {
-        -double balance
-        +deposit(amount)
-        +withdraw(amount) double
-        +getBalance() double
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
     }
-    class Customer {
-        +String name
-        +String email
-        +openAccount() BankAccount
+    class Fish{
+        -int sizeInFeet
+        -canEat()
     }
-
-    Customer --> BankAccount : owns
-```
-
-### Example (With Return Types)
-
-```mermaid
-classDiagram
-    class Calculator {
-        +add(a, b) int
-        +subtract(a, b) int
-        +multiply(a, b) int
-        +divide(a, b) double
+    class Zebra{
+        +bool is_wild
+        +run()
     }
 ```
 
-### Example (With Generic Types)
+### Example (Define a class)
+
+There are two ways to define a class: explicitly using `class` keyword or via a relationship:
 
 ```mermaid
 classDiagram
-    class List~T~ {
-        +add(item T)
-        +get(index) T
-        +size() int
-    }
-    class Map~K,V~ {
-        +put(key K, value V)
-        +get(key K) V
-    }
-```
-
-### Example (With Relationships)
-
-```mermaid
-classDiagram
-    class Vehicle {
-        +String brand
-        +start()
-    }
-    class Car {
-        +int doors
-    }
-    class Engine {
-        +int horsepower
-    }
-    class Wheel {
-        +int size
-    }
-
+    class Animal
     Vehicle <|-- Car
-    Car *-- Engine
-    Car o-- Wheel
 ```
 
-### Example (With Labels and Cardinality)
+### Example (Class labels)
+
+Provide a label for a class using square brackets:
 
 ```mermaid
 classDiagram
-    class Company {
-        +String name
-    }
-    class Employee {
-        +String name
-        +String position
-    }
-
-    Company "1" --> "1..*" Employee : employs
+    class Animal["Animal with a label"]
+    class Car["Car with *! symbols"]
+    Animal --> Car
 ```
 
-### Example (With Interfaces)
+### Example (Class labels with backticks)
+
+Use backticks to escape special characters in class names:
 
 ```mermaid
 classDiagram
-    class Shape {
-        <<interface>>
-        +area() double
-        +perimeter() double
-    }
-    class Circle {
-        +double radius
-        +area() double
-        +perimeter() double
-    }
+    class `Animal Class!`
+    class `Car Class`
+    `Animal Class!` --> `Car Class`
+```
+
+### Example (Defining Members)
+
+Define members using `:` (colon) or `{}` brackets. Methods are identified by `()`:
+
+```mermaid
+---
+title: Bank example
+---
+classDiagram
+    class BankAccount
+    BankAccount : +String owner
+    BankAccount : +Bigdecimal balance
+    BankAccount : +deposit(amount)
+    BankAccount : +withdrawal(amount)
+```
+
+Or using brackets:
+
+```mermaid
+classDiagram
+class BankAccount{
+    +String owner
+    +BigDecimal balance
+    +deposit(amount)
+    +withdrawal(amount)
+}
+```
+
+### Example (Return Type)
+
+End a method definition with the data type that will be returned (space between `)` and return type):
+
+```mermaid
+classDiagram
+class BankAccount{
+    +String owner
+    +BigDecimal balance
+    +deposit(amount) bool
+    +withdrawal(amount) int
+}
+```
+
+### Example (Generic Types)
+
+Enclose generic types within `~` (tilde):
+
+```mermaid
+classDiagram
+class Square~Shape~{
+    int id
+    List~int~ position
+    setPoints(List~int~ points)
+    getPoints() List~int~
+}
+
+Square : -List~string~ messages
+Square : +setMessages(List~string~ messages)
+Square : +getMessages() List~string~
+Square : +getDistanceMatrix() List~List~int~~
+```
+
+### Example (Visibility)
+
+Use `+` (Public), `-` (Private), `#` (Protected), `~` (Package/Internal) before member names:
+
+```mermaid
+classDiagram
+class BankAccount{
+    +String owner
+    -BigDecimal balance
+    #String accountNumber
+    ~String internalId
+}
+```
+
+### Example (Relationships)
+
+Eight types of relations are supported:
+
+```mermaid
+classDiagram
+classA <|-- classB
+classC *-- classD
+classE o-- classF
+classG <-- classH
+classI -- classJ
+classK <.. classL
+classM <|.. classN
+classO .. classP
+```
+
+### Example (Labels on Relations)
+
+Add label text to a relation:
+
+```mermaid
+classDiagram
+classA --|> classB : Inheritance
+classC --* classD : Composition
+classE --o classF : Aggregation
+classG --> classH : Association
+classI -- classJ : Link(Solid)
+classK ..> classL : Dependency
+classM ..|> classN : Realization
+classO .. classP : Link(Dashed)
+```
+
+### Example (Two-way relations)
+
+Represent N:M associations using two-way relations:
+
+```mermaid
+classDiagram
+    Animal <|--|> Zebra
+```
+
+### Example (Lollipop Interfaces)
+
+Define lollipop interfaces using `()--` or `--()`:
+
+```mermaid
+classDiagram
+  bar ()-- foo
+```
+
+### Example (Namespaces)
+
+Group classes using namespaces:
+
+```mermaid
+classDiagram
+namespace BaseShapes {
+    class Triangle
     class Rectangle {
-        +double width
-        +double height
-        +area() double
-        +perimeter() double
+      double width
+      double height
     }
-
-    Shape <|.. Circle
-    Shape <|.. Rectangle
+}
 ```
 
-### Example (With Annotations)
+### Example (Cardinality)
+
+Place cardinality notations near the end of an association:
 
 ```mermaid
 classDiagram
-    class UserService {
-        <<Service>>
-        +createUser()
-        +deleteUser()
-    }
-    class AbstractRepository {
-        <<Abstract>>
-        +save()
-        +find()*
-    }
-    class Status {
-        <<Enumeration>>
-        ACTIVE
-        INACTIVE
-        PENDING
-    }
+    Customer "1" --> "*" Ticket
+    Student "1" --> "1..*" Course
+    Galaxy --> "many" Star : Contains
 ```
 
-### Example (With Namespaces)
+### Example (Annotations)
+
+Annotate classes with markers like `<<Interface>>`, `<<Abstract>>`, `<<Service>>`, `<<Enumeration>>`:
 
 ```mermaid
 classDiagram
-    namespace Core {
-        class User
-        class Product
-    }
-    namespace Services {
-        class UserService
-        class ProductService
-    }
-
-    User --> UserService
-    Product --> ProductService
+class Shape{
+    <<interface>>
+    noOfVertices
+    draw()
+}
+class Color{
+    <<enumeration>>
+    RED
+    BLUE
+    GREEN
+    WHITE
+    BLACK
+}
 ```
 
-### Example (With Direction - Left to Right)
+### Example (Comments)
+
+Comments need to be on their own line, prefaced with `%%`:
 
 ```mermaid
 classDiagram
-    direction LR
-    class Animal {
-        +String name
-        +eat()
-    }
-    class Dog {
-        +bark()
-    }
-    Animal <|-- Dog
+%% This whole line is a comment
+classDiagram
+class Shape <<interface>>
+class Shape{
+    <<interface>>
+    noOfVertices
+    draw()
+}
 ```
 
-### Example (With Styling)
+### Example (Direction)
+
+Set the direction using `direction` statement:
 
 ```mermaid
 classDiagram
-    class User {
-        +String name
-        +String email
-    }
-    class Admin {
-        +String role
-    }
-    User <|-- Admin
-
-    classDef userClass fill:#e1f5ff,stroke:#333,stroke-width:2px
-    classDef adminClass fill:#ff6b6b,stroke:#333,stroke-width:3px
-
-    class User userClass
-    class Admin adminClass
+  direction RL
+  class Student {
+    -idCard : IdCard
+  }
+  class IdCard{
+    -id : int
+    -name : string
+  }
+  class Bike{
+    -id : int
+    -name : string
+  }
+  Student "1" --o "1" IdCard : carries
+  Student "1" --o "1" Bike : rides
 ```
 
-### Example (Complex Class Diagram)
+### Example (Notes)
+
+Add notes using `note` or `note for ClassName`:
 
 ```mermaid
 classDiagram
-    class Person {
-        +String name
-        +int age
-        +walk()
+    note "This is a general note"
+    note for MyClass "This is a note for a class"
+    class MyClass{
     }
-    class Student {
-        +int studentId
-        +study()
-    }
-    class Teacher {
-        +String subject
-        +teach()
-    }
-    class Course {
-        +String title
-        +int credits
-    }
-    class Enrollment {
-        +date enrolledDate
-        +String grade
-    }
+```
 
-    Person <|-- Student
-    Person <|-- Teacher
-    Student "1..*" --> "0..*" Course : enrolls
-    Course "1" --> "0..*" Enrollment : has
-    Student "1" --> "0..*" Enrollment : receives
+### Example (Interaction - Links)
+
+Bind click events to nodes for links:
+
+```mermaid
+classDiagram
+class Shape
+link Shape "https://www.github.com" "This is a tooltip for a link"
+class Shape2
+click Shape2 href "https://www.github.com" "This is a tooltip for a link"
+```
+
+### Example (Interaction - Callbacks)
+
+Bind click events to nodes for callbacks:
+
+```mermaid
+classDiagram
+class Shape
+callback Shape "callbackFunction" "This is a tooltip for a callback"
+class Shape2
+click Shape2 call callbackFunction() "This is a tooltip for a callback"
+```
+
+### Example (Styling a node)
+
+Apply specific styles using `style` keyword:
+
+```mermaid
+classDiagram
+  class Animal
+  class Mineral
+  style Animal fill:#f9f,stroke:#333,stroke-width:4px
+  style Mineral fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+```
+
+### Example (Classes)
+
+Define reusable style classes using `classDef` and apply with `:::`:
+
+```mermaid
+classDiagram
+    class Animal:::someclass
+    classDef someclass fill:#f96
+```
+
+Or with class members:
+
+```mermaid
+classDiagram
+    class Animal:::someclass {
+        -int sizeInFeet
+        -canEat()
+    }
+    classDef someclass fill:#f96
+```
+
+### Example (Default class)
+
+A class named `default` will be applied to all nodes:
+
+```mermaid
+classDiagram
+  class Animal:::pink
+  class Mineral
+
+  classDef default fill:#f96,color:red
+  classDef pink color:#f9f
+```
+
+### Example (CSS Classes)
+
+Predefine classes in CSS styles and apply from the graph definition:
+
+```mermaid
+classDiagram
+    class Animal:::styleClass
+```
+
+### Example (Using cssClass)
+
+Apply a class to a node using `cssClass`:
+
+```mermaid
+classDiagram
+    class Animal
+    class Mineral
+    classDef someclass fill:#f96
+    cssClass "Animal" someclass
+```
+
+### Example (Multiple Classes in classDef)
+
+Define styles for multiple classes in one statement:
+
+```mermaid
+classDiagram
+    class Animal
+    class Mineral
+    classDef firstClassName,secondClassName fill:#f9f,stroke:#333,stroke-width:2px;
+    cssClass "Animal" firstClassName
+    cssClass "Mineral" secondClassName
+```
+
+### Example (Configuration - Hide Empty Members Box)
+
+Hide the empty members box using configuration:
+
+```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
+classDiagram
+  class Duck
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

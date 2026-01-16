@@ -4,119 +4,288 @@ Block diagrams are an intuitive way to represent complex systems, processes, or 
 
 ### Syntax
 
-- Use `block-beta` keyword
+- Use `block` keyword
 - Basic blocks: `block BlockName` or just `BlockName`
-- Columns: Specify number of columns to organize blocks
-- Block width: Blocks can span multiple columns
-- Composite blocks: Nested blocks within parent blocks
+- Columns: `columns N` to specify number of columns to organize blocks
+- Block width: `BlockName:N` where N is the number of columns to span
+- Composite blocks: `block:ID ... end` for nested blocks within parent blocks
 - Connections: `Block1 --> Block2` or `Block1 --- Block2`
-- Labels: `Block1 -->|Label| Block2`
-- Block shapes: rectangle (default), circle, round, diamond, hexagon, square, double-circle, asymmetric, rhombus, parallelogram, trapezoid
-- Space blocks: `space` or `space:num` for intentional spacing
+- Labels: `Block1 -- "Label" --> Block2`
+- Block shapes: rectangle (default), `("Round")`, `(["Stadium"])`, `[["Subroutine"]]`, `[("Cylindrical")]`, `(("Circle"))`, `{"Diamond"}`, `{{"Hexagon"}}`, `>"Asymmetric"]`, `[/"Parallelogram"/]`, `[\"Trapezoid"\`, `((("Double Circle")))`
+- Block arrows: `blockArrowId<["Label"]>(direction)` where direction is `right`, `left`, `up`, `down`, `x`, `y`, or combinations
+- Space blocks: `space` or `space:N` for intentional spacing (N is number of columns)
 - Styling: `style BlockName fill:#color,stroke:#color,stroke-width:2px`
+- Class styling: `classDef className fill:#color` and `class BlockName className`
 
-Reference: [Mermaid Block Diagram Documentation](https://mermaid.ai/open-source/syntax/block.html)
+Reference: [Mermaid Block Diagram Documentation](https://mermaid.js.org/syntax/block.html)
 
 ### Example (Simple Block Diagram)
 
+A simple block diagram with three blocks:
+
 ```mermaid
-block-beta
-    a b c
+block
+  a b c
 ```
 
 ### Example (Multi-Column Layout)
 
+Specify the number of columns to organize blocks:
+
 ```mermaid
-block-beta columns 3
-    a b c d
+block
+  columns 3
+  a b c d
 ```
 
 ### Example (Block Spanning Multiple Columns)
 
+Blocks can span multiple columns using `:N` notation:
+
 ```mermaid
-block-beta columns 3
-    A:1 b:2 c:2 d:1
+block
+  columns 3
+  a["A label"] b:2 c:2 d
 ```
 
-### Example (Composite Blocks - Nested)
+### Example (Composite Blocks)
+
+Create nested blocks using `block:ID ... end`:
 
 ```mermaid
-block-beta
-    A B C
-    D
-        D E
-        D F
+block
+    block
+      D
+    end
+    A["A: I am a wide one"]
 ```
 
-### Example (Basic Connections)
+### Example (Composite Blocks with Columns)
+
+Create composite blocks with column configuration:
 
 ```mermaid
-block-beta
-    A B C
-    A --> B
-    B --> C
+block
+  columns 3
+  a:3
+  block:group1:2
+    columns 2
+    h i j k
+  end
+  g
+  block:group2:3
+    l m n o p q r
+  end
 ```
 
-### Example (Connections with Labels)
+### Example (Vertical Stacking)
+
+Stack blocks vertically using single column:
 
 ```mermaid
-block-beta
-    A B C
-    A -->|Data| B
-    B -->|Result| C
+block
+  block
+    columns 1
+    a["A label"] b c d
+  end
 ```
 
-### Example (Different Block Shapes)
+### Example (Block Shapes)
+
+Use different shapes for blocks:
 
 ```mermaid
-block-beta
-    A["Rectangle"]
-    B(("Circle"))
-    C(["Round"])
-    D{"Diamond"}
-    E{{"Hexagon"}}
-    E1["Square"]
-    E2(("Double Circle"))
-    E3>"Asymmetric"]
-    E4{"Rhombus"}
-    E5[/"Parallelogram"/]
-    E6[/"Trapezoid"\]
+block
+    id1("Round")
+    id2(["Stadium"])
+    id3[["Subroutine"]]
+    id4[("Cylindrical")]
+    id5(("Circle"))
+    id6{"Diamond"}
+    id7{{"Hexagon"}}
+    id8>"Asymmetric"]
+    id9[/"Parallelogram"/]
+    id10[\"Trapezoid"\]
+    id11((("Double Circle")))
+```
+
+### Example (Individual Shape Examples)
+
+Examples of each shape type:
+
+```mermaid
+block
+    id1("This is the text in the box")
+```
+
+```mermaid
+block
+    id1(["This is the text in the box"])
+```
+
+```mermaid
+block
+    id1[["This is the text in the box"]]
+```
+
+```mermaid
+block
+    id1[("Database")]
+```
+
+```mermaid
+block
+    id1(("This is the text in the circle"))
+```
+
+```mermaid
+block
+    id1>"This is the text in the box"]
+```
+
+```mermaid
+block
+    id1{"This is the text in the box"}
+```
+
+```mermaid
+block
+    id1{{"This is the text in the box"}}
+```
+
+```mermaid
+block
+    id1[/"This is the text in the box"/]
+    id2[\"This is the text in the box"\]
+```
+
+```mermaid
+block
+    id1((("This is the text in the circle")))
+```
+
+### Example (Block Arrows)
+
+Use block arrows to indicate direction or flow:
+
+```mermaid
+block
+  blockArrowId<["Label"]>(right)
+  blockArrowId2<["Label"]>(left)
+  blockArrowId3<["Label"]>(up)
+  blockArrowId4<["Label"]>(down)
+  blockArrowId5<["Label"]>(x)
+  blockArrowId6<["Label"]>(y)
+  blockArrowId7<["Label"]>(x, down)
 ```
 
 ### Example (Space Blocks)
 
+Create intentional empty spaces using `space` or `space:N`:
+
 ```mermaid
-block-beta
-    A space B
-    C space:2 D
+block
+  columns 3
+  a space b
+  c   d   e
 ```
 
-### Example (System Architecture with Styling)
+Or specify column width:
 
 ```mermaid
-block-beta
-    Frontend Backend Database
-    Frontend -->|HTTP| Backend
-    Backend -->|Query| Database
+block
+  ida space:3 idb idc
+```
 
-    style Frontend fill:#e1f5,stroke:#333,stroke-width:2px
-    style Backend fill:#fff4e1,stroke:#333,stroke-width:2px
-    style Database fill:#e1f5ff,stroke:#333,stroke-width:2px
+### Example (Basic Connections)
+
+Connect blocks using arrows:
+
+```mermaid
+block
+  A space B
+  A-->B
+```
+
+### Example (Connections with Labels)
+
+Add text to links:
+
+```mermaid
+block
+  A space:2 B
+  A-- "X" -->B
+```
+
+### Example (Styling)
+
+Apply styles to individual blocks:
+
+```mermaid
+block
+  id1 space id2
+  id1("Start")-->id2("Stop")
+  style id1 fill:#636,stroke:#333,stroke-width:4px
+  style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+```
+
+### Example (Class Styling)
+
+Define reusable style classes:
+
+```mermaid
+block
+  A space B
+  A-->B
+  classDef blue fill:#6e6ce6,stroke:#333,stroke-width:4px;
+  class A blue
+  style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+```
+
+### Example (System Architecture)
+
+A system architecture example with styling:
+
+```mermaid
+block
+  columns 3
+  Frontend blockArrowId6<[" "]>(right) Backend
+  space:2 down<[" "]>(down)
+  Disk left<[" "]>(left) Database[("Database")]
+
+  classDef front fill:#696,stroke:#333;
+  classDef back fill:#969,stroke:#333;
+  class Frontend front
+  class Backend,Database back
 ```
 
 ### Example (Business Process Flow)
 
-```mermaid
-block-beta
-    Start{"Start"}
-    Process1["Process 1"]
-    Decision{"Decision?"}
-    Process2["Process 2"]
-    End["End"]
+A business process flow with decision points:
 
-    Start --> Process1
-    Process1 --> Decision
-    Decision -->|Yes| Process2
-    Decision -->|No| End
-    Process2 --> End
+```mermaid
+block
+  columns 3
+  Start(("Start")) space:2
+  down<[" "]>(down) space:2
+  Decision{{"Make Decision"}} right<["Yes"]>(right) Process1["Process A"]
+  downAgain<["No"]>(down) space r3<["Done"]>(down)
+  Process2["Process B"] r2<["Done"]>(right) End(("End"))
+
+  style Start fill:#969;
+  style End fill:#696;
+```
+
+### Alternative (Flowchart - compatible with all Mermaid versions)
+
+If block diagrams are not supported, use this flowchart alternative:
+
+```mermaid
+flowchart TD
+    A[Component A]
+    B[Component B]
+    C[Component C]
+    
+    A -->|Data| B
+    B -->|Result| C
 ```

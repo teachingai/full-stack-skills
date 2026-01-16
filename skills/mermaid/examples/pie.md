@@ -11,82 +11,52 @@ Pie charts display proportional data, showing how parts relate to a whole. A pie
 - Values: Must be positive numbers greater than zero (supported up to two decimal places)
 - Negative values are not allowed and will result in an error
 - Pie slices will be ordered clockwise in the same order as the labels
+- Configuration: `textPosition` (0.0 to 1.0, default: 0.75) - axial position of pie slice labels
 
-Reference: [Mermaid Pie Chart Documentation](https://mermaid.ai/open-source/syntax/pie.html)
+Reference: [Mermaid Pie Chart Documentation](https://mermaid.js.org/syntax/pie.html)
 
 ### Example (Basic Pie Chart)
 
+A simple pie chart with title and data:
+
 ```mermaid
-pie title Sales by Product
-    "Product A" : 42.5
-    "Product B" : 30.2
-    "Product C" : 15.8
-    "Product D" : 11.5
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
 ```
 
 ### Example (With showData)
 
+Use `showData` to render the actual data values after the legend text:
+
 ```mermaid
-pie showData title Sales by Product
-    "Product A" : 42.5
-    "Product B" : 30.2
-    "Product C" : 15.8
-    "Product D" : 11.5
+pie showData
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" : 5
 ```
 
-### Example (Budget Allocation)
+### Example (With Configuration)
+
+Configure text position and theme variables:
 
 ```mermaid
-pie title Budget Allocation
-    "Development" : 40
-    "Marketing" : 25
-    "Operations" : 20
-    "Support" : 10
-    "Other" : 5
-```
-
-### Example (Market Share)
-
-```mermaid
-pie title Market Share
-    "Company A" : 35.5
-    "Company B" : 28.3
-    "Company C" : 20.1
-    "Company D" : 10.2
-    "Others" : 5.9
-```
-
-### Example (Team Distribution)
-
-```mermaid
-pie showData title Team Distribution
-    "Frontend" : 30
-    "Backend" : 35
-    "DevOps" : 15
-    "QA" : 12
-    "Design" : 8
-```
-
-### Example (Revenue Sources)
-
-```mermaid
-pie title Revenue Sources
-    "Product Sales" : 55.5
-    "Services" : 25.3
-    "Subscriptions" : 12.7
-    "Licensing" : 4.2
-    "Other" : 2.3
-```
-
-### Example (With Decimal Values)
-
-```mermaid
-pie title Survey Results
-    "Very Satisfied" : 45.75
-    "Satisfied" : 32.50
-    "Neutral" : 12.25
-    "Dissatisfied" : 7.50
-    "Very Dissatisfied" : 2.00
+---
+config:
+  pie:
+    textPosition: 0.5
+  themeVariables:
+    pieOuterStrokeWidth: "5px"
+---
+pie showData
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" : 5
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

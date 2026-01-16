@@ -204,6 +204,54 @@ gantt
     5    : 0, 5
 ```
 
+### Example (Timeline with Comments, CSS, and Config in Frontmatter)
+
+A comprehensive example demonstrating frontmatter configuration, custom CSS styling, milestones, and vertical markers:
+
+```mermaid
+---
+# Frontmatter config, YAML comments
+title: Ignored if specified in chart
+displayMode: compact
+config:
+    themeCSS: |
+        #item36 { fill: CadetBlue }
+        rect[id^=workaround] {
+            height: calc(100% - 50px);
+            transform: translate(9px, 25px);
+            y: 0;
+            width: 1.5px;
+            stroke: none;
+            fill: red;
+        }
+        text[id^=workaround] {
+            fill: red;
+            y: 100%;
+            font-size: 15px;
+        }
+    gantt:
+        useWidth: 400
+        rightPadding: 0
+        topAxis: true
+        numberSectionStyles: 2
+---
+gantt
+    title Timeline - Gantt Sampler
+    dateFormat YYYY
+    axisFormat %y
+    tickInterval 1decade
+    section Issue19062
+    71   : item71, 1900, 1930
+    section Issue19401
+    36   : item36, 1913, 1935
+    section Issue1300
+    94   : item94, 1910, 1915
+    5    : item5, 1920, 1925
+    0    : milestone, item0, 1918, 1s
+    9    : vert, 1906, 1s
+    64   : workaround, 1923, 1s
+```
+
 ### Alternative (Flowchart - compatible with all Mermaid versions)
 
 If Gantt charts are not supported, use this flowchart alternative:

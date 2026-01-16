@@ -16,112 +16,76 @@ Quadrant charts display items in a 2x2 grid based on two criteria, useful for pr
 - Points: `Point Name: [x, y]` where x and y values are in the range 0-1
 - Point styling: `Point Name: [x, y] radius: 12, color: #ff3300, stroke-color: #10f0f0, stroke-width: 5px`
 - Class styling: `Point Name:::className: [x, y]` with `classDef className color: #109060, radius: 10`
+- Configuration: `chartWidth`, `chartHeight`, `titlePadding`, `titleFontSize`, etc.
+- Theme variables: `quadrant1Fill`, `quadrant1TextFill`, `quadrantPointFill`, etc.
 
-Reference: [Mermaid Quadrant Chart Documentation](https://mermaid.ai/open-source/syntax/quadrantChart.html)
+Reference: [Mermaid Quadrant Chart Documentation](https://mermaid.js.org/syntax/quadrantChart.html)
 
 ### Example (Basic Quadrant Chart)
 
+A complete quadrant chart example:
+
 ```mermaid
 quadrantChart
-    title Product Prioritization
-    x-axis Low Effort --> High Effort
-    y-axis Low Impact --> High Impact
-    quadrant-1 Should Do
-    quadrant-2 Must Do
-    quadrant-3 Won't Do
-    quadrant-4 Nice to Have
-    Feature A: [0.3, 0.8]
-    Feature B: [0.7, 0.9]
-    Feature C: [0.2, 0.3]
-    Feature D: [0.8, 0.2]
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
 ```
 
-### Example (With Single Axis Labels)
+### Example (With Configuration and Theme)
+
+Configure chart dimensions and theme variables:
 
 ```mermaid
+---
+config:
+  quadrantChart:
+    chartWidth: 400
+    chartHeight: 400
+  themeVariables:
+    quadrant1TextFill: "ff0000"
+---
 quadrantChart
-    title Risk vs Reward
-    x-axis Low Risk
-    y-axis Low Reward
-    quadrant-1 High Risk, High Reward
-    quadrant-2 Low Risk, High Reward
-    quadrant-3 Low Risk, Low Reward
-    quadrant-4 High Risk, Low Reward
-    Investment A: [0.8, 0.9]
-    Investment B: [0.2, 0.7]
-    Investment C: [0.3, 0.2]
+  x-axis Urgent --> Not Urgent
+  y-axis Not Important --> "Important ❤"
+  quadrant-1 Plan
+  quadrant-2 Do
+  quadrant-3 Delegate
+  quadrant-4 Delete
 ```
 
 ### Example (With Point Styling)
 
-```mermaid
-quadrantChart
-    title Performance vs Cost
-    x-axis Low Cost --> High Cost
-    y-axis Low Performance --> High Performance
-    quadrant-1 High Cost, High Performance
-    quadrant-2 Low Cost, High Performance
-    quadrant-3 Low Cost, Low Performance
-    quadrant-4 High Cost, Low Performance
-    Product A: [0.9, 0.0] radius: 12
-    Product B: [0.8, 0.1] color: #ff3300, radius: 10
-    Product C: [0.7, 0.2] radius: 25, color: #00ff33, stroke-color: #10f0f0
-    Product D: [0.6, 0.3] radius: 15, stroke-color: #00ff0f, stroke-width: 5px, color: #ff33f0
-```
-
-### Example (With Class Styling)
+Style points directly with radius, color, stroke-color, and stroke-width:
 
 ```mermaid
 quadrantChart
-    title Feature Analysis
-    x-axis Low Priority --> High Priority
-    y-axis Low Value --> High Value
-    quadrant-1 High Priority, High Value
-    quadrant-2 Low Priority, High Value
-    quadrant-3 Low Priority, Low Value
-    quadrant-4 High Priority, Low Value
-    Feature A:::highValue: [0.3, 0.9]
-    Feature B:::mediumValue: [0.7, 0.6]
-    Feature C:::lowValue: [0.2, 0.2]
-    Feature D:::highValue: [0.8, 0.8]
-
-    classDef highValue color: #109060, radius: 10
-    classDef mediumValue color: #908342, radius: 8, stroke-color: #310085, stroke-width: 3px
-    classDef lowValue color: #f00fff, radius: 6
-```
-
-### Example (Business Strategy)
-
-```mermaid
-quadrantChart
-    title Market Analysis
-    x-axis Low Market Share --> High Market Share
-    y-axis Low Growth --> High Growth
-    quadrant-1 Stars
-    quadrant-2 Question Marks
-    quadrant-3 Dogs
-    quadrant-4 Cash Cows
-    Product A: [0.8, 0.9]
-    Product B: [0.3, 0.7]
-    Product C: [0.2, 0.2]
-    Product D: [0.7, 0.3]
-```
-
-### Example (Team Skills Assessment)
-
-```mermaid
-quadrantChart
-    title Team Skills Matrix
-    x-axis Low Experience --> High Experience
-    y-axis Low Performance --> High Performance
-    quadrant-1 High Experience, High Performance
-    quadrant-2 Low Experience, High Performance
-    quadrant-3 Low Experience, Low Performance
-    quadrant-4 High Experience, Low Performance
-    Developer A: [0.9, 0.85]
-    Developer B: [0.6, 0.9]
-    Developer C: [0.3, 0.4]
-    Developer D: [0.8, 0.5]
+  title Reach and engagement of campaigns
+  x-axis Low Reach --> High Reach
+  y-axis Low Engagement --> High Engagement
+  quadrant-1 We should expand
+  quadrant-2 Need to promote
+  quadrant-3 Re-evaluate
+  quadrant-4 May be improved
+  Campaign A: [0.9, 0.0] radius: 12
+  Campaign B:::class1: [0.8, 0.1] color: #ff3300, radius: 10
+  Campaign C: [0.7, 0.2] radius: 25, color: #00ff33, stroke-color: #10f0f0
+  Campaign D: [0.6, 0.3] radius: 15, stroke-color: #00ff0f, stroke-width: 5px ,color: #ff33f0
+  Campaign E:::class2: [0.5, 0.4]
+  Campaign F:::class3: [0.4, 0.5] color: #0000ff
+  classDef class1 color: #109060
+  classDef class2 color: #908342, radius : 10, stroke-color: #310085, stroke-width: 10px
+  classDef class3 color: #f00fff, radius : 10
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

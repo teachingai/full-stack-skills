@@ -5,7 +5,7 @@ Packet diagrams are visual representations used to illustrate the structure and 
 ### Syntax
 
 - Use `packet` keyword (requires Mermaid v11.0.0+)
-- Title: `title "Packet Title"` (optional)
+- Title: `title "Packet Title"` or `--- title: "Packet Title" ---` (optional)
 - Fields:
   - `start-end: "Field Description"` - Multi-bit blocks (e.g., `0-15: "Field Name"`)
   - `start: "Field Description"` - Single-bit block (e.g., `0: "Flag"`)
@@ -16,64 +16,48 @@ Packet diagrams are visual representations used to illustrate the structure and 
 - Ranges: Each line after the title represents a different field in the packet. The range (e.g., `0-15`) indicates the bit positions in the packet.
 - Field Description: A brief description of what the field represents, enclosed in quotes.
 
-Reference: [Mermaid Packet Diagram Documentation](https://mermaid.ai/open-source/syntax/packet.html)
+Reference: [Mermaid Packet Diagram Documentation](https://mermaid.js.org/syntax/packet.html)
 
-### Example (Ethernet Frame - Basic Syntax)
+### Example (TCP Packet with Configuration)
+
+A complete TCP packet example using configuration block and traditional bit range syntax:
 
 ```mermaid
+---
+title: "TCP Packet"
+---
 packet
-    title "Ethernet Frame"
-    0-47: "Destination MAC"
-    48-95: "Source MAC"
-    96-111: "Type/Length"
-    112-: "Payload"
+0-15: "Source Port"
+16-31: "Destination Port"
+32-63: "Sequence Number"
+64-95: "Acknowledgment Number"
+96-99: "Data Offset"
+100-105: "Reserved"
+106: "URG"
+107: "ACK"
+108: "PSH"
+109: "RST"
+110: "SYN"
+111: "FIN"
+112-127: "Window"
+128-143: "Checksum"
+144-159: "Urgent Pointer"
+160-191: "(Options and Padding)"
+192-255: "Data (variable length)"
 ```
 
-### Example (IPv4 Header - Basic Syntax)
+### Example (UDP Packet with Bit Count Syntax)
+
+A UDP packet example using bit count syntax (v11.7.0+):
 
 ```mermaid
 packet
-    title "IPv4 Header"
-    0-3: "Version"
-    4-7: "Header Length"
-    8-15: "Type of Service"
-    16-31: "Total Length"
-    32-47: "Identification"
-    48-63: "Flags & Fragment Offset"
-    64-71: "Time to Live"
-    72-79: "Protocol"
-    80-95: "Header Checksum"
-    96-127: "Source IP Address"
-    128-159: "Destination IP Address"
-    160-: "Options & Padding"
-```
-
-### Example (Using Bit Count Syntax - v11.7.0+)
-
-```mermaid
-packet
-    title "TCP Header"
-    +4: "Source Port"
-    +4: "Destination Port"
-    +8: "Sequence Number"
-    +8: "Acknowledgment Number"
-    32-35: "Data Offset"
-    +4: "Reserved"
-    +6: "Flags"
-    +16: "Window Size"
-    +16: "Checksum"
-    +16: "Urgent Pointer"
-```
-
-### Example (Mixed Syntax)
-
-```mermaid
-packet
-    title "Mixed Syntax Example"
-    +8: "First Field (8 bits)"
-    8-15: "Second Field (manually set)"
-    +4: "Third Field (4 bits, auto-continues from 16)"
-    20-31: "Fourth Field (manually set)"
+title UDP Packet
++16: "Source Port"
++16: "Destination Port"
+32-47: "Length"
+48-63: "Checksum"
+64-95: "Data (variable length)"
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

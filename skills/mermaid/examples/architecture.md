@@ -26,24 +26,29 @@ Reference: [Mermaid Architecture Diagram Documentation](https://mermaid.ai/open-
 
 ```mermaid
 architecture-beta
-    group public_api(cloud)[Public API]
-    group private_api(cloud)[Private API] in public_api
-    service database1(database)[My Database] in private_api
-    service server1(server)[Web Server] in public_api
-    server1:L -- R:database1
+    group api(cloud)[API]
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
 ```
 
 **Flowchart Alternative (Compatible with all versions):**
 
 ```mermaid
 flowchart TD
-    subgraph PublicAPI["Public API"]
-        subgraph PrivateAPI["Private API"]
-            Database[(My Database)]
-        end
-        Server[Web Server]
+    subgraph API["API"]
+        DB[(Database)]
+        Disk1[(Storage)]
+        Disk2[(Storage)]
+        Server[Server]
     end
-    Server --> Database
+    DB --> Server
+    Disk1 --> Server
+    Disk2 --> DB
 ```
 
 ### Example (With Edges and Directions)
@@ -70,6 +75,28 @@ flowchart LR
 
     DB --> Server
     Server --> Gateway
+```
+
+### Example (With Arrows)
+
+**Note**: Requires Mermaid v11.1.0+. If not supported, use the flowchart alternative below.
+
+```mermaid
+architecture-beta
+    service subnet(server)[Subnet]
+    service gateway(internet)[Gateway]
+
+    subnet:R --> L:gateway
+```
+
+**Flowchart Alternative (Compatible with all versions):**
+
+```mermaid
+flowchart LR
+    Subnet[Subnet]
+    Gateway[Gateway]
+
+    Subnet --> Gateway
 ```
 
 ### Example (Groups and Nested Services)
@@ -110,26 +137,36 @@ flowchart TD
 
 ```mermaid
 architecture-beta
-    service db1(database)[Database 1]
-    service db2(database)[Database 2]
-    service server(server)[Server]
-    junction j1
+    service left_disk(disk)[Disk]
+    service top_disk(disk)[Disk]
+    service bottom_disk(disk)[Disk]
+    service top_gateway(internet)[Gateway]
+    service bottom_gateway(internet)[Gateway]
+    junction junctionCenter
+    junction junctionRight
 
-    server:B -- T:j1
-    j1:L -- R:db1
-    j1:R -- L:db2
+    left_disk:R -- L:junctionCenter
+    top_disk:B -- T:junctionCenter
+    bottom_disk:T -- B:junctionCenter
+    junctionCenter:R -- L:junctionRight
+    top_gateway:B -- T:junctionRight
+    bottom_gateway:T -- B:junctionRight
 ```
 
 **Flowchart Alternative (Compatible with all versions):**
 
 ```mermaid
 flowchart TD
-    Server[Server]
-    DB1[(Database 1)]
-    DB2[(Database 2)]
+    LeftDisk[(Disk)]
+    TopDisk[(Disk)]
+    BottomDisk[(Disk)]
+    TopGateway[Gateway]
+    BottomGateway[Gateway]
 
-    Server --> DB1
-    Server --> DB2
+    LeftDisk --> TopDisk
+    LeftDisk --> BottomDisk
+    TopDisk --> TopGateway
+    BottomDisk --> BottomGateway
 ```
 
 ### Example (Edge from Group to Group)
@@ -144,7 +181,7 @@ architecture-beta
     service server[Server] in groupOne
     service subnet[Subnet] in groupTwo
 
-    server{group}:B -- T:subnet{group}
+    server{group}:B --> T:subnet{group}
 ```
 
 **Flowchart Alternative (Compatible with all versions):**
@@ -205,4 +242,35 @@ flowchart TD
     App1 --> DB
     App2 --> DB
     DB --> Storage
+```
+
+### Example (With Custom Icons)
+
+**Note**: Requires Mermaid v11.1.0+ and icon pack registration. If not supported, use the flowchart alternative below.
+
+```mermaid
+architecture-beta
+    group api(logos:aws-lambda)[API]
+    service db(logos:aws-aurora)[Database] in api
+    service disk1(logos:aws-glacier)[Storage] in api
+    service disk2(logos:aws-s3)[Storage] in api
+    service server(logos:aws-ec2)[Server] in api
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+```
+
+**Flowchart Alternative (Compatible with all versions):**
+
+```mermaid
+flowchart TD
+    subgraph API["API"]
+        DB[(Database)]
+        Disk1[(Storage)]
+        Disk2[(Storage)]
+        Server[Server]
+    end
+    DB --> Server
+    Disk1 --> Server
+    Disk2 --> DB
 ```

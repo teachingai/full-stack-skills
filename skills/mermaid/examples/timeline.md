@@ -12,80 +12,119 @@ Timeline diagrams display events in chronological order, showing the sequence of
 - Sections: `section Section Name` (groups time periods in sections/ages)
 - Text wrapping: Use `<br>` to force line breaks
 - Multiple events per period: Can be on same line with `:` separator or on separate lines
+- Configuration: `disableMulticolor` to disable multi-color scheme
+- Theme variables: `cScale0` to `cScale11` for background colors, `cScaleLabel0` to `cScaleLabel11` for foreground colors
 
-Reference: [Mermaid Timeline Diagram Documentation](https://mermaid.ai/open-source/syntax/timeline.html)
+Reference: [Mermaid Timeline Diagram Documentation](https://mermaid.js.org/syntax/timeline.html)
 
 ### Example (Basic Timeline)
 
+A simple timeline with title and multiple events per period:
+
 ```mermaid
 timeline
-    title Project Milestones
-    2024 Q1 : Project Kickoff : Team formation
-    2024 Q2 : Development Phase 1 : First Release
-    2024 Q3 : Development Phase 2 : Production Launch
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook : Google
+    2005 : YouTube
+    2006 : Twitter
 ```
 
 ### Example (With Sections)
 
-```mermaid
-timeline
-    title Product Development Timeline
-    section 2024 Q1
-        Project Kickoff : Team formation
-        Requirements Gathering : Stakeholder meetings
-    section 2024 Q2
-        Development Phase 1 : Core features
-        First Release : Beta version
-    section 2024 Q3
-        Development Phase 2 : Advanced features
-        Production Launch : Public release
-```
-
-### Example (Multiple Events per Period)
+Group time periods in sections/ages:
 
 ```mermaid
 timeline
-    title Company History
-    2020 : Founded : First Product Launch
-    2021 : Series A Funding : Team Expansion
-    2022 : International Expansion : Second Product Launch
-    2023 : Series B Funding : Major Partnership
+    title Timeline of Industrial Revolution
+    section 17th-20th century
+        Industry 1.0 : Machinery, Water power, Steam <br>power
+        Industry 2.0 : Electricity, Internal combustion engine, Mass production
+        Industry 3.0 : Electronics, Computers, Automation
+    section 21st century
+        Industry 4.0 : Internet, Robotics, Internet of Things
+        Industry 5.0 : Artificial intelligence, Big data, 3D printing
 ```
 
 ### Example (With Text Wrapping)
 
+Use `<br>` to force line breaks in long text:
+
 ```mermaid
 timeline
-    title Long Event Names
-    2024 Q1 : Project Kickoff and<br>Team Formation
-    2024 Q2 : Development Phase 1<br>Core Features Implementation
-    2024 Q3 : Production Launch<br>Public Release
+    title England's History Timeline
+    section Stone Age
+      7600 BC : Britain's oldest known house was built in Orkney, Scotland
+      6000 BC : Sea levels rise and Britain becomes an island.<br> The people who live here are hunter-gatherers.
+    section Bronze Age
+      2300 BC : People arrive from Europe and settle in Britain. <br>They bring farming and metalworking.
+                : New styles of pottery and ways of burying the dead appear.
+      2200 BC : The last major building works are completed at Stonehenge.<br> People now bury their dead in stone circles.
+                : The first metal objects are made in Britain.Some other nice things happen. it is a good time to be alive.
 ```
 
-### Example (Simple Timeline)
+### Example (With Section Title Wrapping)
+
+Use `<br>` in section titles and events:
 
 ```mermaid
 timeline
-    January 2024 : Project Start
-    February 2024 : Design Phase
-    March 2024 : Development Begins
-    April 2024 : Testing Phase
-    May 2024 : Launch
+    title MermaidChart 2023 Timeline
+    section 2023 Q1 <br> Release Personal Tier
+      Bullet 1 : sub-point 1a : sub-point 1b
+           : sub-point 1c
+      Bullet 2 : sub-point 2a : sub-point 2b
+    section 2023 Q2 <br> Release XYZ Tier
+      Bullet 3 : sub-point <br> 3a : sub-point 3b
+           : sub-point 3c
+      Bullet 4 : sub-point 4a : sub-point 4b
 ```
 
-### Example (Historical Timeline)
+### Example (With Configuration - Disable MultiColor)
+
+Disable multi-color scheme using configuration:
 
 ```mermaid
+---
+config:
+  logLevel: 'debug'
+  theme: 'base'
+  timeline:
+    disableMulticolor: true
+---
 timeline
-    title Technology Evolution
-    section 1990s
-        Early Internet : Web 1.0
-    section 2000s
-        Social Media : Web 2.0
-    section 2010s
-        Mobile Revolution : Cloud Computing
-    section 2020s
-        AI & Machine Learning : Web 3.0
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook : Google
+    2005 : YouTube
+    2006 : Twitter
+```
+
+### Example (With Theme Variables)
+
+Customize color scheme using theme variables:
+
+```mermaid
+---
+config:
+  logLevel: 'debug'
+  theme: 'default'
+  themeVariables:
+    cScale0: '#ff0000'
+    cScaleLabel0: '#ffffff'
+    cScale1: '#00ff00'
+    cScale2: '#0000ff'
+    cScaleLabel2: '#ffffff'
+---
+timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook : Google
+    2005 : YouTube
+    2006 : Twitter
+    2007 : Tumblr
+    2008 : Instagram
+    2010 : Pinterest
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

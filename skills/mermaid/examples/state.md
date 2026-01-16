@@ -1,6 +1,6 @@
 ## Instructions
 
-State diagrams show the different states of an object and the transitions between them, useful for modeling state machines. A state diagram is a type of diagram used in computer science and related fields to describe the behavior of systems. State diagrams require that the system described is composed of a finite number of states; sometimes, this is indeed the case, while at other times this is a reasonable abstraction.
+State diagrams show the different states of an object and the transitions between them, useful for modeling state machines. In state diagrams systems are described in terms of **states** and how one **state** can change to another **state** via a **transition**.
 
 ### Syntax
 
@@ -19,176 +19,301 @@ State diagrams show the different states of an object and the transitions betwee
 - Styling: `classDef className fill:#color,stroke:#color` and `class StateName className` or `StateName:::className`
 - Spaces in state names: Define state with id first, then reference it
 
-Reference: [Mermaid State Diagram Documentation](https://mermaid.ai/open-source/syntax/stateDiagram.html)
+Reference: [Mermaid State Diagram Documentation](https://mermaid.js.org/syntax/stateDiagram.html)
 
 ### Example (Basic State Diagram)
 
-```mermaid
-stateDiagram-v2
-    [*] --> Idle
-    Idle --> Processing : Start
-    Processing --> Completed : Success
-    Processing --> Error : Failure
-    Error --> Idle : Retry
-    Completed --> [*]
-```
-
-### Example (With State Descriptions)
+A simple state diagram showing states and transitions:
 
 ```mermaid
+---
+title: Simple sample
+---
 stateDiagram-v2
     [*] --> Still
-    Still --> Moving : Start
-    Moving --> Still : Stop
-    Moving --> Crash : Error
-    Crash --> [*]
+    Still --> [*]
 
-    state Still {
-        [*] --> Stationary
-        Stationary --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+### Example (Define a state)
+
+A state can be declared in multiple ways. The simplest way is to define a state with just an id:
+
+```mermaid
+stateDiagram-v2
+    stateId
+```
+
+Another way is by using the state keyword with a description:
+
+```mermaid
+stateDiagram-v2
+    state "This is a state description" as s2
+```
+
+Or define the state id followed by a colon and the description:
+
+```mermaid
+stateDiagram-v2
+    s2 : This is a state description
+```
+
+### Example (Transitions)
+
+Transitions are path/edges when one state passes into another. Add text to describe the transition:
+
+```mermaid
+stateDiagram-v2
+    s1 --> s2: A transition
+```
+
+### Example (Start and End)
+
+Special states indicating the start and stop of the diagram using `[*]`:
+
+```mermaid
+stateDiagram-v2
+    [*] --> s1
+    s1 --> [*]
+```
+
+### Example (Composite states)
+
+Define composite states using the `state` keyword followed by an id and the body between `{}`:
+
+```mermaid
+stateDiagram-v2
+    [*] --> First
+    state First {
+        [*] --> second
+        second --> [*]
+    }
+
+    [*] --> NamedComposite
+    NamedComposite: Another Composite
+    state NamedComposite {
+        [*] --> namedSimple
+        namedSimple --> [*]
+        namedSimple: Another simple
     }
 ```
 
-### Example (With Transitions and Labels)
+### Example (Nested Composite states)
 
-```mermaid
-stateDiagram-v2
-    [*] --> Idle
-    Idle --> Running : Start Event
-    Running --> Paused : Pause Event
-    Paused --> Running : Resume Event
-    Running --> Stopped : Stop Event
-    Stopped --> [*]
-```
-
-### Example (Composite States)
+You can do this in several layers:
 
 ```mermaid
 stateDiagram-v2
     [*] --> First
 
     state First {
-        [*] --> State1
-        State1 --> State2
-        State2 --> [*]
-    }
+        [*] --> Second
 
+        state Second {
+            [*] --> second
+            second --> Third
+
+            state Third {
+                [*] --> third
+                third --> [*]
+            }
+        }
+    }
+```
+
+### Example (Transitions between composite states)
+
+Define transitions between composite states:
+
+```mermaid
+stateDiagram-v2
+    [*] --> First
     First --> Second
+    First --> Third
 
-    state Second {
-        [*] --> State3
-        State3 --> State4
-        State4 --> [*]
+    state First {
+        [*] --> fir
+        fir --> [*]
     }
-
-    Second --> [*]
+    state Second {
+        [*] --> sec
+        sec --> [*]
+    }
+    state Third {
+        [*] --> thi
+        thi --> [*]
+    }
 ```
 
-### Example (With Choice)
+### Example (Choice)
+
+Model a choice between two or more paths using `<<choice>>`:
 
 ```mermaid
 stateDiagram-v2
-    [*] --> State1
-    State1 --> Choice1 : Event1
-    Choice1 --> State2 : Condition1
-    Choice1 --> State3 : Condition2
-    State2 --> [*]
-    State3 --> [*]
-
-    state Choice1 <<choice>>
+    state if_state <<choice>>
+    [*] --> IsPositive
+    IsPositive --> if_state
+    if_state --> False: if n < 0
+    if_state --> True : if n >= 0
 ```
 
-### Example (With Fork and Join)
+### Example (Forks)
+
+Specify a fork in the diagram using `<<fork>>` and `<<join>>`:
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Fork1
+    state fork_state <<fork>>
+    [*] --> fork_state
+    fork_state --> State2
+    fork_state --> State3
 
-    state Fork1 <<fork>>
-    Fork1 --> State1
-    Fork1 --> State2
-    Fork1 --> State3
-
-    State1 --> Join1
-    State2 --> Join1
-    State3 --> Join1
-
-    state Join1 <<join>>
-    Join1 --> [*]
+    state join_state <<join>>
+    State2 --> join_state
+    State3 --> join_state
+    join_state --> State4
+    State4 --> [*]
 ```
 
-### Example (With Notes)
+### Example (Notes)
+
+Add notes to the right or left of a node:
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Idle
-    Idle --> Processing : Start
-    Processing --> Completed : Success
-    Completed --> [*]
-
-    note right of Processing : This is a critical state
-    note left of Idle : Initial state
-```
-
-### Example (With Concurrency)
-
-```mermaid
-stateDiagram-v2
-    [*] --> State1
+    State1: The state with a note
+    note right of State1
+        Important information! You can write
+        notes.
+    end note
     State1 --> State2
-    State2 --> State3
-
-    State2 --> Parallel1
-    State2 --> Parallel2
-
-    Parallel1 --> State4
-    Parallel2 --> State5
-
-    State4 --> State3
-    State5 --> State3
-    State3 --> [*]
+    note left of State2 : This is the note to the left.
 ```
 
-### Example (With Direction - Left to Right)
+### Example (Concurrency)
+
+Specify concurrency using the `--` symbol:
 
 ```mermaid
 stateDiagram-v2
+    [*] --> Active
+
+    state Active {
+        [*] --> NumLockOff
+        NumLockOff --> NumLockOn : EvNumLockPressed
+        NumLockOn --> NumLockOff : EvNumLockPressed
+        --
+        [*] --> CapsLockOff
+        CapsLockOff --> CapsLockOn : EvCapsLockPressed
+        CapsLockOn --> CapsLockOff : EvCapsLockPressed
+        --
+        [*] --> ScrollLockOff
+        ScrollLockOff --> ScrollLockOn : EvScrollLockPressed
+        ScrollLockOn --> ScrollLockOff : EvScrollLockPressed
+    }
+```
+
+### Example (Direction)
+
+Set the direction using `direction` statement:
+
+```mermaid
+stateDiagram
     direction LR
-    [*] --> State1
-    State1 --> State2 : Event
-    State2 --> [*]
+    [*] --> A
+    A --> B
+    B --> C
+    state B {
+      direction LR
+      a --> b
+    }
+    B --> D
 ```
 
-### Example (With Styling)
+### Example (Comments)
+
+Comments need to be on their own line, prefaced with `%%`:
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Idle
-    Idle --> Processing : Start
-    Processing --> Error : Failure
-    Error --> Idle : Retry
-    Processing --> Completed : Success
-    Completed --> [*]
-
-    classDef errorState fill:#ff6b6b,stroke:#333,stroke-width:3px
-    classDef successState fill:#4ecdc4,stroke:#333,stroke-width:2px
-
-    class Error errorState
-    class Completed successState
+    [*] --> Still
+    Still --> [*]
+%% this is a comment
+    Still --> Moving
+    Moving --> Still %% another comment
+    Moving --> Crash
+    Crash --> [*]
 ```
 
-### Example (With Spaces in State Names)
+### Example (Styling with classDefs)
+
+Define a style using `classDef` and apply using `class` statement:
 
 ```mermaid
-stateDiagram-v2
-    [*] --> yswsii
+stateDiagram
+   direction TB
+
+   accTitle: This is the accessible title
+   accDescr: This is an accessible description
+
+   classDef notMoving fill:white
+   classDef movement font-style:italic
+   classDef badBadEvent fill:#f00,color:white,font-weight:bold,stroke-width:2px,stroke:yellow
+
+   [*]--> Still
+   Still --> [*]
+   Still --> Moving
+   Moving --> Still
+   Moving --> Crash
+   Crash --> [*]
+
+   class Still notMoving
+   class Moving, Crash movement
+   class Crash badBadEvent
+```
+
+### Example (Using ::: operator)
+
+Apply a classDef style using the `:::` operator:
+
+```mermaid
+stateDiagram
+   direction TB
+
+   accTitle: This is the accessible title
+   accDescr: This is an accessible description
+
+   classDef notMoving fill:white
+   classDef movement font-style:italic;
+   classDef badBadEvent fill:#f00,color:white,font-weight:bold,stroke-width:2px,stroke:yellow
+
+   [*] --> Still:::notMoving
+   Still --> [*]
+   Still --> Moving:::movement
+   Moving --> Still
+   Moving --> Crash:::movement
+   Crash:::badBadEvent --> [*]
+```
+
+### Example (Spaces in state names)
+
+Spaces can be added to a state by first defining the state with an id and then referencing the id later:
+
+```mermaid
+stateDiagram
+    classDef yourState font-style:italic,font-weight:bold,fill:white
+
+    yswsii: Your state with spaces in it
+    [*] --> yswsii:::yourState
+    [*] --> SomeOtherState
+    SomeOtherState --> YetAnotherState
     yswsii --> YetAnotherState
-
-    state yswsii : Your state with spaces in it
     YetAnotherState --> [*]
-
-    classDef spacedState fill:#ffe66d,stroke:#333,stroke-width:2px
-    class yswsii spacedState
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

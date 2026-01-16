@@ -280,3 +280,166 @@ flowchart LR
     linkStyle 0 stroke:#333,stroke-width:2px
     linkStyle 1 stroke:#333,stroke-width:2px
 ```
+
+### Example (With Unicode Text)
+
+Use quotes to enclose unicode text in nodes:
+
+```mermaid
+flowchart LR
+    id["This ❤ Unicode"]
+```
+
+### Example (With Markdown Formatting)
+
+Use double quotes and backticks to enclose markdown text:
+
+```mermaid
+---
+config:
+  flowchart:
+    htmlLabels: false
+---
+flowchart LR
+    markdown["`This **is** _Markdown_`"]
+    newLines["`Line1
+    Line 2
+    Line 3`"]
+    markdown --> newLines
+```
+
+### Example (With Invisible Links)
+
+Use `~~~` to create invisible links for positioning:
+
+```mermaid
+flowchart LR
+    A ~~~ B
+    B --> C
+```
+
+### Example (With Multi-directional Arrows)
+
+Use circle and cross edge types for multi-directional arrows:
+
+```mermaid
+flowchart LR
+    A o--o B
+    B <--> C
+    C x--x D
+```
+
+### Example (With Circle and Cross Edges)
+
+Use `--o` for circle edge and `--x` for cross edge:
+
+```mermaid
+flowchart LR
+    A --o B
+    C --x D
+```
+
+### Example (With Minimum Link Length)
+
+Add extra dashes to make links span more ranks:
+
+```mermaid
+flowchart TD
+    A[Start] --> B{Is it?}
+    B -->|Yes| C[OK]
+    C --> D[Rethink]
+    D --> B
+    B ---->|No| E[End]
+```
+
+### Example (With Entity Codes)
+
+Use entity codes to escape special characters:
+
+```mermaid
+flowchart LR
+    A["A double quote:#quot;"] --> B["A dec char:#9829;"]
+```
+
+### Example (With Icon Shape - v11.3.0+)
+
+**Note**: Icon shapes require Mermaid v11.3.0+ and registered icon packs.
+
+```mermaid
+flowchart TD
+    A@{ icon: "fa:user", form: "square", label: "User Icon", pos: "t", h: 60 }
+```
+
+### Example (With Image Shape - v11.3.0+)
+
+**Note**: Image shapes require Mermaid v11.3.0+.
+
+```mermaid
+flowchart TD
+    A@{ img: "https://mermaid.js.org/favicon.svg", label: "My example image label", pos: "t", h: 60, constraint: "on" }
+```
+
+### Example (With Edge Animations - v11.10.0+)
+
+**Note**: Edge animations require Mermaid v11.10.0+.
+
+```mermaid
+flowchart LR
+    A e1@--> B
+    e1@{ animation: fast }
+```
+
+### Example (With Click Events and Link Targets)
+
+Bind click events to nodes with tooltips and link targets:
+
+```mermaid
+flowchart LR
+    A-->B
+    B-->C
+    C-->D
+    click A "https://www.github.com" _blank
+    click B "https://www.github.com" "Open this in a new tab" _blank
+    click C href "https://www.github.com" _blank
+```
+
+### Example (With Chaining Links)
+
+Declare multiple links in the same line:
+
+```mermaid
+flowchart LR
+    A -- text --> B -- text2 --> C
+```
+
+### Example (With Multiple Node Links)
+
+Declare multiple node links in the same line:
+
+```mermaid
+flowchart TB
+    A & B --> C & D
+```
+
+### Example (With CSS Classes)
+
+Apply predefined CSS classes to nodes:
+
+```mermaid
+flowchart LR
+    A-->B[AAA<span>BBB</span>]
+    B-->D
+    class A cssClass
+```
+
+### Example (With Default Class)
+
+Define a default class that applies to all nodes without specific class definitions:
+
+```mermaid
+flowchart LR
+    A --> B
+    B --> C
+    
+    classDef default fill:#f9f,stroke:#333,stroke-width:4px
+```

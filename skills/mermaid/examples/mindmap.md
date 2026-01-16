@@ -20,66 +20,37 @@ Mindmaps visualize hierarchical information, showing relationships between conce
 - Icons: `::icon(fa:fa-icon-name)` (experimental, requires icon fonts)
 - Classes: `:::class1 class2` (triple colon followed by CSS classes)
 - Markdown strings: Supports **bold** and *italics*, auto-wraps text
+- Configuration: `layout: tidy-tree` for alternative layout
 
-Reference: [Mermaid Mindmap Documentation](https://mermaid.ai/open-source/syntax/mindmap.html)
+Reference: [Mermaid Mindmap Documentation](https://mermaid.js.org/syntax/mindmap.html)
 
-### Example (Basic Mindmap)
+### Example (Basic Mindmap with Icons)
 
-```mermaid
-mindmap
-    root((Mermaid))
-        Flowcharts
-            Basic Flowchart
-            Subgraph
-            Styling
-        Sequence Diagrams
-            Participants
-            Messages
-            Activations
-        Class Diagrams
-            Classes
-            Relationships
-            Interfaces
-        Other Diagrams
-            State Diagrams
-            ER Diagrams
-            Gantt Charts
-```
-
-### Example (With Different Shapes)
+A complete mindmap example with icons:
 
 ```mermaid
 mindmap
-    root((Project))
-        Planning["Planning"]
-            Requirements("Requirements")
-            Design(("Design"))
-            Timeline))Timeline((
-        Development{{"Development"}}
-            Frontend
-            Backend
-            Database
-        Testing
-            Unit Tests
-            Integration Tests
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
 ```
 
-### Example (With Markdown Formatting)
+### Example (Basic Syntax)
 
-```mermaid
-mindmap
-    root((**Mermaid**))
-        *Flowcharts*
-            **Basic** Flowchart
-            *Subgraph*
-            Styling
-        Sequence Diagrams
-            **Participants**
-            Messages
-            *Activations*
-```
-
-### Example (Simple Hierarchy)
+A simple mindmap with hierarchical structure:
 
 ```mermaid
 mindmap
@@ -87,51 +58,137 @@ mindmap
         A
             B
             C
-        D
-            E
-            F
 ```
 
-### Example (Technology Stack)
+### Example (Square Shape)
+
+Use square shape for a node:
 
 ```mermaid
 mindmap
-    root((Tech Stack))
-        Frontend
-            React
-            Vue
-            Angular
-        Backend
-            Node.js
-            Python
-            Java
-        Database
-            PostgreSQL
-            MongoDB
-            Redis
-        DevOps
-            Docker
-            Kubernetes
-            CI/CD
+    id[I am a square]
 ```
 
-### Example (Project Planning)
+### Example (Rounded Square Shape)
+
+Use rounded square shape for a node:
 
 ```mermaid
 mindmap
-    root((Project))
-        Planning
-            Requirements
-            Design
-            Timeline
-        Development
-            Frontend
-            Backend
-            Testing
-        Deployment
-            Staging
-            Production
-            Monitoring
+    id(I am a rounded square)
+```
+
+### Example (Circle Shape)
+
+Use circle shape for a node:
+
+```mermaid
+mindmap
+    id((I am a circle))
+```
+
+### Example (Bang Shape)
+
+Use bang shape for a node:
+
+```mermaid
+mindmap
+    id))I am a bang((
+```
+
+### Example (Cloud Shape)
+
+Use cloud shape for a node:
+
+```mermaid
+mindmap
+    id)I am a cloud(
+```
+
+### Example (Hexagon Shape)
+
+Use hexagon shape for a node:
+
+```mermaid
+mindmap
+    id{{I am a hexagon}}
+```
+
+### Example (Default Shape)
+
+Default shape (no delimiters):
+
+```mermaid
+mindmap
+    I am the default shape
+```
+
+### Example (With Icons)
+
+Add icons to nodes (requires icon fonts to be loaded):
+
+```mermaid
+mindmap
+    Root
+        A
+        ::icon(fa fa-book)
+        B(B)
+        ::icon(mdi mdi-skull-outline)
+```
+
+### Example (With CSS Classes)
+
+Apply CSS classes to style nodes:
+
+```mermaid
+mindmap
+    Root
+        A[A]
+        :::urgent large
+        B(B)
+        C
+```
+
+### Example (Unclear Indentation)
+
+Mermaid handles unclear indentation by finding the nearest parent:
+
+```mermaid
+mindmap
+    Root
+        A
+            B
+          C
+```
+
+### Example (Markdown Strings)
+
+Use markdown formatting in labels with automatic text wrapping:
+
+```mermaid
+mindmap
+    id1["`**Root** with
+a second line
+Unicode works too: 🤓`"]
+      id2["`The dog in **the** hog... a *very long text* that wraps to a new line`"]
+      id3[Regular labels still works]
+```
+
+### Example (With Configuration - Tidy Tree Layout)
+
+Configure alternative layout using tidy-tree:
+
+```mermaid
+---
+config:
+  layout: tidy-tree
+---
+mindmap
+root((mindmap is a long thing))
+  A
+  B
+  C
+  D
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

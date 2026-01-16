@@ -22,229 +22,207 @@ Requirement diagrams model system requirements and their relationships, showing 
 - Styling: `style name fill:#color,stroke:#color` or `classDef className fill:#color`
 - Markdown formatting: Supports **bold** and *italics* in quoted text
 
-Reference: [Mermaid Requirement Diagram Documentation](https://mermaid.ai/open-source/syntax/requirementDiagram.html)
+Reference: [Mermaid Requirement Diagram Documentation](https://mermaid.js.org/syntax/requirementDiagram.html)
 
 ### Example (Basic Requirement Diagram)
 
-```mermaid
-requirementDiagram
-    requirement R1 {
-        id: 1
-        text: System must handle 1000 concurrent users
-        risk: high
-        verifymethod: test
-    }
-    requirement R2 {
-        id: 2
-        text: System must respond within 2 seconds
-        risk: medium
-        verifymethod: test
-    }
-
-    element E1 {
-        type: System
-        docref: docs/system.md
-    }
-
-    R1 - satisfies -> E1
-    R2 - satisfies -> E1
-```
-
-### Example (With Different Requirement Types)
+A simple requirement diagram with requirement and element:
 
 ```mermaid
 requirementDiagram
-    functionalRequirement FR1 {
-        id: 1
-        text: User authentication functionality
-        risk: high
-        verifymethod: test
-    }
-    performanceRequirement PR1 {
-        id: 2
-        text: Response time must be under 2 seconds
-        risk: medium
-        verifymethod: analysis
-    }
-    interfaceRequirement IR1 {
-        id: 3
-        text: REST API interface specification
-        risk: low
-        verifymethod: inspection
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
     }
 
-    FR1 - refines -> PR1
-    PR1 - traces -> IR1
-```
-
-### Example (With Relationships)
-
-```mermaid
-requirementDiagram
-    requirement R1 {
-        id: 1
-        text: High-level system requirement
-        risk: high
-        verifymethod: test
-    }
-    requirement R2 {
-        id: 2
-        text: Detailed requirement
-        risk: medium
-        verifymethod: test
-    }
-    requirement R3 {
-        id: 3
-        text: Derived requirement
-        risk: low
-        verifymethod: analysis
+    element test_entity {
+    type: simulation
     }
 
-    element E1 {
-        type: Component
-        docref: docs/component.md
-    }
-
-    R1 - contains -> R2
-    R2 - refines -> R1
-    R3 - derives -> R1
-    R2 - satisfies -> E1
-    E1 - verifies -> R2
+    test_entity - satisfies -> test_req
 ```
 
 ### Example (With Markdown Formatting)
 
+Use markdown formatting in requirement names and text:
+
 ```mermaid
 requirementDiagram
-    requirement R1 {
-        id: 1
-        text: "System must support **bold** and *italic* text"
-        risk: low
-        verifymethod: inspection
-    }
 
-    element E1 {
-        type: "**System** Component"
-        docref: "docs/*system*.md"
-    }
-
-    R1 - satisfies -> E1
+requirement "__test_req__" {
+    id: 1
+    text: "*italicized text* **bold text**"
+    risk: high
+    verifymethod: test
+}
 ```
 
-### Example (With Direction - Left to Right)
+### Example (Larger Example - All Features)
+
+A complete example using all requirement types and relationships:
 
 ```mermaid
 requirementDiagram
-    direction LR
 
-    requirement R1 {
-        id: 1
-        text: Requirement 1
-        risk: high
-        verifymethod: test
-    }
-    requirement R2 {
-        id: 2
-        text: Requirement 2
-        risk: medium
-        verifymethod: test
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
     }
 
-    R1 - refines -> R2
+    functionalRequirement test_req2 {
+    id: 1.1
+    text: the second test text.
+    risk: low
+    verifymethod: inspection
+    }
+
+    performanceRequirement test_req3 {
+    id: 1.2
+    text: the third test text.
+    risk: medium
+    verifymethod: demonstration
+    }
+
+    interfaceRequirement test_req4 {
+    id: 1.2.1
+    text: the fourth test text.
+    risk: medium
+    verifymethod: analysis
+    }
+
+    physicalRequirement test_req5 {
+    id: 1.2.2
+    text: the fifth test text.
+    risk: medium
+    verifymethod: analysis
+    }
+
+    designConstraint test_req6 {
+    id: 1.2.3
+    text: the sixth test text.
+    risk: medium
+    verifymethod: analysis
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    element test_entity2 {
+    type: word doc
+    docRef: reqs/test_entity
+    }
+
+    element test_entity3 {
+    type: "test suite"
+    docRef: github.com/all_the_tests
+    }
+
+
+    test_entity - satisfies -> test_req2
+    test_req - traces -> test_req2
+    test_req - contains -> test_req3
+    test_req3 - contains -> test_req4
+    test_req4 - derives -> test_req5
+    test_req5 - refines -> test_req6
+    test_entity3 - verifies -> test_req5
+    test_req <- copies - test_entity2
 ```
 
-### Example (With Styling)
+### Example (With Direction)
+
+Change diagram direction using direction keyword:
 
 ```mermaid
 requirementDiagram
-    requirement R1 {
-        id: 1
-        text: High priority requirement
-        risk: high
-        verifymethod: test
-    }
-    requirement R2 {
-        id: 2
-        text: Medium priority requirement
-        risk: medium
-        verifymethod: test
-    }
 
-    element E1 {
-        type: System
-        docref: docs/system.md
-    }
+direction LR
 
-    R1 - satisfies -> E1
-    R2 - satisfies -> E1
+requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+}
 
-    style R1 fill:#ff6b6b,stroke:#333,stroke-width:3px
-    style R2 fill:#4ecdc4,stroke:#333,stroke-width:2px
-    style E1 fill:#ffe66d,stroke:#333,stroke-width:2px
+element test_entity {
+    type: simulation
+}
+
+test_entity - satisfies -> test_req
+```
+
+### Example (With Direct Styling)
+
+Apply CSS styles directly to requirements and elements:
+
+```mermaid
+requirementDiagram
+
+requirement test_req {
+    id: 1
+    text: styling example
+    risk: low
+    verifymethod: test
+}
+
+element test_entity {
+    type: simulation
+}
+
+style test_req fill:#ffa,stroke:#000, color: green
+style test_entity fill:#f9f,stroke:#333, color: blue
 ```
 
 ### Example (With Class Definitions)
 
+Define reusable styles using classDef:
+
 ```mermaid
 requirementDiagram
-    requirement R1 {
-        id: 1
-        text: Requirement 1
-        risk: high
-        verifymethod: test
-    }
-    requirement R2 {
-        id: 2
-        text: Requirement 2
-        risk: medium
-        verifymethod: test
-    }
 
-    classDef highRisk fill:#ff6b6b,stroke:#333,stroke-width:3px
-    classDef mediumRisk fill:#4ecdc4,stroke:#333,stroke-width:2px
+requirement test_req {
+    id: 1
+    text: "class styling example"
+    risk: low
+    verifymethod: test
+}
 
-    class R1 highRisk
-    class R2 mediumRisk
+element test_entity {
+    type: simulation
+}
+
+classDef important fill:#f96,stroke:#333,stroke-width:4px
+classDef test fill:#ffa,stroke:#000
 ```
 
-### Example (Complex Requirement Diagram)
+### Example (Combined Example - Class and Style)
+
+Combine class definitions with direct styling and shorthand syntax:
 
 ```mermaid
 requirementDiagram
-    requirement R1 {
-        id: 1
-        text: System must be scalable
-        risk: high
-        verifymethod: test
-    }
-    requirement R2 {
-        id: 2
-        text: System must handle 1000 users
-        risk: high
-        verifymethod: test
-    }
-    requirement R3 {
-        id: 3
-        text: System must respond quickly
-        risk: medium
-        verifymethod: analysis
-    }
 
-    element E1 {
-        type: System
-        docref: docs/system.md
-    }
-    element E2 {
-        type: Component
-        docref: docs/component.md
-    }
+requirement test_req:::important {
+    id: 1
+    text: "class styling example"
+    risk: low
+    verifymethod: test
+}
 
-    R1 - contains -> R2
-    R1 - contains -> R3
-    R2 - satisfies -> E1
-    R3 - satisfies -> E1
-    E1 - verifies -> R2
-    E2 - verifies -> R3
+element test_entity {
+    type: simulation
+}
+
+classDef important font-weight:bold
+
+class test_entity important
+style test_entity fill:#f9f,stroke:#333
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)

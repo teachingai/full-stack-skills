@@ -2,11 +2,7 @@
 
 Treemap diagrams display hierarchical data as a set of nested rectangles. Each branch of the tree is represented by a rectangle, which is then tiled with smaller rectangles representing sub-branches. The size of each rectangle is proportional to the value it represents, making it easy to compare different parts of a hierarchy.
 
-Treemap diagrams are particularly useful for:
-- Visualizing hierarchical data structures
-- Comparing proportions between categories
-- Displaying large amounts of hierarchical data in a limited space
-- Identifying patterns and outliers in hierarchical data
+**Note**: This is a new diagram type in Mermaid. Its syntax may evolve in future versions.
 
 ### Syntax
 
@@ -16,84 +12,148 @@ Treemap diagrams are particularly useful for:
 - Hierarchy: Created using indentation (spaces or tabs)
 - Styling: Nodes can be styled using `:::class` syntax
 - Root node: The first node is the root of the tree
-- **Important**: If your environment doesn't support treemap, use the flowchart alternative below
+- Configuration: `useMaxWidth`, `padding`, `diagramPadding`, `showValues`, `nodeWidth`, `nodeHeight`, `borderWidth`, `valueFontSize`, `labelFontSize`, `valueFormat`
 
-Reference: [Mermaid Treemap Diagram Documentation](https://mermaid.ai/open-source/syntax/treemap.html)
+Reference: [Mermaid Treemap Diagram Documentation](https://mermaid.js.org/syntax/treemap.html)
 
 ### Example (Basic Treemap)
 
+A simple treemap with categories and items:
+
 ```mermaid
 treemap-beta
-"Sales"
-    "Region A": 500
-    "Region B": 300
-    "Region C": 200
+"Category A"
+    "Item A1": 10
+    "Item A2": 20
+"Category B"
+    "Item B1": 15
+    "Item B2": 25
 ```
 
 ### Example (Hierarchical Treemap)
 
+A treemap with multiple levels of hierarchy:
+
 ```mermaid
 treemap-beta
-"Sales"
-    "Region A": 500
-        "Product A1": 200
-        "Product A2": 150
-        "Product A3": 150
-    "Region B": 300
-        "Product B1": 120
-        "Product B2": 180
-    "Region C": 200
-        "Product C1": 100
-        "Product C2": 100
+"Products"
+    "Electronics"
+        "Phones": 50
+        "Computers": 30
+        "Accessories": 20
+    "Clothing"
+        "Men's": 40
+        "Women's": 40
 ```
 
 ### Example (With Styling)
 
-```mermaid
-treemap-beta
-"Sales":::highlight
-    "Region A": 500:::regionA
-    "Region B": 300:::regionB
-    "Region C": 200:::regionC
-
-classDef highlight fill:#ff6b6b,stroke:#333,stroke-width:3px
-classDef regionA fill:#4ecdc4,stroke:#333,stroke-width:2px
-classDef regionB fill:#45b7d1,stroke:#333,stroke-width:2px
-classDef regionC fill:#f9ca24,stroke:#333,stroke-width:2px
-```
-
-### Example (File System Structure)
+Style nodes using classDef:
 
 ```mermaid
 treemap-beta
-"Disk Usage"
-    "System": 500
-        "Applications": 200
-        "Library": 150
-        "Users": 150
-    "Documents": 300
-        "Projects": 180
-        "Downloads": 120
-    "Media": 200
-        "Photos": 120
-        "Videos": 80
+"Section 1"
+    "Leaf 1.1": 12
+    "Section 1.2":::class1
+      "Leaf 1.2.1": 12
+"Section 2"
+    "Leaf 2.1": 20:::class1
+    "Leaf 2.2": 25
+    "Leaf 2.3": 12
+
+classDef class1 fill:red,color:blue,stroke:#FFD600;
 ```
 
-### Example (Budget Allocation)
+### Example (Using classDef for Styling)
+
+Another example of styling with classDef:
 
 ```mermaid
+treemap-beta
+"Main"
+    "A": 20
+    "B":::important
+        "B1": 10
+        "B2": 15
+    "C": 5
+
+classDef important fill:#f96,stroke:#333,stroke-width:2px;
+```
+
+### Example (With Theme Configuration)
+
+Configure treemap theme:
+
+```mermaid
+---
+config:
+  theme: 'forest'
+---
+treemap-beta
+"Category A"
+    "Item A1": 10
+    "Item A2": 20
+"Category B"
+    "Item B1": 15
+    "Item B2": 25
+```
+
+### Example (With Diagram Padding)
+
+Adjust padding around the treemap:
+
+```mermaid
+---
+config:
+  treemap:
+    diagramPadding: 200
+---
+treemap-beta
+"Category A"
+    "Item A1": 10
+    "Item A2": 20
+"Category B"
+    "Item B1": 15
+    "Item B2": 25
+```
+
+### Example (With Currency Formatting)
+
+Format values as currency:
+
+```mermaid
+---
+config:
+  treemap:
+    valueFormat: '$0,0'
+---
 treemap-beta
 "Budget"
-    "Development": 50000
-        "Salaries": 35000
-        "Tools": 10000
-        "Training": 5000
-    "Marketing": 30000
-        "Advertising": 20000
-        "Events": 10000
-    "Operations": 20000
-        "Infrastructure": 15000
-        "Support": 5000
+    "Operations"
+        "Salaries": 700000
+        "Equipment": 200000
+        "Supplies": 100000
+    "Marketing"
+        "Advertising": 400000
+        "Events": 100000
+```
+
+### Example (With Percentage Formatting)
+
+Format values as percentages:
+
+```mermaid
+---
+config:
+  treemap:
+    valueFormat: '$.1%'
+---
+treemap-beta
+"Market Share"
+    "Company A": 0.35
+    "Company B": 0.25
+    "Company C": 0.15
+    "Others": 0.25
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)
