@@ -33,44 +33,59 @@ Reference: [Mermaid Gantt Chart Documentation](https://mermaid.ai/open-source/sy
 
 ```mermaid
 gantt
-    title Project Timeline
+    title A Gantt Diagram
     dateFormat YYYY-MM-DD
-    section Phase 1
-    Design :done, des1, 2024-01-01, 2024-01-15
-    Development :active, dev1, 2024-01-16, 2024-02-15
-    section Phase 2
-    Testing :test1, after dev1, 10d
-    Deployment :milestone, deploy1, after test1, 1d
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
 ```
 
 ### Example (With Task IDs and Dependencies)
 
 ```mermaid
 gantt
-    title Project Schedule
-    dateFormat YYYY-MM-DD
-    section Design
-    Requirements :req1, 2024-01-01, 2024-01-10
-    Design Phase :des1, after req1, 2024-01-25
-    section Development
-    Frontend :front1, after des1, 20d
-    Backend :back1, after des1, 25d
-    section Testing
-    Integration Testing :test1, after front1 back1, 10d
-    Deployment :milestone, deploy1, after test1, 1d
+    dateFormat  YYYY-MM-DD
+    title       Adding GANTT diagram functionality to mermaid
+    excludes    weekends
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2              :         des4, after des3, 5d
+
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :until isadded
+    Functionality added                 :milestone, isadded, 2014-01-25, 0d
+
+    section Documentation
+    Describe gantt syntax               :active, a1, after des1, 3d
+    Add gantt diagram to demo page      :after a1  , 20h
+    Add another diagram to demo page    :doc1, after a1  , 48h
+
+    section Last section
+    Describe gantt syntax               :after doc1, 3d
+    Add gantt diagram to demo page      :20h
+    Add another diagram to demo page    :48h
 ```
 
-### Example (With Tags)
+### Example (With Multiple Task Dependencies)
 
 ```mermaid
 gantt
-    title Project with Tags
-    dateFormat YYYY-MM-DD
-    section Tasks
-    Completed Task :done, task1, 2024-01-01, 2024-01-10
-    Active Task :active, task2, 2024-01-11, 2024-01-25
-    Critical Task :crit, task3, 2024-01-26, 2024-02-10
-    Milestone :milestone, milestone1, 2024-02-11, 0d
+    apple :a, 2017-07-20, 1w
+    banana :crit, b, 2017-07-23, 1d
+    cherry :active, c, after b a, 1d
+    kiwi   :d, 2017-07-20, until b c
 ```
 
 ### Example (With Excludes)
@@ -89,16 +104,44 @@ gantt
 
 ```mermaid
 gantt
-    title Project with Custom Weekend
+    title A Gantt Diagram Excluding Fri - Sat weekends
     dateFormat YYYY-MM-DD
     excludes weekends
     weekend friday
-    section Development
-    Task 1 :task1, 2024-01-01, 10d
-    Task 2 :task2, after task1, 10d
+    section Section
+        A task          :a1, 2024-01-01, 30d
+        Another task    :after a1, 20d
+```
+
+### Example (With Milestones)
+
+```mermaid
+gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    Initial milestone : milestone, m1, 17:49, 2m
+    Task A : 10m
+    Task B : 5m
+    Final milestone : milestone, m2, 18:08, 4m
+```
+
+### Example (With Vertical Markers)
+
+**Note**: Vertical markers (`vert`) may not be supported in all Mermaid versions. If this example doesn't work, use milestones instead.
+
+```mermaid
+gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    Initial milestone : milestone, m1, 17:30, 0m
+    Task A : 3m
+    Task B : 8m
+    Final milestone : milestone, m2, 17:58, 0m
 ```
 
 ### Example (With Tick Interval)
+
+**Note**: `tickInterval` requires Mermaid v10.3.0+. This example includes tasks to demonstrate the tick interval.
 
 ```mermaid
 gantt
@@ -111,39 +154,54 @@ gantt
     Development :dev1, after des1, 20d
 ```
 
-### Example (Sequential Tasks)
+### Example (With Comments)
 
 ```mermaid
 gantt
-    title Sequential Tasks
+    title A Gantt Diagram
+    %% This is a comment
     dateFormat YYYY-MM-DD
-    section Phase 1
-    Task A :2024-01-01, 5d
-    Task B :5d
-    Task C :10d
-    section Phase 2
-    Task D :after Task C, 7d
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
 ```
 
-### Example (Complex Project)
+### Example (Compact Mode)
+
+```mermaid
+---
+displayMode: compact
+---
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :a2, 2014-01-20, 25d
+    Another one      :a3, 2014-02-10, 20d
+```
+
+### Example (Bar Chart using Gantt)
 
 ```mermaid
 gantt
-    title Software Development Project
-    dateFormat YYYY-MM-DD
-    excludes weekends
-    section Planning
-    Requirements Gathering :done, req1, 2024-01-01, 2024-01-10
-    System Design :done, des1, after req1, 2024-01-20
-    section Development
-    Frontend Development :active, front1, after des1, 30d
-    Backend Development :active, back1, after des1, 35d
-    Database Setup :db1, after des1, 10d
-    section Testing
-    Unit Testing :test1, after front1 back1, 15d
-    Integration Testing :test2, after test1, 10d
-    section Deployment
-    Production Deployment :milestone, deploy1, after test2, 0d
+    title Git Issues - days since last update
+    dateFormat X
+    axisFormat %s
+    section Issue19062
+    71   : 0, 71
+    section Issue19401
+    36   : 0, 36
+    section Issue193
+    34   : 0, 34
+    section Issue7441
+    9    : 0, 9
+    section Issue1300
+    5    : 0, 5
 ```
 
 ### Alternative (Flowchart - compatible with all Mermaid versions)
@@ -151,9 +209,43 @@ gantt
 If Gantt charts are not supported, use this flowchart alternative:
 
 ```mermaid
-flowchart LR
-    Start[Project Start] --> Phase1[Phase 1: Design]
-    Phase1 --> Phase2[Phase 2: Development]
-    Phase2 --> Phase3[Phase 3: Testing]
-    Phase3 --> End[Deployment]
+flowchart TD
+    Start([Project Start]) --> PlanningPhase[Planning Phase]
+    PlanningPhase --> DesignPhase[Design Phase]
+    DesignPhase --> DevelopmentPhase[Development Phase]
+    DevelopmentPhase --> TestingPhase[Testing Phase]
+    TestingPhase --> Deployment([Deployment])
+    
+    subgraph Planning["Planning"]
+        Req[Requirements<br/>Gathering]
+        Sys[System Design]
+        Req --> Sys
+    end
+    
+    subgraph Development["Development"]
+        Front[Frontend<br/>Development]
+        Back[Backend<br/>Development]
+        DB[Database<br/>Setup]
+    end
+    
+    subgraph Testing["Testing"]
+        Unit[Unit Testing]
+        Integration[Integration<br/>Testing]
+        Unit --> Integration
+    end
+    
+    PlanningPhase --> Req
+    DesignPhase --> Front
+    DesignPhase --> Back
+    DesignPhase --> DB
+    Front --> Unit
+    Back --> Unit
+    DB --> Unit
+    Integration --> Deployment
+    
+    style Start fill:#e1f5,stroke:#333
+    style Deployment fill:#e1f5,stroke:#333
+    style PlanningPhase fill:#bbf,stroke:#333
+    style DevelopmentPhase fill:#bbf,stroke:#333
+    style TestingPhase fill:#bbf,stroke:#333
 ```
