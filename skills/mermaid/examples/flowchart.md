@@ -244,28 +244,39 @@ flowchart TD
 
 ### Example (With New Shapes - v11.3.0+)
 
-```mermaid
-flowchart TD
-    A@{ shape: cloud, label: "Cloud" }
-    B@{ shape: diam, label: "Decision" }
-    C@{ shape: cyl, label: "Database" }
-    D@{ shape: bang, label: "Event" }
+**Note**: New shapes require Mermaid v11.3.0+. If your environment doesn't support new shapes, use traditional shapes instead.
 
-    A --> B
-    B --> C
-    C --> D
+```mermaid
+flowchart RL
+    A@{ shape: manual-file, label: "File Handling"}
+    B@{ shape: manual-input, label: "User Input"}
+    C@{ shape: docs, label: "Multiple Documents"}
+    D@{ shape: procs, label: "Process Automation"}
+    E@{ shape: paper-tape, label: "Paper Records"}
 ```
 
 ### Example (With Edge IDs and Curve Styles - v11.10.0+)
+
+**Note**: Edge ID syntax requires Mermaid v11.10.0+. If your environment doesn't support edge IDs, use linkStyle instead (shown in alternative below).
+
+```mermaid
+flowchart LR
+    A e1@==> B
+    A e2@--> C
+    e1@{ curve: linear }
+    e2@{ curve: natural }
+```
+
+**Alternative (Using linkStyle - Compatible with all versions):**
 
 ```mermaid
 flowchart LR
     A[Start]
     B[Process]
     C[End]
-    A -->|Step 1|e1[ID] B
-    B -->|Step 2|e2[ID] C
+    A -->|Step 1| B
+    B -->|Step 2| C
 
-    e1.curve = "stepBefore"
-    e2.curve = "stepAfter"
+    linkStyle 0 stroke:#333,stroke-width:2px
+    linkStyle 1 stroke:#333,stroke-width:2px
 ```
