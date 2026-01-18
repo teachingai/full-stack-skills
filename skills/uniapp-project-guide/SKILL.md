@@ -116,13 +116,28 @@ uni-ui 是 DCloud 官方提供的跨端 UI 库，包含 40+ 个常用组件，�
 **用途**：代码示例，包含完整的可运行代码
 
 **结构**：
+- `examples/components/built-in/` - 内置组件的完整示例代码（每个组件一个独立的 .md 文件，包含官网全部示例）
+- `examples/api/` - API 的完整示例代码（按分类组织，每个 API 一个独立的 .md 文件）
+  - `examples/api/network/` - 网络请求 API 示例
+  - `examples/api/storage/` - 数据存储 API 示例
+  - `examples/api/device/` - 设备信息 API 示例
+  - `examples/api/ui/` - 界面交互 API 示例
+  - `examples/api/location/` - 位置服务 API 示例
+  - `examples/api/media/` - 媒体处理 API 示例
+  - `examples/api/navigation/` - 页面路由 API 示例
+  - `examples/api/file/` - 文件操作 API 示例
+  - `examples/api/payment/` - 支付 API 示例
+  - `examples/api/share/` - 分享 API 示例
+  - `examples/api/other/` - 其他 API 示例
 - `examples/uni-ui/` - uni-ui 组件的完整示例代码（每个组件一个独立的 .vue 文件）
 
-**使用场景**：当需要查看组件的完整使用示例时，参考此目录下的示例文件。每个示例文件包含官网展示的所有示例场景，可直接复制使用。
+**使用场景**：当需要查看组件或 API 的完整使用示例时，参考此目录下的示例文件。每个示例文件包含官网展示的所有示例场景，可直接复制使用。
 
 **注意**：
 - references/ 和 examples/ 职责不同，不应合并。references/ 提供文档说明，examples/ 提供可运行代码。
-- 内置组件的示例代码请参考[官方文档](https://uniapp.dcloud.net.cn/component/)
+- 每个组件和 API 都有独立的示例文件，包含原文档地址和官网全部示例
+- 内置组件的示例代码在 `examples/components/built-in/` 目录
+- API 的示例代码在 `examples/api/` 目录，按分类组织
 - uni-ui 组件的完整示例代码在 `examples/uni-ui/` 目录
 
 ## 平台支持
