@@ -1,0 +1,194 @@
+---
+name: jest-guide
+description: Jest 完整使用指南，基于官方文档（https://jestjs.io/docs/getting-started、https://jestjs.io/docs/api），涵盖测试编写、匹配器、异步测试、Mock、快照测试、配置、CLI、API 等核心概念和最佳实践。适用于使用 Jest 进行 JavaScript/TypeScript 单元测试和集成测试的场景。
+license: Complete terms in LICENSE.txt
+---
+
+## When to use this skill
+
+Use this skill whenever the user wants to:
+- Write unit tests and integration tests with Jest
+- Set up Jest in a project
+- Use Jest matchers and assertions
+- Test asynchronous code
+- Mock functions, modules, and dependencies
+- Create snapshot tests
+- Configure Jest for different environments
+- Use Jest with TypeScript, React, Vue, or other frameworks
+- Run tests and generate coverage reports
+- Use Jest CLI commands
+- Set up test environments (jsdom, node)
+- Use Jest with Vite (via vite-jest, though Vitest is recommended for new Vite projects)
+
+## How to use this skill
+
+This skill is organized to match the Jest official documentation structure (https://jestjs.io/docs/getting-started, https://jestjs.io/docs/api). When working with Jest:
+
+1. **Identify the topic** from the user's request:
+   - Getting started/快速开始 → `examples/getting-started/installation.md` or `examples/getting-started/using-matchers.md`
+   - Testing/测试 → `examples/testing/asynchronous.md` or `examples/testing/setup-teardown.md`
+   - Mock functions/Mock 函数 → `examples/testing/mock-functions.md`
+   - Mock modules/Mock 模块 → `examples/testing/manual-mocks.md`
+   - Snapshots/快照 → `examples/testing/snapshot-testing.md`
+   - Configuration/配置 → `examples/configuration/jest-config.md`
+   - CLI/命令行 → `examples/configuration/cli-options.md`
+
+2. **Load the appropriate example file** from the `examples/` directory:
+
+   **Getting Started (快速开始) - `examples/getting-started/`**:
+   - `examples/getting-started/installation.md` - Installing Jest and basic setup
+   - `examples/getting-started/using-matchers.md` - Using Jest matchers and assertions
+
+   **Testing (测试) - `examples/testing/`**:
+   - `examples/testing/asynchronous.md` - Testing asynchronous code
+   - `examples/testing/setup-teardown.md` - Setup and teardown functions
+   - `examples/testing/mock-functions.md` - Mocking functions
+   - `examples/testing/manual-mocks.md` - Manual mocks
+   - `examples/testing/snapshot-testing.md` - Snapshot testing
+   - `examples/testing/timer-mocks.md` - Mocking timers
+   - `examples/testing/es6-class-mocks.md` - Mocking ES6 classes
+
+   **Configuration (配置) - `examples/configuration/`**:
+   - `examples/configuration/jest-config.md` - Jest configuration options
+   - `examples/configuration/cli-options.md` - CLI options and flags
+   - `examples/configuration/babel.md` - Using Jest with Babel
+   - `examples/configuration/typescript.md` - Using Jest with TypeScript
+
+   **Guides (指南) - `examples/guides/`**:
+   - `examples/guides/migrating-to-jest.md` - Migrating to Jest
+   - `examples/guides/testing-react-apps.md` - Testing React applications
+   - `examples/guides/testing-vue-apps.md` - Testing Vue applications
+
+3. **Follow the specific instructions** in that example file for syntax, structure, and best practices
+
+   **Important Notes**:
+   - All examples follow Jest best practices
+   - Examples include both JavaScript and TypeScript versions where applicable
+   - Each example file includes key concepts, code examples, and key points
+   - Always check the example file for best practices and common patterns
+
+4. **Reference API documentation** in the `api/` directory when needed:
+   - `api/expect.md` - expect() API and matchers
+   - `api/mock-functions.md` - Mock functions API
+   - `api/jest-object.md` - Jest object API
+   - `api/test.md` - test() and describe() API
+   - `api/cli.md` - CLI commands and options
+
+5. **Use templates** from the `templates/` directory:
+   - `templates/jest-config.md` - Jest configuration templates
+   - `templates/test-template.md` - Test file templates
+   - `templates/setup-file.md` - Setup file templates
+
+## Examples and Templates
+
+This skill includes detailed examples organized to match the Jest official documentation structure (https://jestjs.io/docs/getting-started, https://jestjs.io/docs/api). All examples are in the `examples/` directory, organized by topic:
+
+### Getting Started (快速开始) - `examples/getting-started/`
+
+- `examples/getting-started/installation.md` - Installing Jest, creating a Jest configuration, and running tests
+- `examples/getting-started/using-matchers.md` - Using Jest matchers (toBe, toEqual, toContain, etc.)
+
+### Testing (测试) - `examples/testing/`
+
+- `examples/testing/asynchronous.md` - Testing async code with callbacks, promises, and async/await
+- `examples/testing/setup-teardown.md` - Setup and teardown functions (beforeEach, afterEach, beforeAll, afterAll)
+- `examples/testing/mock-functions.md` - Creating and using mock functions
+- `examples/testing/manual-mocks.md` - Manual mocks and __mocks__ directory
+- `examples/testing/snapshot-testing.md` - Snapshot testing for UI components
+- `examples/testing/timer-mocks.md` - Mocking timers (setTimeout, setInterval, etc.)
+- `examples/testing/es6-class-mocks.md` - Mocking ES6 classes
+
+### Configuration (配置) - `examples/configuration/`
+
+- `examples/configuration/jest-config.md` - Jest configuration options (jest.config.js)
+- `examples/configuration/cli-options.md` - CLI options and command-line flags
+- `examples/configuration/babel.md` - Using Jest with Babel
+- `examples/configuration/typescript.md` - Using Jest with TypeScript
+
+### Guides (指南) - `examples/guides/`
+
+- `examples/guides/migrating-to-jest.md` - Migrating from other testing frameworks
+- `examples/guides/testing-react-apps.md` - Testing React applications
+- `examples/guides/testing-vue-apps.md` - Testing Vue applications
+
+### Templates Directory (`templates/`)
+
+- `templates/jest-config.md` - Jest configuration templates for different scenarios
+- `templates/test-template.md` - Test file templates
+- `templates/setup-file.md` - Setup file templates
+
+**To use examples:**
+- Identify the topic from the user's request
+- Load the appropriate example file from the corresponding directory
+- Follow the instructions, syntax, and best practices in that file
+- Adapt the code examples to your specific use case
+
+**To use templates:**
+- Reference `templates/jest-config.md` for Jest configuration
+- Use test templates for quick setup
+- Adapt templates to your specific needs and coding style
+
+## API Reference
+
+Detailed API documentation is available in the `api/` directory, organized to match the official Jest API documentation structure:
+
+### expect API (`api/expect.md`)
+- `expect()` - Expectation API
+- Matchers: `toBe()`, `toEqual()`, `toContain()`, `toMatch()`, `toBeDefined()`, `toBeNull()`, `toBeTruthy()`, `toBeFalsy()`, etc.
+- Async matchers: `resolves`, `rejects`
+- Custom matchers
+
+### Mock Functions API (`api/mock-functions.md`)
+- `jest.fn()` - Creating mock functions
+- `jest.mock()` - Mocking modules
+- `jest.spyOn()` - Creating spies
+- Mock function properties: `mockReturnValue()`, `mockResolvedValue()`, `mockRejectedValue()`, etc.
+
+### Jest Object API (`api/jest-object.md`)
+- `jest.clearAllMocks()` - Clear all mocks
+- `jest.resetAllMocks()` - Reset all mocks
+- `jest.restoreAllMocks()` - Restore all mocks
+- `jest.useFakeTimers()` - Use fake timers
+- `jest.useRealTimers()` - Use real timers
+
+### Test API (`api/test.md`)
+- `test()` / `it()` - Test function
+- `describe()` - Test suite
+- `beforeEach()`, `afterEach()`, `beforeAll()`, `afterAll()` - Setup and teardown
+
+### CLI API (`api/cli.md`)
+- `jest` - Run tests
+- `jest --watch` - Watch mode
+- `jest --coverage` - Coverage report
+- `jest --updateSnapshot` - Update snapshots
+
+**To use API reference:**
+1. Identify the API you need help with
+2. Load the corresponding API file from the `api/` directory
+3. Find the API signature, parameters, return type, and examples
+4. Reference the linked example files for detailed usage patterns
+5. All API files include links to relevant example files in the `examples/` directory
+
+## Best Practices
+
+1. **Write descriptive test names**: Use clear, descriptive test names
+2. **Use appropriate matchers**: Choose the right matcher for each assertion
+3. **Mock external dependencies**: Mock external APIs, databases, and services
+4. **Test edge cases**: Test both happy paths and error cases
+5. **Keep tests isolated**: Each test should be independent
+6. **Use setup and teardown**: Clean up resources properly
+7. **Snapshot testing**: Use snapshots for UI components, but review changes
+8. **Coverage goals**: Aim for meaningful coverage, not just high percentages
+9. **Organize tests**: Group related tests using describe blocks
+10. **Async testing**: Properly handle async code with async/await or promises
+
+## Resources
+
+- **Official Documentation**: https://jestjs.io/
+- **Getting Started**: https://jestjs.io/docs/getting-started
+- **API Reference**: https://jestjs.io/docs/api
+- **GitHub Repository**: https://github.com/jestjs/jest
+
+## Keywords
+
+Jest, testing, unit test, integration test, mock, spy, snapshot, matcher, assertion, async test, setup, teardown, coverage, CLI, configuration, TypeScript, React, Vue, Babel, 测试, 单元测试, 集成测试, Mock, 快照, 匹配器, 断言, 异步测试, 覆盖率, 配置

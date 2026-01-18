@@ -1,50 +1,85 @@
 {
-  "name": "teaching-ai-skills",
+  "name": "full-stack-skills",
   "owner": {
     "name": "TeachingAI",
     "email": "teachingai@163.com"
   },
   "metadata": {
-    "description": "Teaching AI 免费技能市场 - 提供各种实用的 AI 技能集合，包括教学、开发、设计、文档处理等",
-    "version": "1.0.0"
+    "description": "Teaching AI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合",
+    "version": "2.0.0"
   },
   "plugins": [
     {
-      "name": "teaching-skills",
-      "description": "教学与教育相关技能集合，包括课程设计、学习评估、教学资源生成等",
+      "name": "development-skills-frontend",
+      "description": "前端开发技能集合：Vue、React、Angular、构建工具、UI 框架等",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/course-designer",
-        "./skills/learning-assessor",
-        "./skills/teaching-resource-generator"
+        "./skills/vue2-guide",
+        "./skills/vue3-guide",
+        "./skills/vue-router-guide",
+        "./skills/pinia-guide",
+        "./skills/vuex-guide",
+        "./skills/vite-guide",
+        "./skills/react-guide",
+        "./skills/react-hooks-guide",
+        "./skills/nextjs-guide",
+        "./skills/redux-guide",
+        "./skills/angular-guide",
+        "./skills/svelte-guide",
+        "./skills/webpack-guide",
+        "./skills/rollup-guide",
+        "./skills/parcel-guide",
+        "./skills/element-plus-guide",
+        "./skills/ant-design-vue-guide",
+        "./skills/ant-design-react-guide"
       ]
     },
     {
-      "name": "document-skills",
-      "description": "文档处理技能集合，支持 Excel、Word、PowerPoint、PDF 等办公文档的创建、编辑和处理",
+      "name": "development-skills-backend",
+      "description": "后端开发技能集合：Spring、Node.js、Python、Go 等后端框架",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/docx",
-        "./skills/pptx",
-        "./skills/pdf",
-        "./skills/xlsx",
-        "./skills/doc-coauthoring"
+        "./skills/spring-boot-guide",
+        "./skills/spring-cloud-guide",
+        "./skills/spring-cloud-alibaba-guide",
+        "./skills/spring-ai-guide",
+        "./skills/spring-ai-alibaba-guide",
+        "./skills/spring-security-guide",
+        "./skills/spring-data-jpa-guide",
+        "./skills/express-guide",
+        "./skills/nestjs-guide",
+        "./skills/koa-guide",
+        "./skills/fastify-guide",
+        "./skills/django-guide",
+        "./skills/fastapi-guide",
+        "./skills/flask-guide",
+        "./skills/gin-guide",
+        "./skills/gin-gonic-guide"
       ]
     },
     {
-      "name": "markdown-skills",
-      "description": "Markdown 相关技能集合，包括 Mermaid 图表绘制等",
+      "name": "development-skills-mobile",
+      "description": "移动端开发技能集合：UniApp、React Native、Flutter、原生开发等",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/mermaid"
+        "./skills/uniapp-project-creater",
+        "./skills/uniapp-project-guide",
+        "./skills/uniappx-project-creater",
+        "./skills/uniappx-project-guide",
+        "./skills/react-native-guide",
+        "./skills/react-native-project-creater",
+        "./skills/flutter-guide",
+        "./skills/flutter-project-creater",
+        "./skills/android-kotlin-guide",
+        "./skills/ios-swift-guide"
       ]
     },
     {
-      "name": "development-skills",
-      "description": "开发技能集合，包括代码生成、测试编写、文档构建、项目文档生成、MCP 构建器、Web 开发、前端设计等",
+      "name": "development-skills-utils",
+      "description": "开发工具技能集合，包括代码生成、测试编写、文档构建、项目文档生成、MCP 构建器、Web 开发、前端设计、Node.js 版本管理等",
       "source": "./",
       "strict": false,
       "skills": [
@@ -57,18 +92,148 @@
         "./skills/webapp-testing",
         "./skills/frontend-design",
         "./skills/web-artifacts-builder",
-        "./skills/theme-factory"
+        "./skills/theme-factory",
+        "./skills/nvm"
       ]
     },
     {
       "name": "design-skills",
-      "description": "设计与创意技能集合，包括算法艺术、品牌指南、画布设计等",
+      "description": "设计与创意技能集合：设计工具、AI 设计工具、原型工具等",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/algorithmic-art",
         "./skills/brand-guidelines",
-        "./skills/canvas-design"
+        "./skills/canvas-design",
+        "./skills/figma-guide",
+        "./skills/figma-ai-guide",
+        "./skills/sketch-guide",
+        "./skills/adobe-xd-guide",
+        "./skills/midjourney-guide",
+        "./skills/dalle-guide",
+        "./skills/stable-diffusion-guide",
+        "./skills/uizard-guide",
+        "./skills/galileo-ai-guide",
+        "./skills/runway-ml-guide",
+        "./skills/axure-guide",
+        "./skills/modao-guide",
+        "./skills/framer-guide"
+      ]
+    },
+    {
+      "name": "document-skills",
+      "description": "文档处理技能集合，支持 Excel、Word、PowerPoint、PDF 等办公文档的创建、编辑和处理",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/docx",
+        "./skills/pptx",
+        "./skills/pdf",
+        "./skills/xlsx",
+        "./skills/doc-coauthoring",
+        "./skills/api-doc-generator",
+        "./skills/drawio-flowchart-guide",
+        "./skills/processon-mindmap-guide"
+      ]
+    },
+    {
+      "name": "architecture-skills",
+      "description": "架构技能集合：DDD、微服务、事件驱动、六边形架构、整洁架构、COLA 等",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ddd-guide",
+        "./skills/ddd-cola-guide",
+        "./skills/ddd-microservices-guide",
+        "./skills/ddd-event-driven-guide",
+        "./skills/ddd-hexagonal-architecture-guide",
+        "./skills/ddd-clean-architecture-guide",
+        "./skills/c4-model-guide",
+        "./skills/plantuml-guide",
+        "./skills/drawio-architecture-guide"
+      ]
+    },
+    {
+      "name": "testing-skills",
+      "description": "测试技能集合：单元测试、集成测试、E2E 测试、移动端测试等",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/jest-guide",
+        "./skills/vitest-guide",
+        "./skills/pytest-guide",
+        "./skills/junit-guide",
+        "./skills/cypress-guide",
+        "./skills/playwright-guide",
+        "./skills/selenium-guide",
+        "./skills/appium-guide",
+        "./skills/detox-guide"
+      ]
+    },
+    {
+      "name": "devops-skills",
+      "description": "运维技能集合：CI/CD、容器化、IaC 等",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/jenkins-guide",
+        "./skills/gitlab-ci-guide",
+        "./skills/github-actions-guide",
+        "./skills/docker-guide",
+        "./skills/kubernetes-guide",
+        "./skills/docker-compose-guide",
+        "./skills/terraform-guide",
+        "./skills/ansible-guide",
+        "./skills/cloudformation-guide"
+      ]
+    },
+    {
+      "name": "database-skills",
+      "description": "数据库技能集合：关系型数据库、NoSQL 数据库、数据库工具等",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/mysql-guide",
+        "./skills/postgresql-guide",
+        "./skills/oracle-guide",
+        "./skills/mongodb-guide",
+        "./skills/redis-guide",
+        "./skills/elasticsearch-guide",
+        "./skills/navicat-guide",
+        "./skills/dbeaver-guide"
+      ]
+    },
+    {
+      "name": "cloud-skills",
+      "description": "云平台技能集合：AWS、Azure、阿里云、腾讯云、华为云等",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/cloud-aws-ec2",
+        "./skills/cloud-aws-s3",
+        "./skills/cloud-aws-rds",
+        "./skills/cloud-aws-lambda",
+        "./skills/cloud-azure-vm",
+        "./skills/cloud-azure-storage",
+        "./skills/cloud-azure-sql",
+        "./skills/cloud-aliyun-ecs",
+        "./skills/cloud-aliyun-oss",
+        "./skills/cloud-aliyun-rds",
+        "./skills/cloud-tencent-cvm",
+        "./skills/cloud-tencent-cos",
+        "./skills/cloud-tencent-cdb",
+        "./skills/cloud-huawei-ecs",
+        "./skills/cloud-huawei-obs",
+        "./skills/cloud-huawei-rds"
+      ]
+    },
+    {
+      "name": "markdown-skills",
+      "description": "Markdown 相关技能集合，包括 Mermaid 图表绘制等",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/mermaid"
       ]
     },
     {
@@ -79,6 +244,17 @@
       "skills": [
         "./skills/internal-comms",
         "./skills/slack-gif-creator"
+      ]
+    },
+    {
+      "name": "teaching-skills",
+      "description": "教学与教育相关技能集合，包括课程设计、学习评估、教学资源生成等",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/course-designer",
+        "./skills/learning-assessor",
+        "./skills/teaching-resource-generator"
       ]
     },
     {
