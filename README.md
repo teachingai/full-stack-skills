@@ -1,6 +1,6 @@
-# Teaching AI Skills Marketplace
+# Full Stack Skills
 
-这是一个免费的技能市场，提供各种实用的 AI 技能集合，可以在 Claude Code 中使用。
+**Full-Stack-Skills** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **15 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
 
 > **说明：** 本仓库合并了 Anthropic 的示例技能和 Agent Skills 的技能集合，提供各种实用的 AI 技能，可以在 Claude Code、Claude.ai 和 API 中使用。关于 Agent Skills 标准，请参见 [agentskills.io](http://agentskills.io)。
 
@@ -18,7 +18,29 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 
 ## 关于本仓库
 
-本仓库包含一组技能，用于展示 Claude 的技能系统能够实现哪些能力。这些技能覆盖从创意应用（艺术、音乐、设计）到技术任务（测试 Web 应用、生成 MCP 服务器）再到企业工作流（沟通、品牌等），以及教学与教育场景。
+**full-stack-skills** 是一个面向**期望成为全栈技能人才的群体**的开源技能市场，严格遵循 [Agent Skills 规范](https://agentskills.io/)，按**技能种类**组织技能库，而非按岗位划分。
+
+### 核心价值
+
+- **开源免费**：所有技能采用 Apache 2.0 许可证，完全开源
+- **规范标准**：严格遵循 Agent Skills 规范，确保技能质量和兼容性
+- **全栈覆盖**：170 个技能集合，覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
+- **按技能种类组织**：15 个插件类别，按技能种类而非岗位划分，便于灵活组合使用
+- **AI 赋能**：通过 AI 助手掌握专业技能，实现"一个人 = 一个公司"的愿景
+
+### 技能组织方式
+
+本仓库的技能按**技能种类**分为 15 个插件类别：
+
+- **开发类**：前端开发（Vue、React、Angular）、后端开发（Spring、Node.js、Python、Go）、移动端开发（UniApp、React Native、Flutter）、开发工具
+- **设计类**：UI设计工具、AI设计工具、原型工具
+- **架构类**：DDD、微服务、事件驱动、六边形架构、整洁架构、COLA
+- **测试类**：单元测试、集成测试、E2E测试、移动端测试
+- **文档类**：文档生成、文档处理、图表绘制
+- **运维类**：CI/CD、容器化、IaC
+- **数据库类**：关系型数据库、NoSQL数据库、数据库工具
+- **云平台类**：AWS、Azure、阿里云、腾讯云、华为云
+- **其他**：Markdown、社交协作、教学教育、工具技能
 
 每个技能都自包含在单独的文件夹中，并包含一个 `SKILL.md` 文件，里面有 Claude 使用的说明和元数据。你可以浏览这些技能来获取灵感，或理解不同的模式与实现方式。
 
@@ -37,7 +59,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 在 Claude Code 中运行以下命令，将本仓库注册为 Claude Code 的插件市场：
 
 ```
-/plugin marketplace add https://github.com/teachingai/agent-skills.git
+/plugin marketplace add https://github.com/teachingai/full-stack-skills.git
 ```
 
 ![add_marketplace.png](./media/add_marketplace.png)
@@ -45,7 +67,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 或者使用简写形式：
 
 ```
-/plugin marketplace add teachingai/agent-skills
+/plugin marketplace add teachingai/full-stack-skills
 ```
 
 #### 2. 安装插件
@@ -55,7 +77,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 **方式一：通过界面安装**
 
 1. 选择 `Browse and install plugins`
-2. 选择 `teaching-ai-skills`
+2. 选择 `full-stack-skills`
 3. 选择要安装的插件（见下方可用插件列表）
 4. 选择 `Install now`
 
@@ -64,13 +86,22 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 直接使用命令安装插件：
 
 ```
-/plugin install teaching-skills@teaching-ai-skills
-/plugin install document-skills@teaching-ai-skills
-/plugin install markdown-skills@teaching-ai-skills
-/plugin install development-skills@teaching-ai-skills
-/plugin install design-skills@teaching-ai-skills
-/plugin install social-skills@teaching-ai-skills
-/plugin install utility-skills@teaching-ai-skills
+# 按技能种类安装（15个插件类别）
+/plugin install teaching-skills@full-stack-skills
+/plugin install document-skills@full-stack-skills
+/plugin install markdown-skills@full-stack-skills
+/plugin install development-skills-frontend@full-stack-skills
+/plugin install development-skills-backend@full-stack-skills
+/plugin install development-skills-mobile@full-stack-skills
+/plugin install development-skills-utils@full-stack-skills
+/plugin install design-skills@full-stack-skills
+/plugin install architecture-skills@full-stack-skills
+/plugin install testing-skills@full-stack-skills
+/plugin install devops-skills@full-stack-skills
+/plugin install database-skills@full-stack-skills
+/plugin install cloud-skills@full-stack-skills
+/plugin install social-skills@full-stack-skills
+/plugin install utility-skills@full-stack-skills
 ```
 
 ![install-teaching-ai-skills.png](media/install-teaching-ai-skills.png)
@@ -106,7 +137,386 @@ python convert_all.py ../skills ../adapters-output
 
 ## 可用插件和技能
 
-本仓库的技能按功能分为 7 个插件类别，共包含 25 个技能：
+本仓库的技能按**技能种类**分为 **15 个插件类别**，共包含 **170 个技能**：
+
+### 技能分类统计
+
+- **development-skills-frontend**（前端开发技能集合，37个技能）：包含 Vue 2/3、React、Angular、Svelte 等主流框架；Vite、Webpack、Rspack、Rollup、Parcel 等构建工具；Element Plus、Ant Design、Vant、uView、Bootstrap Vue 等 UI 组件库；Vue Router、Pinia、Vuex、Redux 等状态管理和路由方案；Electron、Tauri 等桌面应用框架。
+
+- **development-skills-backend**（后端开发技能集合，16个技能）：包含 Spring Boot、Spring Cloud、Spring AI、Spring Security、Spring Data JPA 等 Java 生态框架；Express、NestJS、Koa、Fastify 等 Node.js 框架；Django、FastAPI、Flask 等 Python 框架；Gin、Gin-Gonic 等 Go 框架。
+
+- **development-skills-mobile**（移动端开发技能集合，23个技能）：包含 UniApp、UniApp-x 跨平台开发框架及项目创建器；React Native、Flutter 跨平台框架；Android Kotlin、iOS Swift 原生开发；Cocos2d-x 游戏引擎；uCharts、Lime EChart 图表组件；UniCloud 云开发、Uni-ad 广告变现等。
+
+- **development-skills-utils**（开发工具技能集合，12个技能）：包含代码生成、测试编写、文档构建等基础工具；DDD 项目构建器（支持单体单模块、单体多模块、微服务架构）；项目文档生成（14种文档模板，覆盖产品到运维全生命周期）；MCP 构建器、Web 应用测试、前端设计、Web 工件构建器、主题工厂；Node.js 版本管理（nvm）、浏览器自动化等。
+
+- **design-skills**（设计技能集合，16个技能）：包含 Figma、Sketch、Adobe XD、Axure、墨刀、Framer 等专业设计工具；Midjourney、DALL-E、Stable Diffusion、Runway ML、Galileo AI、Uizard、Figma AI 等 AI 设计工具；算法艺术、品牌指南、画布设计等创意工具。
+
+- **document-skills**（文档处理技能集合，8个技能）：包含 Word（docx）、PowerPoint（pptx）、Excel（xlsx）、PDF 等办公文档的创建、编辑和处理；文档协作（多人协作编辑）；API 文档生成器；Draw.io 流程图绘制；ProcessOn 思维导图绘制。
+
+- **architecture-skills**（架构技能集合，9个技能）：包含领域驱动设计（DDD）、DDD 微服务架构、DDD 事件驱动架构、DDD 六边形架构、DDD 整洁架构、COLA 架构等架构模式；C4 模型、PlantUML、Draw.io 架构图绘制工具。
+
+- **testing-skills**（测试技能集合，9个技能）：包含 Jest、Vitest、PyTest、JUnit 等单元测试框架；Cypress、Playwright、Selenium 等 E2E 测试工具；Appium、Detox 等移动端测试工具。
+
+- **devops-skills**（运维技能集合，9个技能）：包含 Jenkins、GitLab CI、GitHub Actions 等 CI/CD 工具；Docker、Docker Compose、Kubernetes 等容器化和容器编排工具；Terraform、Ansible、CloudFormation 等基础设施即代码（IaC）工具。
+
+- **database-skills**（数据库技能集合，8个技能）：包含 MySQL、PostgreSQL、Oracle 等关系型数据库；MongoDB、Redis、Elasticsearch 等 NoSQL 数据库和搜索引擎；Navicat、DBeaver 等数据库管理工具。
+
+- **cloud-skills**（云平台技能集合，16个技能）：包含 AWS（EC2、S3、RDS、Lambda）、Azure（VM、Storage、SQL）、阿里云（ECS、OSS、RDS）、腾讯云（CVM、COS、CDB）、华为云（ECS、OBS、RDS）等主流云平台的核心服务。
+
+- **markdown-skills**（Markdown 技能集合，1个技能）：包含 Mermaid 图表绘制，支持 23 种图表类型（流程图、时序图、类图、状态图、甘特图、架构图、C4 图、思维导图等）。
+
+- **social-skills**（社交技能集合，2个技能）：包含内部沟通（状态报告、领导更新、公司通讯、FAQ 等内部文档编写）；Slack GIF 创建器（为 Slack 消息创建 GIF 动图）。
+
+- **teaching-skills**（教学技能集合，3个技能）：包含课程设计（课程大纲、学习目标、教学计划、评估方案）；学习评估（测验题目、评估标准、评分 rubric、学习分析）；教学资源生成（课件、练习题、教学案例、学习指南）。
+
+- **utility-skills**（工具技能集合，1个技能）：包含技能创建器，指导如何创建有效的 Agent Skills，扩展 Claude 的能力。
+
+## Skills 清单
+
+本仓库共包含 **170 个技能**，其中 **44 个已完成** ✅（有详细 examples/api 目录和丰富内容），**27 个部分完成** ⚠️（有基础内容），**95 个待完善** ❌（仅模板或内容简单），**4 个缺失** ❌。
+
+**完成标准：**
+- ✅ **已完成**：有 examples/api 目录（文件数>5）且内容详细（>5000字符）
+- ⚠️ **部分完成**：有基础内容或少量 examples/api 文件
+- ❌ **待完善**：仅模板或内容简单（<1000字符，无 examples/api 目录）
+
+### 完成状态统计
+
+| 插件类别 | 总技能数 | 已完成 ✅ | 部分完成 ⚠️ | 待完善 ❌ | 缺失 ❌ | 完成率 |
+|---------|---------|---------|-----------|---------|--------|--------|
+| development-skills-frontend | 37 | 23 | 1 | 10 | 3 | 62.2% ⚠️ |
+| development-skills-backend | 16 | 1 | 5 | 10 | 0 | 6.2% ❌ |
+| development-skills-mobile | 23 | 13 | 4 | 6 | 0 | 56.5% ⚠️ |
+| development-skills-utils | 12 | 3 | 6 | 3 | 0 | 25.0% ⚠️ |
+| design-skills | 16 | 0 | 3 | 13 | 0 | 0.0% ❌ |
+| document-skills | 8 | 0 | 5 | 3 | 0 | 0.0% ⚠️ |
+| architecture-skills | 9 | 0 | 0 | 8 | 1 | 0.0% ❌ |
+| testing-skills | 9 | 3 | 0 | 6 | 0 | 33.3% ❌ |
+| devops-skills | 9 | 0 | 0 | 9 | 0 | 0.0% ❌ |
+| database-skills | 8 | 0 | 0 | 8 | 0 | 0.0% ❌ |
+| cloud-skills | 16 | 0 | 0 | 16 | 0 | 0.0% ❌ |
+| markdown-skills | 1 | 1 | 0 | 0 | 0 | 100.0% ✅ |
+| social-skills | 2 | 0 | 2 | 0 | 0 | 0.0% ⚠️ |
+| teaching-skills | 3 | 0 | 0 | 3 | 0 | 0.0% ❌ |
+| utility-skills | 1 | 0 | 1 | 0 | 0 | 0.0% ⚠️ |
+
+### 详细技能清单
+
+#### development-skills-frontend
+
+*前端开发技能集合：Vue、React、Angular、构建工具、UI 框架等*
+
+**已完成技能（23个）：**
+
+- ✅ `avue-form` - 有examples目录（9个文件）; 有api目录（5个文件）; 内容详细（6674字符）
+- ✅ `electron-egg` - 有examples目录（9个文件）; 有api目录（5个文件）; 内容详细（7293字符）
+- ✅ `pinia` - 有examples目录（20个文件）; 有api目录（25个文件）; 内容详细（5534字符）
+- ✅ `rspack` - 有examples目录（136个文件）; 有api目录（5个文件）; 内容详细（9783字符）
+- ✅ `uview-pro-vue3` - 有examples目录（13个文件）; 有api目录（4个文件）; 内容详细（8902字符）
+- ✅ `vue-router-v4` - 有examples目录（26个文件）; 有api目录（10个文件）; 内容详细（12096字符）
+- ✅ `vue3` - 有examples目录（51个文件）; 有api目录（35个文件）; 内容详细（8606字符）
+- ✅ `vuex-vue2` - 有examples目录（10个文件）; 有api目录（5个文件）; 内容详细（7126字符）
+- ✅ `ant-design-mini` - 有examples目录（25个文件）; 有api目录（2个文件，较少）; 内容详细（7076字符）
+- ✅ `ant-design-mobile` - 有examples目录（50个文件）; 有api目录（2个文件，较少）; 内容详细（8137字符）
+- ✅ `ant-design-react` - 有examples目录（14个文件）; 有api目录（2个文件，较少）; 内容详细（7868字符）
+- ✅ `avue` - 有examples目录（9个文件）; 有api目录（2个文件，较少）; 内容详细（6045字符）
+- ✅ `avue-crud` - 有examples目录（12个文件）; 有api目录（2个文件，较少）; 内容详细（6058字符）
+- ✅ `bootstrap-vue3` - 有examples目录（8个文件）; 有api目录（1个文件，较少）; 内容详细（7203字符）
+- ✅ `electron` - 有examples目录（7个文件）; 有api目录（2个文件，较少）; 内容详细（7141字符）
+- ✅ `element-plus-vue3` - 有examples目录（15个文件）; 有api目录（3个文件，较少）; 内容详细（8777字符）
+- ✅ `uview-vue2` - 有examples目录（7个文件）; 有api目录（2个文件，较少）; 内容详细（7086字符）
+- ✅ `vant-vue3` - 有examples目录（9个文件）; 有api目录（2个文件，较少）; 内容详细（6828字符）
+- ✅ `vue-router-v3` - 有examples目录（17个文件）; 有api目录（7个文件）; 内容中等（3602字符）
+- ✅ `dart-sass` - 有examples目录（13个文件）; 有api目录（3个文件，较少）; 内容中等（4621字符）
+- ✅ `vite` - 有examples目录（33个文件）; 有api目录（3个文件，较少）; 内容中等（4258字符）
+- ✅ `nextjs` - 有examples目录（377个文件）
+- ✅ `tauri` - 有examples目录（2个文件，较少）; 内容详细（6506字符）
+
+**部分完成技能（1个）：**
+
+- ⚠️ `vue2` - 内容中等（4618字符）
+
+**待完善技能（10个）：**
+
+- ❌ `angular` - 内容过短（580字符）
+- ❌ `ant-design-vue` - 内容过短（561字符）
+- ❌ `parcel` - 内容过短（553字符）
+- ❌ `react` - 内容过短（577字符）
+- ❌ `react-hooks` - 内容过短（582字符）
+- ❌ `redux` - 内容过短（541字符）
+- ❌ `rollup` - 内容过短（542字符）
+- ❌ `svelte` - 内容过短（539字符）
+- ❌ `vue-router` - 内容过短（610字符）
+- ❌ `webpack` - 内容过短（568字符）
+
+**缺失技能（3个）：**
+
+- ❌ `element-plus` - 文件不存在
+- ❌ `layui-vue` - 文件不存在
+- ❌ `vuex` - 文件不存在
+
+#### development-skills-backend
+
+*后端开发技能集合：Spring、Node.js、Python、Go 等后端框架*
+
+**已完成技能（1个）：**
+
+- ✅ `nestjs` - 有examples目录（85个文件）; 有api目录（1个文件，较少）; 内容详细（10392字符）
+
+**部分完成技能（5个）：**
+
+- ⚠️ `spring-ai` - 内容详细（8715字符）
+- ⚠️ `spring-ai-alibaba` - 内容详细（7013字符）
+- ⚠️ `spring-boot` - 内容详细（8100字符）
+- ⚠️ `spring-cloud` - 内容详细（8225字符）
+- ⚠️ `spring-cloud-alibaba` - 内容详细（7940字符）
+
+**待完善技能（10个）：**
+
+- ❌ `django` - 内容过短（545字符）
+- ❌ `express` - 内容过短（554字符）
+- ❌ `fastapi` - 内容过短（608字符）
+- ❌ `fastify` - 内容过短（559字符）
+- ❌ `flask` - 内容过短（547字符）
+- ❌ `gin` - 内容过短（530字符）
+- ❌ `gin-gonic` - 内容过短（507字符）
+- ❌ `koa` - 内容过短（536字符）
+- ❌ `spring-data-jpa` - 内容过短（566字符）
+- ❌ `spring-security` - 内容过短（581字符）
+
+#### development-skills-mobile
+
+*移动端开发技能集合：UniApp、React Native、Flutter、原生开发、游戏引擎等*
+
+**已完成技能（13个）：**
+
+- ✅ `lime-echart` - 有examples目录（21个文件）; 有api目录（4个文件）; 内容详细（6258字符）
+- ✅ `ucharts` - 有examples目录（20个文件）; 有api目录（5个文件）; 内容详细（7116字符）
+- ✅ `uniapp-ucharts` - 有examples目录（14个文件）; 有api目录（2个文件，较少）; 内容详细（6698字符）
+- ✅ `uniapp-uview` - 有examples目录（14个文件）; 有api目录（2个文件，较少）; 内容详细（6428字符）
+- ✅ `uniappx-uview-pro` - 有examples目录（14个文件）; 有api目录（2个文件，较少）; 内容详细（6973字符）
+- ✅ `cocos2d-x` - 有examples目录（12个文件）; 内容详细（6978字符）
+- ✅ `uniapp-ad` - 有examples目录（7个文件）; 有api目录（1个文件，较少）; 内容中等（2129字符）
+- ✅ `uniapp-cloud` - 有examples目录（14个文件）; 有api目录（1个文件，较少）; 内容中等（2681字符）
+- ✅ `uniapp-project` - 有examples目录（73个文件）; 内容详细（5795字符）
+- ✅ `uniapp-native-app` - 有examples目录（7个文件）; 内容中等（2034字符）
+- ✅ `uniapp-native-plugin` - 有examples目录（7个文件）; 内容中等（2065字符）
+- ✅ `uniapp-plugin` - 有examples目录（6个文件）; 内容中等（2293字符）
+- ✅ `uniappx-project` - 有examples目录（72个文件）; 内容中等（2581字符）
+
+**部分完成技能（4个）：**
+
+- ⚠️ `uniapp-project-creator` - 有examples目录（3个文件，较少）; 内容中等（3475字符）
+- ⚠️ `uniappx-project-creator` - 有examples目录（3个文件，较少）; 内容中等（3585字符）
+- ⚠️ `upgradeLink` - 有examples目录（2个文件，较少）; 内容中等（4179字符）
+- ⚠️ `uniapp-mini` - 有examples目录（4个文件，较少）
+
+**待完善技能（6个）：**
+
+- ❌ `android-kotlin` - 内容过短（594字符）
+- ❌ `flutter` - 内容过短（568字符）
+- ❌ `flutter-project-creater` - 内容过短（560字符）
+- ❌ `ios-swift` - 内容过短（557字符）
+- ❌ `react-native` - 内容过短（601字符）
+- ❌ `react-native-project-creater` - 内容过短（585字符）
+
+#### development-skills-utils
+
+*开发工具技能集合，包括代码生成、测试编写、文档构建、项目文档生成、MCP 构建器、Web 开发、前端设计、Node.js 版本管理、浏览器自动化等*
+
+**已完成技能（3个）：**
+
+- ✅ `agent-browser` - 有examples目录（21个文件）; 有api目录（3个文件，较少）; 内容详细（7544字符）
+- ✅ `nvm` - 有examples目录（57个文件）; 有api目录（2个文件，较少）; 内容中等（3926字符）
+- ✅ `ddd4j-project-builder` - 有examples目录（4个文件，较少）; 内容详细（8757字符）
+
+**部分完成技能（6个）：**
+
+- ⚠️ `mcp-builder` - 内容详细（9038字符）
+- ⚠️ `frontend-design` - 内容中等（4439字符）
+- ⚠️ `full-stack-doc` - 内容中等（3057字符）
+- ⚠️ `theme-factory` - 内容中等（3123字符）
+- ⚠️ `web-artifacts-builder` - 内容中等（3073字符）
+- ⚠️ `webapp-testing` - 内容中等（3861字符）
+
+**待完善技能（3个）：**
+
+- ❌ `code-generator` - 仅基础模板
+- ❌ `documentation-builder` - 仅基础模板
+- ❌ `test-writer` - 仅基础模板
+
+#### design-skills
+
+*设计与创意技能集合：设计工具、AI 设计工具、原型工具等*
+
+**部分完成技能（3个）：**
+
+- ⚠️ `algorithmic-art` - 内容详细（19735字符）
+- ⚠️ `canvas-design` - 内容详细（11937字符）
+- ⚠️ `brand-guidelines` - 内容中等（2234字符）
+
+**待完善技能（13个）：**
+
+- ❌ `adobe-xd` - 内容过短（521字符）
+- ❌ `axure` - 内容过短（535字符）
+- ❌ `dalle` - 内容过短（529字符）
+- ❌ `figma` - 内容过短（545字符）
+- ❌ `figma-ai` - 内容过短（526字符）
+- ❌ `framer` - 内容过短（529字符）
+- ❌ `galileo-ai` - 内容过短（546字符）
+- ❌ `midjourney` - 内容过短（552字符）
+- ❌ `modao` - 内容过短（509字符）
+- ❌ `runway-ml` - 内容过短（521字符）
+- ❌ `sketch` - 内容过短（520字符）
+- ❌ `stable-diffusion` - 内容过短（566字符）
+- ❌ `uizard` - 内容过短（532字符）
+
+#### document-skills
+
+*文档处理技能集合，支持 Excel、Word、PowerPoint、PDF 等办公文档的创建、编辑和处理*
+
+**部分完成技能（5个）：**
+
+- ⚠️ `doc-coauthoring` - 内容详细（15814字符）
+- ⚠️ `docx` - 内容详细（10150字符）
+- ⚠️ `pdf` - 内容详细（7067字符）
+- ⚠️ `pptx` - 内容详细（25533字符）
+- ⚠️ `xlsx` - 内容详细（10628字符）
+
+**待完善技能（3个）：**
+
+- ❌ `api-doc-generator` - 内容过短（587字符）
+- ❌ `drawio-flowchart` - 内容过短（539字符）
+- ❌ `processon-mindmap` - 内容过短（538字符）
+
+#### architecture-skills
+
+*架构技能集合：DDD、微服务、事件驱动、六边形架构、整洁架构、COLA 等*
+
+**待完善技能（8个）：**
+
+- ❌ `c4-model` - 内容过短（559字符）
+- ❌ `ddd-clean-architecture` - 内容过短（576字符）
+- ❌ `ddd-cola` - 内容过短（708字符）
+- ❌ `ddd-event-driven` - 内容过短（545字符）
+- ❌ `ddd-hexagonal-architecture` - 内容过短（589字符）
+- ❌ `ddd-microservices` - 内容过短（580字符）
+- ❌ `drawio-architecture` - 内容过短（568字符）
+- ❌ `plantuml` - 内容过短（535字符）
+
+**缺失技能（1个）：**
+
+- ❌ `ddd` - 文件不存在
+
+#### testing-skills
+
+*测试技能集合：单元测试、集成测试、E2E 测试、移动端测试等*
+
+**已完成技能（3个）：**
+
+- ✅ `cypress` - 有examples目录（81个文件）; 有api目录（135个文件）; 内容详细（11513字符）
+- ✅ `jest` - 有examples目录（9个文件）; 有api目录（5个文件）; 内容详细（7144字符）
+- ✅ `vitest` - 有examples目录（14个文件）; 有api目录（4个文件）; 内容详细（6215字符）
+
+**待完善技能（6个）：**
+
+- ❌ `appium` - 内容过短（552字符）
+- ❌ `detox` - 内容过短（548字符）
+- ❌ `junit` - 内容过短（545字符）
+- ❌ `playwright` - 内容过短（553字符）
+- ❌ `pytest` - 内容过短（543字符）
+- ❌ `selenium` - 内容过短（540字符）
+
+#### devops-skills
+
+*运维技能集合：CI/CD、容器化、IaC 等*
+
+**待完善技能（9个）：**
+
+- ❌ `ansible` - 内容过短（525字符）
+- ❌ `cloudformation` - 内容过短（569字符）
+- ❌ `docker` - 内容过短（547字符）
+- ❌ `docker-compose` - 内容过短（584字符）
+- ❌ `github-actions` - 内容过短（549字符）
+- ❌ `gitlab-ci` - 内容过短（529字符）
+- ❌ `jenkins` - 内容过短（544字符）
+- ❌ `kubernetes` - 内容过短（552字符）
+- ❌ `terraform` - 内容过短（579字符）
+
+#### database-skills
+
+*数据库技能集合：关系型数据库、NoSQL 数据库、数据库工具等*
+
+**待完善技能（8个）：**
+
+- ❌ `dbeaver` - 内容过短（559字符）
+- ❌ `elasticsearch` - 内容过短（569字符）
+- ❌ `mongodb` - 内容过短（537字符）
+- ❌ `mysql` - 内容过短（571字符）
+- ❌ `navicat` - 内容过短（575字符）
+- ❌ `oracle` - 内容过短（521字符）
+- ❌ `postgresql` - 内容过短（576字符）
+- ❌ `redis` - 内容过短（545字符）
+
+#### cloud-skills
+
+*云平台技能集合：AWS、Azure、阿里云、腾讯云、华为云等*
+
+**待完善技能（16个）：**
+
+- ❌ `cloud-aliyun-ecs` - 内容过短（563字符）
+- ❌ `cloud-aliyun-oss` - 内容过短（560字符）
+- ❌ `cloud-aliyun-rds` - 内容过短（555字符）
+- ❌ `cloud-aws-ec2` - 内容过短（530字符）
+- ❌ `cloud-aws-lambda` - 内容过短（566字符）
+- ❌ `cloud-aws-rds` - 内容过短（522字符）
+- ❌ `cloud-aws-s3` - 内容过短（520字符）
+- ❌ `cloud-azure-sql` - 内容过短（558字符）
+- ❌ `cloud-azure-storage` - 内容过短（557字符）
+- ❌ `cloud-azure-vm` - 内容过短（549字符）
+- ❌ `cloud-huawei-ecs` - 内容过短（560字符）
+- ❌ `cloud-huawei-obs` - 内容过短（557字符）
+- ❌ `cloud-huawei-rds` - 内容过短（552字符）
+- ❌ `cloud-tencent-cdb` - 内容过短（556字符）
+- ❌ `cloud-tencent-cos` - 内容过短（561字符）
+- ❌ `cloud-tencent-cvm` - 内容过短（564字符）
+
+#### markdown-skills
+
+*Markdown 相关技能集合，包括 Mermaid 图表绘制等*
+
+**已完成技能（1个）：**
+
+- ✅ `mermaid` - 有examples目录（23个文件）; 内容详细（9690字符）
+
+#### social-skills
+
+*社交与协作技能集合，包括内部沟通、Slack GIF 创建等*
+
+**部分完成技能（2个）：**
+
+- ⚠️ `slack-gif-creator` - 内容详细（7840字符）
+- ⚠️ `internal-comms` - 有examples目录（4个文件，较少）
+
+#### teaching-skills
+
+*教学与教育相关技能集合，包括课程设计、学习评估、教学资源生成等*
+
+**待完善技能（3个）：**
+
+- ❌ `course-designer` - 仅基础模板
+- ❌ `learning-assessor` - 仅基础模板
+- ❌ `teaching-resource-generator` - 仅基础模板
+
+#### utility-skills
+
+*工具与实用技能集合，包括技能创建器等*
+
+**部分完成技能（1个）：**
+
+- ⚠️ `skill-creator` - 内容详细（17700字符）
+
+### 详细技能列表
 
 ### 1. teaching-skills（教学技能集合）
 
@@ -262,7 +672,7 @@ Markdown 相关技能集合，包括 Mermaid 图表绘制等。
 - "创建一个用户使用手册"
 - "编写开发环境搭建指南"
 
-#### zh-product-doc-generator（项目文档生成技能）
+#### full-stack-doc（项目文档生成技能）
 
 基于标准模板快速生成项目文档，包括产品调研、需求分析、PRD、架构设计、技术文档等 14 种项目交付文档模板。适用于软件开发项目的全生命周期文档生成，基于 DDD（领域驱动设计）和 COLA 架构思想。
 
@@ -478,6 +888,7 @@ DDD（领域驱动设计）项目初始化和目录规范检查技能。支持�
 - "如何设计一个技能的结构"
 - "创建一个技能的最佳实践是什么"
 
+
 ## 项目结构
 
 ```
@@ -501,7 +912,7 @@ DDD（领域驱动设计）项目初始化和目录规范检查技能。支持�
 │   │   ├── code-generator/
 │   │   ├── test-writer/
 │   │   ├── documentation-builder/
-│   │   ├── zh-product-doc-generator/
+│   │   ├── full-stack-doc/
 │   │   ├── ddd4j-project-builder/
 │   │   ├── mcp-builder/
 │   │   ├── webapp-testing/
@@ -515,10 +926,13 @@ DDD（领域驱动设计）项目初始化和目录规范检查技能。支持�
 │   ├── social-skills/            # 社交技能
 │   │   ├── internal-comms/
 │   │   └── slack-gif-creator/
-│   └── utility-skills/           # 工具技能
-│       └── skill-creator/
+│   ├── utility-skills/           # 工具技能
+│   │   └── skill-creator/
 ├── spec/                          # Agent Skills 规范
 ├── template/                      # 技能模板
+├── ROLE_DEFINITIONS.md            # IT行业全生命周期岗位职责定义（23个岗位）
+├── PLANNING_SKILL_CATEGORIES.md   # 全栈技能库规划文档（按技能种类组织）
+├── PLATFORM_GUIDE.md              # 跨平台使用指南
 └── README.md                      # 本文件
 ```
 
@@ -637,7 +1051,7 @@ git push
 
 ## 工作原理
 
-1. **Marketplace 注册**: 当您运行 `/plugin marketplace add https://github.com/teachingai/agent-skills.git` 时，Claude Code 会：
+1. **Marketplace 注册**: 当您运行 `/plugin marketplace add https://github.com/teachingai/full-stack-skills.git` 时，Claude Code 会：
    - 从 GitHub 仓库获取 `.claude-plugin/marketplace.json` 文件
    - 解析 marketplace 配置
    - 将 marketplace 添加到可用列表
@@ -670,7 +1084,11 @@ git push
 
 ## 许可证
 
-本仓库中的许多技能采用 Apache 2.0 许可证。文档处理技能（docx、pdf、pptx、xlsx）是"可查看源码"的（source-available），但并非开源。详见各技能目录中的 LICENSE 文件。
+**本仓库完全开源**，采用 Apache 2.0 许可证。所有技能都可以自由使用、修改和分发。
+
+文档处理技能（docx、pdf、pptx、xlsx）是"可查看源码"的（source-available），但并非开源；我们希望将其作为更复杂技能的参考示例，因为它们已在生产级 AI 应用中实际使用。
+
+详见各技能目录中的 LICENSE 文件。
 
 ## 贡献
 
@@ -684,7 +1102,7 @@ git push
 
 技能是教会 Claude 更好使用特定软件的一种好方式。我们看到来自合作伙伴的优秀示例技能时，也可能会在这里进行展示：
 
-- **Notion** - [Notion Skills for Claude](https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0)
+- **Notion** - [Notion Skills for Claude](https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d23180c7af1df7d8615723d0)
 
 ## 跨平台适配
 
@@ -705,7 +1123,22 @@ cd adapters
 python convert_all.py ../skills ../adapters-output
 ```
 
+## 项目愿景
+
+**"一个人 = 一个公司"**
+
+在 AI 时代，全栈独立开发者不再需要组建庞大的团队。通过 **full-stack-skills**，AI 助手可以：
+
+- **掌握全栈技能**：从产品设计到开发、测试、部署、运维的全流程能力
+- **灵活组合使用**：15 个插件类别，按技能种类组织，可根据项目需求灵活组合
+- **标准化流程**：基于 DDD 和 COLA 架构思想，确保项目质量和可维护性
+- **快速交付**：通过技能组合，快速完成从需求到上线的全流程工作
+
+**让 AI 成为你的全栈团队，让独立开发者实现"一个人 = 一个公司"的愿景。**
+
 ## 参考资源
+
+### 官方文档
 
 - [Agent Skills 规范](https://agentskills.io/)
 - [Claude Skills 文档](https://support.claude.com/en/articles/12512176-what-are-skills)
@@ -714,6 +1147,12 @@ python convert_all.py ../skills ../adapters-output
 - [用 Agent Skills 为现实世界装备智能体](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 - [Anthropic Skills 示例](https://github.com/anthropics/skills)
 - [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill)
+
+### 项目文档
+
+- [ROLE_DEFINITIONS.md](ROLE_DEFINITIONS.md) - IT行业全生命周期岗位职责定义（23个岗位，供参考）
+- [PLANNING_SKILL_CATEGORIES.md](PLANNING_SKILL_CATEGORIES.md) - 全栈技能库规划文档（按技能种类组织）
+- [PLATFORM_GUIDE.md](PLATFORM_GUIDE.md) - 跨平台使用指南
 
 ## 联系方式
 

@@ -50,7 +50,7 @@ adapters-output/
 21. web-artifacts-builder
 22. webapp-testing
 23. xlsx
-24. zh-product-doc-generator
+24. full-stack-doc
 
 ## 🔧 平台适配器
 

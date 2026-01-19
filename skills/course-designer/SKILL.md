@@ -1,6 +1,6 @@
 ---
 name: course-designer
-description: 帮助设计和规划课程内容，包括课程大纲、学习目标、教学计划和评估方案。适用于教育工作者、培训师或需要创建结构化学习内容的场景。
+description: Provides comprehensive guidance for course design including curriculum development, learning objectives, and course structure. Use when the user asks about course design, needs to design courses, create learning objectives, or structure educational content.
 ---
 
 # 课程设计技能

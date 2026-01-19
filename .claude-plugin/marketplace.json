@@ -1,17 +1,287 @@
 {
-  "name": "teaching-ai-skills",
+  "name": "full-stack-skills",
   "owner": {
     "name": "TeachingAI",
     "email": "teachingai@163.com"
   },
   "metadata": {
-    "description": "Teaching AI 免费技能市场 - 提供各种实用的 AI 技能集合，包括教学、开发、设计、文档处理等",
-    "version": "1.0.0"
+    "description": "Teaching AI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合。严格遵循 Agent Skills 规范，提供 170 个技能集合，按技能种类组织为 15 个插件类别，覆盖软件开发全生命周期。在 AI 时代，赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现\"一个人 = 一个公司\"的愿景。",
+    "version": "2.0.0"
   },
   "plugins": [
     {
+      "name": "development-skills-frontend",
+      "description": "前端开发技能集合（37个技能）：包含 Vue 2/3、React、Angular、Svelte 等主流框架；Vite、Webpack、Rspack、Rollup、Parcel 等构建工具；Element Plus、Ant Design、Vant、uView、Bootstrap Vue 等 UI 组件库；Vue Router、Pinia、Vuex、Redux 等状态管理和路由方案；Electron、Tauri 等桌面应用框架。帮助 AI 助手掌握现代前端开发全栈技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/vue2",
+        "./skills/vue3",
+        "./skills/vue-router",
+        "./skills/pinia",
+        "./skills/vuex",
+        "./skills/vite",
+        "./skills/react",
+        "./skills/react-hooks",
+        "./skills/nextjs",
+        "./skills/redux",
+        "./skills/angular",
+        "./skills/svelte",
+        "./skills/webpack",
+        "./skills/rollup",
+        "./skills/parcel",
+        "./skills/rspack",
+        "./skills/element-plus",
+        "./skills/element-plus-vue3",
+        "./skills/ant-design-vue",
+        "./skills/ant-design-react",
+        "./skills/ant-design-mobile",
+        "./skills/ant-design-mini",
+        "./skills/bootstrap-vue3",
+        "./skills/vant-vue3",
+        "./skills/uview-vue2",
+        "./skills/uview-pro-vue3",
+        "./skills/layui-vue",
+        "./skills/avue",
+        "./skills/avue-crud",
+        "./skills/avue-form",
+        "./skills/vue-router-v3",
+        "./skills/vue-router-v4",
+        "./skills/vuex-vue2",
+        "./skills/dart-sass",
+        "./skills/electron",
+        "./skills/electron-egg",
+        "./skills/tauri"
+      ]
+    },
+    {
+      "name": "development-skills-backend",
+      "description": "后端开发技能集合（16个技能）：包含 Spring Boot、Spring Cloud、Spring AI、Spring Security、Spring Data JPA 等 Java 生态框架；Express、NestJS、Koa、Fastify 等 Node.js 框架；Django、FastAPI、Flask 等 Python 框架；Gin、Gin-Gonic 等 Go 框架。帮助 AI 助手掌握企业级后端开发、微服务架构、AI 应用开发等技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/spring-boot",
+        "./skills/spring-cloud",
+        "./skills/spring-cloud-alibaba",
+        "./skills/spring-ai",
+        "./skills/spring-ai-alibaba",
+        "./skills/spring-security",
+        "./skills/spring-data-jpa",
+        "./skills/express",
+        "./skills/nestjs",
+        "./skills/koa",
+        "./skills/fastify",
+        "./skills/django",
+        "./skills/fastapi",
+        "./skills/flask",
+        "./skills/gin",
+        "./skills/gin-gonic"
+      ]
+    },
+    {
+      "name": "development-skills-mobile",
+      "description": "移动端开发技能集合（23个技能）：包含 UniApp、UniApp-x 跨平台开发框架及项目创建器；React Native、Flutter 跨平台框架；Android Kotlin、iOS Swift 原生开发；Cocos2d-x 游戏引擎；uCharts、Lime EChart 图表组件；UniCloud 云开发、Uni-ad 广告变现等。帮助 AI 助手掌握移动端全栈开发技能，支持小程序、App、H5 多端开发。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/uniapp-project-creator",
+        "./skills/uniapp-project",
+        "./skills/uniappx-project-creator",
+        "./skills/uniappx-project",
+        "./skills/uniapp-uview",
+        "./skills/uniappx-uview-pro",
+        "./skills/uniapp-ucharts",
+        "./skills/uniapp-ad",
+        "./skills/uniapp-cloud",
+        "./skills/uniapp-mini",
+        "./skills/uniapp-native-app",
+        "./skills/uniapp-native-plugin",
+        "./skills/uniapp-plugin",
+        "./skills/lime-echart",
+        "./skills/ucharts",
+        "./skills/upgradeLink",
+        "./skills/react-native",
+        "./skills/react-native-project-creater",
+        "./skills/flutter",
+        "./skills/flutter-project-creater",
+        "./skills/android-kotlin",
+        "./skills/ios-swift",
+        "./skills/cocos2d-x"
+      ]
+    },
+    {
+      "name": "development-skills-utils",
+      "description": "开发工具技能集合（12个技能）：包含代码生成、测试编写、文档构建等基础工具；DDD 项目构建器（支持单体单模块、单体多模块、微服务架构）；项目文档生成（14种文档模板，覆盖产品到运维全生命周期）；MCP 构建器、Web 应用测试、前端设计、Web 工件构建器、主题工厂；Node.js 版本管理（nvm）、浏览器自动化等。帮助 AI 助手掌握开发工具链和工程化实践。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/code-generator",
+        "./skills/test-writer",
+        "./skills/ddd4j-project-builder",
+        "./skills/documentation-builder",
+        "./skills/full-stack-doc",
+        "./skills/mcp-builder",
+        "./skills/webapp-testing",
+        "./skills/frontend-design",
+        "./skills/web-artifacts-builder",
+        "./skills/theme-factory",
+        "./skills/nvm",
+        "./skills/agent-browser"
+      ]
+    },
+    {
+      "name": "design-skills",
+      "description": "设计与创意技能集合（16个技能）：包含 Figma、Sketch、Adobe XD、Axure、墨刀、Framer 等专业设计工具；Midjourney、DALL-E、Stable Diffusion、Runway ML、Galileo AI、Uizard、Figma AI 等 AI 设计工具；算法艺术、品牌指南、画布设计等创意工具。帮助 AI 助手掌握 UI/UX 设计、原型设计、AI 绘图等设计技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/algorithmic-art",
+        "./skills/brand-guidelines",
+        "./skills/canvas-design",
+        "./skills/figma",
+        "./skills/figma-ai",
+        "./skills/sketch",
+        "./skills/adobe-xd",
+        "./skills/midjourney",
+        "./skills/dalle",
+        "./skills/stable-diffusion",
+        "./skills/uizard",
+        "./skills/galileo-ai",
+        "./skills/runway-ml",
+        "./skills/axure",
+        "./skills/modao",
+        "./skills/framer"
+      ]
+    },
+    {
+      "name": "document-skills",
+      "description": "文档处理技能集合（8个技能）：包含 Word（docx）、PowerPoint（pptx）、Excel（xlsx）、PDF 等办公文档的创建、编辑和处理；文档协作（多人协作编辑）；API 文档生成器；Draw.io 流程图绘制；ProcessOn 思维导图绘制。帮助 AI 助手掌握文档处理、图表绘制、文档协作等办公自动化技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/docx",
+        "./skills/pptx",
+        "./skills/pdf",
+        "./skills/xlsx",
+        "./skills/doc-coauthoring",
+        "./skills/api-doc-generator",
+        "./skills/drawio-flowchart",
+        "./skills/processon-mindmap"
+      ]
+    },
+    {
+      "name": "architecture-skills",
+      "description": "架构技能集合（9个技能）：包含领域驱动设计（DDD）、DDD 微服务架构、DDD 事件驱动架构、DDD 六边形架构、DDD 整洁架构、COLA 架构等架构模式；C4 模型、PlantUML、Draw.io 架构图绘制工具。帮助 AI 助手掌握企业级架构设计、领域建模、架构图绘制等架构设计技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ddd",
+        "./skills/ddd-cola",
+        "./skills/ddd-microservices",
+        "./skills/ddd-event-driven",
+        "./skills/ddd-hexagonal-architecture",
+        "./skills/ddd-clean-architecture",
+        "./skills/c4-model",
+        "./skills/plantuml",
+        "./skills/drawio-architecture"
+      ]
+    },
+    {
+      "name": "testing-skills",
+      "description": "测试技能集合（9个技能）：包含 Jest、Vitest、PyTest、JUnit 等单元测试框架；Cypress、Playwright、Selenium 等 E2E 测试工具；Appium、Detox 等移动端测试工具。帮助 AI 助手掌握单元测试、集成测试、端到端测试、移动端测试等测试技能，提升代码质量和测试覆盖率。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/jest",
+        "./skills/vitest",
+        "./skills/pytest",
+        "./skills/junit",
+        "./skills/cypress",
+        "./skills/playwright",
+        "./skills/selenium",
+        "./skills/appium",
+        "./skills/detox"
+      ]
+    },
+    {
+      "name": "devops-skills",
+      "description": "运维技能集合（9个技能）：包含 Jenkins、GitLab CI、GitHub Actions 等 CI/CD 工具；Docker、Docker Compose、Kubernetes 等容器化和容器编排工具；Terraform、Ansible、CloudFormation 等基础设施即代码（IaC）工具。帮助 AI 助手掌握 DevOps 实践、自动化部署、容器化、基础设施管理等运维技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/jenkins",
+        "./skills/gitlab-ci",
+        "./skills/github-actions",
+        "./skills/docker",
+        "./skills/kubernetes",
+        "./skills/docker-compose",
+        "./skills/terraform",
+        "./skills/ansible",
+        "./skills/cloudformation"
+      ]
+    },
+    {
+      "name": "database-skills",
+      "description": "数据库技能集合（8个技能）：包含 MySQL、PostgreSQL、Oracle 等关系型数据库；MongoDB、Redis、Elasticsearch 等 NoSQL 数据库和搜索引擎；Navicat、DBeaver 等数据库管理工具。帮助 AI 助手掌握数据库设计、SQL 优化、数据存储、数据检索等数据库技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/mysql",
+        "./skills/postgresql",
+        "./skills/oracle",
+        "./skills/mongodb",
+        "./skills/redis",
+        "./skills/elasticsearch",
+        "./skills/navicat",
+        "./skills/dbeaver"
+      ]
+    },
+    {
+      "name": "cloud-skills",
+      "description": "云平台技能集合（16个技能）：包含 AWS（EC2、S3、RDS、Lambda）、Azure（VM、Storage、SQL）、阿里云（ECS、OSS、RDS）、腾讯云（CVM、COS、CDB）、华为云（ECS、OBS、RDS）等主流云平台的核心服务。帮助 AI 助手掌握云计算、云服务使用、云架构设计等云平台技能，支持多云部署和云原生应用开发。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/cloud-aws-ec2",
+        "./skills/cloud-aws-s3",
+        "./skills/cloud-aws-rds",
+        "./skills/cloud-aws-lambda",
+        "./skills/cloud-azure-vm",
+        "./skills/cloud-azure-storage",
+        "./skills/cloud-azure-sql",
+        "./skills/cloud-aliyun-ecs",
+        "./skills/cloud-aliyun-oss",
+        "./skills/cloud-aliyun-rds",
+        "./skills/cloud-tencent-cvm",
+        "./skills/cloud-tencent-cos",
+        "./skills/cloud-tencent-cdb",
+        "./skills/cloud-huawei-ecs",
+        "./skills/cloud-huawei-obs",
+        "./skills/cloud-huawei-rds"
+      ]
+    },
+    {
+      "name": "markdown-skills",
+      "description": "Markdown 相关技能集合（1个技能）：包含 Mermaid 图表绘制，支持 23 种图表类型（流程图、时序图、类图、状态图、甘特图、架构图、C4 图、思维导图等）。帮助 AI 助手掌握 Markdown 文档编写、技术图表绘制、架构图可视化等文档技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/mermaid"
+      ]
+    },
+    {
+      "name": "social-skills",
+      "description": "社交与协作技能集合（2个技能）：包含内部沟通（状态报告、领导更新、公司通讯、FAQ 等内部文档编写）；Slack GIF 创建器（为 Slack 消息创建 GIF 动图）。帮助 AI 助手掌握团队协作、内部沟通、社交工具使用等协作技能。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/internal-comms",
+        "./skills/slack-gif-creator"
+      ]
+    },
+    {
       "name": "teaching-skills",
-      "description": "教学与教育相关技能集合，包括课程设计、学习评估、教学资源生成等",
+      "description": "教学与教育相关技能集合（3个技能）：包含课程设计（课程大纲、学习目标、教学计划、评估方案）；学习评估（测验题目、评估标准、评分 rubric、学习分析）；教学资源生成（课件、练习题、教学案例、学习指南）。帮助 AI 助手掌握教学资源设计、课程规划、学习评估等教育技能。",
       "source": "./",
       "strict": false,
       "skills": [
@@ -21,69 +291,8 @@
       ]
     },
     {
-      "name": "document-skills",
-      "description": "文档处理技能集合，支持 Excel、Word、PowerPoint、PDF 等办公文档的创建、编辑和处理",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/docx",
-        "./skills/pptx",
-        "./skills/pdf",
-        "./skills/xlsx",
-        "./skills/doc-coauthoring"
-      ]
-    },
-    {
-      "name": "markdown-skills",
-      "description": "Markdown 相关技能集合，包括 Mermaid 图表绘制等",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/mermaid"
-      ]
-    },
-    {
-      "name": "development-skills",
-      "description": "开发技能集合，包括代码生成、测试编写、文档构建、项目文档生成、MCP 构建器、Web 开发、前端设计等",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/code-generator",
-        "./skills/test-writer",
-        "./skills/ddd4j-project-builder",
-        "./skills/documentation-builder",
-        "./skills/zh-product-doc-generator",
-        "./skills/mcp-builder",
-        "./skills/webapp-testing",
-        "./skills/frontend-design",
-        "./skills/web-artifacts-builder",
-        "./skills/theme-factory"
-      ]
-    },
-    {
-      "name": "design-skills",
-      "description": "设计与创意技能集合，包括算法艺术、品牌指南、画布设计等",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/algorithmic-art",
-        "./skills/brand-guidelines",
-        "./skills/canvas-design"
-      ]
-    },
-    {
-      "name": "social-skills",
-      "description": "社交与协作技能集合，包括内部沟通、Slack GIF 创建等",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/internal-comms",
-        "./skills/slack-gif-creator"
-      ]
-    },
-    {
       "name": "utility-skills",
-      "description": "工具与实用技能集合，包括技能创建器等",
+      "description": "工具与实用技能集合（1个技能）：包含技能创建器，指导如何创建有效的 Agent Skills，扩展 Claude 的能力。帮助 AI 助手和开发者掌握技能设计、技能结构、最佳实践等技能创建技能，支持自定义技能开发。",
       "source": "./",
       "strict": false,
       "skills": [
