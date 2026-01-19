@@ -1,6 +1,6 @@
-# Full Stack Skills
+# Full Stack Skills（Alpha）
 
-**Full-Stack-Skills** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **13 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
+**Full-Stack-Skills（Alpha）** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **13 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作（当前项目尚未经过严格测试，还在自测中）。
 
 > **说明：** 本仓库合并了 Anthropic 的示例技能和 Agent Skills 的技能集合，提供各种实用的 AI 技能，可以在 Claude Code、Claude.ai 和 API 中使用。关于 Agent Skills 标准，请参见 [agentskills.io](http://agentskills.io)。
 
