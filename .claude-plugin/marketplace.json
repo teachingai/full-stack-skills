@@ -139,7 +139,7 @@
     },
     {
       "name": "document-skills",
-      "description": "文档处理技能集合（8个技能）：包含 Word（docx）、PowerPoint（pptx）、Excel（xlsx）、PDF 等办公文档的创建、编辑和处理；文档协作（多人协作编辑）；API 文档生成器；Draw.io 流程图绘制；ProcessOn 思维导图绘制。帮助 AI 助手掌握文档处理、图表绘制、文档协作等办公自动化技能。",
+      "description": "文档处理技能集合（10个技能）：包含 Word（docx）、PowerPoint（pptx）、Excel（xlsx）、PDF 等办公文档的创建、编辑和处理；文档协作（多人协作编辑）；API 文档生成器；Draw.io 流程图绘制；ProcessOn 思维导图绘制；Mermaid 图表绘制；PlantUML 架构图绘制。帮助 AI 助手掌握文档处理、图表绘制、文档协作等办公自动化技能。",
       "source": "./",
       "strict": false,
       "skills": [
@@ -150,12 +150,14 @@
         "./skills/doc-coauthoring",
         "./skills/api-doc-generator",
         "./skills/drawio-flowchart",
-        "./skills/processon-mindmap"
+        "./skills/processon-mindmap",
+        "./skills/mermaid",
+        "./skills/plantuml"
       ]
     },
     {
       "name": "architecture-skills",
-      "description": "架构技能集合（8个技能）：包含领域驱动设计（DDD）、DDD 微服务架构、DDD 事件驱动架构、DDD 六边形架构、DDD 整洁架构、COLA 架构等架构模式；PlantUML、Draw.io 架构图绘制工具。帮助 AI 助手掌握企业级架构设计、领域建模、架构图绘制等架构设计技能。",
+      "description": "架构技能集合（7个技能）：包含领域驱动设计（DDD）、DDD 微服务架构、DDD 事件驱动架构、DDD 六边形架构、DDD 整洁架构、COLA 架构等架构模式；Draw.io 架构图绘制工具。帮助 AI 助手掌握企业级架构设计、领域建模、架构图绘制等架构设计技能。",
       "source": "./",
       "strict": false,
       "skills": [
@@ -165,7 +167,6 @@
         "./skills/ddd-event-driven",
         "./skills/ddd-hexagonal-architecture",
         "./skills/ddd-clean-architecture",
-        "./skills/plantuml",
         "./skills/drawio-architecture"
       ]
     },
@@ -241,15 +242,6 @@
         "./skills/cloud-huawei-ecs",
         "./skills/cloud-huawei-obs",
         "./skills/cloud-huawei-rds"
-      ]
-    },
-    {
-      "name": "markdown-skills",
-      "description": "Markdown 相关技能集合（1个技能）：包含 Mermaid 图表绘制，支持 23 种图表类型（流程图、时序图、类图、状态图、甘特图、架构图、C4 图、思维导图等）。帮助 AI 助手掌握 Markdown 文档编写、技术图表绘制、架构图可视化等文档技能。",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/mermaid"
       ]
     },
     {
