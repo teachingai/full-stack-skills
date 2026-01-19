@@ -1,6 +1,6 @@
 ---
 name: cloud-aliyun-oss
-description: [待完善] Aliyun Oss guide and best practices. Use this skill when users need to work with Aliyun Oss.
+description: Provides comprehensive guidance for Alibaba Cloud OSS including bucket creation, object storage, access control, and OSS management. Use when the user asks about Alibaba Cloud OSS, needs to store files in OSS, configure OSS buckets, or work with Alibaba Cloud storage.
 license: Complete terms in LICENSE.txt
 ---
 

@@ -1,81 +1,65 @@
-# RouterView Component API
+## Instructions
 
-## API Reference
+Use this API section to confirm options for `router view`.
 
-RouterView component props and usage.
+## Examples
 
-### RouterView Props
-
-#### name
-
-**Type:** `string`
-
-Default: `"default"`
-
-When a `<router-view>` has a name, it will render the component with the corresponding name in the matched route record's `components` option.
-
-**Example:**
-```vue
-<router-view name="header" />
+```html
 <router-view />
-<router-view name="footer" />
+<router-view name="sidebar" />
 ```
 
-### RouterView Behavior
-
-- Renders the component matched by the route
-- Updates when the route changes
-- Can be nested for nested routes
-- Can be named for named views
-
-### Example: Basic Usage
-
-```vue
-<template>
-  <div id="app">
-    <router-view />
-  </div>
-</template>
+```js
+const routes = [
+  {
+    path: '/dashboard',
+    components: {
+      default: Dashboard,
+      sidebar: Sidebar
+    }
+  }
+]
 ```
 
-### Example: Named Views
+## Scenarios
 
-```vue
-<template>
-  <div>
-    <router-view name="header" />
-    <router-view />
-    <router-view name="sidebar" />
-  </div>
-</template>
+### Layout with sidebar
+
+- Render default and named views for layout regions.
+- Keep layout components thin.
+
+```html
+<router-view />
+<router-view name="sidebar" />
 ```
 
-### Example: With Transition
+### Nested routes outlet
 
-```vue
-<template>
-  <transition name="fade" mode="out-in">
-    <router-view />
-  </transition>
-</template>
+- Place router-view inside parent to render children.
+- Use nested routes for sub-sections.
+
+```html
+<!-- Parent.vue -->
+<router-view />
 ```
 
-### Example: With Keep-Alive
+Reference: https://v3.router.vuejs.org/api/#router-view
 
-```vue
-<template>
-  <keep-alive>
-    <router-view />
-  </keep-alive>
-</template>
-```
+## Parameters
 
-### Key Points
+- `name` (string) - Named view to render (default: `default`).
 
-- Default name is "default"
-- Use name prop for named views
-- Can be nested for nested routes
-- Works with transition and keep-alive
-- Updates automatically on route changes
+## Returns
 
-**See also:** `examples/nested-routes.md`, `examples/named-views.md`
+- Renders the matched component for the current route.
+- Supports named views for multiple outlets.
+
+## Common Errors
+
+- Missing `<router-view>` yields no route component output.
+- Name mismatch prevents named view from rendering.
+
+## Best Practices
+
+- Keep a single router-view per layout region.
+- Use named views only when needed.

@@ -1,6 +1,6 @@
 ---
 name: uniapp-project-creator
-description: A comprehensive skill for creating uni-app projects with one command. Use this skill whenever the user wants to create a new uni-app project, initialize project structure, configure manifest.json and pages.json, set up development environment, or generate project templates. This skill provides complete CLI commands, project templates, and configuration examples based on the official uni-app documentation.
+description: Provides one-command project creation for uni-app using the official quickstart CLI, including project initialization, configuration, and template selection. Use when the user asks to create a uni-app project with a single command, needs to initialize a new uni-app project, or generate uni-app project structure.
 license: Complete terms in LICENSE.txt
 ---
 
@@ -17,7 +17,7 @@ Use this skill whenever the user wants to:
 
 ## How to use this skill
 
-To create a uni-app project:
+To create a uni-app project with a single command or via HBuilderX:
 
 1. **Identify the project type** from the user's request:
    - Standard uni-app project → Use Vue 2 or Vue 3 template
@@ -36,6 +36,11 @@ To create a uni-app project:
 4. **Follow the specific instructions** in those files for project creation, structure, and configuration
 
 5. **Generate the project structure** with proper files and configurations
+
+**Important Notes**:
+- This skill focuses on uni-app CLI quickstart and HBuilderX creation flows
+- Use one command creation when the user wants "一句话创建"
+- Ensure Vue 2/Vue 3 template choice matches the user's target stack
 
 ## Examples and Templates
 

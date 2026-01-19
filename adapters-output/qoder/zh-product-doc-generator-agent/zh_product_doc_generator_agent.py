@@ -11,7 +11,7 @@ class ZhProductDocGeneratorAgent:
     """
     
     def __init__(self):
-        self.name = "zh-product-doc-generator"
+        self.name = "full-stack-doc"
         self.description = "基于标准模板快速生成项目文档，包括产品调研、需求分析、PRD、架构设计、技术文档等13种项目交付文档模板。适用于软件开发项目的全生命周期文档生成。"
     
     def execute(self, task, context=None):

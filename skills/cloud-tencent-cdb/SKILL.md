@@ -1,6 +1,6 @@
 ---
 name: cloud-tencent-cdb
-description: [待完善] Tencent Cdb guide and best practices. Use this skill when users need to work with Tencent Cdb.
+description: Provides comprehensive guidance for Tencent Cloud CDB including database creation, configuration, backups, and CDB management. Use when the user asks about Tencent Cloud CDB, needs to create CDB databases, configure CDB, or manage Tencent Cloud database services.
 license: Complete terms in LICENSE.txt
 ---
 

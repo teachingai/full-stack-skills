@@ -1,6 +1,6 @@
 ---
 name: cloud-tencent-cos
-description: [待完善] Tencent Cos guide and best practices. Use this skill when users need to work with Tencent Cos.
+description: Provides comprehensive guidance for Tencent Cloud COS including bucket creation, object storage, access control, and COS management. Use when the user asks about Tencent Cloud COS, needs to store files in COS, configure COS buckets, or work with Tencent Cloud storage.
 license: Complete terms in LICENSE.txt
 ---
 

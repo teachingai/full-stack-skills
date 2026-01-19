@@ -1,6 +1,6 @@
 ---
 name: cloud-aliyun-rds
-description: [待完善] Aliyun Rds guide and best practices. Use this skill when users need to work with Aliyun Rds.
+description: Provides comprehensive guidance for Alibaba Cloud RDS including database creation, configuration, backups, and RDS management. Use when the user asks about Alibaba Cloud RDS, needs to create RDS databases, configure RDS, or manage Alibaba Cloud database services.
 license: Complete terms in LICENSE.txt
 ---
 

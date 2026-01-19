@@ -1,6 +1,6 @@
 ---
 name: cloud-azure-sql
-description: [待完善] Azure Sql guide and best practices. Use this skill when users need to work with Azure Sql.
+description: Provides comprehensive guidance for Azure SQL Database including database creation, configuration, security, and Azure SQL management. Use when the user asks about Azure SQL, needs to create Azure SQL databases, configure Azure SQL, or manage Azure database services.
 license: Complete terms in LICENSE.txt
 ---
 

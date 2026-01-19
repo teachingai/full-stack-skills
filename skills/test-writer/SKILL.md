@@ -1,6 +1,6 @@
 ---
 name: test-writer
-description: 帮助编写单元测试、集成测试和端到端测试。支持多种测试框架，生成测试用例、测试数据和测试报告。适用于确保代码质量和功能正确性。
+description: Provides comprehensive guidance for writing tests including test case creation, test structure, and testing best practices. Use when the user asks about writing tests, needs to create test cases, structure tests, or implement testing strategies.
 ---
 
 # 测试编写技能

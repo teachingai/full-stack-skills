@@ -1,6 +1,6 @@
 ---
 name: react-native-project-creater
-description: [待完善] React Native guide and best practices. Use this skill when users need to work with React Native.
+description: Provides one-command project creation for React Native including project initialization, configuration, and template generation. Use when the user asks about creating React Native projects, needs to initialize a new React Native project, or generate React Native project structure.
 license: Complete terms in LICENSE.txt
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cloud-azure-storage
-description: [待完善] Azure Storage guide and best practices. Use this skill when users need to work with Azure Storage.
+description: Provides comprehensive guidance for Azure Storage including blob storage, file shares, queues, and storage account management. Use when the user asks about Azure Storage, needs to store data in Azure, configure Azure Storage, or work with Azure storage services.
 license: Complete terms in LICENSE.txt
 ---
 

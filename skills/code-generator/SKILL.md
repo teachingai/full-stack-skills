@@ -1,6 +1,6 @@
 ---
 name: code-generator
-description: 帮助生成高质量的代码，包括函数、类、模块和完整项目。支持多种编程语言，遵循最佳实践和设计模式。适用于快速开发、代码示例生成或教学演示。
+description: Provides comprehensive guidance for code generation including template-based generation, code scaffolding, and automated code creation. Use when the user asks about code generation, needs to generate code from templates, create code scaffolds, or automate code creation.
 ---
 
 # 代码生成技能

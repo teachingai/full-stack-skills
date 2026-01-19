@@ -1,6 +1,6 @@
 ---
 name: cloud-aws-lambda
-description: [待完善] Aws Lambda guide and best practices. Use this skill when users need to work with Aws Lambda.
+description: Provides comprehensive guidance for AWS Lambda including function creation, triggers, configuration, and serverless development. Use when the user asks about AWS Lambda, needs to create Lambda functions, implement serverless functions, or work with AWS serverless computing.
 license: Complete terms in LICENSE.txt
 ---
 

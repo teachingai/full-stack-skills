@@ -1,6 +1,6 @@
 ---
 name: uniappx-project-creator
-description: A comprehensive skill for creating uni-app-x projects with one command. Use this skill whenever the user wants to create a new uni-app-x project, initialize project structure with TypeScript and Vue 3, configure manifest.json and pages.json, set up development environment, or generate project templates. This skill provides complete CLI commands, project templates, and configuration examples based on the official uni-app-x documentation.
+description: Provides one-command project creation for uni-app-x including Vue 3 + TypeScript + Vite setup, configuration, and template generation. Use when the user asks to create a uni-app-x project with a single command, needs to initialize a new uni-app-x project, or generate uni-app-x project structure.
 license: Complete terms in LICENSE.txt
 ---
 
@@ -17,7 +17,7 @@ Use this skill whenever the user wants to:
 
 ## How to use this skill
 
-To create a uni-app-x project:
+To create a uni-app-x project with a single command or via HBuilderX:
 
 1. **Identify the project type** from the user's request:
    - Standard uni-app-x project → Use TypeScript + Vue 3 template
@@ -36,6 +36,11 @@ To create a uni-app-x project:
 4. **Follow the specific instructions** in those files for project creation, structure, and configuration
 
 5. **Generate the project structure** with proper TypeScript and Vue 3 configurations
+
+**Important Notes**:
+- This skill focuses on uni-app-x CLI quickstart and HBuilderX creation flows
+- Use one command creation when the user wants "一句话创建"
+- uni-app-x requires Vue 3 + TypeScript + Vite
 
 ## Examples and Templates
 

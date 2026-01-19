@@ -1,6 +1,6 @@
 ---
 name: cloud-huawei-obs
-description: [待完善] Huawei Obs guide and best practices. Use this skill when users need to work with Huawei Obs.
+description: Provides comprehensive guidance for Huawei Cloud OBS including bucket creation, object storage, access control, and OBS management. Use when the user asks about Huawei Cloud OBS, needs to store files in OBS, configure OBS buckets, or work with Huawei Cloud storage.
 license: Complete terms in LICENSE.txt
 ---
 

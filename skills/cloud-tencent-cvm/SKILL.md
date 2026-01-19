@@ -1,6 +1,6 @@
 ---
 name: cloud-tencent-cvm
-description: [待完善] Tencent Cvm guide and best practices. Use this skill when users need to work with Tencent Cvm.
+description: Provides comprehensive guidance for Tencent Cloud CVM including instance creation, configuration, security groups, and CVM management. Use when the user asks about Tencent Cloud CVM, needs to create CVM instances, configure CVM, or manage Tencent Cloud compute resources.
 license: Complete terms in LICENSE.txt
 ---
 

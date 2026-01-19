@@ -1,5 +1,8 @@
 # Lazy Loading Routes | 懒加载路由
 
+**官方文档**: https://router.vuejs.org/guide/advanced/lazy-loading.html
+
+
 ## Instructions
 
 This example demonstrates how to implement lazy loading for routes to enable code splitting and improve performance.

@@ -1,5 +1,8 @@
 # Route Meta Fields | 路由元信息
 
+**官方文档**: https://router.vuejs.org/guide/advanced/meta.html
+
+
 ## Instructions
 
 This example demonstrates how to use route meta fields to attach custom data to routes.

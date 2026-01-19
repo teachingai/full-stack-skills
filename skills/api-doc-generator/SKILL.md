@@ -1,6 +1,6 @@
 ---
 name: api-doc-generator
-description: [待完善] Api Doc Generator guide and best practices. Use this skill when users need to work with Api Doc Generator.
+description: Provides comprehensive guidance for API documentation generation including API documentation creation, formatting, and API documentation best practices. Use when the user asks about API documentation, needs to generate API docs, format API documentation, or create API documentation structures.
 license: Complete terms in LICENSE.txt
 ---
 

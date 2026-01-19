@@ -1,5 +1,8 @@
 # Named Views | 命名视图
 
+**官方文档**: https://router.vuejs.org/guide/essentials/named-views.html
+
+
 ## Instructions
 
 This example demonstrates how to use named views to display multiple RouterView components simultaneously.

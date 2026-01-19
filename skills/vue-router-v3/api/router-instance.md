@@ -1,137 +1,75 @@
-# Router Instance API
+## Instructions
 
-## API Reference
+Use this API section to confirm options for `router instance`.
 
-Router instance properties and methods.
+## Examples
 
-### Router Instance Properties
-
-#### router.app
-
-**Type:** `Vue instance`
-
-The root Vue instance the router was injected into.
-
-#### router.mode
-
-**Type:** `string`
-
-The mode the router is using (`"hash"` | `"history"` | `"abstract"`).
-
-#### router.currentRoute
-
-**Type:** `Route`
-
-The current route object.
-
-### Router Instance Methods
-
-#### router.push(location, onComplete?, onAbort?)
-
-**Type:** `Function`
-
-Programmatically navigate to a new route.
-
-**Parameters:**
-- `location` - Route location (string or object)
-- `onComplete` - Success callback (optional)
-- `onAbort` - Abort callback (optional)
-
-**Returns:** `Promise<Route>`
-
-**Example:**
-```javascript
-router.push('/home')
-router.push({ path: '/home' })
-router.push({ name: 'user', params: { id: '123' } })
+```js
+// programmatic navigation
+this.$router.push({ name: 'user', params: { id: 1 } })
+this.$router.replace('/login')
 ```
 
-#### router.replace(location, onComplete?, onAbort?)
-
-**Type:** `Function`
-
-Navigate to a new route without adding a history entry.
-
-**Parameters:**
-- `location` - Route location (string or object)
-- `onComplete` - Success callback (optional)
-- `onAbort` - Abort callback (optional)
-
-**Returns:** `Promise<Route>`
-
-#### router.go(n)
-
-**Type:** `Function`
-
-Go n steps in the history stack.
-
-**Parameters:**
-- `n` - Number of steps (positive for forward, negative for back)
-
-**Example:**
-```javascript
-router.go(-1)  // Go back
-router.go(1)   // Go forward
+```js
+// global guard
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !isLoggedIn()) {
+    next('/login')
+  } else {
+    next()
+  }
+})
 ```
 
-#### router.back()
+## Scenarios
 
-**Type:** `Function`
+### Guarded routes
 
-Go back one step in history (equivalent to `router.go(-1)`).
+- Check meta flags before navigation.
+- Redirect to login when unauthenticated.
 
-#### router.forward()
-
-**Type:** `Function`
-
-Go forward one step in history (equivalent to `router.go(1)`).
-
-#### router.addRoutes(routes)
-
-**Type:** `Function`
-
-Dynamically add routes to the router.
-
-**Parameters:**
-- `routes` - Array of route config objects
-
-**Example:**
-```javascript
-router.addRoutes([
-  { path: '/new', component: NewComponent }
-])
+```js
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !isLoggedIn()) {
+    next('/login')
+  } else {
+    next()
+  }
+})
 ```
 
-#### router.onReady(callback, errorCallback?)
+### Error handling
 
-**Type:** `Function`
+- Handle NavigationDuplicated errors gracefully.
+- Avoid unhandled promise rejections.
 
-Register a callback that's called when the router has completed the initial navigation.
+```js
+this.$router.push('/same').catch(() => {})
+```
 
-**Parameters:**
-- `callback` - Callback function
-- `errorCallback` - Error callback (optional)
+Reference: https://v3.router.vuejs.org/api/#router-instance
 
-#### router.onError(callback)
+## Parameters
 
-**Type:** `Function`
+- `router.push(location)` - Navigate to a new route.
+- `router.replace(location)` - Replace current history entry.
+- `router.go(n)` - Move forward/back in history.
+- `router.back()` / `router.forward()` - History helpers.
+- `router.beforeEach(fn)` - Global guard.
+- `router.afterEach(fn)` - Global after hook.
 
-Register a callback that's called when an error occurs during navigation.
+## Returns
 
-**Parameters:**
-- `callback` - Error callback function
+- Most navigation methods return a Promise.
+- Guards return control via `next()` callbacks.
 
-#### router.resolve(location, current?, append?)
+## Common Errors
 
-**Type:** `Function`
+- Unhandled NavigationDuplicated errors on same route.
+- Missing `next()` in guards causes navigation to hang.
 
-Resolve a route location to a normalized route object.
+## Best Practices
 
-**Parameters:**
-- `location` - Route location
-- `current` - Current route (optional)
-- `append` - Append flag (optional)
-
-**Returns:** `Route`
-
-**See also:** `examples/programmatic-navigation.md`
+- Use named routes for push/replace.
+- Handle promise rejections from push/replace.
+- Keep guards minimal and async-safe.

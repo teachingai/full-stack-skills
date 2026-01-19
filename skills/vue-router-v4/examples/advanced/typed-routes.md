@@ -1,5 +1,8 @@
 # Typed Routes | 类型化路由
 
+**官方文档**: https://router.vuejs.org/guide/advanced/typed-routes.html
+
+
 ## Instructions
 
 This example demonstrates how to use TypeScript with Vue Router for type-safe routing.

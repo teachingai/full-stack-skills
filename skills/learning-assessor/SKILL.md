@@ -1,6 +1,6 @@
 ---
 name: learning-assessor
-description: 帮助创建学习评估工具，包括测验题目、评估标准、评分 rubric 和学习分析。适用于评估学习效果、设计考试题目或分析学习数据。
+description: Provides comprehensive guidance for learning assessment including assessment creation, evaluation methods, and assessment best practices. Use when the user asks about learning assessment, needs to create assessments, evaluate learning, or implement assessment strategies.
 ---
 
 # 学习评估技能

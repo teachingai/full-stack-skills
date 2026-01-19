@@ -1,6 +1,6 @@
 ---
 name: cloud-huawei-rds
-description: [待完善] Huawei Rds guide and best practices. Use this skill when users need to work with Huawei Rds.
+description: Provides comprehensive guidance for Huawei Cloud RDS including database creation, configuration, backups, and RDS management. Use when the user asks about Huawei Cloud RDS, needs to create RDS databases, configure RDS, or manage Huawei Cloud database services.
 license: Complete terms in LICENSE.txt
 ---
 

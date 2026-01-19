@@ -1,5 +1,8 @@
 # Scroll Behavior | 滚动行为
 
+**官方文档**: https://router.vuejs.org/guide/advanced/scroll-behavior.html
+
+
 ## Instructions
 
 This example demonstrates how to configure scroll behavior when navigating between routes.

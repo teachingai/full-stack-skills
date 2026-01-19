@@ -1,6 +1,6 @@
 ---
 name: documentation-builder
-description: 帮助生成技术文档，包括 API 文档、用户手册、开发指南、README 等。支持多种文档格式，确保文档清晰、完整、易于理解。
+description: Provides comprehensive guidance for building documentation including documentation generation, formatting, and documentation best practices. Use when the user asks about building documentation, needs to generate documentation, format documentation, or create documentation structures.
 ---
 
 # 文档构建技能

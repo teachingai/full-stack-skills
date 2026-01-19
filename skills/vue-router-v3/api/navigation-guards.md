@@ -1,157 +1,79 @@
-# Navigation Guards API
+## Instructions
 
-## API Reference
+Use this API section to confirm options for `navigation guards`.
 
-Navigation guards for controlling navigation flow.
+## Examples
 
-### Global Guards
-
-#### router.beforeEach(guard)
-
-**Type:** `Function`
-
-Register a global before guard.
-
-**Parameters:**
-- `guard: NavigationGuard` - Guard function
-
-**Example:**
-```javascript
+```js
 router.beforeEach((to, from, next) => {
-  // Navigation logic
-  next()
-})
-```
-
-#### router.beforeResolve(guard)
-
-**Type:** `Function`
-
-Register a global resolve guard.
-
-**Parameters:**
-- `guard: NavigationGuard` - Guard function
-
-**Example:**
-```javascript
-router.beforeResolve((to, from, next) => {
-  // Called after beforeRouteEnter and beforeRouteUpdate
-  next()
-})
-```
-
-#### router.afterEach(hook)
-
-**Type:** `Function`
-
-Register a global after hook.
-
-**Parameters:**
-- `hook: AfterNavigationHook` - Hook function
-
-**Example:**
-```javascript
-router.afterEach((to, from) => {
-  // Called after navigation is confirmed
-  console.log('Navigated to:', to.path)
-})
-```
-
-### Per-Route Guard
-
-#### beforeEnter
-
-**Type:** `NavigationGuard`
-
-Guard defined directly on the route configuration.
-
-**Example:**
-```javascript
-{
-  path: '/admin',
-  beforeEnter: (to, from, next) => {
-    if (isAdmin()) next()
-    else next('/')
-  },
-  component: Admin
-}
-```
-
-### Component Guards
-
-#### beforeRouteEnter
-
-**Type:** `NavigationGuard`
-
-Called before the route that renders this component is confirmed.
-
-**Example:**
-```javascript
-beforeRouteEnter(to, from, next) {
-  // Cannot access this
-  // Can access component via next(vm => {})
-  next(vm => {
-    vm.loadData()
-  })
-}
-```
-
-#### beforeRouteUpdate
-
-**Type:** `NavigationGuard`
-
-Called when the route that renders this component has changed, but this component is reused.
-
-**Example:**
-```javascript
-beforeRouteUpdate(to, from, next) {
-  // Can access this
-  this.userId = to.params.id
-  next()
-}
-```
-
-#### beforeRouteLeave
-
-**Type:** `NavigationGuard`
-
-Called when the route that renders this component is about to be navigated away from.
-
-**Example:**
-```javascript
-beforeRouteLeave(to, from, next) {
-  if (this.hasUnsavedChanges) {
-    if (confirm('Leave without saving?')) {
-      next()
-    } else {
-      next(false)
-    }
+  if (to.meta.requiresAuth && !isLoggedIn()) {
+    next('/login')
   } else {
+    next()
+  }
+})
+```
+
+```js
+export default {
+  beforeRouteLeave(to, from, next) {
+    // confirm leave
     next()
   }
 }
 ```
 
-### NavigationGuard Function Signature
+## Scenarios
 
-```typescript
-type NavigationGuard = (
-  to: Route,
-  from: Route,
-  next: (to?: RawLocation | false | ((vm: Component) => any) | void) => void
-) => any
+### Auth and role checks
+
+- Use global guards with meta roles.
+- Redirect or block appropriately.
+
+```js
+router.beforeEach((to, from, next) => {
+  const role = getUserRole()
+  if (to.meta.role && to.meta.role !== role) {
+    next('/403')
+  } else {
+    next()
+  }
+})
 ```
 
-### Guard Execution Order
+### Unsaved changes
 
-1. Navigation triggered
-2. Call `beforeRouteLeave` guards in deactivated components
-3. Call global `beforeEach` guards
-4. Call `beforeRouteUpdate` guards in reused components
-5. Call `beforeEnter` in route configs
-6. Call `beforeRouteEnter` in activated components
-7. Call global `beforeResolve` guards
-8. Navigation confirmed
-9. Call global `afterEach` hooks
+- Use beforeRouteLeave for confirmation.
+- Prevent accidental navigation loss.
 
-**See also:** `examples/navigation-guards.md`
+```js
+export default {
+  beforeRouteLeave(to, from, next) {
+    const ok = window.confirm('Discard changes?')
+    next(ok)
+  }
+}
+```
+
+Reference: https://v3.router.vuejs.org/api/#navigation-guards
+
+## Parameters
+
+- `beforeEach` / `beforeResolve` / `afterEach` - Global hooks.
+- `beforeEnter` - Per-route guard.
+- `beforeRouteEnter` / `beforeRouteUpdate` / `beforeRouteLeave` - In-component.
+
+## Returns
+
+- Guards control navigation flow via `next()`.
+- After hooks run after navigation completes.
+
+## Common Errors
+
+- Not calling next() blocks navigation.
+- Calling next() multiple times causes errors.
+
+## Best Practices
+
+- Use meta fields to centralize access control.
+- Prefer async/await with try/catch in guards.

@@ -6,6 +6,16 @@
 
 ## 创建第一个项目
 
+### 一句话创建（CLI）
+
+```bash
+# Vue 2 项目
+npx degit dcloudio/uni-preset-vue my-uniapp
+
+# Vue 3 + Vite 项目
+npx degit dcloudio/uni-preset-vue#vite-ts my-uniapp
+```
+
 ### 使用 HBuilderX
 
 1. **打开 HBuilderX**
@@ -257,6 +267,6 @@ export default {
 
 ## 下一步
 
-- 学习 uni-app 组件：参考 `uniapp-project-guide`
-- 学习 uni-app API：参考 `uniapp-project-guide`
+- 学习 uni-app 组件：参考 `uniapp-project`
+- 学习 uni-app API：参考 `uniapp-project`
 - 配置项目：参考 `templates/project-templates.md`

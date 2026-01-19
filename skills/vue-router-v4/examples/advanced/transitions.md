@@ -1,5 +1,8 @@
 # Transitions | 过渡效果
 
+**官方文档**: https://router.vuejs.org/guide/advanced/transitions.html
+
+
 ## Instructions
 
 This example demonstrates how to add transitions between route changes.

@@ -1,5 +1,8 @@
 # Programmatic Navigation | 编程式导航
 
+**官方文档**: https://router.vuejs.org/guide/essentials/navigation.html
+
+
 ## Instructions
 
 This example demonstrates how to navigate programmatically using the router instance methods.

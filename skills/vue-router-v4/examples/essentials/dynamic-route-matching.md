@@ -1,5 +1,8 @@
 # Dynamic Route Matching | 动态路由匹配
 
+**官方文档**: https://router.vuejs.org/guide/essentials/dynamic-matching.html
+
+
 ## Instructions
 
 This example demonstrates how to use dynamic route parameters and query strings in Vue Router.

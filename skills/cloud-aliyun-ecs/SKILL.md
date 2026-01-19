@@ -1,6 +1,6 @@
 ---
 name: cloud-aliyun-ecs
-description: [待完善] Aliyun Ecs guide and best practices. Use this skill when users need to work with Aliyun Ecs.
+description: Provides comprehensive guidance for Alibaba Cloud ECS including instance creation, configuration, security groups, and ECS management. Use when the user asks about Alibaba Cloud ECS, needs to create ECS instances, configure ECS, or manage Alibaba Cloud compute resources.
 license: Complete terms in LICENSE.txt
 ---
 

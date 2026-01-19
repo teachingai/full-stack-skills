@@ -1,6 +1,6 @@
 ---
 name: cloud-huawei-ecs
-description: [待完善] Huawei Ecs guide and best practices. Use this skill when users need to work with Huawei Ecs.
+description: Provides comprehensive guidance for Huawei Cloud ECS including instance creation, configuration, security groups, and ECS management. Use when the user asks about Huawei Cloud ECS, needs to create ECS instances, configure ECS, or manage Huawei Cloud compute resources.
 license: Complete terms in LICENSE.txt
 ---
 

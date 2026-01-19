@@ -6,6 +6,16 @@
 
 ## 创建第一个项目
 
+### 一句话创建（CLI）
+
+```bash
+# 官方脚手架（推荐）
+npm create uni-app-x@latest my-uniappx
+
+# 或使用官方模板
+npx degit dcloudio/uni-preset-vue-x my-uniappx
+```
+
 ### 使用 HBuilderX
 
 1. **打开 HBuilderX**（版本 3.93+）
@@ -235,6 +245,6 @@ const handleButtonClick = () => {
 
 ## 下一步
 
-- 学习 uni-app-x 组件：参考 `uniappx-project-guide`
-- 学习 uni-app-x API：参考 `uniappx-project-guide`
+- 学习 uni-app-x 组件：参考 `uniappx-project`
+- 学习 uni-app-x API：参考 `uniappx-project`
 - 配置项目：参考 `templates/project-templates.md`

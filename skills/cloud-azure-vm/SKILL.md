@@ -1,6 +1,6 @@
 ---
 name: cloud-azure-vm
-description: [待完善] Azure Vm guide and best practices. Use this skill when users need to work with Azure Vm.
+description: Provides comprehensive guidance for Azure Virtual Machines including VM creation, configuration, networking, and Azure VM management. Use when the user asks about Azure VMs, needs to create Azure VMs, configure Azure compute, or manage Azure virtual machines.
 license: Complete terms in LICENSE.txt
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cloud-aws-ec2
-description: [待完善] Aws Ec2 guide and best practices. Use this skill when users need to work with Aws Ec2.
+description: Provides comprehensive guidance for AWS EC2 including instance creation, configuration, security groups, and EC2 management. Use when the user asks about AWS EC2, needs to create EC2 instances, configure EC2, or manage AWS compute resources.
 license: Complete terms in LICENSE.txt
 ---
 

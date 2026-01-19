@@ -1,5 +1,8 @@
 # Passing Props to Route Components | 向路由组件传递 Props
 
+**官方文档**: https://router.vuejs.org/guide/essentials/passing-props.html
+
+
 ## Instructions
 
 This example demonstrates how to pass props to route components instead of using `$route.params`.

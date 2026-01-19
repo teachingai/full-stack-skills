@@ -1,6 +1,6 @@
 ---
 name: mermaid
-description: A comprehensive skill for creating all types of Mermaid diagrams including flowcharts, sequence diagrams, class diagrams, state diagrams, entity relationship diagrams, user journey diagrams, Gantt charts, pie charts, quadrant charts, requirement diagrams, Git graphs, C4 diagrams, mindmaps, timelines, ZenUML, Sankey diagrams, XY charts, block diagrams, packet diagrams, Kanban boards, architecture diagrams, radar charts, and treemaps. Use this skill whenever the user requests to create, draw, or visualize any diagram, flowchart, or structured chart using Mermaid syntax.
+description: Provides comprehensive guidance for creating Mermaid diagrams including flowcharts, sequence diagrams, class diagrams, state diagrams, Gantt charts, and all other Mermaid diagram types. Use when the user requests to create, draw, or visualize any diagram, flowchart, or structured chart using Mermaid syntax.
 license: Complete terms in LICENSE.txt
 ---
 

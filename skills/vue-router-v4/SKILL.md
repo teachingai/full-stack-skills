@@ -1,6 +1,6 @@
 ---
 name: vue-router-v4
-description: Vue Router 4.x 完整使用指南，基于官方文档（https://router.vuejs.org/），涵盖路由配置、导航守卫、动态路由、嵌套路由、命名路由、路由元信息、组合式 API、类型化路由、滚动行为、懒加载等核心概念和最佳实践。适用于使用 Vue Router 4 在 Vue 3 应用中实现路由管理的场景。
+description: Provides comprehensive guidance for Vue Router v4 including route configuration, navigation, nested routes, route guards, and Vue 3 integration. Use when the user asks about Vue Router v4, needs to set up routing for Vue 3 applications, implement navigation guards, or work with Vue Router v4 features.
 license: Complete terms in LICENSE.txt
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cloud-aws-s3
-description: [待完善] Aws S3 guide and best practices. Use this skill when users need to work with Aws S3.
+description: Provides comprehensive guidance for AWS S3 including bucket creation, object storage, access control, and S3 management. Use when the user asks about AWS S3, needs to store files in S3, configure S3 buckets, or work with S3 storage.
 license: Complete terms in LICENSE.txt
 ---
 

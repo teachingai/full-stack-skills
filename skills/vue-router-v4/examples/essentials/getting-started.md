@@ -1,5 +1,8 @@
 # Getting Started | 快速开始
 
+**官方文档**: https://router.vuejs.org/guide/
+
+
 ## Instructions
 
 This example demonstrates how to create a Vue Router instance and set up basic routing in a Vue 3 application.

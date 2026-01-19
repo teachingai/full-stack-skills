@@ -1,148 +1,79 @@
-# Route Configuration API
+## Instructions
 
-## API Reference
+Use this API section to confirm options for `route config`.
 
-Route configuration options for defining routes.
+## Examples
 
-### Route Config Properties
-
-#### path
-
-**Type:** `string`
-
-Required. The path pattern for the route.
-
-**Example:**
-```javascript
-{ path: '/user/:id', component: User }
+```js
+const routes = [
+  { path: '/', component: Home },
+  { path: '/user/:id', name: 'user', component: User, props: true }
+]
 ```
 
-#### component
-
-**Type:** `Component`
-
-The component to render when the route is matched.
-
-**Example:**
-```javascript
-{ path: '/home', component: Home }
-```
-
-#### components
-
-**Type:** `{ [name: string]: Component }`
-
-Named components for named views.
-
-**Example:**
-```javascript
-{
-  path: '/',
-  components: {
-    default: Home,
-    header: Header,
-    footer: Footer
+```js
+const routes = [
+  {
+    path: '/user/:id',
+    component: User,
+    children: [
+      { path: 'profile', component: UserProfile }
+    ]
   }
-}
+]
 ```
 
-#### name
+## Scenarios
 
-**Type:** `string`
+### Nested user routes
 
-Named route for programmatic navigation.
+- Use children for nested UI.
+- Keep child paths relative.
 
-**Example:**
-```javascript
-{ path: '/user/:id', name: 'user', component: User }
+```js
+const routes = [
+  {
+    path: '/user/:id',
+    component: User,
+    children: [
+      { path: 'profile', component: UserProfile },
+      { path: 'posts', component: UserPosts }
+    ]
+  }
+]
 ```
 
-#### redirect
+### Passing props
 
-**Type:** `string | Location | Function`
+- Use props: true to simplify components.
+- Avoid direct $route usage in components.
 
-Redirect to another route.
-
-**Example:**
-```javascript
-{ path: '/home', redirect: '/' }
-{ path: '/old', redirect: { name: 'new' } }
-{ path: '/a', redirect: to => '/b' }
+```js
+{ path: '/user/:id', component: User, props: true }
 ```
 
-#### alias
+Reference: https://v3.router.vuejs.org/api/#routes
 
-**Type:** `string | Array<string>`
+## Parameters
 
-Alias for the route.
+- `path` (string) - URL path pattern.
+- `component` / `components` - Component(s) to render.
+- `name` (string) - Named route.
+- `children` (Array<RouteConfig>) - Nested routes.
+- `redirect` / `alias` - Routing aliases.
+- `props` (boolean | object | function) - Pass props.
 
-**Example:**
-```javascript
-{ path: '/home', alias: '/', component: Home }
-{ path: '/user/:id', alias: ['/u/:id', '/profile/:id'], component: User }
-```
+## Returns
 
-#### children
+- Defines how URLs map to components.
+- Nested routes create nested UI via router-view.
 
-**Type:** `Array<RouteConfig>`
+## Common Errors
 
-Nested routes.
+- Missing leading slash in path for top-level routes.
+- Conflicting paths lead to unexpected matches.
 
-**Example:**
-```javascript
-{
-  path: '/user/:id',
-  component: User,
-  children: [
-    { path: 'profile', component: Profile }
-  ]
-}
-```
+## Best Practices
 
-#### props
-
-**Type:** `boolean | Object | Function`
-
-Pass props to route component.
-
-**Example:**
-```javascript
-{ path: '/user/:id', props: true, component: User }
-{ path: '/promo', props: { show: true }, component: Promo }
-{ path: '/search', props: route => ({ q: route.query.q }), component: Search }
-```
-
-#### meta
-
-**Type:** `any`
-
-Custom metadata for the route.
-
-**Example:**
-```javascript
-{
-  path: '/admin',
-  meta: { requiresAuth: true, requiresAdmin: true },
-  component: Admin
-}
-```
-
-#### beforeEnter
-
-**Type:** `NavigationGuard`
-
-Per-route navigation guard.
-
-**Example:**
-```javascript
-{
-  path: '/admin',
-  beforeEnter: (to, from, next) => {
-    if (isAdmin()) next()
-    else next('/')
-  },
-  component: Admin
-}
-```
-
-**See also:** `examples/dynamic-route-matching.md`, `examples/nested-routes.md`, `examples/redirects-and-aliases.md`, `examples/route-props.md`
+- Use names for stable navigation.
+- Prefer lazy loading for large route components.

@@ -1,48 +1,22 @@
-# Route Records API | 路由记录 API
+# RouteRecordRaw | 路由记录
 
-## API Reference
+**官方文档**: https://router.vuejs.org/api/#routerecordraw
 
-Route record types and properties.
+## 关键字段
+- `path` / `name` / `component` / `children`
+- `redirect` / `alias` / `meta`
 
-### RouteRecordRaw
-
-Route configuration type.
-
-**Type:**
-```typescript
-interface RouteRecordRaw {
-  path: string
-  name?: string | symbol
-  component?: Component
-  components?: Record<string, Component>
-  redirect?: RouteRecordRedirectOption
-  alias?: string | string[]
-  children?: RouteRecordRaw[]
-  beforeEnter?: NavigationGuard
-  meta?: RouteMeta
-  props?: boolean | Record<string, any> | RoutePropsFunction
-  caseSensitive?: boolean
-  pathToRegexpOptions?: PathToRegexpOptions
+## 示例
+```ts
+// buildRoutes(): 定义路由记录
+function buildRoutes(): RouteRecordRaw[] {
+  return [
+    {
+      path: '/users/:id',
+      name: 'User',
+      component: () => import('@/views/User.vue'),
+      meta: { requiresAuth: true }
+    }
+  ]
 }
 ```
-
-### RouteRecordNormalized
-
-Normalized route record.
-
-**Properties:**
-- `path`: Route path
-- `name`: Route name
-- `components`: Route components
-- `children`: Child routes
-- `meta`: Route meta
-- `beforeEnter`: Route guard
-- `props`: Props configuration
-- `redirect`: Redirect configuration
-
-### Key Points
-
-- `RouteRecordRaw` is the input type for route definitions
-- `RouteRecordNormalized` is the processed route record
-- All route properties are optional except `path`
-- Can use `component` (single) or `components` (named views)

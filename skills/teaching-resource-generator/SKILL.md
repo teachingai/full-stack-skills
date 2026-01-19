@@ -1,6 +1,6 @@
 ---
 name: teaching-resource-generator
-description: 帮助生成各种教学资源，包括课件、练习题、教学案例、学习指南等。适用于快速创建高质量的教学材料。
+description: Provides comprehensive guidance for teaching resource generation including resource creation, formatting, and educational content development. Use when the user asks about teaching resources, needs to generate teaching materials, create educational content, or develop teaching resources.
 ---
 
 # 教学资源生成技能

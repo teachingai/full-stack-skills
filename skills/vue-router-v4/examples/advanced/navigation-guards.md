@@ -1,5 +1,8 @@
 # Navigation Guards | 导航守卫
 
+**官方文档**: https://router.vuejs.org/guide/advanced/navigation-guards.html
+
+
 ## Instructions
 
 This example demonstrates how to use navigation guards to control navigation and perform actions before/after route changes.

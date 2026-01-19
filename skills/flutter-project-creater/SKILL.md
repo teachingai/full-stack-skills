@@ -1,6 +1,6 @@
 ---
 name: flutter-project-creater
-description: [待完善] Flutter guide and best practices. Use this skill when users need to work with Flutter.
+description: Provides one-command project creation for Flutter including project initialization, configuration, and template generation. Use when the user asks about creating Flutter projects, needs to initialize a new Flutter project, or generate Flutter project structure.
 license: Complete terms in LICENSE.txt
 ---
 

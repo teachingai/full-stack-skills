@@ -1,6 +1,6 @@
 ---
 name: cloud-aws-rds
-description: [待完善] Aws Rds guide and best practices. Use this skill when users need to work with Aws Rds.
+description: Provides comprehensive guidance for AWS RDS including database creation, configuration, backups, and RDS management. Use when the user asks about AWS RDS, needs to create RDS databases, configure RDS, or manage AWS database services.
 license: Complete terms in LICENSE.txt
 ---
 

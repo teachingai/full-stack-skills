@@ -1,130 +1,68 @@
-# RouterLink Component API
+## Instructions
 
-## API Reference
+Use this API section to confirm options for `router link`.
 
-RouterLink component props and usage.
+## Examples
 
-### RouterLink Props
-
-#### to
-
-**Type:** `string | Location`
-
-Required. Denotes the target route of the link.
-
-**Example:**
-```vue
-<router-link to="/home">Home</router-link>
-<router-link :to="{ name: 'user', params: { id: 123 }}">User</router-link>
-```
-
-#### replace
-
-**Type:** `boolean`
-
-Default: `false`
-
-When present, clicking the link will call `router.replace()` instead of `router.push()`.
-
-**Example:**
-```vue
-<router-link to="/home" replace>Home</router-link>
-```
-
-#### append
-
-**Type:** `boolean`
-
-Default: `false`
-
-When present, the relative path will be appended to the current path.
-
-**Example:**
-```vue
-<!-- If current path is /user/123 -->
-<router-link to="profile" append>Profile</router-link>
-<!-- Results in /user/123/profile -->
-```
-
-#### tag
-
-**Type:** `string`
-
-Default: `"a"`
-
-Specify which tag to render.
-
-**Example:**
-```vue
-<router-link to="/home" tag="button">Home</router-link>
-```
-
-#### active-class
-
-**Type:** `string`
-
-Default: `"router-link-active"`
-
-Configure the active CSS class applied when the link is active.
-
-**Example:**
-```vue
-<router-link to="/home" active-class="active">Home</router-link>
-```
-
-#### exact
-
-**Type:** `boolean`
-
-Default: `false`
-
-The default active class matching behavior is inclusive match. Setting this prop forces the link into "exact match mode".
-
-**Example:**
-```vue
-<router-link to="/" exact>Home</router-link>
-```
-
-#### exact-active-class
-
-**Type:** `string`
-
-Default: `"router-link-exact-active"`
-
-Configure the active CSS class applied when the link is active with exact match.
-
-**Example:**
-```vue
-<router-link to="/" exact exact-active-class="exact-active">Home</router-link>
-```
-
-#### event
-
-**Type:** `string | Array<string>`
-
-Default: `"click"`
-
-Specify the event(s) that can trigger the link navigation.
-
-**Example:**
-```vue
-<router-link to="/home" event="mouseover">Home</router-link>
-```
-
-### RouterLink Scoped Slot
-
-**Available in Vue Router 3.1.0+**
-
-```vue
-<router-link
-  to="/home"
-  custom
-  v-slot="{ href, route, navigate, isActive, isExactActive }">
-  <a :href="href" @click="navigate">
-    {{ route.name }}
-    <span v-if="isActive">(active)</span>
-  </a>
+```html
+<router-link :to="{ name: 'user', params: { id: 42 } }">
+  User 42
 </router-link>
 ```
 
-**See also:** `examples/navigation.md`
+```html
+<router-link to="/about" exact>About</router-link>
+```
+
+## Scenarios
+
+### Authentication-aware navigation
+
+- Use named routes to avoid brittle paths.
+- Use exact-active-class for precise styling.
+
+```html
+<router-link
+  :to="{ name: 'dashboard' }"
+  exact-active-class="is-active"
+>
+  Dashboard
+</router-link>
+```
+
+### External links vs router-link
+
+- Use <a> for external URLs.
+- Keep router-link for internal navigation only.
+
+```html
+<a href="https://example.com" target="_blank" rel="noopener">Docs</a>
+```
+
+Reference: https://v3.router.vuejs.org/api/#router-link
+
+## Parameters
+
+- `to` (string | Location Object) - Target location.
+- `tag` (string) - Rendered tag (default: `a`).
+- `replace` (boolean) - Use `replace` instead of `push`.
+- `append` (boolean) - Append to current path.
+- `exact` (boolean) - Apply active class only on exact match.
+- `active-class` / `exact-active-class` - Custom active classes.
+- `event` (string | array) - Trigger events (default: `click`).
+
+## Returns
+
+- Renders a link component that updates route when activated.
+- Applies active classes based on current route.
+
+## Common Errors
+
+- Using invalid `to` format leads to navigation errors.
+- Forgetting `exact` causes active class to match child routes.
+
+## Best Practices
+
+- Prefer named routes in `to` for stability.
+- Use `exact-active-class` for precise styling.
+- Avoid nesting router-links inside anchors.
