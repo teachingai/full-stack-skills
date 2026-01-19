@@ -1,5 +1,8 @@
 # Timer Mocks | 定时器 Mock
 
+**官方文档**: https://jestjs.io/docs/timer-mocks
+
+
 ## Instructions
 
 This example demonstrates how to mock timers in Jest.

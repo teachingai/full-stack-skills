@@ -1,5 +1,8 @@
 # Tooltip Directive | 工具提示指令
 
+**官方文档**: https://bootstrap-vue.org
+
+
 ## Instructions
 
 This example demonstrates how to use the v-b-tooltip directive in Bootstrap Vue 3.0.

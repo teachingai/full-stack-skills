@@ -92,87 +92,27 @@ This skill is organized to match the Ant Design React official documentation str
    - `templates/project-setup.md` - Project setup templates
    - `templates/component-template.md` - Component usage templates
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://4x-ant-design.antgroup.com/docs/react/introduce-cn
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://4x-ant-design.antgroup.com/components/overview-cn/
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Ant Design React official documentation structure (https://4x-ant-design.antgroup.com/docs/react/introduce-cn, https://4x-ant-design.antgroup.com/components/overview-cn/). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing Ant Design, importing styles, and basic setup
-- `examples/getting-started/basic-usage.md` - Basic component usage examples
-
-### Components (组件) - `examples/components/`
-
-**General (通用)**:
-- `examples/components/button.md` - Button component with different types and sizes
-- `examples/components/icon.md` - Icon component usage
-- `examples/components/typography.md` - Typography component
-
-**Layout (布局)**:
-- `examples/components/grid.md` - Grid layout system
-- `examples/components/layout.md` - Layout component
-- `examples/components/space.md` - Space component for spacing
-- `examples/components/divider.md` - Divider component
-
-**Navigation (导航)**:
-- `examples/components/menu.md` - Menu component
-- `examples/components/breadcrumb.md` - Breadcrumb component
-- `examples/components/pagination.md` - Pagination component
-- `examples/components/steps.md` - Steps component
-- `examples/components/tabs.md` - Tabs component
-
-**Data Entry (数据录入)**:
-- `examples/components/input.md` - Input component
-- `examples/components/form.md` - Form component with validation
-- `examples/components/select.md` - Select component
-- `examples/components/date-picker.md` - DatePicker component
-- `examples/components/checkbox.md` - Checkbox component
-- `examples/components/radio.md` - Radio component
-- `examples/components/switch.md` - Switch component
-- `examples/components/upload.md` - Upload component
-- `examples/components/rate.md` - Rate component
-- `examples/components/slider.md` - Slider component
-
-**Data Display (数据展示)**:
-- `examples/components/table.md` - Table component
-- `examples/components/card.md` - Card component
-- `examples/components/list.md` - List component
-- `examples/components/tree.md` - Tree component
-- `examples/components/tag.md` - Tag component
-- `examples/components/badge.md` - Badge component
-- `examples/components/avatar.md` - Avatar component
-- `examples/components/tooltip.md` - Tooltip component
-- `examples/components/popover.md` - Popover component
-
-**Feedback (反馈)**:
-- `examples/components/modal.md` - Modal component
-- `examples/components/message.md` - Message component
-- `examples/components/notification.md` - Notification component
-- `examples/components/alert.md` - Alert component
-- `examples/components/spin.md` - Spin component
-- `examples/components/progress.md` - Progress component
-- `examples/components/drawer.md` - Drawer component
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/theme-customization.md` - Customizing Ant Design theme
-- `examples/advanced/internationalization.md` - Internationalization setup
-- `examples/advanced/typescript.md` - TypeScript support and type definitions
-
-### Templates Directory (`templates/`)
-
-- `templates/project-setup.md` - Ant Design project setup templates
-- `templates/component-template.md` - Component usage templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/project-setup.md` for project setup
-- Use component templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

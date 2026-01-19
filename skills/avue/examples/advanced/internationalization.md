@@ -1,5 +1,8 @@
 # Internationalization | 国际化
 
+**官方文档**: https://avuejs.com/
+
+
 ## Instructions
 
 This example demonstrates how to configure internationalization in Avue.

@@ -1,5 +1,8 @@
 # Mock Functions API | Mock 函数 API
 
+**官方文档**: https://jestjs.io/docs/mock-functions
+
+
 ## API Reference
 
 Mock functions API and methods.

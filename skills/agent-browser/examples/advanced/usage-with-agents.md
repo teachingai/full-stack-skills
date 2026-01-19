@@ -1,5 +1,8 @@
 # Usage with AI Agents | 与 AI 智能体一起使用
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to integrate agent-browser with AI agents.

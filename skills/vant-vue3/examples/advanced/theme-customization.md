@@ -1,5 +1,8 @@
 # Theme Customization | 主题定制
 
+**官方文档**: https://vant-ui.github.io/vant/#/zh-CN
+
+
 ## Instructions
 
 This example demonstrates how to customize Vant theme.

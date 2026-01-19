@@ -139,49 +139,24 @@ new Vue({
 }).$mount('#app')
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/guide/` or `examples/getting-started/` → https://vuex.vuejs.org/zh/guide/
+- `api/` → https://vuex.vuejs.org/zh/api/
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Vuex official documentation structure (https://vuex.vuejs.org/zh/guide/, https://vuex.vuejs.org/zh/api/). All examples are in the `examples/` directory, organized by topic:
-
-### Guide (使用指南) - `examples/guide/`
-
-- `examples/guide/intro.md` - Introduction to Vuex
-- `examples/guide/installation.md` - Installation guide
-- `examples/guide/quick-start.md` - Quick start guide
-- `examples/guide/what-is-vuex.md` - What is Vuex
-
-### Core Concepts (核心概念) - `examples/core-concepts/`
-
-- `examples/core-concepts/state.md` - State usage
-- `examples/core-concepts/getters.md` - Getters usage
-- `examples/core-concepts/mutations.md` - Mutations usage
-- `examples/core-concepts/actions.md` - Actions usage
-- `examples/core-concepts/modules.md` - Modules usage
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/plugins.md` - Plugins usage
-- `examples/advanced/strict-mode.md` - Strict mode
-- `examples/advanced/form-handling.md` - Form handling
-- `examples/advanced/testing.md` - Testing
-- `examples/advanced/hot-reload.md` - Hot reload
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/store-setup.md` - Store setup templates
-- `templates/component-usage.md` - Component usage templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/store-setup.md` for store setup templates
-- Use `templates/component-usage.md` for component usage templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

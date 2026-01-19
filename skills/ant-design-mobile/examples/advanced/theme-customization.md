@@ -1,5 +1,8 @@
 # Theme Customization | 主题定制
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to customize the theme in Ant Design Mobile.

@@ -1,5 +1,8 @@
 # Manual Mocks | 手动 Mock
 
+**官方文档**: https://jestjs.io/docs/manual-mocks
+
+
 ## Instructions
 
 This example demonstrates how to create manual mocks in Jest.

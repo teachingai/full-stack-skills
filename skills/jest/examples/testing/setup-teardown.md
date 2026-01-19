@@ -1,5 +1,8 @@
 # Setup and Teardown | 设置和清理
 
+**官方文档**: https://jestjs.io/docs/setup-teardown
+
+
 ## Instructions
 
 This example demonstrates how to use setup and teardown functions in Jest.

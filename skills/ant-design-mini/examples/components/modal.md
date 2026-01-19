@@ -1,5 +1,8 @@
 # Modal Component
 
+**官方文档**: https://ant-design-mini.antgroup.com
+
+
 ## Instructions
 
 This example demonstrates the Modal component in Ant Design Mini.

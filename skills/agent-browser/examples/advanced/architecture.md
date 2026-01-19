@@ -1,5 +1,8 @@
 # Architecture | 架构
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example explains the architecture of agent-browser.

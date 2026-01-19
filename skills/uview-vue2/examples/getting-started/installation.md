@@ -1,5 +1,8 @@
 # Installation | 安装
 
+**官方文档**: https://www.uviewui.com
+
+
 ## Instructions
 
 This example demonstrates how to install uView UI and set it up in a uni-app project.

@@ -147,70 +147,27 @@ import 'element-plus/es/components/button/style/css'
 import 'element-plus/es/components/input/style/css'
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://element-plus.org/en-US/guide/design
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://element-plus.org/en-US/component/overview
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Element Plus official documentation structure (https://element-plus.org/en-US/component/overview). All examples are in the `examples/` directory, organized by topic:
-
-### Guide (使用指南) - `examples/guide/`
-
-- `examples/guide/installation.md` - Installation guide
-- `examples/guide/quick-start.md` - Quick start guide
-- `examples/guide/design.md` - Design guidelines
-- `examples/guide/i18n.md` - Internationalization
-- `examples/guide/theme.md` - Theme customization
-- `examples/guide/global-config.md` - Global configuration
-
-### Components (组件) - `examples/components/`
-
-- `examples/components/overview.md` - Components overview and categories
-- `examples/components/button.md` - Button component usage
-- `examples/components/input.md` - Input component
-- `examples/components/form.md` - Form component
-- `examples/components/table.md` - Table component
-- `examples/components/card.md` - Card component
-- `examples/components/dialog.md` - Dialog component
-- `examples/components/message.md` - Message component
-- `examples/components/notification.md` - Notification component
-- `examples/components/menu.md` - Menu component
-- `examples/components/tabs.md` - Tabs component
-- `examples/components/date-picker.md` - DatePicker component
-- `examples/components/select.md` - Select component
-- `examples/components/switch.md` - Switch component
-- `examples/components/checkbox.md` - Checkbox component
-- `examples/components/radio.md` - Radio component
-- `examples/components/upload.md` - Upload component
-- `examples/components/pagination.md` - Pagination component
-- `examples/components/tree.md` - Tree component
-- `examples/components/tree-select.md` - TreeSelect component
-- `examples/components/transfer.md` - Transfer component
-- `examples/components/descriptions.md` - Descriptions component
-- `examples/components/avatar.md` - Avatar component
-- `examples/components/badge.md` - Badge component
-- `examples/components/tag.md` - Tag component
-- `examples/components/empty.md` - Empty component
-- `examples/components/loading.md` - Loading component
-- `examples/components/popover.md` - Popover component
-- `examples/components/tooltip.md` - Tooltip component
-- `examples/components/dropdown.md` - Dropdown component
-- `examples/components/drawer.md` - Drawer component
-- `examples/components/popconfirm.md` - Popconfirm component
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/component-usage.md` - Component usage templates
-- `templates/project-setup.md` - Project setup templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/component-usage.md` for component usage templates
-- Use `templates/project-setup.md` for project setup templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

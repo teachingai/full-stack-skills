@@ -53,33 +53,24 @@ To use Dart Sass:
    - `templates/modular-project.md` - Modular Sass project template
    - `templates/build-integration.md` - Build tool integration template
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/` → https://sass-lang.com/documentation/
+
 ## Examples and Templates
 
-### Getting Started
-- **Installation**: `examples/getting-started/installation.md` - How to install Dart Sass on different platforms
-- **Basic Usage**: `examples/getting-started/basic-usage.md` - Basic compilation examples
-- **Compiling Modes**: `examples/getting-started/compiling-modes.md` - Different compilation modes and options
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
-### Syntax
-- **Variables**: `examples/syntax/variables.md` - Variable declarations and usage
-- **Nesting**: `examples/syntax/nesting.md` - Nesting selectors and properties
-- **Mixins**: `examples/syntax/mixins.md` - Mixin definitions and usage
-- **Functions**: `examples/syntax/functions.md` - Function definitions and usage
-- **Operators**: `examples/syntax/operators.md` - Mathematical and string operators
-- **At-Rules**: `examples/syntax/at-rules.md` - @use, @forward, @import, @include, etc.
+**To use examples:**
+- Identify the topic from the user's request
+- Load the appropriate example file from the mapping above
+- Follow the instructions, syntax, and best practices in that file
+- Adapt the code examples to your specific use case
 
-### Features
-- **Modules**: `examples/features/modules.md` - Module system with @use and @forward
-- **Imports**: `examples/features/imports.md` - Importing files and modules
-- **Control Flow**: `examples/features/control-flow.md` - @if, @for, @each, @while
-- **Built-in Modules**: `examples/features/built-in-modules.md` - sass:math, sass:color, sass:string, etc.
-- **Source Maps**: `examples/features/source-maps.md` - Source map configuration
-- **Custom Functions**: `examples/features/custom-functions.md` - Creating custom Sass functions
-
-### Templates
-- **Basic Project**: `templates/basic-project.md` - Basic Sass project structure
-- **Modular Project**: `templates/modular-project.md` - Modular Sass project with @use
-- **Build Integration**: `templates/build-integration.md` - Integrating Sass with build tools
+**To use templates:**
+- Reference templates in `templates/` directory for common scaffolding
+- Adapt templates to your specific needs and coding style
 
 ## API Reference
 

@@ -1,98 +1,36 @@
-# Optimization
-
 ## Instructions
 
-This example demonstrates optimization configuration in Rspack.
+- Use this page as the authoritative reference for **optimization**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Code splitting
-- Minification
-- Tree shaking
-- Chunk optimization
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: Basic Optimization
+## Returns
 
-```javascript
-module.exports = {
-  optimization: {
-    minimize: true,
-  },
-};
-```
+- Describe expected behavior or output for the documented feature.
 
-### Example: Code Splitting
+## Common Errors
 
-```javascript
-module.exports = {
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-      },
-    },
-  },
-};
-```
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-### Example: Minification Options
+## Best Practices
 
-```javascript
-module.exports = {
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new rspack.SwcJsMinimizerRspackPlugin({
-        compress: {
-          drop_console: true,
-        },
-      }),
-    ],
-  },
-};
-```
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-### Example: Tree Shaking
+## Scenarios
 
-```javascript
-module.exports = {
-  optimization: {
-    usedExports: true,
-    sideEffects: false,
-  },
-};
-```
+### Typical usage
 
-### Example: Runtime Chunk
+- Apply the official steps and validate expected behavior.
 
-```javascript
-module.exports = {
-  optimization: {
-    runtimeChunk: 'single',
-  },
-};
-```
+### Troubleshooting
 
-### Example: Module IDs
+- Cross-check config and runtime requirements.
 
-```javascript
-module.exports = {
-  optimization: {
-    moduleIds: 'deterministic',
-    chunkIds: 'deterministic',
-  },
-};
-```
-
-### Key Points
-
-- minimize enables minification
-- splitChunks configures code splitting
-- usedExports enables tree shaking
-- runtimeChunk extracts runtime code
-- deterministic IDs for better caching
+Reference: https://rspack.rs/zh/config/optimization

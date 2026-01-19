@@ -79,95 +79,45 @@ This skill is organized to match the Jest official documentation structure (http
    - `templates/test-template.md` - Test file templates
    - `templates/setup-file.md` - Setup file templates
 
+### Doc mapping (one-to-one with https://jestjs.io/docs/getting-started, https://jestjs.io/docs/api)
+
+**Getting Started (快速开始)**:
+- `examples/getting-started/installation.md` → https://jestjs.io/docs/getting-started
+- `examples/getting-started/using-matchers.md` → https://jestjs.io/docs/using-matchers
+
+**Testing (测试)**:
+- `examples/testing/asynchronous.md` → https://jestjs.io/docs/asynchronous
+- `examples/testing/setup-teardown.md` → https://jestjs.io/docs/setup-teardown
+- `examples/testing/mock-functions.md` → https://jestjs.io/docs/mock-functions
+- `examples/testing/manual-mocks.md` → https://jestjs.io/docs/manual-mocks
+- `examples/testing/snapshot-testing.md` → https://jestjs.io/docs/snapshot-testing
+- `examples/testing/timer-mocks.md` → https://jestjs.io/docs/timer-mocks
+- `examples/testing/es6-class-mocks.md` → https://jestjs.io/docs/es6-class-mocks
+
+**Configuration (配置)**:
+- `examples/configuration/jest-config.md` → https://jestjs.io/docs/configuration
+- `examples/configuration/cli-options.md` → https://jestjs.io/docs/cli
+
+**API Reference**:
+- `api/expect.md` → https://jestjs.io/docs/expect
+- `api/mock-functions.md` → https://jestjs.io/docs/mock-functions
+- `api/jest-object.md` → https://jestjs.io/docs/jest-object
+- `api/test.md` → https://jestjs.io/docs/api#testname-fn-timeout
+- `api/cli.md` → https://jestjs.io/docs/cli
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Jest official documentation structure (https://jestjs.io/docs/getting-started, https://jestjs.io/docs/api). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing Jest, creating a Jest configuration, and running tests
-- `examples/getting-started/using-matchers.md` - Using Jest matchers (toBe, toEqual, toContain, etc.)
-
-### Testing (测试) - `examples/testing/`
-
-- `examples/testing/asynchronous.md` - Testing async code with callbacks, promises, and async/await
-- `examples/testing/setup-teardown.md` - Setup and teardown functions (beforeEach, afterEach, beforeAll, afterAll)
-- `examples/testing/mock-functions.md` - Creating and using mock functions
-- `examples/testing/manual-mocks.md` - Manual mocks and __mocks__ directory
-- `examples/testing/snapshot-testing.md` - Snapshot testing for UI components
-- `examples/testing/timer-mocks.md` - Mocking timers (setTimeout, setInterval, etc.)
-- `examples/testing/es6-class-mocks.md` - Mocking ES6 classes
-
-### Configuration (配置) - `examples/configuration/`
-
-- `examples/configuration/jest-config.md` - Jest configuration options (jest.config.js)
-- `examples/configuration/cli-options.md` - CLI options and command-line flags
-- `examples/configuration/babel.md` - Using Jest with Babel
-- `examples/configuration/typescript.md` - Using Jest with TypeScript
-
-### Guides (指南) - `examples/guides/`
-
-- `examples/guides/migrating-to-jest.md` - Migrating from other testing frameworks
-- `examples/guides/testing-react-apps.md` - Testing React applications
-- `examples/guides/testing-vue-apps.md` - Testing Vue applications
-
-### Templates Directory (`templates/`)
-
-- `templates/jest-config.md` - Jest configuration templates for different scenarios
-- `templates/test-template.md` - Test file templates
-- `templates/setup-file.md` - Setup file templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/jest-config.md` for Jest configuration
-- Use test templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
-
-## API Reference
-
-Detailed API documentation is available in the `api/` directory, organized to match the official Jest API documentation structure:
-
-### expect API (`api/expect.md`)
-- `expect()` - Expectation API
-- Matchers: `toBe()`, `toEqual()`, `toContain()`, `toMatch()`, `toBeDefined()`, `toBeNull()`, `toBeTruthy()`, `toBeFalsy()`, etc.
-- Async matchers: `resolves`, `rejects`
-- Custom matchers
-
-### Mock Functions API (`api/mock-functions.md`)
-- `jest.fn()` - Creating mock functions
-- `jest.mock()` - Mocking modules
-- `jest.spyOn()` - Creating spies
-- Mock function properties: `mockReturnValue()`, `mockResolvedValue()`, `mockRejectedValue()`, etc.
-
-### Jest Object API (`api/jest-object.md`)
-- `jest.clearAllMocks()` - Clear all mocks
-- `jest.resetAllMocks()` - Reset all mocks
-- `jest.restoreAllMocks()` - Restore all mocks
-- `jest.useFakeTimers()` - Use fake timers
-- `jest.useRealTimers()` - Use real timers
-
-### Test API (`api/test.md`)
-- `test()` / `it()` - Test function
-- `describe()` - Test suite
-- `beforeEach()`, `afterEach()`, `beforeAll()`, `afterAll()` - Setup and teardown
-
-### CLI API (`api/cli.md`)
-- `jest` - Run tests
-- `jest --watch` - Watch mode
-- `jest --coverage` - Coverage report
-- `jest --updateSnapshot` - Update snapshots
-
-**To use API reference:**
-1. Identify the API you need help with
-2. Load the corresponding API file from the `api/` directory
-3. Find the API signature, parameters, return type, and examples
-4. Reference the linked example files for detailed usage patterns
-5. All API files include links to relevant example files in the `examples/` directory
 
 ## Best Practices
 

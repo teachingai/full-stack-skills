@@ -1,100 +1,36 @@
-# Output
-
 ## Instructions
 
-This example demonstrates output configuration in Rspack.
+- Use this page as the authoritative reference for **output**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Output path
-- Output filename
-- Public path
-- Asset modules
-- Clean output
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: Basic Output
+## Returns
 
-```javascript
-const path = require('path');
+- Describe expected behavior or output for the documented feature.
 
-module.exports = {
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
-};
-```
+## Common Errors
 
-### Example: Output with Template
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-```javascript
-module.exports = {
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].chunk.js',
-  },
-};
-```
+## Best Practices
 
-### Example: Output with Hash
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-```javascript
-module.exports = {
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
-    chunkFilename: '[name].[contenthash].chunk.js',
-  },
-};
-```
+## Scenarios
 
-### Example: Public Path
+### Typical usage
 
-```javascript
-module.exports = {
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/assets/',
-  },
-};
-```
+- Apply the official steps and validate expected behavior.
 
-### Example: Clean Output
+### Troubleshooting
 
-```javascript
-const rspack = require('@rspack/core');
+- Cross-check config and runtime requirements.
 
-module.exports = {
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    clean: true,  // Clean output directory before build
-  },
-};
-```
-
-### Example: Library Output
-
-```javascript
-module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'my-library.js',
-    library: {
-      name: 'MyLibrary',
-      type: 'umd',
-    },
-  },
-};
-```
-
-### Key Points
-
-- path specifies output directory
-- filename can use templates ([name], [hash], etc.)
-- publicPath sets base path for assets
-- clean removes old files before build
-- library config for library mode
+Reference: https://rspack.rs/zh/config/output

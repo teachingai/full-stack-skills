@@ -1,5 +1,8 @@
 # Installation | 安装
 
+**官方文档**: https://bootstrap-vue.org
+
+
 ## Instructions
 
 This example demonstrates how to install Bootstrap Vue 3.0 and set it up in a Vue 3 project.

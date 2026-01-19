@@ -1,5 +1,8 @@
 # Snapshot Testing | 快照测试
 
+**官方文档**: https://jestjs.io/docs/snapshot-testing
+
+
 ## Instructions
 
 This example demonstrates how to use snapshot testing in Jest.

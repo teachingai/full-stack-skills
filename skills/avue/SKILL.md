@@ -73,51 +73,23 @@ This skill is organized to match the Avue official documentation structure (http
    - `templates/table-template.md` - Table template
    - `templates/crud-template.md` - CRUD template
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- See examples and API files → https://avuejs.com
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Avue official documentation structure (https://avuejs.com/). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing Avue, importing styles, and basic setup
-- `examples/getting-started/quick-start.md` - Quick start tutorial
-- `examples/getting-started/global-config.md` - Global configuration
-
-### Forms (表单) - `examples/forms/`
-
-- `examples/forms/basic-form.md` - Basic form usage
-- `examples/forms/form-config.md` - Form configuration options
-- `examples/forms/form-validation.md` - Form validation
-- `examples/forms/form-table.md` - Form with table selector
-
-### Components (组件) - `examples/components/`
-
-- `examples/components/table.md` - Table component
-- `examples/components/tree.md` - Tree component
-- `examples/components/upload.md` - Upload component
-- `examples/components/select.md` - Select component
-- `examples/components/input.md` - Input component
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/crud.md` - CRUD operations
-- `examples/advanced/internationalization.md` - Internationalization setup
-- `examples/advanced/plugins.md` - Plugins and extensions
-
-### Templates Directory (`templates/`)
-
-- `templates/form-template.md` - Form usage template
-- `templates/table-template.md` - Table usage template
-- `templates/crud-template.md` - CRUD template
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

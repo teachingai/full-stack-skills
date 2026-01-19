@@ -1,5 +1,8 @@
 # Basic Configuration
 
+**官方文档**: https://vitest.dev/config/
+
+
 ## Instructions
 
 This example demonstrates basic Vitest configuration.

@@ -1,5 +1,8 @@
 # Traditional Selectors | 传统选择器
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to use traditional selectors (CSS, XPath, semantic locators) in agent-browser.

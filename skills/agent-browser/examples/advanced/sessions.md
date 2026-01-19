@@ -1,5 +1,8 @@
 # Sessions | 会话管理
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to manage multiple isolated browser sessions with agent-browser.

@@ -345,7 +345,7 @@ assistant: "我将使用市场专员智能体来完成相关方案与文档。"<
 - 项目管理：Jira、禅道、Teambition
 
 ### 可用Agent Skills
-- ddd, ddd-microservices（DDD架构）
+- ddd-clean-architecture, ddd-microservices（DDD架构）
 - c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
@@ -353,6 +353,7 @@ assistant: "我将使用市场专员智能体来完成相关方案与文档。"<
 - documentation-builder（文档构建）
 - docx, pdf（文档处理）
 - mermaid（图表绘制）
+- drawio-flowchart（流程图绘制）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证
@@ -412,7 +413,7 @@ assistant: "我将使用技术研究工程师智能体来完成相关方案与�
 - 监控工具：Prometheus、Grafana、ELK
 
 ### 可用Agent Skills
-- ddd, ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
+- ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
 - c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
@@ -420,6 +421,8 @@ assistant: "我将使用技术研究工程师智能体来完成相关方案与�
 - docker, kubernetes, docker-compose（容器化）
 - api-doc-generator（API文档生成）
 - documentation-builder（文档构建）
+- docx, pdf（文档处理）
+- mermaid（图表绘制）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证
@@ -543,7 +546,7 @@ assistant: "我将使用需求分析师智能体来完成相关方案与文档�
 - 项目管理：Jira、禅道、Teambition
 
 ### 可用Agent Skills
-- ddd（DDD架构）
+- ddd-clean-architecture（DDD架构）
 - c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
@@ -551,6 +554,9 @@ assistant: "我将使用需求分析师智能体来完成相关方案与文档�
 - navicat, dbeaver（数据库工具）
 - api-doc-generator（API文档生成）
 - documentation-builder（文档构建）
+- docx, pdf（文档处理）
+- mermaid（图表绘制）
+- drawio-flowchart（流程图绘制）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证
@@ -682,7 +688,7 @@ assistant: "我将使用交互设计师智能体来完成相关方案与文档�
 - midjourney, dalle, stable-diffusion（AI图像生成）
 - uizard, galileo-ai, runway-ml（AI设计工具）
 - algorithmic-art, canvas-design（算法艺术）
-- brandlines（品牌指南）
+- brand-guidelines（品牌指南）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证
@@ -740,7 +746,7 @@ assistant: "我将使用UI设计师智能体来完成相关方案与文档。"</
 - 项目管理：Jira、禅道、Teambition
 
 ### 可用Agent Skills
-- ddd, ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
+- ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
 - ddd4j-project-builder（DDD项目构建）
 - c4-model（C4模型）
 - plantuml（PlantUML）
@@ -748,6 +754,8 @@ assistant: "我将使用UI设计师智能体来完成相关方案与文档。"</
 - api-doc-generator（API文档生成）
 - documentation-builder（文档构建）
 - docx, pdf（文档处理）
+- mermaid（图表绘制）
+- drawio-flowchart（流程图绘制）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证
@@ -810,11 +818,18 @@ assistant: "我将使用领域专家智能体来完成相关方案与文档。"<
 - vue2, vue3, vue-router, vue-router-v3, vue-router-v4, pinia, vuex, vuex-vue2（Vue生态）
 - react, react-hooks, nextjs, redux（React生态）
 - angular, svelte（其他框架）
-- element-plus, element-plus-vue3, ant-design-vue, ant-design-react, ant-design-mobile, ant-design-mini, bootstrap-vue3, vant-vue3, uview-vue2, uview-pro-vue3, layui-vue, avue, avue-crud, avue-form（UI组件库）
+- element-plus-vue3, ant-design-vue, ant-design-react, ant-design-mobile, ant-design-mini, bootstrap-vue3, vant-vue3, uview-vue2, uview-pro-vue3, layui-vue3, avue, avue-crud, avue-form（UI组件库）
 - vite, webpack, rollup, parcel, rspack（构建工具）
 - dart-sass（样式工具）
 - electron, electron-egg, tauri（桌面应用）
 - uniapp-project, uniapp-uview, uniapp-ucharts（移动开发）
+- code-generator（代码生成）
+- nvm（Node版本管理）
+- agent-browser（浏览器自动化）
+- frontend-design（前端设计）
+- web-artifacts-builder（Web构建）
+- api-doc-generator（API文档生成）
+- documentation-builder（文档构建）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证
@@ -880,8 +895,12 @@ assistant: "我将使用前端开发工程师智能体来完成相关方案与�
 - gin, gin-gonic（Go框架）
 - mysql, postgresql, oracle, mongodb, redis, elasticsearch（数据库）
 - navicat, dbeaver（数据库工具）
-- ddd, ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
+- ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
 - ddd4j-project-builder（DDD项目构建）
+- code-generator（代码生成）
+- api-doc-generator（API文档生成）
+- documentation-builder（文档构建）
+- docx, pdf（文档处理）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证
@@ -941,7 +960,7 @@ assistant: "我将使用后端开发工程师智能体来完成相关方案与�
 - 项目管理：Jira、禅道、Teambition
 
 ### 可用Agent Skills
-- uniapp-project-creator, uniapp-project, uniappx-project-creator, uniappx-project, uniapp-uview, uniappx-uview-pro, uniapp-ucharts, uniapp-ad, uniapp-cloud, uniapp-mini, uniapp-native-app, uniapp-native-plugin, uniapp-plugin（UniApp生态）
+- uniapp-project-creator, uniapp-project, uniappx-project-creator, uniappx-project, uniapp-uview, uniappx-uview-pro, uniapp-ucharts, uniapp-ad, uniapp-cloud, uniapp-mini-guide, uniapp-native-app, uniapp-native-plugin, uniapp-plugin（UniApp生态）
 - react-native, react-native-project-creater（React Native）
 - flutter, flutter-project-creater（Flutter）
 - android-kotlin, ios-swift（原生开发）
@@ -1469,6 +1488,9 @@ assistant: "我将使用SRE工程师智能体来完成相关方案与文档。"<
 - drawio-flowchart（流程图绘制）
 - processon-mindmap（思维导图）
 - drawio-architecture（架构图绘制）
+- doc-coauthoring（文档协作）
+- code-generator（代码生成）
+- test-writer（测试用例生成）
 
 ## 协作与交付
 - 输出结构化文档或方案，确保范围清晰、可执行、可验证

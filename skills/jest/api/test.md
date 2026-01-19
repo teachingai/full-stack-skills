@@ -1,5 +1,8 @@
 # test and describe API | test 和 describe API
 
+**官方文档**: https://jestjs.io/docs/api#testname-fn-timeout
+
+
 ## API Reference
 
 Test functions and test suite organization.

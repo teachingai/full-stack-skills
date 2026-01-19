@@ -74,39 +74,24 @@ To use lime-echart in UniApp/UniAppX projects:
    - `templates/advanced-chart.md` - Advanced chart template
    - `templates/chart-with-data.md` - Chart with data binding template
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- See examples and API files → https://ext.dcloud.net.cn/plugin?id=4899
+
 ## Examples and Templates
 
-### Getting Started
-- **Installation**: `examples/getting-started/installation.md` - How to install and configure lime-echart in UniApp/UniAppX projects
-- **Basic Usage**: `examples/getting-started/basic-usage.md` - Basic usage examples and common patterns
-- **Configuration**: `examples/getting-started/configuration.md` - Configuration options and settings
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
-### Chart Types
-- **Line Chart**: `examples/charts/line-chart.md` - Line chart examples with various configurations
-- **Bar Chart**: `examples/charts/bar-chart.md` - Bar chart examples (vertical and horizontal)
-- **Pie Chart**: `examples/charts/pie-chart.md` - Pie chart and donut chart examples
-- **Scatter Chart**: `examples/charts/scatter-chart.md` - Scatter chart examples
-- **Radar Chart**: `examples/charts/radar-chart.md` - Radar chart examples
-- **Gauge Chart**: `examples/charts/gauge-chart.md` - Gauge chart examples
-- **Funnel Chart**: `examples/charts/funnel-chart.md` - Funnel chart examples
-- **Heatmap**: `examples/charts/heatmap.md` - Heatmap examples
-- **Tree Chart**: `examples/charts/tree-chart.md` - Tree chart examples
-- **Map Chart**: `examples/charts/map-chart.md` - Map chart examples
-- **Candlestick Chart**: `examples/charts/candlestick-chart.md` - Candlestick chart examples
-- **Boxplot Chart**: `examples/charts/boxplot-chart.md` - Boxplot chart examples
+**To use examples:**
+- Identify the topic from the user's request
+- Load the appropriate example file from the mapping above
+- Follow the instructions, syntax, and best practices in that file
+- Adapt the code examples to your specific use case
 
-### Advanced Usage
-- **Dynamic Data**: `examples/advanced/dynamic-data.md` - How to update chart data dynamically
-- **Event Handling**: `examples/advanced/event-handling.md` - Chart event handling and interactions
-- **Custom Theme**: `examples/advanced/custom-theme.md` - Custom theme configuration
-- **Multiple Charts**: `examples/advanced/multiple-charts.md` - Multiple charts on one page
-- **Responsive Charts**: `examples/advanced/responsive-charts.md` - Responsive chart design for different screen sizes
-- **Performance Optimization**: `examples/advanced/performance-optimization.md` - Performance optimization tips
-
-### Templates
-- **Basic Chart**: `templates/basic-chart.md` - Basic chart template for quick start
-- **Advanced Chart**: `templates/advanced-chart.md` - Advanced chart template with custom options
-- **Chart with Data**: `templates/chart-with-data.md` - Chart template with data binding
+**To use templates:**
+- Reference templates in `templates/` directory for common scaffolding
+- Adapt templates to your specific needs and coding style
 
 ## API Reference
 

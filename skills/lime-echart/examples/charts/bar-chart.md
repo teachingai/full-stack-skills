@@ -1,5 +1,8 @@
 # Bar Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 柱状图
 
 柱状图用于比较不同类别的数据。

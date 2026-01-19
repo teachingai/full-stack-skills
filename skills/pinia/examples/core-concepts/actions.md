@@ -1,208 +1,48 @@
-# Actions | 操作
-
 ## Instructions
 
-This example demonstrates how to create and use actions in Pinia stores.
+- Use this page as the authoritative reference for **Actions**.
+- Follow the official Pinia docs for supported APIs and patterns.
+- Keep examples aligned with the section (Introduction / Core Concepts / Cookbook / SSR / API).
 
-### Key Concepts
+## Parameters
 
-- Defining actions
-- Accessing state and getters in actions
-- Accessing other stores
-- Async actions
-- Action parameters
-- Action return values
+- Identify key inputs, configuration options, or function parameters from the official docs.
+- Use exact naming and casing from the documentation.
+- Document required vs optional parameters.
 
-### Example: Basic Action
+## Returns
 
-```javascript
-import { defineStore } from 'pinia'
+- Describe expected behavior, return values, or output for the documented feature.
+- If the page is conceptual, summarize the expected result or effect.
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  actions: {
-    increment() {
-      this.count++
-    },
-    decrement() {
-      this.count--
-    },
-    reset() {
-      this.count = 0
-    }
-  }
-})
-```
+## Common Errors
 
-### Example: Action with Parameters
+- Mismatched store IDs or invalid store definitions.
+- Using stores before Pinia is installed.
+- Accessing stores outside of component context without proper setup.
+- Type errors in TypeScript when using stores.
+- State mutations outside of actions (in strict mode).
 
-```javascript
-import { defineStore } from 'pinia'
+## Best Practices
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  actions: {
-    incrementBy(amount) {
-      this.count += amount
-    },
-    setCount(newCount) {
-      this.count = newCount
-    }
-  }
-})
-```
+- Use `defineStore()` for all store definitions.
+- Keep state flat and normalized when possible.
+- Use getters for computed values derived from state.
+- Use actions for async operations and mutations.
+- Use TypeScript for type safety.
+- Split large stores into smaller, focused stores.
 
-### Example: Accessing Getters in Actions
+## Scenarios
 
-```javascript
-import { defineStore } from 'pinia'
+### Typical usage
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  getters: {
-    doubleCount: (state) => state.count * 2
-  },
-  actions: {
-    incrementToDouble() {
-      // Access getter using 'this'
-      this.count = this.doubleCount
-    }
-  }
-})
-```
+- Apply the official steps and validate expected behavior.
+- Follow Pinia patterns for store creation and usage.
 
-### Example: Async Actions
+### Troubleshooting
 
-```javascript
-import { defineStore } from 'pinia'
+- Cross-check store setup and Pinia installation.
+- Verify store IDs are unique and correctly referenced.
+- Check TypeScript types if using TypeScript.
 
-export const useUserStore = defineStore('user', {
-  state: () => ({
-    user: null,
-    loading: false,
-    error: null
-  }),
-  actions: {
-    async fetchUser(userId) {
-      this.loading = true
-      this.error = null
-      try {
-        const response = await fetch(`/api/users/${userId}`)
-        const user = await response.json()
-        this.user = user
-      } catch (error) {
-        this.error = error.message
-      } finally {
-        this.loading = false
-      }
-    }
-  }
-})
-```
-
-### Example: Accessing Other Stores
-
-```javascript
-import { defineStore } from 'pinia'
-import { useAuthStore } from './auth'
-
-export const useCartStore = defineStore('cart', {
-  state: () => ({
-    items: []
-  }),
-  actions: {
-    async addItem(item) {
-      // Access another store
-      const authStore = useAuthStore()
-      if (!authStore.isAuthenticated) {
-        throw new Error('User must be authenticated')
-      }
-      this.items.push({ ...item, userId: authStore.userId })
-    }
-  }
-})
-```
-
-### Example: Action Return Values
-
-```javascript
-import { defineStore } from 'pinia'
-
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  actions: {
-    increment() {
-      this.count++
-      return this.count
-    },
-    async fetchData() {
-      const response = await fetch('/api/data')
-      const data = await response.json()
-      return data
-    }
-  }
-})
-```
-
-### Example: Action in Setup Syntax
-
-```javascript
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
-
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  
-  function increment() {
-    count.value++
-  }
-  
-  async function fetchData() {
-    const response = await fetch('/api/data')
-    const data = await response.json()
-    return data
-  }
-  
-  return { count, increment, fetchData }
-})
-```
-
-### Example: TypeScript Actions
-
-```typescript
-import { defineStore } from 'pinia'
-
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  actions: {
-    incrementBy(amount: number): void {
-      this.count += amount
-    },
-    async fetchData(): Promise<any> {
-      const response = await fetch('/api/data')
-      return response.json()
-    }
-  }
-})
-```
-
-### Key Points
-
-- Actions are methods for mutating state and performing side effects
-- Actions can be synchronous or asynchronous
-- Access state and getters using `this`
-- Actions can access other stores
-- Actions can accept parameters and return values
-- Actions are called like regular functions
-- Use async/await for asynchronous operations
-- Actions can throw errors
+Reference: https://pinia.vuejs.org/core-concepts/actions

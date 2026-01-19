@@ -123,55 +123,27 @@ pnpm add antd-mini
 <ant-button type="primary" onTap="handleTap">Button</ant-button>
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://ant-design-mini.antgroup.com/guide/quick-start
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://ant-design-mini.antgroup.com/components/overview
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Ant Design Mini official documentation structure (https://ant-design-mini.antgroup.com/components/overview). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/`
-
-- `examples/getting-started.md` - Installation and setup guide
-- `examples/quick-start.md` - Quick start guide
-
-### Components (组件) - `examples/components/`
-
-- `examples/components/overview.md` - Components overview and categories
-- `examples/components/button.md` - Button component usage
-- `examples/components/input.md` - Input component
-- `examples/components/form.md` - Form component
-- `examples/components/list.md` - List component
-- `examples/components/card.md` - Card component
-- `examples/components/toast.md` - Toast component
-- `examples/components/modal.md` - Modal component
-- `examples/components/tabs.md` - Tabs component
-- `examples/components/nav-bar.md` - NavBar component
-- `examples/components/picker.md` - Picker component
-- `examples/components/date-picker.md` - DatePicker component
-- `examples/components/switch.md` - Switch component
-- `examples/components/checkbox.md` - Checkbox component
-- `examples/components/radio.md` - Radio component
-- `examples/components/stepper.md` - Stepper component
-- `examples/components/avatar.md` - Avatar component
-- `examples/components/badge.md` - Badge component
-- `examples/components/tag.md` - Tag component
-- `examples/components/empty.md` - Empty component
-- `examples/components/loading.md` - Loading component
-- `examples/components/popup.md` - Popup component
-- `examples/components/action-sheet.md` - ActionSheet component
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/component-usage.md` - Component usage templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/component-usage.md` for component usage templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

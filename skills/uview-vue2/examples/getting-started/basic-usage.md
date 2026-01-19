@@ -1,5 +1,8 @@
 # Basic Usage | 基本用法
 
+**官方文档**: https://www.uviewui.com
+
+
 ## Instructions
 
 This example demonstrates basic uView UI component usage in uni-app.

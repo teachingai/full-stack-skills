@@ -1,5 +1,8 @@
 # Multiple Charts
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 多个图表
 
 在一个页面中展示多个图表。

@@ -1,5 +1,8 @@
 # Pie Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 饼图
 
 饼图用于显示不同类别的数据在总体中的占比。

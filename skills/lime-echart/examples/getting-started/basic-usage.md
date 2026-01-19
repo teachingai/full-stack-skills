@@ -1,5 +1,8 @@
 # Basic Usage
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 基本使用
 
 lime-echart 提供了 `<l-echart>` 组件，用于在 UniApp/UniAppX 中显示 ECharts 图表。

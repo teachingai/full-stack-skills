@@ -1,5 +1,8 @@
 # Snapshot Options | 快照选项
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates snapshot-specific options in agent-browser.

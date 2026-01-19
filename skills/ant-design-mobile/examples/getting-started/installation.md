@@ -1,5 +1,8 @@
 # Installation | 安装
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to install Ant Design Mobile and set it up in a React project.

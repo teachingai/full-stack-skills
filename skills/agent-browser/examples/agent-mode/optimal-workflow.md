@@ -1,5 +1,8 @@
 # Optimal AI Workflow | 最优 AI 工作流
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates the optimal workflow for AI agents using agent-browser.

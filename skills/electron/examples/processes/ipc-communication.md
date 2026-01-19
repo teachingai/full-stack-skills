@@ -1,5 +1,8 @@
 # IPC Communication | IPC 通信
 
+**官方文档**: https://www.electronjs.org/zh/docs/latest/,
+
+
 ## Instructions
 
 This example demonstrates IPC (Inter-Process Communication) between main and renderer processes.

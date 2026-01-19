@@ -1,5 +1,8 @@
 # Environment Configuration
 
+**官方文档**: https://vitest.dev/config/#environment
+
+
 ## Instructions
 
 This example demonstrates environment configuration in Vitest.

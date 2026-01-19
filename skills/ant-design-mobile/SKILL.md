@@ -102,81 +102,28 @@ This skill is organized to match the Ant Design Mobile official documentation st
    - `templates/project-setup.md` - Project setup templates
    - `templates/component-template.md` - Component usage templates
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://ant-design-mobile.antgroup.com/zh/guide/quick-start
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://ant-design-mobile.antgroup.com/zh/components/button
+
 ## Examples and Templates
 
-### Getting Started
-- **Installation**: `examples/getting-started/installation.md` - Installing Ant Design Mobile, importing styles, and basic setup
-- **Basic Usage**: `examples/getting-started/basic-usage.md` - Basic component usage examples
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
-### Components
+**To use examples:**
+- Identify the topic from the user's request
+- Load the appropriate example file from the mapping above
+- Follow the instructions, syntax, and best practices in that file
+- Adapt the code examples to your specific use case
 
-#### General (通用)
-- **Button**: `examples/components/button.md` - Button component with different types, sizes, and states
-- **Icon**: `examples/components/icon.md` - Icon component usage
-- **Badge**: `examples/components/badge.md` - Badge component
-- **Tag**: `examples/components/tag.md` - Tag component
-- **Avatar**: `examples/components/avatar.md` - Avatar component
-- **Divider**: `examples/components/divider.md` - Divider component
-- **Space**: `examples/components/space.md` - Space component
-- **SafeArea**: `examples/components/safe-area.md` - SafeArea component
-
-#### Data Entry (数据录入)
-- **Input**: `examples/components/input.md` - Input component
-- **Form**: `examples/components/form.md` - Form component with validation
-- **Textarea**: `examples/components/textarea.md` - Textarea component
-- **Switch**: `examples/components/switch.md` - Switch component
-- **Checkbox**: `examples/components/checkbox.md` - Checkbox component
-- **Radio**: `examples/components/radio.md` - Radio component
-- **Stepper**: `examples/components/stepper.md` - Stepper component
-- **Rate**: `examples/components/rate.md` - Rate component
-- **Slider**: `examples/components/slider.md` - Slider component
-- **Uploader**: `examples/components/uploader.md` - Uploader component
-
-#### Data Display (数据展示)
-- **List**: `examples/components/list.md` - List component
-- **Card**: `examples/components/card.md` - Card component
-- **Grid**: `examples/components/grid.md` - Grid component
-- **Image**: `examples/components/image.md` - Image component
-- **ImageViewer**: `examples/components/image-viewer.md` - ImageViewer component
-
-#### Navigation (导航)
-- **Tabs**: `examples/components/tabs.md` - Tabs component
-- **NavBar**: `examples/components/nav-bar.md` - NavBar component
-- **TabBar**: `examples/components/tab-bar.md` - TabBar component
-- **IndexBar**: `examples/components/index-bar.md` - IndexBar component
-- **SideBar**: `examples/components/side-bar.md` - SideBar component
-
-#### Feedback (反馈)
-- **Modal**: `examples/components/modal.md` - Modal component
-- **Dialog**: `examples/components/dialog.md` - Dialog component
-- **Toast**: `examples/components/toast.md` - Toast component
-- **ActionSheet**: `examples/components/action-sheet.md` - ActionSheet component
-- **Popup**: `examples/components/popup.md` - Popup component
-- **Loading**: `examples/components/loading.md` - Loading component
-- **ErrorBlock**: `examples/components/error-block.md` - ErrorBlock component
-- **Empty**: `examples/components/empty.md` - Empty component
-- **NoticeBar**: `examples/components/notice-bar.md` - NoticeBar component
-- **Mask**: `examples/components/mask.md` - Mask component
-
-#### Selector (选择器)
-- **Picker**: `examples/components/picker.md` - Picker component
-- **DatePicker**: `examples/components/date-picker.md` - DatePicker component
-- **Cascader**: `examples/components/cascader.md` - Cascader component
-- **SearchBar**: `examples/components/search-bar.md` - SearchBar component
-
-#### Other (其他)
-- **Swiper**: `examples/components/swiper.md` - Swiper component
-- **PullToRefresh**: `examples/components/pull-to-refresh.md` - PullToRefresh component
-- **InfiniteScroll**: `examples/components/infinite-scroll.md` - InfiniteScroll component
-- **VirtualInput**: `examples/components/virtual-input.md` - VirtualInput component
-
-### Advanced
-- **Theme Customization**: `examples/advanced/theme-customization.md` - Customizing Ant Design Mobile theme
-- **Internationalization**: `examples/advanced/internationalization.md` - Internationalization setup
-
-### Templates
-- **Project Setup**: `templates/project-setup.md` - Ant Design Mobile project setup templates
-- **Component Template**: `templates/component-template.md` - Component usage templates
+**To use templates:**
+- Reference templates in `templates/` directory for common scaffolding
+- Adapt templates to your specific needs and coding style
 
 ## API Reference
 

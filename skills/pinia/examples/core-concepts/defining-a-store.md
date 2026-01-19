@@ -1,119 +1,48 @@
-# Defining a Store | 定义 Store
-
 ## Instructions
 
-This example demonstrates how to define stores using defineStore() with different syntaxes.
+- Use this page as the authoritative reference for **Defining A Store**.
+- Follow the official Pinia docs for supported APIs and patterns.
+- Keep examples aligned with the section (Introduction / Core Concepts / Cookbook / SSR / API).
 
-### Key Concepts
+## Parameters
 
-- defineStore() function
-- Store ID
-- Options API syntax
-- Setup (Composition API) syntax
-- Store naming conventions
+- Identify key inputs, configuration options, or function parameters from the official docs.
+- Use exact naming and casing from the documentation.
+- Document required vs optional parameters.
 
-### Example: Options API Syntax
+## Returns
 
-```javascript
-import { defineStore } from 'pinia'
+- Describe expected behavior, return values, or output for the documented feature.
+- If the page is conceptual, summarize the expected result or effect.
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  getters: {
-    doubleCount: (state) => state.count * 2
-  },
-  actions: {
-    increment() {
-      this.count++
-    }
-  }
-})
-```
+## Common Errors
 
-### Example: Setup (Composition API) Syntax
+- Mismatched store IDs or invalid store definitions.
+- Using stores before Pinia is installed.
+- Accessing stores outside of component context without proper setup.
+- Type errors in TypeScript when using stores.
+- State mutations outside of actions (in strict mode).
 
-```javascript
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+## Best Practices
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  
-  const doubleCount = computed(() => count.value * 2)
-  
-  function increment() {
-    count.value++
-  }
-  
-  return { count, doubleCount, increment }
-})
-```
+- Use `defineStore()` for all store definitions.
+- Keep state flat and normalized when possible.
+- Use getters for computed values derived from state.
+- Use actions for async operations and mutations.
+- Use TypeScript for type safety.
+- Split large stores into smaller, focused stores.
 
-### Example: Store with ID as First Argument
+## Scenarios
 
-```javascript
-// Using string ID
-export const useCounterStore = defineStore('counter', {
-  // ...
-})
+### Typical usage
 
-// Using function that returns ID
-export const useCounterStore = defineStore(() => 'counter', {
-  // ...
-})
-```
+- Apply the official steps and validate expected behavior.
+- Follow Pinia patterns for store creation and usage.
 
-### Example: TypeScript with Options API
+### Troubleshooting
 
-```typescript
-import { defineStore } from 'pinia'
+- Cross-check store setup and Pinia installation.
+- Verify store IDs are unique and correctly referenced.
+- Check TypeScript types if using TypeScript.
 
-interface CounterState {
-  count: number
-}
-
-export const useCounterStore = defineStore('counter', {
-  state: (): CounterState => ({
-    count: 0
-  }),
-  getters: {
-    doubleCount: (state) => state.count * 2
-  },
-  actions: {
-    increment() {
-      this.count++
-    }
-  }
-})
-```
-
-### Example: TypeScript with Setup Syntax
-
-```typescript
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
-
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref<number>(0)
-  
-  const doubleCount = computed(() => count.value * 2)
-  
-  function increment(): void {
-    count.value++
-  }
-  
-  return { count, doubleCount, increment }
-})
-```
-
-### Key Points
-
-- Use `defineStore()` to create stores
-- First argument is the store ID (string or function)
-- Second argument is store options (object) or setup function
-- Options API syntax: object with state, getters, actions
-- Setup syntax: function that returns state, getters, actions
-- Store ID must be unique
-- Use descriptive store names (e.g., `useUserStore`, `useCartStore`)
+Reference: https://pinia.vuejs.org/core-concepts/defining-a-store

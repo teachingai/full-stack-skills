@@ -1,5 +1,8 @@
 # Dialog Component
 
+**官方文档**: https://element-plus.org/en-US/component/dialog.html
+
+
 ## Instructions
 
 This example demonstrates the Dialog component in Element Plus.

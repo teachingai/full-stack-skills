@@ -1,5 +1,8 @@
 # Upload | 上传
 
+**官方文档**: https://avuejs.com/
+
+
 ## Instructions
 
 This example demonstrates how to use Avue upload component in forms.

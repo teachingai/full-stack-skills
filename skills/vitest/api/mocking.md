@@ -1,5 +1,8 @@
 # Mocking API
 
+**官方文档**: https://vitest.dev/api/vi.html
+
+
 ## API Reference
 
 Vitest mocking API for functions and modules.

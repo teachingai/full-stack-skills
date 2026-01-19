@@ -1,5 +1,8 @@
 # CDP Mode | Chrome DevTools Protocol 模式
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to connect to an existing browser via Chrome DevTools Protocol (CDP).

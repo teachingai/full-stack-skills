@@ -1,5 +1,8 @@
 # Internationalization | 国际化
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to set up internationalization in Ant Design Mobile.

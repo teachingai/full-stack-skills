@@ -1,5 +1,8 @@
 # Installation
 
+**官方文档**: https://uviewpro.cn
+
+
 ## Instructions
 
 This example demonstrates how to install uView Pro in a uni-app project.

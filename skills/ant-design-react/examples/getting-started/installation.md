@@ -1,5 +1,8 @@
 # Installation | 安装
 
+**官方文档**: https://4x-ant-design.antgroup.com/docs/react/introduce-cn
+
+
 ## Instructions
 
 This example demonstrates how to install Ant Design React and set it up in a React project.

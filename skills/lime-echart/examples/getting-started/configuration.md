@@ -1,5 +1,8 @@
 # Configuration
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 配置选项
 
 lime-echart 组件支持多种配置选项，用于自定义图表的行为和外观。

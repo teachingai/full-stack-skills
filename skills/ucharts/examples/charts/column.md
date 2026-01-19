@@ -1,5 +1,8 @@
 # Column Chart
 
+**官方文档**: https://www.ucharts.cn/v2/#/,
+
+
 ## Instructions
 
 This example demonstrates the Column chart in uCharts.

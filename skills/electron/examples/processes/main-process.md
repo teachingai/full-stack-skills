@@ -1,5 +1,8 @@
 # Main Process | 主进程
 
+**官方文档**: https://www.electronjs.org/zh/docs/latest/,
+
+
 ## Instructions
 
 This example demonstrates main process concepts and usage in Electron.

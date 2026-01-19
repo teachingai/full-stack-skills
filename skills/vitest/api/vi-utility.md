@@ -1,5 +1,8 @@
 # vi Utility
 
+**官方文档**: https://vitest.dev/api/vi.html
+
+
 ## API Reference
 
 Vitest vi utility functions for mocking and testing.

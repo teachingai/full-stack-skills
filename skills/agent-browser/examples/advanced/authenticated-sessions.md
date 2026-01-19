@@ -1,5 +1,8 @@
 # Authenticated Sessions | 认证会话
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to use custom HTTP headers for authentication, skipping login flows.

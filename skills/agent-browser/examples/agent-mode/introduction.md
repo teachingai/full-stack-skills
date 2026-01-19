@@ -1,5 +1,8 @@
 # Agent Mode Introduction | 代理模式介绍
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates agent mode in agent-browser for AI agent integration.

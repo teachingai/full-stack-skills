@@ -138,49 +138,23 @@ export default {
 </script>
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/` → https://avuejs.com/form/form-doc.html
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Avue-form official documentation structure (https://avuejs.com/form/form-doc.html). All examples are in the `examples/` directory, organized by topic:
-
-### Components (组件) - `examples/components/`
-
-- `examples/components/intro.md` - Introduction to Avue-form
-- `examples/components/installation.md` - Installation guide
-- `examples/components/basic-usage.md` - Basic usage
-- `examples/components/configuration.md` - Configuration
-- `examples/components/options.md` - Form options
-- `examples/components/columns.md` - Form columns
-- `examples/components/validation.md` - Form validation
-- `examples/components/events.md` - Form events
-- `examples/components/methods.md` - Form methods
-
-### Features (功能特性) - `examples/features/`
-
-- `examples/features/dynamic-form.md` - Dynamic form
-- `examples/features/form-layout.md` - Form layout
-- `examples/features/form-rules.md` - Form rules
-- `examples/features/form-submit.md` - Form submit
-- `examples/features/form-reset.md` - Form reset
-- `examples/features/custom-components.md` - Custom components
-- `examples/features/form-group.md` - Form group
-- `examples/features/form-tabs.md` - Form tabs
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/basic-form.md` - Basic form templates
-- `templates/configuration.md` - Configuration templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/basic-form.md` for basic form templates
-- Use `templates/configuration.md` for configuration templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

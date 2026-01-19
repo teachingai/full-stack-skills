@@ -113,50 +113,24 @@ npm create tauri-app
 cargo tauri init
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/guide/` or `examples/getting-started/` → https://v2.tauri.org.cn/start/
+- `api/` → https://v2.tauri.org.cn/reference/cli/
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Tauri official documentation structure (https://v2.tauri.org.cn/start/, https://v2.tauri.org.cn/reference/cli/). All examples are in the `examples/` directory, organized by topic:
-
-### Start (快速开始) - `examples/start/`
-
-- `examples/start/intro.md` - Introduction to Tauri
-- `examples/start/installation.md` - Installation guide
-- `examples/start/quick-start.md` - Quick start guide
-- `examples/start/prerequisites.md` - Prerequisites
-
-### Guide (使用指南) - `examples/guide/`
-
-- `examples/guide/architecture.md` - Architecture overview
-- `examples/guide/frontend.md` - Frontend setup
-- `examples/guide/backend.md` - Backend (Rust) setup
-- `examples/guide/commands.md` - Commands usage
-- `examples/guide/events.md` - Events usage
-- `examples/guide/window.md` - Window management
-- `examples/guide/filesystem.md` - File system operations
-- `examples/guide/configuration.md` - Configuration
-- `examples/guide/build.md` - Build and package
-
-### Reference (参考) - `examples/reference/`
-
-- `examples/reference/cli.md` - CLI commands reference
-- `examples/reference/config.md` - Configuration reference
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/project-setup.md` - Project setup templates
-- `templates/configuration.md` - Configuration templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/project-setup.md` for project setup templates
-- Use `templates/configuration.md` for configuration templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

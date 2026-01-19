@@ -1,5 +1,8 @@
 # Mask | 遮罩层
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to use the Mask component in Ant Design Mobile.

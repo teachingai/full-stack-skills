@@ -1,5 +1,8 @@
 # Custom Browser Executable | 自定义浏览器可执行文件
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to use a custom browser executable instead of the bundled Chromium.

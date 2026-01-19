@@ -1,5 +1,8 @@
 # Browser Mode
 
+**官方文档**: https://vitest.dev/guide/browser.html
+
+
 ## Instructions
 
 This example demonstrates browser mode testing in Vitest.

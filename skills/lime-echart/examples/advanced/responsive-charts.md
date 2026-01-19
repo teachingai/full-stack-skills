@@ -1,5 +1,8 @@
 # Responsive Charts
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 响应式图表
 
 图表需要适配不同屏幕尺寸和设备。

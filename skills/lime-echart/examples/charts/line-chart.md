@@ -1,5 +1,8 @@
 # Line Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 折线图
 
 折线图用于显示数据随时间或其他有序类别的变化趋势。

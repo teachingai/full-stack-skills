@@ -1,5 +1,8 @@
 # Quick Start
 
+**官方文档**: https://www.ucharts.cn/v2/#/,
+
+
 ## Instructions
 
 This example provides a quick start guide for uCharts.

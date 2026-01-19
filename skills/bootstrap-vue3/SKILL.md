@@ -84,74 +84,27 @@ This skill is organized to match the Bootstrap Vue 3.0 official documentation st
    - `templates/project-setup.md` - Project setup templates
    - `templates/component-template.md` - Component usage templates
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://bootstrap-vue.org/docs
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://bootstrap-vue.org/docs/components
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Bootstrap Vue 3.0 official documentation structure (https://bootstrap-vue.org/docs, https://bootstrap-vue.org/docs/components). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing Bootstrap Vue, importing styles, and basic setup
-- `examples/getting-started/basic-usage.md` - Basic component usage examples
-
-### Components (组件) - `examples/components/`
-
-**General (通用)**:
-- `examples/components/button.md` - Button component with variants and sizes
-- `examples/components/badge.md` - Badge component
-- `examples/components/card.md` - Card component
-
-**Layout (布局)**:
-- `examples/components/grid.md` - Grid system (Container, Row, Col)
-- `examples/components/collapse.md` - Collapse component
-
-**Forms (表单)**:
-- `examples/components/form.md` - Form component
-- `examples/components/input.md` - Input component
-- `examples/components/select.md` - Select component
-- `examples/components/checkbox.md` - Checkbox component
-- `examples/components/radio.md` - Radio component
-
-**Data Display (数据展示)**:
-- `examples/components/table.md` - Table component
-- `examples/components/pagination.md` - Pagination component
-- `examples/components/tabs.md` - Tabs component
-
-**Navigation (导航)**:
-- `examples/components/navbar.md` - Navbar component
-- `examples/components/dropdown.md` - Dropdown component
-
-**Feedback (反馈)**:
-- `examples/components/modal.md` - Modal component
-- `examples/components/alert.md` - Alert component
-- `examples/components/popover.md` - Popover component
-- `examples/components/tooltip.md` - Tooltip component
-
-### Directives (指令) - `examples/directives/`
-
-- `examples/directives/tooltip.md` - v-b-tooltip directive usage
-- `examples/directives/popover.md` - v-b-popover directive usage
-- `examples/directives/modal.md` - v-b-modal directive usage
-- `examples/directives/toggle.md` - v-b-toggle directive usage
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/theme-customization.md` - Customizing Bootstrap theme
-- `examples/advanced/composables.md` - Using composables (useToast, useModal)
-
-### Templates Directory (`templates/`)
-
-- `templates/project-setup.md` - Bootstrap Vue project setup templates
-- `templates/component-template.md` - Component usage templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/project-setup.md` for project setup
-- Use component templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

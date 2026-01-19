@@ -1,5 +1,8 @@
 # Radar Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 雷达图
 
 雷达图用于展示多维度数据的对比。

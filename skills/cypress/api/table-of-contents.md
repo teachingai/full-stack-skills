@@ -1,54 +1,47 @@
-# API Table of Contents
+## Instructions
 
-## API Reference Overview
+- Use this page as the authoritative reference for **Table Of Contents**.
+- Follow the official Cypress docs for supported APIs and patterns.
+- Keep examples aligned with the section (App / API).
 
-Cypress API is organized into the following categories:
+## Parameters
 
-### Commands
+- Identify key inputs, configuration options, or function parameters from the official docs.
+- Use exact naming and casing from the documentation.
+- Document required vs optional parameters.
 
-Action, query, and assertion commands:
-- `cy.get()` - Get DOM elements
-- `cy.click()` - Click elements
-- `cy.type()` - Type into inputs
-- `cy.visit()` - Visit URLs
-- `cy.contains()` - Find elements by text
-- `cy.should()` - Make assertions
-- And many more...
+## Returns
 
-**See also:** `api/commands.md`
+- Describe expected behavior, return values, or output for the documented feature.
+- If the page is conceptual, summarize the expected result or effect.
 
-### Cypress API
+## Common Errors
 
-Global Cypress API:
-- `Cypress.config()` - Configuration methods
-- `Cypress.Commands` - Custom commands
-- `Cypress.env()` - Environment variables
-- `Cypress.version` - Cypress version
-- `Cypress.platform` - Platform info
+- Element not found or not visible errors.
+- Timeout errors when waiting for elements or network requests.
+- Incorrect selector usage or stale element references.
+- Async/await issues in Cypress commands.
+- Configuration errors in cypress.config.js.
 
-**See also:** `api/cypress-api.md`
+## Best Practices
 
-### Utilities
+- Use data-cy attributes for stable selectors.
+- Avoid hard-coded waits, use Cypress's built-in retry-ability.
+- Keep tests isolated and independent.
+- Use custom commands for reusable test logic.
+- Follow Cypress's best practices for assertions and commands.
 
-Cypress utility functions:
-- `Cypress._` - Lodash utilities
-- `Cypress.Blob` - Blob utilities
-- `Cypress.Promise` - Promise utilities
-- `Cypress.$` - jQuery reference
+## Scenarios
 
-**See also:** `api/utilities.md`
+### Typical usage
 
-### Node Events
+- Apply the official steps and validate expected behavior.
+- Follow Cypress patterns for test creation and execution.
 
-Node-level events and tasks:
-- `cy.task()` - Run Node tasks
-- Plugin events
-- File system operations
+### Troubleshooting
 
-**See also:** `api/node-events.md`
+- Cross-check selector strategies and element visibility.
+- Verify network requests and responses if testing API calls.
+- Check Cypress configuration and environment setup.
 
-### Examples
-
-All APIs are demonstrated in the `examples/` directory:
-- `examples/e2e-testing/` - E2E testing examples
-- `examples/component-testing/` - Component testing examples
+Reference: https://docs.cypress.io/api/table-of-contents

@@ -1,5 +1,8 @@
 # Streaming | 流式传输
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to stream the browser viewport via WebSocket for live preview or "pair browsing".

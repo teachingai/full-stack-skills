@@ -50,35 +50,23 @@ This skill is organized to match the UpgradeLink official documentation structur
 5. **Use templates** from the `templates/` directory:
    - `templates/` - Usage templates
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/` → https://www.toolsetlink.com/upgrade/what-is-upgrade.html
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the UpgradeLink official documentation structure (https://www.toolsetlink.com/upgrade/what-is-upgrade.html). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/introduction.md` - What is UpgradeLink
-- `examples/getting-started/basic-usage.md` - Basic usage examples
-
-### Features (功能特性) - `examples/features/`
-
-Feature-specific examples will be added based on official documentation.
-
-### Advanced (高级) - `examples/advanced/`
-
-Advanced usage examples will be added based on official documentation.
-
-### Templates Directory (`templates/`)
-
-- Usage templates will be added based on official documentation.
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

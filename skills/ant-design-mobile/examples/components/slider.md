@@ -1,5 +1,8 @@
 # Slider | 滑动输入条
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to use the Slider component in Ant Design Mobile.

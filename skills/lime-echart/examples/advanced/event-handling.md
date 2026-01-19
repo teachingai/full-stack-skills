@@ -1,5 +1,8 @@
 # Event Handling
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 事件处理
 
 lime-echart 支持 ECharts 的所有事件，可以通过事件监听实现交互功能。

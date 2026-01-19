@@ -84,58 +84,24 @@ This skill is organized to match the agent-browser official documentation struct
    - `templates/basic-automation.md` - Basic automation workflow
    - `templates/ai-agent-workflow.md` - AI agent workflow template
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- See examples and API files → https://github.com/vercel-labs/agent-browser
+
 ## Examples and Templates
 
-### Getting Started
-- **Installation**: `examples/getting-started/installation.md` - Installing agent-browser CLI tool
-- **Quick Start**: `examples/quick-start/quick-start.md` - Basic workflow examples
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
-### Commands
-- **Basic Commands**: `examples/commands/basic-commands.md` - Core commands (open, click, fill, type, etc.)
-- **Advanced Commands**: `examples/commands/advanced-commands.md` - Advanced commands (snapshot, eval, screenshot, etc.)
-- **Get Info**: `examples/commands/get-info/` - Information retrieval commands (get text, get html, get value, etc.)
-- **Check State**: `examples/commands/check-state/` - State checking commands (is visible, is enabled, is checked)
-- **Find Elements**: `examples/commands/find-elements/` - Semantic locator commands (find role, find text, find label, etc.)
-- **Wait**: `examples/commands/wait/` - Wait commands (wait for element, wait for text, wait for URL, etc.)
-- **Mouse Control**: `examples/commands/mouse-control/` - Mouse control commands (mouse move, mouse down, mouse up, mouse wheel)
-- **Browser Settings**: `examples/commands/browser-settings/` - Browser configuration (set viewport, set device, set geo, etc.)
-- **Cookies & Storage**: `examples/commands/cookies-storage/` - Cookies and storage management
-- **Network**: `examples/commands/network/` - Network interception and mocking
-- **Tabs & Windows**: `examples/commands/tabs-windows/` - Tab and window management
-- **Frames**: `examples/commands/frames/` - Iframe handling
-- **Dialogs**: `examples/commands/dialogs/` - Dialog handling (accept, dismiss)
-- **Debug**: `examples/commands/debug/` - Debugging commands (trace, console, errors, highlight, state)
-- **Navigation**: `examples/commands/navigation/` - Navigation commands (back, forward, reload)
-- **Setup**: `examples/commands/setup/` - Setup commands (install)
+**To use examples:**
+- Identify the topic from the user's request
+- Load the appropriate example file from the mapping above
+- Follow the instructions, syntax, and best practices in that file
+- Adapt the code examples to your specific use case
 
-### Selectors
-- **Refs**: `examples/selectors/refs.md` - Using refs (@e1, @e2) for deterministic element selection
-- **Traditional Selectors**: `examples/selectors/traditional-selectors.md` - CSS selectors, XPath, semantic locators
-
-### Agent Mode
-- **Introduction**: `examples/agent-mode/introduction.md` - Agent mode overview and JSON output
-- **Optimal Workflow**: `examples/agent-mode/optimal-workflow.md` - Optimal AI workflow patterns
-- **Integration**: `examples/agent-mode/integration.md` - Integrating with AI agents (Claude, Cursor, Copilot, etc.)
-
-### Advanced Features
-- **Sessions**: `examples/advanced/sessions.md` - Managing multiple isolated browser sessions
-- **Headed Mode**: `examples/advanced/headed-mode.md` - Running browser in visible mode for debugging
-- **Authenticated Sessions**: `examples/advanced/authenticated-sessions.md` - Using custom headers for authentication
-- **Custom Executable**: `examples/advanced/custom-executable.md` - Using custom browser executable path
-- **CDP Mode**: `examples/advanced/cdp-mode.md` - Connecting to existing browsers via Chrome DevTools Protocol
-- **Streaming**: `examples/advanced/streaming.md` - Streaming browser viewport for live preview
-- **Architecture**: `examples/advanced/architecture.md` - Architecture overview (client-daemon model)
-- **Platforms**: `examples/advanced/platforms.md` - Platform support information
-- **Usage with AI Agents**: `examples/advanced/usage-with-agents.md` - Integration patterns for AI agents
-
-### Options
-- **Global Options**: `examples/options/global-options.md` - Global CLI options (--session, --headers, --headed, --json, etc.)
-- **Snapshot Options**: `examples/options/snapshot-options.md` - Snapshot-specific options (-i, -c, -d, -s)
-- **Session Options**: `examples/options/session-options.md` - Session management options
-
-### Templates
-- **Basic Automation**: `templates/basic-automation.md` - Basic browser automation workflow
-- **AI Agent Workflow**: `templates/ai-agent-workflow.md` - Complete AI agent workflow template
+**To use templates:**
+- Reference templates in `templates/` directory for common scaffolding
+- Adapt templates to your specific needs and coding style
 
 ## API Reference
 

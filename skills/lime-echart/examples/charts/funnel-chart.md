@@ -1,5 +1,8 @@
 # Funnel Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 漏斗图
 
 漏斗图用于展示流程中各个阶段的转化情况。

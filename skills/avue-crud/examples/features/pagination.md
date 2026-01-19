@@ -1,5 +1,8 @@
 # Pagination | 分页
 
+**官方文档**: https://avuejs.com/crud/crud-doc.html
+
+
 ## Instructions
 
 This example demonstrates pagination configuration in Avue CRUD.

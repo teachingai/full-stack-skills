@@ -88,6 +88,11 @@ To work with Cocos2d-x v4:
    - `templates/project-structure.md` - Standard project structure
    - `templates/cmake-config.md` - CMake configuration examples
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- See examples and API files → https://docs.cocos.com/cocos2d-x/v4/manual/zh/
+
 ## Core Concepts
 
 ### Node System

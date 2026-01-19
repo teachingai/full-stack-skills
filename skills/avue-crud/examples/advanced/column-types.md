@@ -1,5 +1,8 @@
 # Column Types | 列类型
 
+**官方文档**: https://avuejs.com/crud/crud-doc.html
+
+
 ## Instructions
 
 This example demonstrates different column types in Avue CRUD.

@@ -1,90 +1,36 @@
-# Resolve
-
 ## Instructions
 
-This example demonstrates module resolution configuration in Rspack.
+- Use this page as the authoritative reference for **resolve**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Module resolution
-- Alias
-- Extensions
-- Modules directories
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: Basic Resolve
+## Returns
 
-```javascript
-module.exports = {
-  resolve: {
-    extensions: ['.js', '.json', '.jsx', '.ts', '.tsx'],
-  },
-};
-```
+- Describe expected behavior or output for the documented feature.
 
-### Example: Alias
+## Common Errors
 
-```javascript
-const path = require('path');
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-module.exports = {
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-      'components': path.resolve(__dirname, 'src/components'),
-    },
-  },
-};
-```
+## Best Practices
 
-### Example: Modules Directories
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-```javascript
-module.exports = {
-  resolve: {
-    modules: ['node_modules', 'src'],
-  },
-};
-```
+## Scenarios
 
-### Example: Resolve Fallback
+### Typical usage
 
-```javascript
-module.exports = {
-  resolve: {
-    fallback: {
-      'crypto': false,
-      'stream': false,
-      'buffer': false,
-    },
-  },
-};
-```
+- Apply the official steps and validate expected behavior.
 
-### Example: Condition Names
+### Troubleshooting
 
-```javascript
-module.exports = {
-  resolve: {
-    conditionNames: ['import', 'require', 'default'],
-  },
-};
-```
+- Cross-check config and runtime requirements.
 
-### Example: Main Fields
-
-```javascript
-module.exports = {
-  resolve: {
-    mainFields: ['browser', 'module', 'main'],
-  },
-};
-```
-
-### Key Points
-
-- extensions specifies file extensions to resolve
-- alias creates path shortcuts
-- modules specifies directories to search
-- fallback for Node.js polyfills
-- conditionNames for package.json exports
-- mainFields for package entry points
+Reference: https://rspack.rs/zh/config/resolve

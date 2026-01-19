@@ -1,5 +1,8 @@
 # Dialog | 对话框
 
+**官方文档**: https://vant-ui.github.io/vant/#/zh-CN
+
+
 ## Instructions
 
 This example demonstrates how to use the Dialog component in Vant.

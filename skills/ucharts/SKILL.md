@@ -136,55 +136,24 @@ export default {
 </script>
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/guide/` or `examples/getting-started/` → https://www.ucharts.cn/v2/#/guide/index
+- `examples/` → https://www.ucharts.cn/v2/#/document/index
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the uCharts official documentation structure (https://www.ucharts.cn/v2/#/guide/index, https://www.ucharts.cn/v2/#/document/index). All examples are in the `examples/` directory, organized by topic:
-
-### Guide (使用指南) - `examples/guide/`
-
-- `examples/guide/intro.md` - Introduction to uCharts
-- `examples/guide/installation.md` - Installation guide
-- `examples/guide/quick-start.md` - Quick start guide
-- `examples/guide/configuration.md` - Configuration
-- `examples/guide/platform-support.md` - Platform support
-
-### Charts (图表类型) - `examples/charts/`
-
-- `examples/charts/line.md` - Line chart usage
-- `examples/charts/column.md` - Column chart usage
-- `examples/charts/area.md` - Area chart usage
-- `examples/charts/pie.md` - Pie chart usage
-- `examples/charts/ring.md` - Ring chart usage
-- `examples/charts/radar.md` - Radar chart usage
-- `examples/charts/funnel.md` - Funnel chart usage
-- `examples/charts/gauge.md` - Gauge chart usage
-- `examples/charts/candle.md` - Candle chart usage
-- `examples/charts/mix.md` - Mixed chart usage
-
-### Features (功能特性) - `examples/features/`
-
-- `examples/features/data-format.md` - Data format
-- `examples/features/chart-events.md` - Chart events
-- `examples/features/chart-methods.md` - Chart methods
-- `examples/features/chart-update.md` - Chart update
-- `examples/features/chart-customization.md` - Chart customization
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/basic-chart.md` - Basic chart templates
-- `templates/configuration.md` - Configuration templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/basic-chart.md` for basic chart templates
-- Use `templates/configuration.md` for configuration templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

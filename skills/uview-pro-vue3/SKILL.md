@@ -153,80 +153,27 @@ export function createApp() {
 }
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://uviewpro.cn/zh/guide/intro.html
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://uviewpro.cn/zh/components/intro.html
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the uView Pro official documentation structure (https://uviewpro.cn/zh/components/intro.html, https://uviewpro.cn/zh/tools/intro.html, https://uviewpro.cn/zh/layout/intro.html). All examples are in the `examples/` directory, organized by topic:
-
-### Guide (使用指南) - `examples/guide/`
-
-- `examples/guide/intro.md` - Introduction to uView Pro
-- `examples/guide/installation.md` - Installation guide
-- `examples/guide/quick-start.md` - Quick start guide
-- `examples/guide/theme.md` - Theme customization
-- `examples/guide/i18n.md` - Internationalization
-- `examples/guide/config.md` - Configuration
-
-### Components (组件) - `examples/components/`
-
-- `examples/components/intro.md` - Components introduction
-- `examples/components/button.md` - Button component usage
-- `examples/components/input.md` - Input component
-- `examples/components/form.md` - Form component
-- `examples/components/list.md` - List component
-- `examples/components/card.md` - Card component
-- `examples/components/toast.md` - Toast component
-- `examples/components/modal.md` - Modal component
-- `examples/components/tabs.md` - Tabs component
-- `examples/components/navbar.md` - NavBar component
-- `examples/components/date-picker.md` - DatePicker component
-- `examples/components/select.md` - Select component
-- `examples/components/switch.md` - Switch component
-- `examples/components/checkbox.md` - Checkbox component
-- `examples/components/radio.md` - Radio component
-- `examples/components/upload.md` - Upload component
-- `examples/components/pagination.md` - Pagination component
-- `examples/components/avatar.md` - Avatar component
-- `examples/components/badge.md` - Badge component
-- `examples/components/tag.md` - Tag component
-- `examples/components/empty.md` - Empty component
-- `examples/components/loading.md` - Loading component
-- `examples/components/popup.md` - Popup component
-- `examples/components/dropdown.md` - Dropdown component
-- `examples/components/drawer.md` - Drawer component
-
-### Tools (工具) - `examples/tools/`
-
-- `examples/tools/intro.md` - Tools introduction
-- `examples/tools/http.md` - HTTP request utilities
-- `examples/tools/storage.md` - Storage utilities
-- `examples/tools/router.md` - Router utilities
-- `examples/tools/validator.md` - Validator utilities
-- `examples/tools/format.md` - Format utilities
-- `examples/tools/color.md` - Color utilities
-
-### Layout (布局) - `examples/layout/`
-
-- `examples/layout/intro.md` - Layout introduction
-- `examples/layout/grid.md` - Grid layout
-- `examples/layout/flex.md` - Flex layout
-- `examples/layout/container.md` - Container layout
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/component-usage.md` - Component usage templates
-- `templates/project-setup.md` - Project setup templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/component-usage.md` for component usage templates
-- Use `templates/project-setup.md` for project setup templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

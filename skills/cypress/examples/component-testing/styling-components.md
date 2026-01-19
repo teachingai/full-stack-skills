@@ -1,91 +1,47 @@
-# Styling Components
-
 ## Instructions
 
-This example demonstrates how to handle styling in component tests.
+- Use this page as the authoritative reference for **Styling Components**.
+- Follow the official Cypress docs for supported APIs and patterns.
+- Keep examples aligned with the section (App / API).
 
-### Key Concepts
+## Parameters
 
-- Loading styles
-- CSS modules
-- Global styles
-- Style testing
+- Identify key inputs, configuration options, or function parameters from the official docs.
+- Use exact naming and casing from the documentation.
+- Document required vs optional parameters.
 
-### Example: Loading Global Styles
+## Returns
 
-```javascript
-// Button.cy.js
-import { mount } from 'cypress/vue'
-import Button from './Button.vue'
-import './styles.css' // Load global styles
+- Describe expected behavior, return values, or output for the documented feature.
+- If the page is conceptual, summarize the expected result or effect.
 
-describe('Button Component', () => {
-  it('has correct styles', () => {
-    mount(Button)
-    cy.get('button').should('have.css', 'background-color', 'rgb(0, 0, 255)')
-  })
-})
-```
+## Common Errors
 
-### Example: CSS Modules
+- Element not found or not visible errors.
+- Timeout errors when waiting for elements or network requests.
+- Incorrect selector usage or stale element references.
+- Async/await issues in Cypress commands.
+- Configuration errors in cypress.config.js.
 
-```javascript
-// Button.cy.js
-import { mount } from 'cypress/vue'
-import Button from './Button.vue'
-import styles from './Button.module.css'
+## Best Practices
 
-describe('Button Component', () => {
-  it('applies CSS module classes', () => {
-    mount(Button)
-    cy.get('button').should('have.class', styles.button)
-  })
-})
-```
+- Use data-cy attributes for stable selectors.
+- Avoid hard-coded waits, use Cypress's built-in retry-ability.
+- Keep tests isolated and independent.
+- Use custom commands for reusable test logic.
+- Follow Cypress's best practices for assertions and commands.
 
-### Example: Testing Computed Styles
+## Scenarios
 
-```javascript
-// Card.cy.js
-import { mount } from 'cypress/vue'
-import Card from './Card.vue'
+### Typical usage
 
-describe('Card Component', () => {
-  it('has correct dimensions', () => {
-    mount(Card)
-    cy.get('.card').then(($el) => {
-      const width = $el.width()
-      const height = $el.height()
-      expect(width).to.be.greaterThan(0)
-      expect(height).to.be.greaterThan(0)
-    })
-  })
-})
-```
+- Apply the official steps and validate expected behavior.
+- Follow Cypress patterns for test creation and execution.
 
-### Example: Visual Testing
+### Troubleshooting
 
-```javascript
-// Button.cy.js
-import { mount } from 'cypress/vue'
-import Button from './Button.vue'
+- Cross-check selector strategies and element visibility.
+- Verify network requests and responses if testing API calls.
+- Check Cypress configuration and environment setup.
 
-describe('Button Component', () => {
-  it('matches visual snapshot', () => {
-    mount(Button, {
-      props: {
-        label: 'Click me'
-      }
-    })
-    cy.get('button').matchImageSnapshot()
-  })
-})
-```
-
-### Key Points
-
-- Import styles in test files
-- Test computed styles with cy.should()
-- CSS modules are supported
-- Global styles can be loaded
-- Visual testing with snapshots
+Reference: https://docs.cypress.io/app/component-testing/styling-components

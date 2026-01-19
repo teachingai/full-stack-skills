@@ -1,5 +1,8 @@
 # IndexBar | 索引栏
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to use the IndexBar component in Ant Design Mobile.

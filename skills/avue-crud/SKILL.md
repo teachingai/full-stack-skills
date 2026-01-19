@@ -72,47 +72,23 @@ This skill is organized to match the Avue CRUD official documentation structure 
    - `templates/advanced-crud.md` - Advanced CRUD template
    - `templates/crud-with-api.md` - CRUD with API integration
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/` → https://avuejs.com/crud/crud-doc.html
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Avue CRUD official documentation structure (https://avuejs.com/crud/crud-doc.html). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/basic-usage.md` - Basic CRUD usage and setup
-- `examples/getting-started/configuration.md` - CRUD configuration options
-
-### Features (功能特性) - `examples/features/`
-
-- `examples/features/columns.md` - Column configuration and types
-- `examples/features/crud-operations.md` - CRUD operations (add, edit, delete)
-- `examples/features/pagination.md` - Pagination setup and configuration
-- `examples/features/search.md` - Search functionality and filters
-- `examples/features/sorting.md` - Column sorting configuration
-- `examples/features/selection.md` - Row selection and batch operations
-- `examples/features/export.md` - Data export functionality
-- `examples/features/form-config.md` - Form configuration in CRUD dialogs
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/custom-operations.md` - Custom operations and buttons
-- `examples/advanced/column-types.md` - Different column types and renderers
-- `examples/advanced/validation.md` - Form validation in CRUD
-- `examples/advanced/events.md` - Event handling and callbacks
-
-### Templates Directory (`templates/`)
-
-- `templates/basic-crud.md` - Basic CRUD template
-- `templates/advanced-crud.md` - Advanced CRUD template with all features
-- `templates/crud-with-api.md` - CRUD with API integration template
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

@@ -1,5 +1,8 @@
 # Candlestick Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## K线图
 
 K线图用于展示股票等金融数据。

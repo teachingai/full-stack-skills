@@ -1,5 +1,8 @@
 # Gauge Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 仪表盘
 
 仪表盘用于展示进度或完成度。

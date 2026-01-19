@@ -118,46 +118,24 @@ const app = new Application({
 app.start()
 ```
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/` → https://www.kaka996.com/pages/987b1c/
+- `api/` → https://www.kaka996.com/pages/a99b72/
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Electron EGG official documentation structure (https://www.kaka996.com/pages/987b1c/, https://www.kaka996.com/pages/a99b72/). All examples are in the `examples/` directory, organized by topic:
-
-### Guide (使用文档) - `examples/guide/`
-
-- `examples/guide/intro.md` - Introduction to Electron EGG
-- `examples/guide/installation.md` - Installation guide
-- `examples/guide/quick-start.md` - Quick start guide
-- `examples/guide/project-structure.md` - Project structure
-- `examples/guide/configuration.md` - Configuration
-- `examples/guide/build.md` - Build and package
-
-### Features (功能特性) - `examples/features/`
-
-- `examples/features/main-process.md` - Main process usage
-- `examples/features/renderer-process.md` - Renderer process usage
-- `examples/features/ipc-communication.md` - IPC communication
-- `examples/features/window-management.md` - Window management
-- `examples/features/menu.md` - Menu system
-- `examples/features/tray.md` - System tray
-- `examples/features/auto-updater.md` - Auto updater
-- `examples/features/plugin-system.md` - Plugin system
-
-### Templates Directory (`templates/`)
-
-- `templates/installation.md` - Installation and setup templates
-- `templates/project-setup.md` - Project setup templates
-- `templates/configuration.md` - Configuration templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/installation.md` for installation templates
-- Use `templates/project-setup.md` for project setup templates
-- Use `templates/configuration.md` for configuration templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

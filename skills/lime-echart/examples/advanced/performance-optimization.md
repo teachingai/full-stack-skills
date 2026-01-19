@@ -1,5 +1,8 @@
 # Performance Optimization
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 性能优化
 
 在 UniApp/UniAppX 中使用图表时，需要注意性能优化。

@@ -1,5 +1,8 @@
 # Browser Configuration
 
+**官方文档**: https://vitest.dev/config/#browser
+
+
 ## Instructions
 
 This example demonstrates browser mode configuration.

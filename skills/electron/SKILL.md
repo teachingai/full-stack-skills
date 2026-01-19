@@ -85,59 +85,24 @@ This skill is organized to match the Electron official documentation structure (
    - `templates/renderer-process.md` - Renderer process template
    - `templates/package-json.md` - package.json template
 
+
+### Doc mapping (one-to-one with official documentation)
+
+- `examples/` → https://www.electronjs.org/zh/docs/latest/
+- `api/` → https://www.electronjs.org/zh/docs/latest/api/app
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Electron official documentation structure (https://www.electronjs.org/zh/docs/latest/). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing Electron, project setup
-- `examples/getting-started/quick-start.md` - Quick start tutorial
-
-### Processes (进程) - `examples/processes/`
-
-- `examples/processes/main-process.md` - Main process concepts
-- `examples/processes/renderer-process.md` - Renderer process concepts
-- `examples/processes/preload-scripts.md` - Preload scripts
-- `examples/processes/ipc-communication.md` - IPC communication
-
-### API Examples (API 示例) - `examples/api/`
-
-- `examples/api/browser-window.md` - BrowserWindow usage
-- `examples/api/menu.md` - Menu usage
-- `examples/api/tray.md` - Tray usage
-- `examples/api/dialog.md` - Dialog usage
-- `examples/api/ipc-main.md` - ipcMain usage
-- `examples/api/ipc-renderer.md` - ipcRenderer usage
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/packaging.md` - Application packaging
-- `examples/advanced/security.md` - Security best practices
-- `examples/advanced/auto-updater.md` - Auto updater
-- `examples/advanced/native-modules.md` - Native modules
-
-### Tools (工具) - `examples/tools/`
-
-- `examples/tools/electron-forge.md` - Electron Forge
-- `examples/tools/electron-fiddle.md` - Electron Fiddle
-
-### Templates Directory (`templates/`)
-
-- `templates/main-process.md` - Main process template
-- `templates/preload-script.md` - Preload script template
-- `templates/renderer-process.md` - Renderer process template
-- `templates/package-json.md` - package.json template
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/main-process.md` for main process setup
-- Use preload and renderer templates for process setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

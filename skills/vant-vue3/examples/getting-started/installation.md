@@ -1,5 +1,8 @@
 # Installation | 安装
 
+**官方文档**: https://vant-ui.github.io/vant/#/zh-CN
+
+
 ## Instructions
 
 This example demonstrates how to install Vant and set it up in a Vue 3 project.

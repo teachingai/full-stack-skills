@@ -1,154 +1,48 @@
-# Getters | 计算属性
-
 ## Instructions
 
-This example demonstrates how to create and use getters in Pinia stores.
+- Use this page as the authoritative reference for **Getters**.
+- Follow the official Pinia docs for supported APIs and patterns.
+- Keep examples aligned with the section (Introduction / Core Concepts / Cookbook / SSR / API).
 
-### Key Concepts
+## Parameters
 
-- Defining getters
-- Accessing other getters
-- Passing arguments to getters
-- Accessing other stores in getters
-- Getters with TypeScript
+- Identify key inputs, configuration options, or function parameters from the official docs.
+- Use exact naming and casing from the documentation.
+- Document required vs optional parameters.
 
-### Example: Basic Getter
+## Returns
 
-```javascript
-import { defineStore } from 'pinia'
+- Describe expected behavior, return values, or output for the documented feature.
+- If the page is conceptual, summarize the expected result or effect.
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  getters: {
-    doubleCount: (state) => state.count * 2,
-    tripleCount: (state) => state.count * 3
-  }
-})
-```
+## Common Errors
 
-### Example: Accessing Other Getters
+- Mismatched store IDs or invalid store definitions.
+- Using stores before Pinia is installed.
+- Accessing stores outside of component context without proper setup.
+- Type errors in TypeScript when using stores.
+- State mutations outside of actions (in strict mode).
 
-```javascript
-import { defineStore } from 'pinia'
+## Best Practices
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  getters: {
-    doubleCount: (state) => state.count * 2,
-    // Access other getters using 'this'
-    quadrupleCount() {
-      return this.doubleCount * 2
-    }
-  }
-})
-```
+- Use `defineStore()` for all store definitions.
+- Keep state flat and normalized when possible.
+- Use getters for computed values derived from state.
+- Use actions for async operations and mutations.
+- Use TypeScript for type safety.
+- Split large stores into smaller, focused stores.
 
-### Example: Passing Arguments to Getters
+## Scenarios
 
-```javascript
-import { defineStore } from 'pinia'
+### Typical usage
 
-export const useCartStore = defineStore('cart', {
-  state: () => ({
-    items: [
-      { id: 1, name: 'Apple', price: 1.5 },
-      { id: 2, name: 'Banana', price: 2.0 }
-    ]
-  }),
-  getters: {
-    // Getter that returns a function
-    getItemById: (state) => {
-      return (itemId) => state.items.find(item => item.id === itemId)
-    },
-    // Or using arrow function
-    getItemByPrice: (state) => (minPrice) => {
-      return state.items.filter(item => item.price >= minPrice)
-    }
-  }
-})
-```
+- Apply the official steps and validate expected behavior.
+- Follow Pinia patterns for store creation and usage.
 
-### Example: Using Getter with Arguments
+### Troubleshooting
 
-```vue
-<script setup>
-import { useCartStore } from '@/stores/cart'
+- Cross-check store setup and Pinia installation.
+- Verify store IDs are unique and correctly referenced.
+- Check TypeScript types if using TypeScript.
 
-const cartStore = useCartStore()
-
-// Call getter with argument
-const item = cartStore.getItemById(1)
-const expensiveItems = cartStore.getItemByPrice(1.5)
-</script>
-```
-
-### Example: Accessing Other Stores
-
-```javascript
-import { defineStore } from 'pinia'
-import { useUserStore } from './user'
-
-export const useCartStore = defineStore('cart', {
-  state: () => ({
-    items: []
-  }),
-  getters: {
-    // Access another store
-    userCartItems() {
-      const userStore = useUserStore()
-      return this.items.filter(item => item.userId === userStore.userId)
-    }
-  }
-})
-```
-
-### Example: TypeScript Getters
-
-```typescript
-import { defineStore } from 'pinia'
-
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  getters: {
-    doubleCount: (state): number => state.count * 2,
-    getCountByMultiplier: (state) => {
-      return (multiplier: number): number => state.count * multiplier
-    }
-  }
-})
-```
-
-### Example: Getter in Setup Syntax
-
-```javascript
-import { defineStore } from 'pinia'
-import { computed } from 'vue'
-
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  
-  const doubleCount = computed(() => count.value * 2)
-  
-  const getCountByMultiplier = computed(() => {
-    return (multiplier) => count.value * multiplier
-  })
-  
-  return { count, doubleCount, getCountByMultiplier }
-})
-```
-
-### Key Points
-
-- Getters are computed properties for stores
-- Getters receive state as first parameter
-- Access other getters using `this`
-- Getters can return functions to accept arguments
-- Getters can access other stores
-- Getters are cached and only recompute when dependencies change
-- Use computed() in setup syntax
+Reference: https://pinia.vuejs.org/core-concepts/getters

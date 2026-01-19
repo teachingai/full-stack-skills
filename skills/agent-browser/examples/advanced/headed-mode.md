@@ -1,5 +1,8 @@
 # Headed Mode | 有界面模式
 
+**官方文档**: https://github.com/vercel-labs/agent-browser/blob/main/README.md
+
+
 ## Instructions
 
 This example demonstrates how to run agent-browser in headed mode (visible browser window) for debugging.

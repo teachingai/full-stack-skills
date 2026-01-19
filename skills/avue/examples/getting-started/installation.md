@@ -1,5 +1,8 @@
 # Installation | 安装
 
+**官方文档**: https://avuejs.com/
+
+
 ## Instructions
 
 This example demonstrates how to install Avue and set it up in a Vue project.

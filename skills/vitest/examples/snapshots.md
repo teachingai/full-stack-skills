@@ -1,5 +1,8 @@
 # Snapshots
 
+**官方文档**: https://vitest.dev/guide/snapshot.html
+
+
 ## Instructions
 
 This example demonstrates snapshot testing in Vitest.

@@ -1,5 +1,8 @@
 # Installation
 
+**官方文档**: https://v2.tauri.org.cn/,
+
+
 ## Instructions
 
 This example demonstrates how to install Tauri.

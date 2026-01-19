@@ -1,151 +1,48 @@
-# State | 状态
-
 ## Instructions
 
-This example demonstrates how to define and work with state in Pinia stores.
+- Use this page as the authoritative reference for **State**.
+- Follow the official Pinia docs for supported APIs and patterns.
+- Keep examples aligned with the section (Introduction / Core Concepts / Cookbook / SSR / API).
 
-### Key Concepts
+## Parameters
 
-- Defining state
-- Accessing state
-- Mutating state
-- Resetting state
-- Replacing state
-- State reactivity
+- Identify key inputs, configuration options, or function parameters from the official docs.
+- Use exact naming and casing from the documentation.
+- Document required vs optional parameters.
 
-### Example: Defining State
+## Returns
 
-```javascript
-import { defineStore } from 'pinia'
+- Describe expected behavior, return values, or output for the documented feature.
+- If the page is conceptual, summarize the expected result or effect.
 
-export const useUserStore = defineStore('user', {
-  state: () => ({
-    name: 'John',
-    age: 30,
-    email: 'john@example.com'
-  })
-})
-```
+## Common Errors
 
-### Example: Accessing State
+- Mismatched store IDs or invalid store definitions.
+- Using stores before Pinia is installed.
+- Accessing stores outside of component context without proper setup.
+- Type errors in TypeScript when using stores.
+- State mutations outside of actions (in strict mode).
 
-```vue
-<script setup>
-import { useUserStore } from '@/stores/user'
+## Best Practices
 
-const userStore = useUserStore()
+- Use `defineStore()` for all store definitions.
+- Keep state flat and normalized when possible.
+- Use getters for computed values derived from state.
+- Use actions for async operations and mutations.
+- Use TypeScript for type safety.
+- Split large stores into smaller, focused stores.
 
-// Direct access
-console.log(userStore.name)
+## Scenarios
 
-// Or use storeToRefs for destructuring
-import { storeToRefs } from 'pinia'
-const { name, age } = storeToRefs(userStore)
-</script>
-```
+### Typical usage
 
-### Example: Mutating State
+- Apply the official steps and validate expected behavior.
+- Follow Pinia patterns for store creation and usage.
 
-```javascript
-import { defineStore } from 'pinia'
+### Troubleshooting
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 0
-  }),
-  actions: {
-    increment() {
-      this.count++
-    },
-    setCount(newCount) {
-      this.count = newCount
-    }
-  }
-})
-```
+- Cross-check store setup and Pinia installation.
+- Verify store IDs are unique and correctly referenced.
+- Check TypeScript types if using TypeScript.
 
-### Example: Resetting State
-
-```javascript
-import { defineStore } from 'pinia'
-
-export const useUserStore = defineStore('user', {
-  state: () => ({
-    name: '',
-    age: 0,
-    email: ''
-  }),
-  actions: {
-    reset() {
-      this.$reset()
-    }
-  }
-})
-```
-
-### Example: Replacing State
-
-```javascript
-import { defineStore } from 'pinia'
-
-export const useUserStore = defineStore('user', {
-  state: () => ({
-    name: '',
-    age: 0
-  }),
-  actions: {
-    updateUser(newUser) {
-      this.$patch(newUser)
-      // Or
-      this.$state = { ...this.$state, ...newUser }
-    }
-  }
-})
-```
-
-### Example: Using $patch
-
-```javascript
-// Patch with object
-store.$patch({
-  name: 'Jane',
-  age: 25
-})
-
-// Patch with function
-store.$patch((state) => {
-  state.items.push({ name: 'shoes', quantity: 1 })
-  state.hasChanged = true
-})
-```
-
-### Example: TypeScript State
-
-```typescript
-import { defineStore } from 'pinia'
-
-interface UserState {
-  name: string
-  age: number
-  email: string
-}
-
-export const useUserStore = defineStore('user', {
-  state: (): UserState => ({
-    name: '',
-    age: 0,
-    email: ''
-  })
-})
-```
-
-### Key Points
-
-- State is defined as a function that returns an object
-- State is reactive
-- Access state via `store.propertyName`
-- Mutate state in actions using `this.propertyName`
-- Use `$reset()` to reset state to initial values
-- Use `$patch()` to update multiple properties
-- Use `$state` to replace entire state
-- State must be serializable for SSR
+Reference: https://pinia.vuejs.org/core-concepts/state

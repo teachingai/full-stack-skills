@@ -1,5 +1,8 @@
 # Columns | 列配置
 
+**官方文档**: https://avuejs.com/crud/crud-doc.html
+
+
 ## Instructions
 
 This example demonstrates how to configure columns in Avue CRUD.

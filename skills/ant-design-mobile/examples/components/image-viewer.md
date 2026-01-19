@@ -1,5 +1,8 @@
 # ImageViewer | 图片查看器
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to use the ImageViewer component in Ant Design Mobile.

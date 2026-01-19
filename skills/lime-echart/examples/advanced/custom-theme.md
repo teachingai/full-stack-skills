@@ -1,5 +1,8 @@
 # Custom Theme
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 自定义主题
 
 可以通过自定义主题来统一图表的视觉风格。

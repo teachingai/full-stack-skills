@@ -1,67 +1,36 @@
-# Mode
-
 ## Instructions
 
-This example demonstrates mode configuration in Rspack.
+- Use this page as the authoritative reference for **mode**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Development mode
-- Production mode
-- None mode
-- Mode-specific optimizations
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: Development Mode
+## Returns
 
-```javascript
-module.exports = {
-  mode: 'development',
-};
-```
+- Describe expected behavior or output for the documented feature.
 
-### Example: Production Mode
+## Common Errors
 
-```javascript
-module.exports = {
-  mode: 'production',
-};
-```
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-### Example: Mode with Environment Variable
+## Best Practices
 
-```javascript
-module.exports = {
-  mode: process.env.NODE_ENV || 'development',
-};
-```
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-### Example: Mode-Specific Configuration
+## Scenarios
 
-```javascript
-const isProduction = process.env.NODE_ENV === 'production';
+### Typical usage
 
-module.exports = {
-  mode: isProduction ? 'production' : 'development',
-  optimization: {
-    minimize: isProduction,
-  },
-  devtool: isProduction ? false : 'eval-source-map',
-};
-```
+- Apply the official steps and validate expected behavior.
 
-### Example: None Mode
+### Troubleshooting
 
-```javascript
-module.exports = {
-  mode: 'none',
-  // No default optimizations
-};
-```
+- Cross-check config and runtime requirements.
 
-### Key Points
-
-- mode: 'development' enables dev optimizations
-- mode: 'production' enables prod optimizations
-- mode: 'none' disables default optimizations
-- Mode affects built-in optimizations
-- Can be set via environment variable
+Reference: https://rspack.rs/zh/config/mode

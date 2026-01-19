@@ -1,5 +1,8 @@
 # Map Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 地图
 
 地图用于展示地理数据分布。

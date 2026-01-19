@@ -1,5 +1,8 @@
 # Chart Methods
 
+**官方文档**: https://www.ucharts.cn/v2/#/,
+
+
 ## Instructions
 
 This example demonstrates chart methods in uCharts.

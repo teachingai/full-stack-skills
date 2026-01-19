@@ -1,5 +1,8 @@
 # Getting Started
 
+**官方文档**: https://vitest.dev/guide/getting-started.html
+
+
 ## Instructions
 
 This example demonstrates how to get started with Vitest.

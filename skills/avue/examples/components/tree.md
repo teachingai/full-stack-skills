@@ -1,5 +1,8 @@
 # Tree | 树形
 
+**官方文档**: https://avuejs.com/
+
+
 ## Instructions
 
 This example demonstrates how to use Avue tree component.

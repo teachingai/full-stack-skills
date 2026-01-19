@@ -83,76 +83,27 @@ This skill is organized to match the Vant Vue 3.0 official documentation structu
    - `templates/project-setup.md` - Project setup templates
    - `templates/component-template.md` - Component usage templates
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://vant-ui.github.io/vant/#/zh-CN
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://vant-ui.github.io/vant/#/zh-CN
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Vant Vue 3.0 official documentation structure (https://vant-ui.github.io/vant/#/zh-CN). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing Vant, importing styles, and basic setup
-- `examples/getting-started/basic-usage.md` - Basic component usage examples
-
-### Components (组件) - `examples/components/`
-
-**Basic (基础)**:
-- `examples/components/button.md` - Button component
-- `examples/components/cell.md` - Cell component
-- `examples/components/icon.md` - Icon component
-- `examples/components/image.md` - Image component
-- `examples/components/popup.md` - Popup component
-
-**Form (表单)**:
-- `examples/components/form.md` - Form component
-- `examples/components/field.md` - Field component
-- `examples/components/picker.md` - Picker component
-- `examples/components/calendar.md` - Calendar component
-- `examples/components/checkbox.md` - Checkbox component
-- `examples/components/radio.md` - Radio component
-- `examples/components/switch.md` - Switch component
-- `examples/components/uploader.md` - Uploader component
-
-**Feedback (反馈)**:
-- `examples/components/toast.md` - Toast component
-- `examples/components/dialog.md` - Dialog component
-- `examples/components/loading.md` - Loading component
-- `examples/components/action-sheet.md` - ActionSheet component
-- `examples/components/notify.md` - Notify component
-
-**Display (展示)**:
-- `examples/components/list.md` - List component
-- `examples/components/card.md` - Card component
-- `examples/components/badge.md` - Badge component
-- `examples/components/tag.md` - Tag component
-- `examples/components/empty.md` - Empty component
-- `examples/components/skeleton.md` - Skeleton component
-
-**Navigation (导航)**:
-- `examples/components/tabs.md` - Tabs component
-- `examples/components/tabbar.md` - Tabbar component
-- `examples/components/navbar.md` - Navbar component
-- `examples/components/grid.md` - Grid component
-- `examples/components/sidebar.md` - Sidebar component
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/theme-customization.md` - Customizing Vant theme
-- `examples/advanced/internationalization.md` - Internationalization setup
-- `examples/advanced/typescript.md` - TypeScript support
-
-### Templates Directory (`templates/`)
-
-- `templates/project-setup.md` - Vant project setup templates
-- `templates/component-template.md` - Component usage templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/project-setup.md` for project setup
-- Use component templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

@@ -1,5 +1,8 @@
 # SideBar | 侧边栏
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to use the SideBar component in Ant Design Mobile.

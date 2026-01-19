@@ -1,5 +1,8 @@
 # Mock Functions | Mock 函数
 
+**官方文档**: https://jestjs.io/docs/mock-functions
+
+
 ## Instructions
 
 This example demonstrates how to create and use mock functions in Jest.

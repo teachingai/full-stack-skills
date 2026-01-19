@@ -87,86 +87,27 @@ This skill is organized to match the uView UI official documentation structure (
    - `templates/project-setup.md` - Project setup templates
    - `templates/component-template.md` - Component usage templates
 
+
+### Doc mapping (one-to-one with official documentation)
+
+**Guide (指南)**:
+- See guide files in `examples/guide/` or `examples/getting-started/` → https://www.uviewui.com/guide/demo.html
+
+**Components (组件)**:
+- See component files in `examples/components/` → https://www.uviewui.com/components/intro.html
+
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the uView UI official documentation structure (https://www.uviewui.com/guide/demo.html, https://www.uviewui.com/components/intro.html). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing uView UI, importing styles, and basic setup
-- `examples/getting-started/basic-usage.md` - Basic component usage examples
-- `examples/getting-started/design-principles.md` - Design principles and best practices
-
-### Components (组件) - `examples/components/`
-
-**General (通用)**:
-- `examples/components/button.md` - Button component
-- `examples/components/icon.md` - Icon component
-- `examples/components/badge.md` - Badge component
-- `examples/components/tag.md` - Tag component
-
-**Form (表单)**:
-- `examples/components/input.md` - Input component
-- `examples/components/form.md` - Form component
-- `examples/components/textarea.md` - Textarea component
-- `examples/components/switch.md` - Switch component
-- `examples/components/checkbox.md` - Checkbox component
-- `examples/components/radio.md` - Radio component
-- `examples/components/picker.md` - Picker component
-- `examples/components/upload.md` - Upload component
-
-**Data Display (数据展示)**:
-- `examples/components/table.md` - Table component
-- `examples/components/list.md` - List component
-- `examples/components/card.md` - Card component
-- `examples/components/collapse.md` - Collapse component
-
-**Navigation (导航)**:
-- `examples/components/navbar.md` - Navbar component
-- `examples/components/tabs.md` - Tabs component
-- `examples/components/steps.md` - Steps component
-
-**Feedback (反馈)**:
-- `examples/components/modal.md` - Modal component
-- `examples/components/toast.md` - Toast component
-- `examples/components/loading.md` - Loading component
-- `examples/components/alert.md` - Alert component
-- `examples/components/action-sheet.md` - ActionSheet component
-
-**Other (其他)**:
-- `examples/components/swiper.md` - Swiper component
-- `examples/components/grid.md` - Grid component
-- `examples/components/divider.md` - Divider component
-- `examples/components/empty.md` - Empty component
-
-### Tools (工具) - `examples/tools/`
-
-- `examples/tools/toast.md` - Toast tool ($u.toast)
-- `examples/tools/http.md` - Http tool ($u.http)
-- `examples/tools/storage.md` - Storage tool ($u.storage)
-- `examples/tools/route.md` - Route tool ($u.route)
-- `examples/tools/debounce.md` - Debounce tool
-- `examples/tools/throttle.md` - Throttle tool
-
-### Advanced (高级) - `examples/advanced/`
-
-- `examples/advanced/theme-customization.md` - Customizing uView UI theme
-- `examples/advanced/uniapp-integration.md` - UniApp integration guide
-
-### Templates Directory (`templates/`)
-
-- `templates/project-setup.md` - uView UI project setup templates
-- `templates/component-template.md` - Component usage templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/project-setup.md` for project setup
-- Use component templates for quick setup
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
 
 ## API Reference

@@ -28,33 +28,156 @@ Use this skill whenever the user wants to:
 This skill is organized to match the Rspack official documentation structure (https://rspack.rs/zh/guide/start/introduction, https://rspack.rs/zh/config/, https://rspack.rs/zh/plugins/, https://rspack.rs/zh/api/). When working with Rspack:
 
 1. **Identify the topic** from the user's request:
-   - Getting started/快速上手 → `examples/start/`
+   - Getting started/快速上手 → `examples/guide/start/`
    - Configuration/配置 → `examples/config/`
    - Plugins/插件 → `examples/plugins/`
-   - API → `api/`
+   - API → `examples/api/`
 
 2. **Load the appropriate example file** from the `examples/` directory:
 
-   **Getting Started (快速上手)**:
-   - `examples/start/introduction.md` - Introduction to Rspack
-   - `examples/start/quick-start.md` - Quick start guide
+   **Guide (指南)** - `examples/guide/`:
+   - `examples/guide/compatibility/plugin.md`
+   - `examples/guide/features/asset-base-path.md`
+   - `examples/guide/features/asset-module.md`
+   - `examples/guide/features/builtin-lightningcss-loader.md`
+   - `examples/guide/features/builtin-swc-loader.md`
+   - `examples/guide/features/dev-server.md`
+   - `examples/guide/features/esm.md`
+   - `examples/guide/features/layer.md`
+   - `examples/guide/features/lazy-compilation.md`
+   - `examples/guide/features/loader.md`
+   - `examples/guide/features/module-federation.md`
+   - `examples/guide/features/module-resolution.md`
+   - `examples/guide/features/plugin.md`
+   - `examples/guide/features/web-workers.md`
+   - `examples/guide/migration/cra.md`
+   - `examples/guide/migration/rspack_0.x.md`
+   - `examples/guide/migration/storybook.md`
+   - `examples/guide/migration/webpack.md`
+   - `examples/guide/optimization/analysis.md`
+   - `examples/guide/optimization/code-splitting.md`
+   - `examples/guide/optimization/lazy-barrel.md`
+   - `examples/guide/optimization/production.md`
+   - `examples/guide/optimization/profile.md`
+   - `examples/guide/optimization/tree-shaking.md`
+   - `examples/guide/optimization/use-rsdoctor.md`
+   - `examples/guide/start/ecosystem.md`
+   - `examples/guide/start/introduction.md`
+   - `examples/guide/start/quick-start.md`
+   - `examples/guide/tech/css.md`
+   - `examples/guide/tech/json.md`
+   - `examples/guide/tech/nestjs.md`
+   - `examples/guide/tech/next.md`
+   - `examples/guide/tech/preact.md`
+   - `examples/guide/tech/react.md`
+   - `examples/guide/tech/solid.md`
+   - `examples/guide/tech/svelte.md`
+   - `examples/guide/tech/typescript.md`
+   - `examples/guide/tech/vue.md`
 
-   **Configuration (配置)**:
-   - `examples/config/configuration-file.md` - Configuration file setup
-   - `examples/config/configuration-formats.md` - Configuration file formats
-   - `examples/config/entry.md` - Entry points configuration
-   - `examples/config/output.md` - Output configuration
-   - `examples/config/module.md` - Module configuration
-   - `examples/config/resolve.md` - Module resolution
-   - `examples/config/optimization.md` - Optimization options
-   - `examples/config/dev-server.md` - Development server
-   - `examples/config/plugins.md` - Plugins configuration
-   - `examples/config/mode.md` - Mode configuration
+   **Configuration (配置)** - `examples/config/`:
+   - `examples/config/cache.md`
+   - `examples/config/context.md`
+   - `examples/config/deprecated-options.md`
+   - `examples/config/dev-server.md`
+   - `examples/config/devtool.md`
+   - `examples/config/entry.md`
+   - `examples/config/experiments.md`
+   - `examples/config/extends.md`
+   - `examples/config/externals.md`
+   - `examples/config/filename-placeholders.md`
+   - `examples/config/index.md`
+   - `examples/config/infrastructure-logging.md`
+   - `examples/config/lazy-compilation.md`
+   - `examples/config/mode.md`
+   - `examples/config/module-rules.md`
+   - `examples/config/module.md`
+   - `examples/config/node.md`
+   - `examples/config/optimization-optimizationsplitchunks.md`
+   - `examples/config/optimization.md`
+   - `examples/config/other-options.md`
+   - `examples/config/output.md`
+   - `examples/config/performance.md`
+   - `examples/config/plugins.md`
+   - `examples/config/resolve-loader.md`
+   - `examples/config/resolve.md`
+   - `examples/config/stats.md`
+   - `examples/config/target.md`
+   - `examples/config/watch.md`
 
-   **Plugins (插件)**:
-   - `examples/plugins/builtin-plugins.md` - Built-in plugins
-   - `examples/plugins/webpack-compat-plugins.md` - Webpack compatibility
-   - `examples/plugins/writing-plugins.md` - Writing custom plugins
+   **Plugins (插件)** - `examples/plugins/`:
+   - `examples/plugins/index.md`
+   - `examples/plugins/rspack/circular-dependency-rspack-plugin.md`
+   - `examples/plugins/rspack/copy-rspack-plugin.md`
+   - `examples/plugins/rspack/css-chunking-plugin.md`
+   - `examples/plugins/rspack/css-extract-rspack-plugin.md`
+   - `examples/plugins/rspack/esm-library-plugin.md`
+   - `examples/plugins/rspack/html-rspack-plugin.md`
+   - `examples/plugins/rspack/lightning-css-minimizer-rspack-plugin.md`
+   - `examples/plugins/rspack/subresource-integrity-plugin.md`
+   - `examples/plugins/rspack/swc-js-minimizer-rspack-plugin.md`
+   - `examples/plugins/rspack/virtual-modules-plugin.md`
+   - `examples/plugins/webpack/banner-plugin.md`
+   - `examples/plugins/webpack/case-sensitive-plugin.md`
+   - `examples/plugins/webpack/context-replacement-plugin.md`
+   - `examples/plugins/webpack/define-plugin.md`
+   - `examples/plugins/webpack/dll-plugin.md`
+   - `examples/plugins/webpack/dll-reference-plugin.md`
+   - `examples/plugins/webpack/electron-target-plugin.md`
+   - `examples/plugins/webpack/enable-chunk-loading-plugin.md`
+   - `examples/plugins/webpack/enable-library-plugin.md`
+   - `examples/plugins/webpack/enable-wasm-loading-plugin.md`
+   - `examples/plugins/webpack/entry-plugin.md`
+   - `examples/plugins/webpack/environment-plugin.md`
+   - `examples/plugins/webpack/eval-source-map-dev-tool-plugin.md`
+   - `examples/plugins/webpack/externals-plugin.md`
+   - `examples/plugins/webpack/hot-module-replacement-plugin.md`
+   - `examples/plugins/webpack/ignore-plugin.md`
+   - `examples/plugins/webpack/index.md`
+   - `examples/plugins/webpack/internal-plugins.md`
+   - `examples/plugins/webpack/javascript-modules-plugin.md`
+   - `examples/plugins/webpack/limit-chunk-count-plugin.md`
+   - `examples/plugins/webpack/module-federation-plugin-v1.md`
+   - `examples/plugins/webpack/module-federation-plugin.md`
+   - `examples/plugins/webpack/no-emit-on-errors-plugin.md`
+   - `examples/plugins/webpack/node-target-plugin.md`
+   - `examples/plugins/webpack/node-template-plugin.md`
+   - `examples/plugins/webpack/normal-module-replacement-plugin.md`
+   - `examples/plugins/webpack/progress-plugin.md`
+   - `examples/plugins/webpack/provide-plugin.md`
+   - `examples/plugins/webpack/runtime-chunk-plugin.md`
+   - `examples/plugins/webpack/source-map-dev-tool-plugin.md`
+   - `examples/plugins/webpack/split-chunks-plugin.md`
+
+   **API Reference** - `examples/api/`:
+   - `examples/api/cli.md`
+   - `examples/api/index.md`
+   - `examples/api/javascript-api/browser.md`
+   - `examples/api/javascript-api/cache.md`
+   - `examples/api/javascript-api/compilation.md`
+   - `examples/api/javascript-api/compiler.md`
+   - `examples/api/javascript-api/index.md`
+   - `examples/api/javascript-api/logger.md`
+   - `examples/api/javascript-api/resolver.md`
+   - `examples/api/javascript-api/stats-json.md`
+   - `examples/api/javascript-api/stats.md`
+   - `examples/api/javascript-api/swc.md`
+   - `examples/api/loader-api/context.md`
+   - `examples/api/loader-api/index.md`
+   - `examples/api/loader-api/inline-match-resource.md`
+   - `examples/api/loader-api/inline.md`
+   - `examples/api/loader-api/writing-loaders.md`
+   - `examples/api/plugin-api/compilation-hooks.md`
+   - `examples/api/plugin-api/compiler-hooks.md`
+   - `examples/api/plugin-api/context-module-factory-hooks.md`
+   - `examples/api/plugin-api/index.md`
+   - `examples/api/plugin-api/javascript-modules-plugin-hooks.md`
+   - `examples/api/plugin-api/normal-module-factory-hooks.md`
+   - `examples/api/plugin-api/runtime-plugin-hooks.md`
+   - `examples/api/plugin-api/stats-hooks.md`
+   - `examples/api/runtime-api/hmr.md`
+   - `examples/api/runtime-api/module-methods.md`
+   - `examples/api/runtime-api/module-variables.md`
 
 3. **Follow the specific instructions** in that example file for syntax, structure, and best practices
 
@@ -63,143 +186,13 @@ This skill is organized to match the Rspack official documentation structure (ht
    - Configuration format is similar to Webpack
    - Rspack provides better performance than Webpack
    - Examples include both JavaScript and TypeScript versions
-   - Each example file includes key concepts, code examples, and key points
+   - Each example file includes parameters, returns, common errors, best practices, and scenarios
 
-4. **Reference API documentation** in the `api/` directory when needed:
-   - `api/cli.md` - Rspack CLI commands
-   - `api/javascript-api.md` - JavaScript API
-   - `api/loader-api.md` - Loader API
-   - `api/plugin-api.md` - Plugin API
-   - `api/runtime-api.md` - Runtime API
-
-5. **Use templates** from the `templates/` directory:
-   - `templates/rspack-config.md` - Rspack configuration templates
-   - `templates/project-structure.md` - Project structure templates
-
-### 1. Understanding Rspack
-
-Rspack is a fast Rust-based web bundler designed to be a drop-in replacement for Webpack, with significantly better performance.
-
-**Key Concepts**:
-- **High Performance**: Built with Rust for faster builds
-- **Webpack Compatible**: Most Webpack plugins and loaders work
-- **Fast HMR**: Hot Module Replacement with better performance
-- **TypeScript Support**: Built-in TypeScript support
-
-### 2. Installation
-
-**Using npm**:
-
-```bash
-npm install -D @rspack/core @rspack/cli
-```
-
-**Using yarn**:
-
-```bash
-yarn add -D @rspack/core @rspack/cli
-```
-
-**Using pnpm**:
-
-```bash
-pnpm add -D @rspack/core @rspack/cli
-```
-
-### 3. Basic Configuration
-
-```javascript
-// rspack.config.js
-const rspack = require('@rspack/core');
-
-module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
-  plugins: [
-    new rspack.HtmlRspackPlugin({
-      template: './index.html',
-    }),
-  ],
-};
-```
-
-## Examples and Templates
-
-This skill includes detailed examples organized to match the Rspack official documentation structure (https://rspack.rs/zh/). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速上手) - `examples/start/`
-
-- `examples/start/introduction.md` - Introduction to Rspack, why use it, and comparison with other bundlers
-- `examples/start/quick-start.md` - Quick start guide, installation, and project setup
-
-### Configuration (配置) - `examples/config/`
-
-- `examples/config/configuration-file.md` - Configuration file location and naming
-- `examples/config/configuration-formats.md` - Configuration file formats (JS, TS, etc.)
-- `examples/config/entry.md` - Entry points configuration
-- `examples/config/output.md` - Output configuration
-- `examples/config/module.md` - Module configuration (loaders, rules)
-- `examples/config/resolve.md` - Module resolution configuration
-- `examples/config/optimization.md` - Optimization options (code splitting, minification)
-- `examples/config/dev-server.md` - Development server configuration
-- `examples/config/plugins.md` - Plugins configuration
-- `examples/config/mode.md` - Mode configuration (development, production)
-
-### Plugins (插件) - `examples/plugins/`
-
-- `examples/plugins/builtin-plugins.md` - Built-in plugins (HtmlRspackPlugin, CopyRspackPlugin, etc.)
-- `examples/plugins/webpack-compat-plugins.md` - Webpack plugin compatibility
-- `examples/plugins/writing-plugins.md` - Writing custom plugins
-
-### Templates Directory (`templates/`)
-
-- `templates/rspack-config.md` - Rspack configuration templates
-- `templates/project-structure.md` - Project structure templates
-
-**To use examples:**
-- Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
-- Follow the instructions, syntax, and best practices in that file
-- Adapt the code examples to your specific use case
-
-**To use templates:**
-- Reference `templates/rspack-config.md` for Rspack configuration templates
-- Use `templates/project-structure.md` for organizing Rspack projects
-- Adapt templates to your specific needs and coding style
-
-## API Reference
-
-Detailed API documentation is available in the `api/` directory, organized to match the official Rspack API documentation structure:
-
-### CLI API (`api/cli.md`)
-- Rspack CLI commands and options
-- Build, dev, and other commands
-
-### JavaScript API (`api/javascript-api.md`)
-- Programmatic API for using Rspack
-- Compiler and compilation APIs
-
-### Loader API (`api/loader-api.md`)
-- Loader interface and API
-- Writing custom loaders
-
-### Plugin API (`api/plugin-api.md`)
-- Plugin interface and hooks
-- Compiler and compilation hooks
-
-### Runtime API (`api/runtime-api.md`)
-- Runtime module API
-- HMR API
-
-**To use API reference:**
-1. Identify the API you need help with
-2. Load the corresponding API file from the `api/` directory
-3. Find the API signature, parameters, return type, and examples
-4. Reference the linked example files for detailed usage patterns
-5. All API files include links to relevant example files in the `examples/` directory
+4. **Reference the official documentation** when needed:
+   - Guide: https://rspack.rs/zh/guide/
+   - Configuration: https://rspack.rs/zh/config/
+   - Plugins: https://rspack.rs/zh/plugins/
+   - API: https://rspack.rs/zh/api/
 
 ## Best Practices
 

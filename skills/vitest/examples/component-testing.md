@@ -1,5 +1,8 @@
 # Component Testing
 
+**官方文档**: https://vitest.dev/guide/testing-components.html
+
+
 ## Instructions
 
 This example demonstrates component testing with Vitest.

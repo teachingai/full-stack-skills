@@ -1,5 +1,8 @@
 # ErrorBlock | 错误区块
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to use the ErrorBlock component in Ant Design Mobile.

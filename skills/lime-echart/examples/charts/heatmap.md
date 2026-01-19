@@ -1,5 +1,8 @@
 # Heatmap
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 热力图
 
 热力图用于展示数据的密度分布。

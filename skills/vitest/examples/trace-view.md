@@ -1,5 +1,8 @@
 # Trace View
 
+**官方文档**: https://vitest.dev/guide/trace-view.html
+
+
 ## Instructions
 
 This example demonstrates trace view for debugging tests.

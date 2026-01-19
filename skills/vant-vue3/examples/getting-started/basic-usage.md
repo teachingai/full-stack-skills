@@ -1,5 +1,8 @@
 # Basic Usage | 基本用法
 
+**官方文档**: https://vant-ui.github.io/vant/#/zh-CN
+
+
 ## Instructions
 
 This example demonstrates basic Vant component usage in Vue 3.

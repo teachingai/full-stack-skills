@@ -1,5 +1,8 @@
 # Validation | 验证
 
+**官方文档**: https://avuejs.com/crud/crud-doc.html
+
+
 ## Instructions
 
 This example demonstrates form validation in Avue CRUD.

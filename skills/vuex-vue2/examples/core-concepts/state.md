@@ -1,5 +1,8 @@
 # State
 
+**官方文档**: https://vuex.vuejs.org/zh/,
+
+
 ## Instructions
 
 This example demonstrates state usage in Vuex.

@@ -1,5 +1,8 @@
 # Loading | 加载
 
+**官方文档**: https://ant-design-mobile.antgroup.com/zh
+
+
 ## Instructions
 
 This example demonstrates how to use the Loading component in Ant Design Mobile.

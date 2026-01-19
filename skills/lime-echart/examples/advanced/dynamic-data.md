@@ -1,5 +1,8 @@
 # Dynamic Data
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 动态数据更新
 
 在 UniApp/UniAppX 中，图表数据通常需要动态更新。

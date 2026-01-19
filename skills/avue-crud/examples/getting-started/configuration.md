@@ -1,5 +1,8 @@
 # Configuration | 配置
 
+**官方文档**: https://avuejs.com/crud/crud-doc.html
+
+
 ## Instructions
 
 This example demonstrates Avue CRUD configuration options.

@@ -1,5 +1,8 @@
 # Quick Start | 快速开始
 
+**官方文档**: https://www.electronjs.org/zh/docs/latest/,
+
+
 ## Instructions
 
 This example demonstrates how to create a basic Electron application.

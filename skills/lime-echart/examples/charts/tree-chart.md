@@ -1,5 +1,8 @@
 # Tree Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 树图
 
 树图用于展示层级结构数据。

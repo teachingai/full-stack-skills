@@ -1,5 +1,8 @@
 # Introduction
 
+**官方文档**: https://vuex.vuejs.org/zh/,
+
+
 ## Instructions
 
 This example provides an introduction to Vuex.

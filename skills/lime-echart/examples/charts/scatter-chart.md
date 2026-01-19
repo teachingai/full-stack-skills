@@ -1,5 +1,8 @@
 # Scatter Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 散点图
 
 散点图用于展示两个变量之间的关系。

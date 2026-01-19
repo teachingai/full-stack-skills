@@ -1,91 +1,36 @@
-# Entry
-
 ## Instructions
 
-This example demonstrates entry point configuration in Rspack.
+- Use this page as the authoritative reference for **entry**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Single entry
-- Multiple entries
-- Entry object
-- Dynamic entries
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: Single Entry (String)
+## Returns
 
-```javascript
-module.exports = {
-  entry: './src/index.js',
-};
-```
+- Describe expected behavior or output for the documented feature.
 
-### Example: Single Entry (Array)
+## Common Errors
 
-```javascript
-module.exports = {
-  entry: ['./src/index.js', './src/polyfills.js'],
-};
-```
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-### Example: Multiple Entries (Object)
+## Best Practices
 
-```javascript
-module.exports = {
-  entry: {
-    main: './src/index.js',
-    vendor: './src/vendor.js',
-  },
-};
-```
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-### Example: Multiple Entries with Path
+## Scenarios
 
-```javascript
-module.exports = {
-  entry: {
-    app: './src/app.js',
-    admin: './src/admin.js',
-  },
-  output: {
-    filename: '[name].bundle.js',
-  },
-};
-```
+### Typical usage
 
-### Example: Dynamic Entry
+- Apply the official steps and validate expected behavior.
 
-```javascript
-module.exports = {
-  entry: () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({
-          main: './src/index.js',
-        });
-      }, 1000);
-    });
-  },
-};
-```
+### Troubleshooting
 
-### Example: Entry with Dependencies
+- Cross-check config and runtime requirements.
 
-```javascript
-module.exports = {
-  entry: {
-    main: {
-      import: './src/index.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash',
-  },
-};
-```
-
-### Key Points
-
-- Entry can be string, array, object, or function
-- Multiple entries create multiple bundles
-- Use [name] in output.filename for named entries
-- Can specify dependencies between entries
-- Dynamic entries support async loading
+Reference: https://rspack.rs/zh/config/entry

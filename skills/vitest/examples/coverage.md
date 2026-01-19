@@ -1,5 +1,8 @@
 # Coverage
 
+**官方文档**: https://vitest.dev/guide/coverage.html
+
+
 ## Instructions
 
 This example demonstrates code coverage in Vitest.

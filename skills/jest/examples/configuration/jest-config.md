@@ -1,5 +1,8 @@
 # Jest Configuration | Jest 配置
 
+**官方文档**: https://jestjs.io/docs/configuration
+
+
 ## Instructions
 
 This example demonstrates Jest configuration options.

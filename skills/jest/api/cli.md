@@ -1,5 +1,8 @@
 # CLI API | CLI API
 
+**官方文档**: https://jestjs.io/docs/cli
+
+
 ## API Reference
 
 Jest CLI commands and options.

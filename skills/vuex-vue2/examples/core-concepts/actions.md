@@ -1,5 +1,8 @@
 # Actions
 
+**官方文档**: https://vuex.vuejs.org/zh/,
+
+
 ## Instructions
 
 This example demonstrates actions usage in Vuex.

@@ -1,5 +1,8 @@
 # Boxplot Chart
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 箱线图
 
 箱线图用于展示数据的分布情况。

@@ -1,5 +1,8 @@
 # Installation | 安装
 
+**官方文档**: https://jestjs.io/docs/getting-started
+
+
 ## Instructions
 
 This example demonstrates how to install Jest and set it up in a project.

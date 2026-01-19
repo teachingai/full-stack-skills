@@ -1,92 +1,36 @@
-# Development Server
-
 ## Instructions
 
-This example demonstrates development server configuration in Rspack.
+- Use this page as the authoritative reference for **dev-server**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Dev server setup
-- Hot Module Replacement
-- Proxy configuration
-- Server options
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: Basic Dev Server
+## Returns
 
-```javascript
-module.exports = {
-  devServer: {
-    port: 3000,
-    open: true,
-  },
-};
-```
+- Describe expected behavior or output for the documented feature.
 
-### Example: Dev Server with HMR
+## Common Errors
 
-```javascript
-module.exports = {
-  devServer: {
-    hot: true,
-    liveReload: true,
-  },
-};
-```
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-### Example: Proxy Configuration
+## Best Practices
 
-```javascript
-module.exports = {
-  devServer: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
-        changeOrigin: true,
-      },
-    },
-  },
-};
-```
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-### Example: Static Files
+## Scenarios
 
-```javascript
-module.exports = {
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
-  },
-};
-```
+### Typical usage
 
-### Example: Headers
+- Apply the official steps and validate expected behavior.
 
-```javascript
-module.exports = {
-  devServer: {
-    headers: {
-      'X-Custom-Header': 'value',
-    },
-  },
-};
-```
+### Troubleshooting
 
-### Example: HTTPS
+- Cross-check config and runtime requirements.
 
-```javascript
-module.exports = {
-  devServer: {
-    https: true,
-  },
-};
-```
-
-### Key Points
-
-- devServer configures development server
-- hot enables Hot Module Replacement
-- proxy forwards requests to backend
-- static serves static files
-- headers sets response headers
-- https enables HTTPS
+Reference: https://rspack.rs/zh/config/dev-server

@@ -1,5 +1,8 @@
 # Quick Start
 
+**官方文档**: https://www.kaka996.com/,
+
+
 ## Instructions
 
 This example provides a quick start guide for Electron EGG.

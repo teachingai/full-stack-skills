@@ -1,5 +1,8 @@
 # BrowserWindow | 窗口
 
+**官方文档**: https://www.electronjs.org/zh/docs/latest/,
+
+
 ## Instructions
 
 This example demonstrates how to use BrowserWindow to create and manage application windows.

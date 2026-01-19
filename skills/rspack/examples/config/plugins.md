@@ -1,95 +1,36 @@
-# Plugins
-
 ## Instructions
 
-This example demonstrates plugins configuration in Rspack.
+- Use this page as the authoritative reference for **plugins**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Built-in plugins
-- Plugin usage
-- Plugin options
-- Custom plugins
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: HTML Plugin
+## Returns
 
-```javascript
-const rspack = require('@rspack/core');
+- Describe expected behavior or output for the documented feature.
 
-module.exports = {
-  plugins: [
-    new rspack.HtmlRspackPlugin({
-      template: './index.html',
-    }),
-  ],
-};
-```
+## Common Errors
 
-### Example: Copy Plugin
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-```javascript
-const rspack = require('@rspack/core');
+## Best Practices
 
-module.exports = {
-  plugins: [
-    new rspack.CopyRspackPlugin({
-      patterns: [
-        { from: 'public', to: 'dist' },
-      ],
-    }),
-  ],
-};
-```
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-### Example: Define Plugin
+## Scenarios
 
-```javascript
-const rspack = require('@rspack/core');
+### Typical usage
 
-module.exports = {
-  plugins: [
-    new rspack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
-  ],
-};
-```
+- Apply the official steps and validate expected behavior.
 
-### Example: Progress Plugin
+### Troubleshooting
 
-```javascript
-const rspack = require('@rspack/core');
+- Cross-check config and runtime requirements.
 
-module.exports = {
-  plugins: [
-    new rspack.ProgressPlugin({
-      profile: true,
-    }),
-  ],
-};
-```
-
-### Example: Multiple Plugins
-
-```javascript
-const rspack = require('@rspack/core');
-
-module.exports = {
-  plugins: [
-    new rspack.HtmlRspackPlugin({
-      template: './index.html',
-    }),
-    new rspack.CopyRspackPlugin({
-      patterns: [{ from: 'public' }],
-    }),
-  ],
-};
-```
-
-### Key Points
-
-- plugins array contains plugin instances
-- Built-in plugins available from @rspack/core
-- Most Webpack plugins are compatible
-- Plugins extend Rspack functionality
-- Plugins can have options
+Reference: https://rspack.rs/zh/config/plugins

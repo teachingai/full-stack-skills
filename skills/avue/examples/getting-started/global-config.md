@@ -1,5 +1,8 @@
 # Global Configuration | 全局配置
 
+**官方文档**: https://avuejs.com/
+
+
 ## Instructions
 
 This example demonstrates how to configure Avue globally.

@@ -1,5 +1,8 @@
 # Visual Regression Testing
 
+**官方文档**: https://vitest.dev/guide/visual-regression.html
+
+
 ## Instructions
 
 This example demonstrates visual regression testing with Vitest.

@@ -1,5 +1,8 @@
 # Installation
 
+**官方文档**: https://ext.dcloud.net.cn/plugin?id=4899
+
+
 ## 安装 lime-echart
 
 lime-echart 是为 UniApp 和 UniAppX 提供 ECharts 图表兼容支持的插件，使 ECharts 图表能在 H5、小程序、App 中运行。

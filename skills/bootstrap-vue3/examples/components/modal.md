@@ -1,5 +1,8 @@
 # Modal | 模态框
 
+**官方文档**: https://bootstrap-vue.org
+
+
 ## Instructions
 
 This example demonstrates how to use the Modal component in Bootstrap Vue 3.0.

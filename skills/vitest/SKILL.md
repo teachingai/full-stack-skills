@@ -79,146 +79,44 @@ This skill is organized to match the Vitest official documentation structure (ht
    - `templates/vitest-config.md` - Vitest configuration templates
    - `templates/test-examples.md` - Test example templates
 
-### 1. Understanding Vitest
+### Doc mapping (one-to-one with https://vitest.dev/guide/, https://vitest.dev/api/, https://vitest.dev/config/)
 
-Vitest is a blazing fast unit test framework powered by Vite. It's designed to work seamlessly with Vite projects and provides instant feedback during development.
+**Guide (指南)**:
+- `examples/getting-started.md` → https://vitest.dev/guide/getting-started.html
+- `examples/features.md` → https://vitest.dev/guide/features.html
+- `examples/ui.md` → https://vitest.dev/guide/ui.html
+- `examples/component-testing.md` → https://vitest.dev/guide/testing-components.html
+- `examples/browser-mode.md` → https://vitest.dev/guide/browser.html
+- `examples/visual-regression-testing.md` → https://vitest.dev/guide/visual-regression.html
+- `examples/trace-view.md` → https://vitest.dev/guide/trace-view.html
+- `examples/mocking.md` → https://vitest.dev/guide/mocking.html
+- `examples/snapshots.md` → https://vitest.dev/guide/snapshot.html
+- `examples/coverage.md` → https://vitest.dev/guide/coverage.html
 
-**Key Concepts**:
-- **Fast**: Powered by Vite's native ESM support
-- **Compatible**: Jest-compatible API
-- **Watch Mode**: Smart watch mode with HMR
-- **TypeScript**: Native TypeScript support
-- **Component Testing**: Test Vue, React, Svelte components
+**Configuration (配置)**:
+- `examples/config/basic-config.md` → https://vitest.dev/config/
+- `examples/config/environment.md` → https://vitest.dev/config/#environment
+- `examples/config/browser-config.md` → https://vitest.dev/config/#browser
 
-### 2. Installation
-
-**Using npm**:
-
-```bash
-npm install -D vitest
-```
-
-**Using yarn**:
-
-```bash
-yarn add -D vitest
-```
-
-**Using pnpm**:
-
-```bash
-pnpm add -D vitest
-```
-
-### 3. Basic Setup
-
-```javascript
-// sum.js
-export function sum(a, b) {
-  return a + b
-}
-
-// sum.test.js
-import { describe, it, expect } from 'vitest'
-import { sum } from './sum'
-
-describe('sum', () => {
-  it('adds two numbers', () => {
-    expect(sum(1, 2)).toBe(3)
-  })
-})
-```
-
-### 4. Running Tests
-
-```json
-{
-  "scripts": {
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:run": "vitest run"
-  }
-}
-```
+**API Reference**:
+- `api/test-api.md` → https://vitest.dev/api/
+- `api/vi-utility.md` → https://vitest.dev/api/vi.html
+- `api/expect.md` → https://vitest.dev/api/expect.html
+- `api/mocking.md` → https://vitest.dev/api/vi.html
 
 ## Examples and Templates
 
-This skill includes detailed examples organized to match the Vitest official documentation structure (https://vitest.dev/guide/). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/`
-
-- `examples/getting-started.md` - Installation, setup, and first test
-
-### Features (功能特性) - `examples/`
-
-- `examples/features.md` - Key features and capabilities
-- `examples/ui.md` - Vitest UI usage
-- `examples/component-testing.md` - Component testing setup and examples
-- `examples/browser-mode.md` - Browser mode configuration and usage
-- `examples/visual-regression-testing.md` - Visual regression testing
-- `examples/trace-view.md` - Trace view for debugging
-
-### Testing (测试) - `examples/`
-
-- `examples/test-api.md` - Test API (test, it, describe, hooks)
-- `examples/mocking.md` - Mocking functions and modules
-- `examples/snapshots.md` - Snapshot testing
-- `examples/coverage.md` - Code coverage configuration
-
-### Configuration (配置) - `examples/config/`
-
-- `examples/config/basic-config.md` - Basic Vitest configuration
-- `examples/config/environment.md` - Environment configuration (jsdom, happy-dom, etc.)
-- `examples/config/browser-config.md` - Browser mode configuration
-
-### Templates Directory (`templates/`)
-
-- `templates/vitest-config.md` - Vitest configuration templates
-- `templates/test-examples.md` - Test example templates
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
 **To use examples:**
 - Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
+- Load the appropriate example file from the mapping above
 - Follow the instructions, syntax, and best practices in that file
 - Adapt the code examples to your specific use case
 
 **To use templates:**
-- Reference `templates/vitest-config.md` for Vitest configuration templates
-- Use `templates/test-examples.md` for test example templates
+- Reference templates in `templates/` directory for common scaffolding
 - Adapt templates to your specific needs and coding style
-
-## API Reference
-
-Detailed API documentation is available in the `api/` directory, organized to match the official Vitest API documentation structure:
-
-### Test API (`api/test-api.md`)
-- `test()`, `it()`, `describe()` - Test functions
-- Hooks: `beforeEach()`, `afterEach()`, `beforeAll()`, `afterAll()`
-- Test modifiers: `.skip()`, `.only()`, `.todo()`
-- `bench()` - Benchmark testing
-
-### vi Utility (`api/vi-utility.md`)
-- `vi.fn()` - Create mock functions
-- `vi.mock()` - Mock modules
-- `vi.spyOn()` - Spy on functions
-- `vi.waitFor()`, `vi.waitUntil()` - Async utilities
-
-### Expect API (`api/expect.md`)
-- `expect()` - Assertions
-- Matchers: `toBe()`, `toEqual()`, `toMatchSnapshot()`, etc.
-- Custom matchers
-
-### Mocking API (`api/mocking.md`)
-- Module mocking
-- Function mocking
-- Auto-mocking
-
-**To use API reference:**
-1. Identify the API you need help with
-2. Load the corresponding API file from the `api/` directory
-3. Find the API signature, parameters, return type, and examples
-4. Reference the linked example files for detailed usage patterns
-5. All API files include links to relevant example files in the `examples/` directory
 
 ## Best Practices
 

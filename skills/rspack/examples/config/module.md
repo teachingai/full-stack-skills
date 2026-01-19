@@ -1,135 +1,36 @@
-# Module
-
 ## Instructions
 
-This example demonstrates module configuration in Rspack.
+- Use this page as the authoritative reference for **module**.
+- Follow the official Rspack docs for supported APIs and patterns.
+- Keep examples aligned with the section (Guide / Config / Plugins / API).
 
-### Key Concepts
+## Parameters
 
-- Module rules
-- Loaders
-- Parser options
-- Generator options
+- Identify key inputs or configuration options from the official docs.
+- Use exact naming and casing from the documentation.
 
-### Example: Basic Module Rules
+## Returns
 
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: ['babel-loader'],
-      },
-    ],
-  },
-};
-```
+- Describe expected behavior or output for the documented feature.
 
-### Example: Multiple Loaders
+## Common Errors
 
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
-};
-```
+- Mismatched configuration keys or invalid values.
+- Using incompatible options or missing required fields.
 
-### Example: Loader with Options
+## Best Practices
 
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
-};
-```
+- Use official patterns and recommended defaults.
+- Validate changes against the official docs.
 
-### Example: Exclude Files
+## Scenarios
 
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-    ],
-  },
-};
-```
+### Typical usage
 
-### Example: Asset Modules
+- Apply the official steps and validate expected behavior.
 
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-      {
-        test: /\.svg$/i,
-        type: 'asset/inline',
-      },
-    ],
-  },
-};
-```
+### Troubleshooting
 
-### Example: TypeScript with Rspack
+- Cross-check config and runtime requirements.
 
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: [
-          {
-            loader: 'builtin:swc-loader',
-            options: {
-              jsc: {
-                parser: {
-                  syntax: 'typescript',
-                },
-              },
-            },
-          },
-        ],
-        type: 'javascript/auto',
-      },
-    ],
-  },
-};
-```
-
-### Key Points
-
-- rules array defines module processing rules
-- test matches file patterns
-- use specifies loaders
-- exclude/include filter files
-- type: 'asset' for asset modules
-- Built-in SWC loader for TypeScript
+Reference: https://rspack.rs/zh/config/module

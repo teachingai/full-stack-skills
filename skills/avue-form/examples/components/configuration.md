@@ -1,5 +1,8 @@
 # Configuration
 
+**官方文档**: https://avuejs.com/form/form-doc.html
+
+
 ## Instructions
 
 This example demonstrates how to configure Avue-form.

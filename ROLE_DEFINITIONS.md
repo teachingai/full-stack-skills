@@ -691,7 +691,7 @@
 - vue2, vue3, vue-router, vue-router-v3, vue-router-v4, pinia, vuex, vuex-vue2（Vue生态）
 - react, react-hooks, nextjs, redux（React生态）
 - angular, svelte（其他框架）
-- element-plus-vue3, ant-design-vue, ant-design-react, ant-design-mobile, ant-design-mini, bootstrap-vue3, vant-vue3, uview-vue2, uview-pro-vue3, layui-vue, avue, avue-crud, avue-form（UI组件库）
+- element-plus-vue3, ant-design-vue, ant-design-react, ant-design-mobile, ant-design-mini, bootstrap-vue3, vant-vue3, uview-vue2, uview-pro-vue3, layui-vue3, avue, avue-crud, avue-form（UI组件库）
 - vite, webpack, rollup, parcel, rspack（构建工具）
 - dart-sass（样式工具）
 - electron, electron-egg, tauri（桌面应用）

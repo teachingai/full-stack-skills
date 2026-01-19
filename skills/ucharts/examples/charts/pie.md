@@ -1,5 +1,8 @@
 # Pie Chart
 
+**官方文档**: https://www.ucharts.cn/v2/#/,
+
+
 ## Instructions
 
 This example demonstrates the Pie chart in uCharts.

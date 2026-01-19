@@ -1,5 +1,8 @@
 # Asynchronous | 异步测试
 
+**官方文档**: https://jestjs.io/docs/asynchronous
+
+
 ## Instructions
 
 This example demonstrates how to test asynchronous code in Jest.

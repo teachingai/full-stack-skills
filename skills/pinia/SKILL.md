@@ -22,140 +22,90 @@ Use this skill whenever the user wants to:
 
 ## How to use this skill
 
-This skill is organized to match the Pinia official documentation structure (https://pinia.vuejs.org/introduction.html, https://pinia.vuejs.org/api/). When working with Pinia:
+This skill is organized to match the Pinia official documentation structure (https://pinia.vuejs.org/introduction.html, https://pinia.vuejs.org/core-concepts/, https://pinia.vuejs.org/api/). When working with Pinia:
 
 1. **Identify the topic** from the user's request:
-   - Getting started/快速开始 → `examples/getting-started/installation.md` or `examples/getting-started/basic-usage.md`
-   - Defining a store/定义 Store → `examples/core-concepts/defining-a-store.md`
-   - State/状态 → `examples/core-concepts/state.md`
-   - Getters/计算属性 → `examples/core-concepts/getters.md`
-   - Actions/操作 → `examples/core-concepts/actions.md`
-   - Plugins/插件 → `examples/plugins/basics.md`
-   - SSR/服务端渲染 → `examples/ssr/setup.md`
-   - TypeScript/类型支持 → `examples/core-concepts/typescript.md`
+   - Introduction/介绍 → `examples/introduction/`
+   - Core Concepts/核心概念 → `examples/core-concepts/`
+   - Cookbook/食谱 → `examples/cookbook/`
+   - SSR/服务端渲染 → `examples/ssr/`
+   - API Reference/API 参考 → `api/`
 
 2. **Load the appropriate example file** from the `examples/` directory:
 
-   **Getting Started (快速开始) - `examples/getting-started/`**:
-   - `examples/getting-started/installation.md` - Installing Pinia and basic setup
-   - `examples/getting-started/basic-usage.md` - Basic store usage in components
+   **Introduction (介绍)** - `examples/introduction/`:
+   - `examples/introduction/introduction.md`
 
-   **Core Concepts (核心概念) - `examples/core-concepts/`**:
-   - `examples/core-concepts/defining-a-store.md` - Creating stores with defineStore()
-   - `examples/core-concepts/state.md` - Working with state
-   - `examples/core-concepts/getters.md` - Creating and using getters
-   - `examples/core-concepts/actions.md` - Creating and using actions
-   - `examples/core-concepts/typescript.md` - TypeScript support
-   - `examples/core-concepts/composition-api.md` - Using Pinia with Composition API
-   - `examples/core-concepts/options-api.md` - Using Pinia with Options API
+   **Core Concepts (核心概念)** - `examples/core-concepts/`:
+   - `examples/core-concepts/actions.md`
+   - `examples/core-concepts/defining-a-store.md`
+   - `examples/core-concepts/getters.md`
+   - `examples/core-concepts/index.md`
+   - `examples/core-concepts/outside-component-usage.md`
+   - `examples/core-concepts/plugins.md`
+   - `examples/core-concepts/state.md`
 
-   **Plugins (插件) - `examples/plugins/`**:
-   - `examples/plugins/basics.md` - Creating and using plugins
-   - `examples/plugins/persistence.md` - State persistence plugins
+   **Cookbook (食谱)** - `examples/cookbook/`:
+   - `examples/cookbook/composables.md`
+   - `examples/cookbook/composing-stores.md`
+   - `examples/cookbook/hot-module-replacement.md`
+   - `examples/cookbook/index.md`
+   - `examples/cookbook/migration-v1-v2.md`
+   - `examples/cookbook/migration-v2-v3.md`
+   - `examples/cookbook/migration-vuex.md`
+   - `examples/cookbook/options-api.md`
+   - `examples/cookbook/testing.md`
+   - `examples/cookbook/vscode-snippets.md`
 
-   **SSR (服务端渲染) - `examples/ssr/`**:
-   - `examples/ssr/setup.md` - Setting up Pinia for SSR
-   - `examples/ssr/hydration.md` - State hydration
+   **SSR (服务端渲染)** - `examples/ssr/`:
+   - `examples/ssr/index.md`
+   - `examples/ssr/nuxt.md`
 
-3. **Follow the specific instructions** in that example file for syntax, structure, and best practices
+3. **Reference API documentation** in the `api/` directory when needed:
+
+   **Pinia Core API** - `api/pinia/`:
+   - `api/pinia/enumerations/MutationType.md`
+   - `api/pinia/functions/acceptHMRUpdate.md`
+   - `api/pinia/functions/createPinia.md`
+   - `api/pinia/functions/defineStore.md`
+   - `api/pinia/functions/disposePinia.md`
+   - `api/pinia/functions/getActivePinia.md`
+   - `api/pinia/functions/mapActions.md`
+   - `api/pinia/functions/mapState.md`
+   - `api/pinia/functions/mapStores.md`
+   - `api/pinia/functions/mapWritableState.md`
+   - `api/pinia/functions/setMapStoreSuffix.md`
+   - `api/pinia/index.md`
+   - `api/pinia/interfaces/Store.md`
+   - `api/pinia/interfaces/StoreActions.md`
+   - `api/pinia/interfaces/StoreDefinition.md`
+   - `api/pinia/interfaces/StoreGetters.md`
+   - `api/pinia/interfaces/StoreProperties.md`
+   - `api/pinia/interfaces/StoreState.md`
+
+   **@pinia/nuxt** - `api/@pinia/nuxt/`:
+   - `api/@pinia/nuxt/index.md`
+   - `api/@pinia/nuxt/interfaces/ModuleOptions.md`
+   - `api/@pinia/nuxt/variables/default.md`
+
+   **@pinia/testing** - `api/@pinia/testing/`:
+   - `api/@pinia/testing/functions/createTestingPinia.md`
+   - `api/@pinia/testing/index.md`
+   - `api/@pinia/testing/interfaces/TestingOptions.md`
+   - `api/@pinia/testing/interfaces/TestingPinia.md`
+
+4. **Follow the specific instructions** in that example file for syntax, structure, and best practices
 
    **Important Notes**:
    - All examples follow Pinia best practices
    - Examples include both JavaScript and TypeScript versions where applicable
-   - Each example file includes key concepts, code examples, and key points
+   - Each example file includes parameters, returns, common errors, best practices, and scenarios
    - Always check the example file for best practices and common patterns
 
-4. **Reference API documentation** in the `api/` directory when needed:
-   - `api/defineStore.md` - defineStore() API reference
-   - `api/store.md` - Store instance API
-   - `api/storeToRefs.md` - storeToRefs() utility
-   - `api/createPinia.md` - createPinia() API
-   - `api/plugins.md` - Plugin API
-
-5. **Use templates** from the `templates/` directory:
-   - `templates/store-setup.md` - Pinia setup templates
-   - `templates/store-template.md` - Store template
-   - `templates/composition-store.md` - Composition API store template
-   - `templates/options-store.md` - Options API store template
-
-## Examples and Templates
-
-This skill includes detailed examples organized to match the Pinia official documentation structure (https://pinia.vuejs.org/introduction.html, https://pinia.vuejs.org/api/). All examples are in the `examples/` directory, organized by topic:
-
-### Getting Started (快速开始) - `examples/getting-started/`
-
-- `examples/getting-started/installation.md` - Installing Pinia, creating a Pinia instance, and registering it with Vue app
-- `examples/getting-started/basic-usage.md` - Basic store usage in components, accessing state, getters, and actions
-
-### Core Concepts (核心概念) - `examples/core-concepts/`
-
-- `examples/core-concepts/defining-a-store.md` - Creating stores with defineStore(), store IDs, and store options
-- `examples/core-concepts/state.md` - Defining state, accessing state, resetting state, and replacing state
-- `examples/core-concepts/getters.md` - Creating getters, accessing other getters, passing arguments to getters, and accessing other stores
-- `examples/core-concepts/actions.md` - Creating actions, accessing state and getters, accessing other stores, and async actions
-- `examples/core-concepts/typescript.md` - TypeScript support, typed stores, and type inference
-- `examples/core-concepts/composition-api.md` - Using Pinia with Composition API (setup script)
-- `examples/core-concepts/options-api.md` - Using Pinia with Options API
-
-### Plugins (插件) - `examples/plugins/`
-
-- `examples/plugins/basics.md` - Creating and using plugins, plugin context, and adding properties to stores
-- `examples/plugins/persistence.md` - State persistence plugins
-
-### SSR (服务端渲染) - `examples/ssr/`
-
-- `examples/ssr/setup.md` - Setting up Pinia for SSR
-- `examples/ssr/hydration.md` - State hydration and preventing state pollution
-
-### Templates Directory (`templates/`)
-
-- `templates/store-setup.md` - Pinia setup templates for different scenarios
-- `templates/store-template.md` - Basic store template
-- `templates/composition-store.md` - Composition API store template
-- `templates/options-store.md` - Options API store template
-
-**To use examples:**
-- Identify the topic from the user's request
-- Load the appropriate example file from the corresponding directory
-- Follow the instructions, syntax, and best practices in that file
-- Adapt the code examples to your specific use case
-
-**To use templates:**
-- Reference `templates/store-setup.md` for Pinia setup
-- Use store templates for quick setup
-- Adapt templates to your specific needs and coding style
-
-## API Reference
-
-Detailed API documentation is available in the `api/` directory, organized to match the official Pinia API documentation structure:
-
-### defineStore API (`api/defineStore.md`)
-- `defineStore()` - Creating a store
-- Store options: state, getters, actions
-- Store ID and naming
-
-### Store Instance API (`api/store.md`)
-- Store properties: `$id`, `$state`, `$patch()`, `$reset()`, `$subscribe()`, `$onAction()`
-- Store methods and utilities
-
-### Utilities API (`api/storeToRefs.md`)
-- `storeToRefs()` - Converting store to refs
-- `mapStores()`, `mapState()`, `mapWritableState()`, `mapGetters()`, `mapActions()`
-
-### createPinia API (`api/createPinia.md`)
-- `createPinia()` - Creating a Pinia instance
-- Pinia options and configuration
-
-### Plugins API (`api/plugins.md`)
-- Plugin creation and usage
-- Plugin context and API
-
-**To use API reference:**
-1. Identify the API you need help with
-2. Load the corresponding API file from the `api/` directory
-3. Find the API signature, parameters, return type, and examples
-4. Reference the linked example files for detailed usage patterns
-5. All API files include links to relevant example files in the `examples/` directory
+5. **Reference the official documentation** when needed:
+   - Introduction: https://pinia.vuejs.org/introduction.html
+   - Core Concepts: https://pinia.vuejs.org/core-concepts/
+   - API Reference: https://pinia.vuejs.org/api/
 
 ## Best Practices
 
@@ -174,6 +124,7 @@ Detailed API documentation is available in the `api/` directory, organized to ma
 
 - **Official Documentation**: https://pinia.vuejs.org/
 - **Introduction**: https://pinia.vuejs.org/introduction.html
+- **Core Concepts**: https://pinia.vuejs.org/core-concepts/
 - **API Reference**: https://pinia.vuejs.org/api/
 - **GitHub Repository**: https://github.com/vuejs/pinia
 
