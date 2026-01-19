@@ -1,6 +1,6 @@
 # Full Stack Skills
 
-**Full-Stack-Skills** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **15 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
+**Full-Stack-Skills** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **13 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
 
 > **说明：** 本仓库合并了 Anthropic 的示例技能和 Agent Skills 的技能集合，提供各种实用的 AI 技能，可以在 Claude Code、Claude.ai 和 API 中使用。关于 Agent Skills 标准，请参见 [agentskills.io](http://agentskills.io)。
 
@@ -25,12 +25,12 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **开源免费**：所有技能采用 Apache 2.0 许可证，完全开源
 - **规范标准**：严格遵循 Agent Skills 规范，确保技能质量和兼容性
 - **全栈覆盖**：170 个技能集合，覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
-- **按技能种类组织**：15 个插件类别，按技能种类而非岗位划分，便于灵活组合使用
+- **按技能种类组织**：13 个插件类别，按技能种类而非岗位划分，便于灵活组合使用
 - **AI 赋能**：通过 AI 助手掌握专业技能，实现"一个人 = 一个公司"的愿景
 
 ### 技能组织方式
 
-本仓库的技能按**技能种类**分为 15 个插件类别：
+本仓库的技能按**技能种类**分为 13 个插件类别：
 
 - **开发类**：前端开发（Vue、React、Angular）、后端开发（Spring、Node.js、Python、Go）、移动端开发（UniApp、React Native、Flutter）、开发工具
 - **设计类**：UI设计工具、AI设计工具、原型工具
@@ -94,9 +94,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 /plugin install teaching-skills@full-stack-skills
 /plugin install document-skills@full-stack-skills
 /plugin install markdown-skills@full-stack-skills
-/plugin install development-skills-frontend@full-stack-skills
-/plugin install development-skills-backend@full-stack-skills
-/plugin install development-skills-mobile@full-stack-skills
+/plugin install development-skills@full-stack-skills
 /plugin install development-skills-utils@full-stack-skills
 /plugin install design-skills@full-stack-skills
 /plugin install architecture-skills@full-stack-skills
@@ -141,15 +139,11 @@ python convert_all.py ../skills ../adapters-output
 
 ## 可用插件和技能
 
-本仓库的技能按**技能种类**分为 **15 个插件类别**，共包含 **170 个技能**：
+本仓库的技能按**技能种类**分为 **13 个插件类别**，共包含 **170 个技能**：
 
 ### 技能分类统计
 
-- **development-skills-frontend**（前端开发技能集合，37个技能）：包含 Vue 2/3、React、Angular、Svelte 等主流框架；Vite、Webpack、Rspack、Rollup、Parcel 等构建工具；Element Plus、Ant Design、Vant、uView、Bootstrap Vue 等 UI 组件库；Vue Router、Pinia、Vuex、Redux 等状态管理和路由方案；Electron、Tauri 等桌面应用框架。
-
-- **development-skills-backend**（后端开发技能集合，16个技能）：包含 Spring Boot、Spring Cloud、Spring AI、Spring Security、Spring Data JPA 等 Java 生态框架；Express、NestJS、Koa、Fastify 等 Node.js 框架；Django、FastAPI、Flask 等 Python 框架；Gin、Gin-Gonic 等 Go 框架。
-
-- **development-skills-mobile**（移动端开发技能集合，23个技能）：包含 UniApp、UniApp-x 跨平台开发框架及项目创建器；React Native、Flutter 跨平台框架；Android Kotlin、iOS Swift 原生开发；Cocos2d-x 游戏引擎；uCharts、Lime EChart 图表组件；UniCloud 云开发、Uni-ad 广告变现等。
+- **development-skills**（全栈开发技能集合，76个技能）：包含前端开发（Vue 2/3、React、Angular、Svelte 等框架；Vite、Webpack、Rspack、Rollup、Parcel 等构建工具；Element Plus、Ant Design、Vant、uView、Bootstrap Vue、Layui Vue3 等 UI 组件库；Vue Router、Pinia、Vuex、Redux 等状态管理和路由方案；Electron、Tauri 等桌面应用框架）、后端开发（Spring Boot、Spring Cloud、Spring AI、Spring Security、Spring Data JPA 等 Java 生态框架；Express、NestJS、Koa、Fastify 等 Node.js 框架；Django、FastAPI、Flask 等 Python 框架；Gin、Gin-Gonic 等 Go 框架）、移动端开发（UniApp、UniApp-x 跨平台开发框架及项目创建器；React Native、Flutter 跨平台框架；Android Kotlin、iOS Swift 原生开发；Cocos2d-x 游戏引擎；uCharts、Lime EChart 图表组件；UniCloud 云开发、Uni-ad 广告变现等）。
 
 - **development-skills-utils**（开发工具技能集合，12个技能）：包含代码生成、测试编写、文档构建等基础工具；DDD 项目构建器（支持单体单模块、单体多模块、微服务架构）；项目文档生成（14种文档模板，覆盖产品到运维全生命周期）；MCP 构建器、Web 应用测试、前端设计、Web 工件构建器、主题工厂；Node.js 版本管理（nvm）、浏览器自动化等。
 
@@ -188,9 +182,7 @@ python convert_all.py ../skills ../adapters-output
 
 | 插件类别 | 总技能数 | 已完成 ✅ | 部分完成 ⚠️ | 待完善 ❌ | 缺失 ❌ | 完成率 |
 |---------|---------|---------|-----------|---------|--------|--------|
-| development-skills-frontend | 37 | 23 | 1 | 10 | 3 | 62.2% ⚠️ |
-| development-skills-backend | 16 | 1 | 5 | 10 | 0 | 6.2% ❌ |
-| development-skills-mobile | 23 | 13 | 4 | 6 | 0 | 56.5% ⚠️ |
+| development-skills | 76 | 37 | 10 | 26 | 3 | 48.7% ⚠️ |
 | development-skills-utils | 12 | 3 | 6 | 3 | 0 | 25.0% ⚠️ |
 | design-skills | 16 | 0 | 3 | 13 | 0 | 0.0% ❌ |
 | document-skills | 8 | 0 | 5 | 3 | 0 | 0.0% ⚠️ |
@@ -206,9 +198,9 @@ python convert_all.py ../skills ../adapters-output
 
 ### 详细技能清单
 
-#### development-skills-frontend
+#### development-skills
 
-*前端开发技能集合：Vue、React、Angular、构建工具、UI 框架等*
+*全栈开发技能集合：前端、后端、移动端开发技能*
 
 **已完成技能（23个）：**
 
@@ -256,12 +248,10 @@ python convert_all.py ../skills ../adapters-output
 **缺失技能（3个）：**
 
 - ❌ `element-plus` - 文件不存在
-- ❌ `layui-vue` - 文件不存在
+- ❌ `layui-vue` - 文件不存在（已重命名为 layui-vue3）
 - ❌ `vuex` - 文件不存在
 
-#### development-skills-backend
-
-*后端开发技能集合：Spring、Node.js、Python、Go 等后端框架*
+**后端开发技能：**
 
 **已完成技能（1个）：**
 
@@ -288,9 +278,7 @@ python convert_all.py ../skills ../adapters-output
 - ❌ `spring-data-jpa` - 内容过短（566字符）
 - ❌ `spring-security` - 内容过短（581字符）
 
-#### development-skills-mobile
-
-*移动端开发技能集合：UniApp、React Native、Flutter、原生开发、游戏引擎等*
+**移动端开发技能：**
 
 **已完成技能（13个）：**
 
@@ -313,7 +301,7 @@ python convert_all.py ../skills ../adapters-output
 - ⚠️ `uniapp-project-creator` - 有examples目录（3个文件，较少）; 内容中等（3475字符）
 - ⚠️ `uniappx-project-creator` - 有examples目录（3个文件，较少）; 内容中等（3585字符）
 - ⚠️ `upgradeLink` - 有examples目录（2个文件，较少）; 内容中等（4179字符）
-- ⚠️ `uniapp-mini` - 有examples目录（4个文件，较少）
+- ⚠️ `uniapp-mini-guide` - 有examples目录（4个文件，较少）
 
 **待完善技能（6个）：**
 
@@ -1134,7 +1122,7 @@ python convert_all.py ../skills ../adapters-output
 在 AI 时代，全栈独立开发者不再需要组建庞大的团队。通过 **full-stack-skills**，AI 助手可以：
 
 - **掌握全栈技能**：从产品设计到开发、测试、部署、运维的全流程能力
-- **灵活组合使用**：15 个插件类别，按技能种类组织，可根据项目需求灵活组合
+- **灵活组合使用**：13 个插件类别，按技能种类组织，可根据项目需求灵活组合
 - **标准化流程**：基于 DDD 和 COLA 架构思想，确保项目质量和可维护性
 - **快速交付**：通过技能组合，快速完成从需求到上线的全流程工作
 

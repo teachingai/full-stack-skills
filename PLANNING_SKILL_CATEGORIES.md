@@ -293,33 +293,21 @@ Marketplace (full-stack-skills)
   "name": "full-stack-skills",
   "plugins": [
     {
-      "name": "development-skills-frontend",
-      "description": "前端开发技能集合：Vue、React、Angular、构建工具、UI 框架等",
+      "name": "development-skills",
+      "description": "全栈开发技能集合：前端、后端、移动端开发技能",
       "skills": [
         "./skills/vue2",
         "./skills/vue3",
         "./skills/vite",
         "./skills/react",
         "./skills/nextjs",
-        "./skills/element-plus",
-        "./skills/ant-design-vue"
-      ]
-    },
-    {
-      "name": "development-skills-backend",
-      "description": "后端开发技能集合：Spring、Node.js、Python、Go 等后端框架",
-      "skills": [
+        "./skills/element-plus-vue3",
+        "./skills/ant-design-vue",
         "./skills/spring-boot",
         "./skills/spring-cloud",
         "./skills/express",
         "./skills/django",
-        "./skills/fastapi"
-      ]
-    },
-    {
-      "name": "development-skills-mobile",
-      "description": "移动端开发技能集合：UniApp、React Native、Flutter、原生开发、游戏引擎等",
-      "skills": [
+        "./skills/fastapi",
         "./skills/uniapp-project-creator",
         "./skills/uniapp-project",
         "./skills/react-native",
