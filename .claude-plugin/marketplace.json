@@ -5,13 +5,13 @@
     "email": "teachingai@163.com"
   },
   "metadata": {
-    "description": "Teaching AI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合。严格遵循 Agent Skills 规范，提供 170 个技能集合，按技能种类组织为 15 个插件类别，覆盖软件开发全生命周期。在 AI 时代，赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现\"一个人 = 一个公司\"的愿景。",
+    "description": "Teaching AI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合。严格遵循 Agent Skills 规范，提供 170 个技能集合，按技能种类组织为 13 个插件类别，覆盖软件开发全生命周期。在 AI 时代，赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现\"一个人 = 一个公司\"的愿景。",
     "version": "2.0.0"
   },
   "plugins": [
     {
-      "name": "development-skills-frontend",
-      "description": "前端开发技能集合（37个技能）：包含 Vue 2/3、React、Angular、Svelte 等主流框架；Vite、Webpack、Rspack、Rollup、Parcel 等构建工具；Element Plus、Ant Design、Vant、uView、Bootstrap Vue 等 UI 组件库；Vue Router、Pinia、Vuex、Redux 等状态管理和路由方案；Electron、Tauri 等桌面应用框架。帮助 AI 助手掌握现代前端开发全栈技能。",
+      "name": "development-skills",
+      "description": "全栈开发技能集合（76个技能）：包含前端开发（Vue 2/3、React、Angular、Svelte 等框架；Vite、Webpack 等构建工具；Element Plus、Ant Design、Vant 等 UI 组件库；Vue Router、Pinia、Vuex、Redux 等状态管理；Electron、Tauri 等桌面应用框架）、后端开发（Spring Boot、Spring Cloud、Spring AI 等 Java 生态；Express、NestJS、Koa、Fastify 等 Node.js 框架；Django、FastAPI、Flask 等 Python 框架；Gin 等 Go 框架）、移动端开发（UniApp、UniApp-x 跨平台框架；React Native、Flutter 跨平台框架；Android Kotlin、iOS Swift 原生开发；Cocos2d-x 游戏引擎；uCharts、Lime EChart 图表组件；UniCloud 云开发、Uni-ad 广告变现等）。帮助 AI 助手掌握全栈开发技能，支持 Web、移动端、桌面应用全平台开发。",
       "source": "./",
       "strict": false,
       "skills": [
@@ -41,7 +41,7 @@
         "./skills/vant-vue3",
         "./skills/uview-vue2",
         "./skills/uview-pro-vue3",
-        "./skills/layui-vue",
+        "./skills/layui-vue3",
         "./skills/avue",
         "./skills/avue-crud",
         "./skills/avue-form",
@@ -51,15 +51,7 @@
         "./skills/dart-sass",
         "./skills/electron",
         "./skills/electron-egg",
-        "./skills/tauri"
-      ]
-    },
-    {
-      "name": "development-skills-backend",
-      "description": "后端开发技能集合（16个技能）：包含 Spring Boot、Spring Cloud、Spring AI、Spring Security、Spring Data JPA 等 Java 生态框架；Express、NestJS、Koa、Fastify 等 Node.js 框架；Django、FastAPI、Flask 等 Python 框架；Gin、Gin-Gonic 等 Go 框架。帮助 AI 助手掌握企业级后端开发、微服务架构、AI 应用开发等技能。",
-      "source": "./",
-      "strict": false,
-      "skills": [
+        "./skills/tauri",
         "./skills/spring-boot",
         "./skills/spring-cloud",
         "./skills/spring-cloud-alibaba",
@@ -75,15 +67,7 @@
         "./skills/fastapi",
         "./skills/flask",
         "./skills/gin",
-        "./skills/gin-gonic"
-      ]
-    },
-    {
-      "name": "development-skills-mobile",
-      "description": "移动端开发技能集合（23个技能）：包含 UniApp、UniApp-x 跨平台开发框架及项目创建器；React Native、Flutter 跨平台框架；Android Kotlin、iOS Swift 原生开发；Cocos2d-x 游戏引擎；uCharts、Lime EChart 图表组件；UniCloud 云开发、Uni-ad 广告变现等。帮助 AI 助手掌握移动端全栈开发技能，支持小程序、App、H5 多端开发。",
-      "source": "./",
-      "strict": false,
-      "skills": [
+        "./skills/gin-gonic",
         "./skills/uniapp-project-creator",
         "./skills/uniapp-project",
         "./skills/uniappx-project-creator",
@@ -93,7 +77,7 @@
         "./skills/uniapp-ucharts",
         "./skills/uniapp-ad",
         "./skills/uniapp-cloud",
-        "./skills/uniapp-mini",
+        "./skills/uniapp-mini-guide",
         "./skills/uniapp-native-app",
         "./skills/uniapp-native-plugin",
         "./skills/uniapp-plugin",

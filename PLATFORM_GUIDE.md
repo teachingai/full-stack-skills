@@ -4,8 +4,8 @@
 
 ## 支持的平台
 
-- **Claude Code** - 原生支持，通过 Marketplace 安装
-- **Claude.ai** - 通过 Skills API 使用
+- **Claude Code** - 原生支持，通过 Marketplace 安装（推荐）
+- **Claude.ai** - 通过 Skills API 使用（付费套餐中部分技能已默认可用）
 - **Cursor** - 转换为 Cursor 自定义指令格式
 - **Trae** - 转换为 Trae 插件格式
 - **Qoder** - 转换为 Qoder Agent 格式
@@ -15,6 +15,8 @@
 ## 在 Claude Code 中使用
 
 ### 1. 注册 Marketplace
+
+在 Claude Code 中运行以下命令，将本仓库注册为插件市场：
 
 ```bash
 /plugin marketplace add https://github.com/teachingai/full-stack-skills.git
@@ -29,14 +31,15 @@
 ### 2. 安装插件
 
 ```bash
-# 按技能种类安装
-/plugin install development-skills-frontend@full-stack-skills
-/plugin install development-skills-backend@full-stack-skills
-
-# 按岗位安装
-/plugin install frontend-engineer@full-stack-skills
-/plugin install backend-engineer@full-stack-skills
+# 按技能种类安装（推荐）
+/plugin install development-skills@full-stack-skills
+/plugin install design-skills@full-stack-skills
+/plugin install testing-skills@full-stack-skills
+/plugin install devops-skills@full-stack-skills
+# ... 更多插件请参考 README.md
 ```
+
+**注意：** 本仓库按**技能种类**组织插件，而非按岗位划分。如需按岗位使用，请参考 [AGENTS_PROMPT.md](AGENTS_PROMPT.md) 中的角色定义。
 
 详细说明请参考 [README.md](README.md)。
 
@@ -84,6 +87,8 @@ python convert_to_codebuddy.py --all ../../skills ../../adapters-output/codebudd
 cd adapters/windsurf
 python convert_to_windsurf.py --all ../../skills ../../adapters-output/windsurf
 ```
+
+**注意：** 所有转换脚本都需要从对应的子目录运行，或者使用 `convert_all.py` 一次性转换所有平台。
 
 ### 输出目录结构
 
@@ -238,7 +243,7 @@ pip install -r requirements.txt
 
 - [适配器工具文档](adapters/README.md) - 详细的适配器使用说明
 - [适配器示例](adapters/EXAMPLES.md) - 转换后的示例文件
-- [Agent Skills 规范](https://agentskills.io/) - Agent Skills 官方规范
+- [Agent Skills 规范](https://agentskills.io/) - Agent Skills 官方规范（如链接不可访问，请参考 [Anthropic 官方文档](https://support.claude.com/en/articles/12512198-creating-custom-skills)）
 - [项目主文档](README.md) - full-stack-skills 完整文档
 
 ## 常见问题
