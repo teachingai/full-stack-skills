@@ -4,7 +4,7 @@
 
 **基于 Agent Skills 规范的全栈技能集合**
 
-![Version](https://img.shields.io/badge/Version-2.0.0-blue)
+![Version](https://img.shields.io/badge/Version-0.0.1-red)
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
 ![Skills](https://img.shields.io/badge/Skills-170-orange)
 ![Plugins](https://img.shields.io/badge/Plugins-12-brightgreen)
