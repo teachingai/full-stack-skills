@@ -64,6 +64,10 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 
 ![add_marketplace.png](./media/add_marketplace.png)
 
+安装成功！
+
+![add_marketplace_success.png](media/add_marketplace_success.png)
+
 或者使用简写形式：
 
 ```
@@ -104,7 +108,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 /plugin install utility-skills@full-stack-skills
 ```
 
-![install-teaching-ai-skills.png](media/install-teaching-ai-skills.png)
+![install-development-skills-frontend.png](media/install-development-skills-frontend.png)
 
 #### 3. 使用技能
 
