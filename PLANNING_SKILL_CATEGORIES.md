@@ -162,7 +162,6 @@ Marketplace (full-stack-skills)
 ### 2.3 架构类（Architecture Skills）
 
 **架构设计**：
-- `ddd` - 领域驱动设计（DDD）指南
 - `ddd-cola` - COLA (Clean Object-Oriented and Layered Architecture) 架构指南
 - `ddd-microservices` - DDD 微服务架构指南
 - `ddd-event-driven` - DDD 事件驱动架构指南
@@ -170,7 +169,6 @@ Marketplace (full-stack-skills)
 - `ddd-clean-architecture` - DDD 整洁架构指南
 
 **架构工具**：
-- `c4-model` - C4 模型架构图绘制指南
 - `plantuml` - PlantUML 架构图绘制指南
 - `drawio-architecture` - Draw.io 架构图绘制指南
 
@@ -331,7 +329,6 @@ Marketplace (full-stack-skills)
       "skills": [
         "./skills/ddd",
         "./skills/ddd-cola",
-        "./skills/c4-model",
         "./skills/plantuml"
       ]
     },
@@ -540,7 +537,7 @@ skills/
    - `figma`、`figma-ai`、`midjourney`、`dalle`
 
 2. **架构类技能**：
-   - `ddd`、`ddd-cola`、`c4-model`
+   - `ddd`、`ddd-cola`
 
 3. **运维类技能**：
    - `docker`、`kubernetes`、`jenkins`

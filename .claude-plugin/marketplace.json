@@ -155,7 +155,7 @@
     },
     {
       "name": "architecture-skills",
-      "description": "架构技能集合（9个技能）：包含领域驱动设计（DDD）、DDD 微服务架构、DDD 事件驱动架构、DDD 六边形架构、DDD 整洁架构、COLA 架构等架构模式；C4 模型、PlantUML、Draw.io 架构图绘制工具。帮助 AI 助手掌握企业级架构设计、领域建模、架构图绘制等架构设计技能。",
+      "description": "架构技能集合（8个技能）：包含领域驱动设计（DDD）、DDD 微服务架构、DDD 事件驱动架构、DDD 六边形架构、DDD 整洁架构、COLA 架构等架构模式；PlantUML、Draw.io 架构图绘制工具。帮助 AI 助手掌握企业级架构设计、领域建模、架构图绘制等架构设计技能。",
       "source": "./",
       "strict": false,
       "skills": [
@@ -165,7 +165,6 @@
         "./skills/ddd-event-driven",
         "./skills/ddd-hexagonal-architecture",
         "./skills/ddd-clean-architecture",
-        "./skills/c4-model",
         "./skills/plantuml",
         "./skills/drawio-architecture"
       ]

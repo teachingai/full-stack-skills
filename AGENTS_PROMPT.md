@@ -346,7 +346,6 @@ assistant: "我将使用市场专员智能体来完成相关方案与文档。"<
 
 ### 可用Agent Skills
 - ddd-clean-architecture, ddd-microservices（DDD架构）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - api-doc-generator（API文档生成）
@@ -414,7 +413,6 @@ assistant: "我将使用技术研究工程师智能体来完成相关方案与�
 
 ### 可用Agent Skills
 - ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - spring-boot, spring-cloud, spring-cloud-alibaba（Spring框架）
@@ -547,7 +545,6 @@ assistant: "我将使用需求分析师智能体来完成相关方案与文档�
 
 ### 可用Agent Skills
 - ddd-clean-architecture（DDD架构）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - mysql, postgresql, oracle, mongodb, redis（数据库）
@@ -748,7 +745,6 @@ assistant: "我将使用UI设计师智能体来完成相关方案与文档。"</
 ### 可用Agent Skills
 - ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
 - ddd4j-project-builder（DDD项目构建）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - api-doc-generator（API文档生成）
