@@ -1,6 +1,21 @@
+<div align="center">
+
 # Full Stack Skills（Alpha）
 
-**Full-Stack-Skills（Alpha）** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **13 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作（当前项目尚未经过严格测试，还在自测中）。
+**基于 Agent Skills 规范的全栈技能集合**
+
+![Version](https://img.shields.io/badge/Version-2.0.0-blue)
+![License](https://img.shields.io/badge/License-Apache%202.0-green)
+![Skills](https://img.shields.io/badge/Skills-170-orange)
+![Plugins](https://img.shields.io/badge/Plugins-12-brightgreen)
+
+</div>
+
+## 📖 简介
+
+**Full-Stack-Skills（Alpha）** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **12 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
+
+> **⚠️ 注意：** 当前项目处于 Alpha 阶段，尚未经过严格测试，还在自测中。欢迎反馈问题和建议。
 
 > **说明：** 本仓库合并了 Anthropic 的示例技能和 Agent Skills 的技能集合，提供各种实用的 AI 技能，可以在 Claude Code、Claude.ai 和 API 中使用。关于 Agent Skills 标准，请参见 [agentskills.io](http://agentskills.io)。
 
@@ -29,7 +44,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 
 #### 2. 全栈覆盖
 - **170 个技能集合**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
-- **13 个插件类别**：按技能种类组织，而非按岗位划分，便于灵活组合使用
+- **12 个插件类别**：按技能种类组织，而非按岗位划分，便于灵活组合使用
 - **跨平台支持**：支持 Claude Code、Claude.ai、Claude API 及其他 AI 平台
 
 #### 3. AI 赋能
@@ -38,27 +53,49 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **专业指导**：每个技能都包含详细的官方文档链接和使用示例
 
 #### 4. 灵活组织
-- **按技能种类组织**：13 个插件类别，可按需安装
+- **按技能种类组织**：12 个插件类别，可按需安装
 - **独立技能**：每个技能自包含，可单独使用
 - **跨平台适配**：提供适配器工具，支持多种 AI 平台
 
 ### 技能组织方式
 
-本仓库的技能按**技能种类**分为 13 个插件类别：
+本仓库的技能按**技能种类**分为 12 个插件类别：
 
 - **开发类**：前端开发（Vue、React、Angular）、后端开发（Spring、Node.js、Python、Go）、移动端开发（UniApp、React Native、Flutter）、开发工具
 - **设计类**：UI设计工具、AI设计工具、原型工具
+- **文档类**：文档生成、文档处理、图表绘制（Mermaid、PlantUML）
 - **架构类**：DDD、微服务、事件驱动、六边形架构、整洁架构、COLA
 - **测试类**：单元测试、集成测试、E2E测试、移动端测试
-- **文档类**：文档生成、文档处理、图表绘制
 - **运维类**：CI/CD、容器化、IaC
 - **数据库类**：关系型数据库、NoSQL数据库、数据库工具
 - **云平台类**：AWS、Azure、阿里云、腾讯云、华为云
-- **其他**：Markdown、社交协作、教学教育、工具技能
+- **其他**：社交协作、教学教育、工具技能
 
 每个技能都自包含在单独的文件夹中，并包含一个 `SKILL.md` 文件，里面有 Claude 使用的说明和元数据。你可以浏览这些技能来获取灵感，或理解不同的模式与实现方式。
 
 本仓库中的许多技能是开源的（Apache 2.0）。我们还在 [`skills/docx`](skills/docx)、[`skills/pdf`](skills/pdf)、[`skills/pptx`](skills/pptx) 和 [`skills/xlsx`](skills/xlsx) 子目录中包含了用于支撑 [Claude 文档能力](https://www.anthropic.com/news/create-files) 的文档创建与编辑技能。这些技能是"可查看源码"的（source-available），但并非开源；我们希望将其作为更复杂技能的参考示例，因为它们已在生产级 AI 应用中实际使用。
+
+### 🎯 核心设计理念
+
+#### **技能标准化**
+- **Agent Skills 规范**：严格遵循 [Agent Skills 规范](https://agentskills.io/)，确保技能质量和兼容性
+- **统一格式**：所有技能采用统一的 Markdown 格式和 YAML Frontmatter 元数据
+- **渐进式披露**：通过 `SKILL.md`、`examples/`、`templates/`、`api/` 等目录实现渐进式信息披露
+
+#### **按技能种类组织**
+- **灵活组合**：按技能种类而非岗位划分，便于灵活组合使用
+- **独立技能**：每个技能自包含，可单独使用
+- **插件化**：12 个插件类别，可按需安装
+
+#### **全栈覆盖**
+- **170 个技能**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
+- **跨平台支持**：支持 Claude Code、Claude.ai、Claude API 及其他 AI 平台
+- **持续更新**：社区驱动，持续添加新技能和改进现有技能
+
+#### **AI 赋能**
+- **智能识别**：Claude 会根据技能描述自动判断何时使用该技能
+- **即插即用**：安装插件后，只需提到技能名称即可使用
+- **专业指导**：每个技能都包含详细的官方文档链接和使用示例
 
 ### 📦 项目定位
 
@@ -68,6 +105,51 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **规范标准**：严格遵循 Agent Skills 规范，确保技能质量和兼容性
 - **灵活组合**：按技能种类组织，可根据需求灵活组合使用
 - **技术栈统一**：覆盖主流技术栈，统一技能格式和文档结构
+
+### 🏗️ 项目架构
+
+**Full-Stack-Skills 技能组织结构**：
+
+```
+full-stack-skills/
+├── .claude-plugin/
+│   └── marketplace.json          # 插件市场配置
+├── skills/                       # 技能目录
+│   ├── vue2/                     # 单个技能目录
+│   │   ├── SKILL.md              # 技能主文档
+│   │   ├── examples/             # 示例文件
+│   │   ├── templates/            # 模板文件
+│   │   ├── api/                  # API 参考
+│   │   └── LICENSE.txt           # 许可证
+│   ├── vue3/
+│   ├── react/
+│   └── ...                       # 170 个技能
+├── adapters/                     # 跨平台适配器
+│   ├── cursor/                   # Cursor 适配器
+│   ├── trae/                     # Trae 适配器
+│   └── ...
+├── ROLE_DEFINITIONS.md           # 角色定义
+├── AGENTS_PROMPT.md              # 智能体提示词
+└── README.md                     # 项目说明
+```
+
+**插件类别组织**：
+
+| 插件类别 | 技能数量 | 说明 |
+|---|---|---|
+| development-skills | 76 | 全栈开发技能集合 |
+| development-skills-utils | 12 | 开发工具技能集合 |
+| design-skills | 16 | 设计技能集合 |
+| document-skills | 10 | 文档处理技能集合 |
+| architecture-skills | 7 | 架构技能集合 |
+| testing-skills | 9 | 测试技能集合 |
+| devops-skills | 9 | 运维技能集合 |
+| database-skills | 8 | 数据库技能集合 |
+| cloud-skills | 16 | 云平台技能集合 |
+| markdown-skills | 1 | Markdown 技能集合 |
+| social-skills | 2 | 社交技能集合 |
+| teaching-skills | 3 | 教学技能集合 |
+| utility-skills | 1 | 工具技能集合 |
 
 ### 免责声明
 
@@ -121,19 +203,18 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 直接使用命令安装插件：
 
 ```
-# 按技能种类安装（13个插件类别）
-/plugin install teaching-skills@full-stack-skills
-/plugin install document-skills@full-stack-skills
-/plugin install markdown-skills@full-stack-skills
+# 按技能种类安装（12个插件类别）
 /plugin install development-skills@full-stack-skills
 /plugin install development-skills-utils@full-stack-skills
 /plugin install design-skills@full-stack-skills
+/plugin install document-skills@full-stack-skills
 /plugin install architecture-skills@full-stack-skills
 /plugin install testing-skills@full-stack-skills
 /plugin install devops-skills@full-stack-skills
 /plugin install database-skills@full-stack-skills
 /plugin install cloud-skills@full-stack-skills
 /plugin install social-skills@full-stack-skills
+/plugin install teaching-skills@full-stack-skills
 /plugin install utility-skills@full-stack-skills
 ```
 
@@ -168,9 +249,37 @@ cd adapters
 python convert_all.py ../skills ../adapters-output
 ```
 
+## 📝 核心功能
+
+### 1. 技能管理
+- **技能分类**：按技能种类组织为 12 个插件类别
+- **技能搜索**：通过技能名称快速查找所需技能
+- **技能安装**：支持按插件类别批量安装或单独安装技能
+
+### 2. 跨平台支持
+- **Claude Code**：原生支持，通过插件市场安装
+- **Claude.ai**：支持上传自定义技能
+- **Claude API**：通过 API 使用技能
+- **其他平台**：提供适配器工具，支持 Cursor、Trae、Qoder、CodeBuddy、Windsurf 等
+
+### 3. 技能创建
+- **规范指导**：提供技能创建规范和最佳实践
+- **模板支持**：提供技能模板，快速创建新技能
+- **文档生成**：自动生成技能文档结构
+
+### 4. 文档处理
+- **办公文档**：支持 Word、PowerPoint、Excel、PDF 等文档处理
+- **图表绘制**：支持 Mermaid、PlantUML、Draw.io 等图表绘制
+- **文档协作**：支持多人协作编辑
+
+### 5. 开发工具
+- **代码生成**：支持代码生成和模板化
+- **项目构建**：支持 DDD 项目构建（单体单模块、单体多模块、微服务）
+- **文档生成**：支持全栈文档生成（14种文档模板）
+
 ## 可用插件和技能
 
-本仓库的技能按**技能种类**分为 **13 个插件类别**，共包含 **170 个技能**。
+本仓库的技能按**技能种类**分为 **12 个插件类别**，共包含 **170 个技能**。
 
 ---
 
@@ -258,19 +367,25 @@ python convert_all.py ../skills ../adapters-output
 
 **安装命令：** `/plugin install document-skills@full-stack-skills`
 
-**技能数量：** 8 个技能
+**技能数量：** 10 个技能
 
-**描述：** 文档处理技能集合，包含办公文档的创建、编辑和处理；文档协作；API 文档生成；流程图和思维导图绘制等。帮助 AI 助手掌握文档处理、图表绘制、文档协作等办公自动化技能。
+**描述：** 文档处理技能集合，包含办公文档的创建、编辑和处理；文档协作；API 文档生成；流程图和思维导图绘制；Mermaid 和 PlantUML 图表绘制等。帮助 AI 助手掌握文档处理、图表绘制、文档协作等办公自动化技能。
 
-**技能列表：**
+#### 办公文档处理
 - `docx` - Word 文档处理
 - `pptx` - PowerPoint 演示文稿处理
 - `pdf` - PDF 文档处理
 - `xlsx` - Excel 电子表格处理
+
+#### 文档协作与生成
 - `doc-coauthoring` - 文档协作（多人协作编辑）
 - `api-doc-generator` - API 文档生成器
+
+#### 图表绘制工具
 - `drawio-flowchart` - Draw.io 流程图绘制
 - `processon-mindmap` - ProcessOn 思维导图绘制
+- `mermaid` - Mermaid 图表绘制（支持 23 种图表类型）
+- `plantuml` - PlantUML 架构图绘制（支持 UML 和非 UML 图表）
 
 ---
 
@@ -278,7 +393,7 @@ python convert_all.py ../skills ../adapters-output
 
 **安装命令：** `/plugin install architecture-skills@full-stack-skills`
 
-**技能数量：** 8 个技能
+**技能数量：** 7 个技能
 
 **描述：** 架构技能集合，包含领域驱动设计（DDD）、各种架构模式、架构图绘制工具等。帮助 AI 助手掌握企业级架构设计、领域建模、架构图绘制等架构设计技能。
 
@@ -291,7 +406,6 @@ python convert_all.py ../skills ../adapters-output
 - `ddd-clean-architecture` - DDD 整洁架构
 
 #### 架构图工具
-- `plantuml` - PlantUML 架构图绘制
 - `drawio-architecture` - Draw.io 架构图绘制
 
 ---
@@ -378,19 +492,6 @@ python convert_all.py ../skills ../adapters-output
 
 ---
 
-### 📝 markdown-skills（Markdown 技能集合）
-
-**安装命令：** `/plugin install markdown-skills@full-stack-skills`
-
-**技能数量：** 1 个技能
-
-**描述：** Markdown 相关技能集合，包含 Mermaid 图表绘制，支持 23 种图表类型（流程图、时序图、类图、状态图、甘特图、架构图、C4 图、思维导图等）。帮助 AI 助手掌握 Markdown 文档编写、技术图表绘制、架构图可视化等文档技能。
-
-**技能列表：**
-- `mermaid` - Mermaid 图表绘制（支持 23 种图表类型）
-
----
-
 ### 👥 social-skills（社交技能集合）
 
 **安装命令：** `/plugin install social-skills@full-stack-skills`
@@ -456,9 +557,9 @@ python convert_all.py ../skills ../adapters-output
 
 | 项目 | 当前版本 |
 |---|---|
-| full-stack-skills | 2.0.0 |
+| full-stack-skills | 2.0.0 (Alpha) |
 | 技能总数 | 170 |
-| 插件类别 | 13 |
+| 插件类别 | 12 |
 | Agent Skills 规范 | 最新版本 |
 
 ## 🔗 相关链接
