@@ -1,26 +1,61 @@
 ---
 name: mermaid
-description: Provides comprehensive guidance for creating Mermaid diagrams including flowcharts, sequence diagrams, class diagrams, state diagrams, Gantt charts, and all other Mermaid diagram types. Use when the user requests to create, draw, or visualize any diagram, flowchart, or structured chart using Mermaid syntax.
+description: Provides comprehensive guidance for creating Mermaid diagrams. Mermaid is a JavaScript-based diagramming and charting tool that uses Markdown-inspired text definitions and a renderer to create and modify complex diagrams. The main purpose of Mermaid is to help documentation catch up with development. Mermaid is particularly well-suited for use in Markdown documents, GitHub, GitLab, wikis, blogs, and other Markdown-based platforms. Use when the user wants to draw, create, generate, make, build, or visualize any diagram, chart, graph, flowchart, architecture diagram, sequence diagram, class diagram, state diagram, Gantt chart, mindmap, timeline, or any other visual diagram in Markdown-friendly format. This skill covers all 23+ Mermaid diagram types including flowcharts, sequence diagrams, class diagrams, state diagrams, ER diagrams, Gantt charts, pie charts, quadrant charts, Git graphs, C4 diagrams, mindmaps, timelines, and more. Always use this skill when the user mentions Mermaid, needs diagrams for Markdown documentation, or wants quick diagrams that render directly in Markdown renderers.
 license: Complete terms in LICENSE.txt
 ---
 
 ## When to use this skill
 
-Use this skill whenever the user wants to:
-- Create any type of diagram or flowchart
-- Visualize processes, workflows, or system architectures
-- Draw sequence diagrams, class diagrams, or state diagrams
-- Create project timelines (Gantt charts)
-- Visualize data relationships (ER diagrams, entity relationships)
-- Create user journey maps
-- Generate pie charts, quadrant charts, or other data visualizations
-- Draw Git branching structures
-- Create mindmaps or hierarchical structures
-- Visualize system architectures (C4 diagrams)
-- Create timelines or event sequences
-- Generate any other diagram type supported by Mermaid
+**ALWAYS use this skill when the user mentions:**
+- Drawing, creating, generating, making, or building any diagram, chart, or graph
+- Visualizing processes, workflows, systems, architectures, or data
+- Any request to "画图" (draw diagram), "绘图" (draw chart), "生成图" (generate diagram), "创建图" (create diagram)
+- Flowcharts, sequence diagrams, class diagrams, state diagrams, or any diagram type
+- Architecture diagrams, system diagrams, or design diagrams
+- Data visualization, charts, or graphs
+- Process flows, workflows, or business processes
+- Project timelines, schedules, or Gantt charts
+- User journeys, mindmaps, or hierarchical structures
+- Database schemas, ER diagrams, or entity relationships
+- Git branching structures or version control diagrams
+- Any visual representation or diagrammatic content
+
+**Trigger phrases include:**
+- "画一个图" (draw a diagram), "画流程图" (draw flowchart), "画架构图" (draw architecture diagram)
+- "创建一个图表" (create a chart), "生成一个图" (generate a diagram)
+- "帮我画" (help me draw), "给我画" (draw for me), "画出来" (draw it out)
+- "用图表示" (represent with diagram), "可视化" (visualize), "画个图说明" (draw a diagram to explain)
+- "流程图" (flowchart), "时序图" (sequence diagram), "类图" (class diagram), "状态图" (state diagram)
+- "架构图" (architecture diagram), "系统图" (system diagram), "设计图" (design diagram)
+- "甘特图" (Gantt chart), "思维导图" (mindmap), "时间线" (timeline)
+- "用 Mermaid" (use Mermaid), "Mermaid 画图" (draw with Mermaid), "Mermaid 语法" (Mermaid syntax)
+- Any mention of "diagram", "chart", "graph", "flowchart", "visualization", "drawing", "Mermaid"
+
+**IMPORTANT: Mermaid vs PlantUML - Two Different Diagramming Tools:**
+
+Mermaid and PlantUML are two different diagramming tools with different purposes:
+
+- **Mermaid**: A JavaScript-based diagramming tool designed for Markdown documentation. It uses Markdown-inspired syntax and renders directly in Markdown renderers (GitHub, GitLab, wikis, blogs). Best for quick diagrams, Markdown documentation, and simple visualizations.
+
+- **PlantUML**: A component that allows you to create various UML diagrams through simple textual descriptions. It focuses on UML standards and complex system architecture. Best for UML diagrams, enterprise architecture, C4 models, and diagrams requiring precise UML notation.
+
+**When both PlantUML and Mermaid skills are matched:**
+- If the user explicitly mentions "Mermaid" or "Markdown diagram", use this skill (Mermaid)
+- If the user explicitly mentions "PlantUML" or "UML diagram", use the PlantUML skill instead
+- If the user mentions both or neither, **ALWAYS ask the user to choose**: "I can create this diagram using either Mermaid or PlantUML. Mermaid is a JavaScript-based tool designed for Markdown documentation and renders directly in GitHub/GitLab. PlantUML is focused on UML diagrams and enterprise architecture. Which would you prefer?"
 
 ## How to use this skill
+
+**CRITICAL: Mermaid is a Markdown-focused diagramming tool. This skill should be triggered when the user explicitly mentions "Mermaid", needs diagrams for Markdown documentation, or wants diagrams that render directly in Markdown renderers (GitHub, GitLab, wikis, blogs).**
+
+**Trigger this skill when you see:**
+- User says "用 Mermaid" (use Mermaid), "Mermaid 画图" (draw with Mermaid), "Markdown 图" (Markdown diagram)
+- User needs diagrams for Markdown documentation, GitHub, GitLab, wikis, or blogs
+- User wants quick diagrams that render directly in Markdown renderers
+- User mentions any diagram type for Markdown: flowchart, sequence diagram, class diagram, etc.
+- User wants to visualize, represent, or illustrate something with a diagram in Markdown format
+
+**When both PlantUML and Mermaid are matched, ALWAYS ask the user to choose the output format or tool, as they are two different diagramming tools with different purposes.**
 
 To create a Mermaid diagram:
 
@@ -179,6 +214,38 @@ If a beta diagram type is not supported, the example files provide flowchart alt
 6. **Organize files**: Save diagrams in appropriate directories (`docs/diagrams/` or `diagrams/`)
 7. **Use descriptive names**: Name diagram files clearly (e.g., `system-architecture.md`, `user-flow.md`)
 
+## Mermaid vs PlantUML - Key Differences
+
+**Mermaid (This Skill):**
+- **Purpose**: JavaScript-based diagramming tool designed for Markdown documentation
+- **Main Use Case**: Help documentation catch up with development
+- **Best For**: 
+  - Markdown documents, GitHub, GitLab, wikis, blogs
+  - Quick diagrams that render directly in Markdown renderers
+  - Simple flowcharts, sequence diagrams, basic charts
+  - Rapid prototyping and iteration
+  - When the user explicitly requests Mermaid or needs Markdown-compatible diagrams
+
+**PlantUML (Different Skill):**
+- **Purpose**: Component for creating various UML diagrams through textual descriptions
+- **Main Use Case**: UML-focused diagramming with emphasis on standard UML notation
+- **Best For**:
+  - Complex UML diagrams requiring precise notation (class, component, deployment diagrams)
+  - Enterprise architecture diagrams and C4 model diagrams
+  - Standard UML compliance requirements
+  - Diagrams requiring advanced customization, styling, or layout control
+  - When the user explicitly requests PlantUML or UML diagrams
+
+**When Both Skills Are Matched:**
+- **ALWAYS ask the user to choose**: "I can create this diagram using either Mermaid or PlantUML. Mermaid is a JavaScript-based tool designed for Markdown documentation and renders directly in GitHub/GitLab. PlantUML is focused on UML diagrams and enterprise architecture. Which would you prefer?"
+- These are two different diagramming tools with different purposes - do not automatically choose one
+- If the user explicitly mentions one tool, use that tool
+- If the user mentions both or neither, ask the user to choose based on their needs
+
 ## Keywords
 
-mermaid, diagram, flowchart, flow chart, sequence diagram, class diagram, state diagram, entity relationship, ER diagram, user journey, Gantt chart, pie chart, quadrant chart, requirement diagram, Git graph, C4 diagram, mindmap, timeline, ZenUML, Sankey diagram, XY chart, block diagram, packet diagram, Kanban, architecture diagram, radar chart, treemap, 流程图, 时序图, 类图, 状态图, 实体关系图, 用户旅程图, 甘特图, 饼图, 象限图, 需求图, Git图, C4图, 思维导图, 时间线图, 桑基图, XY图, 方块图, 数据包图, 看板图, 架构图, 雷达图, 树状图
+**English keywords:**
+mermaid, diagram, chart, graph, flowchart, flow chart, sequence diagram, class diagram, state diagram, entity relationship, ER diagram, user journey, Gantt chart, pie chart, quadrant chart, requirement diagram, Git graph, C4 diagram, mindmap, timeline, ZenUML, Sankey diagram, XY chart, block diagram, packet diagram, Kanban, architecture diagram, radar chart, treemap, draw, create, generate, make, build, visualize, visualization, drawing, plotting, mapping, schematics, blueprint, design diagram, system diagram, process flow, workflow, data visualization, visual representation
+
+**Chinese keywords (中文关键词):**
+流程图, 时序图, 类图, 状态图, 实体关系图, 用户旅程图, 甘特图, 饼图, 象限图, 需求图, Git图, C4图, 思维导图, 时间线图, 桑基图, XY图, 方块图, 数据包图, 看板图, 架构图, 雷达图, 树状图, 画图, 绘图, 生成图, 创建图, 制作图, 画流程图, 画架构图, 画时序图, 画类图, 画状态图, 画甘特图, 画思维导图, 画时间线, 可视化, 图表, 图形, 示意图, 设计图, 系统图, 流程图, 架构图, 时序图, 类图, 状态图, 甘特图, 思维导图, 时间线, 用图表示, 画出来, 给我画, 帮我画, 画一个, 创建一个图, 生成一个图, 画个图说明, 用图表展示, 可视化展示

@@ -289,7 +289,6 @@
 
 **Agent Skills：**
 - ddd-clean-architecture, ddd-microservices（DDD架构）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - api-doc-generator（API文档生成）
@@ -345,7 +344,6 @@
 
 **Agent Skills：**
 - ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - spring-boot, spring-cloud, spring-cloud-alibaba（Spring框架）
@@ -453,7 +451,6 @@
 
 **Agent Skills：**
 - ddd-clean-architecture（DDD架构）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - mysql, postgresql, oracle, mongodb, redis（数据库）
@@ -626,7 +623,6 @@
 **Agent Skills：**
 - ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
 - ddd4j-project-builder（DDD项目构建）
-- c4-model（C4模型）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - api-doc-generator（API文档生成）
@@ -1097,7 +1093,6 @@
 - cloud-tencent-cvm, cloud-tencent-cos, cloud-tencent-cdb（腾讯云服务）
 - cloud-huawei-ecs, cloud-huawei-obs, cloud-huawei-rds（华为云服务）
 - ddd-clean-architecture, ddd-microservices（DDD架构）
-- c4-model（C4模型）
 - drawio-architecture（架构图绘制）
 - api-doc-generator（API文档生成）
 - documentation-builder（文档构建）
@@ -1227,7 +1222,6 @@
 - cloud-tencent-cvm, cloud-tencent-cos, cloud-tencent-cdb（腾讯云服务）
 - cloud-huawei-ecs, cloud-huawei-obs, cloud-huawei-rds（华为云服务）
 - ddd-clean-architecture, ddd-microservices（DDD架构）
-- c4-model（C4模型）
 - drawio-architecture（架构图绘制）
 - api-doc-generator（API文档生成）
 - documentation-builder（文档构建）
