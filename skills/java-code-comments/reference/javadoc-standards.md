@@ -4,7 +4,7 @@
 
 JavaDoc 是 Java 的文档生成工具，通过标准化的注释格式生成 API 文档。本文档说明如何编写符合规范的 JavaDoc 注释。
 
-> **注意**：本文档基于标准 JavaDoc 规范。如果项目遵循《JAVA 编程规范》，请参考 [java-coding-standards.md](./java-coding-standards.md) 获取更严格的格式要求。
+> **注意**：本文档基于标准 JavaDoc 规范。如果项目遵循《JAVA 编程规范》，请参考 [java-coding-standards.md](./java-coding-standards.md) 获取更严格的格式要求（该文档只说明与标准 JavaDoc 的差异，避免重复）。
 
 ## 注释格式
 

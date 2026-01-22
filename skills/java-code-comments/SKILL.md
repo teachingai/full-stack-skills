@@ -38,6 +38,9 @@ license: Complete terms in LICENSE.txt
 - Controller (REST controllers, Spring MVC controllers)
 - Service (business service interfaces)
 - ServiceImpl (service implementations)
+- Application Service (DDD application services, orchestrating domain logic)
+- Domain Service (DDD domain services, domain business logic)
+- Feign Service Interface (Feign remote service interfaces)
 - Mapper (MyBatis mappers, data access layer)
 - Model (data models, domain models)
 - Entity (JPA entities, database entities)
@@ -110,6 +113,9 @@ Present a checklist of common Java component types and ask the user to select:
 - [ ] Controller（控制器）
 - [ ] Service（服务接口）
 - [ ] ServiceImpl（服务实现）
+- [ ] Application Service（应用服务，DDD架构）
+- [ ] Domain Service（领域服务，DDD架构）
+- [ ] Feign Service Interface（Feign远程服务接口）
 - [ ] Mapper（数据访问层）
 - [ ] Model（数据模型）
 - [ ] Entity（实体类）
@@ -234,6 +240,63 @@ For each component type selected by the user:
    public class UserController {
    ```
 
+   **Specialized class comment formats** (Java Coding Standards - strict):
+
+   **Application Service:**
+   ```java
+   /**
+    * {服务名称}应用服务
+    *
+    * <p>{详细描述服务的业务功能、职责和应用场景}</p>
+    * <p>主要功能包括:</p>
+    * <ul>
+    *   <li>{功能点1}</li>
+    *   <li>{功能点2}</li>
+    *   <li>{功能点3}</li>
+    * </ul>
+    *
+    * @author system
+    * @since 2025-01-21
+    */
+   public class UserApplicationService {
+   ```
+
+   **Domain Service:**
+   ```java
+   /**
+    * {服务名称}领域服务
+    *
+    * <p>{详细描述服务的领域职责和业务逻辑}</p>
+    * <p>主要功能包括:</p>
+    * <ul>
+    *   <li>{功能点1}</li>
+    *   <li>{功能点2}</li>
+    * </ul>
+    *
+    * @author system
+    * @since 2025-01-21
+    */
+   public class UserDomainService {
+   ```
+
+   **Feign Service Interface:**
+   ```java
+   /**
+    * {服务名称}Feign远程服务接口
+    *
+    * <p>通过Feign调用{目标服务}的远程接口</p>
+    * <p>主要功能:</p>
+    * <ul>
+    *   <li>{接口功能1}</li>
+    *   <li>{接口功能2}</li>
+    * </ul>
+    *
+    * @author system
+    * @since 2025-01-21
+    */
+   public interface UserFeignService {
+   ```
+
 3. **Method-level comment format** (Standard JavaDoc):
    ```java
    /**
@@ -305,8 +368,8 @@ For each component type selected by the user:
 **IMPORTANT: Comment Format Standards**
 
 This skill follows two standards:
-1. **Standard JavaDoc** (default): See [javadoc-standards.md](reference/javadoc-standards.md)
-2. **Java Coding Standards** (strict): See [java-coding-standards.md](reference/java-coding-standards.md)
+1. **Standard JavaDoc** (default): See [javadoc-standards.md](reference/javadoc-standards.md) (within this skill)
+2. **Java Coding Standards** (strict): See [java-coding-standards.md](reference/java-coding-standards.md) (within this skill)
 
 The Java Coding Standards require:
 - **Description must be wrapped in `<p>` tags**: `<p>description</p>`
@@ -351,14 +414,19 @@ For different component types, use appropriate templates from the `templates/` d
 - `templates/controller-comment-template.md` - Controller class comments
 - `templates/service-comment-template.md` - Service interface comments
 - `templates/serviceimpl-comment-template.md` - Service implementation comments
+- `templates/application-service-comment-template.md` - Application Service comments (DDD)
+- `templates/domain-service-comment-template.md` - Domain Service comments (DDD)
+- `templates/feign-service-comment-template.md` - Feign Service Interface comments
 - `templates/mapper-comment-template.md` - Mapper comments
 - `templates/entity-comment-template.md` - Entity class comments
 - `templates/dto-comment-template.md` - DTO class comments
 
 ### Comment Standards Reference
 
-- **Standard JavaDoc**: See [reference/javadoc-standards.md](reference/javadoc-standards.md)
-- **Java Coding Standards** (strict format): See [reference/java-coding-standards.md](reference/java-coding-standards.md)
+**Note**: All reference documents are located within this skill's directory structure.
+
+- **Standard JavaDoc**: See [reference/javadoc-standards.md](reference/javadoc-standards.md) (local reference)
+- **Java Coding Standards** (strict format): See [reference/java-coding-standards.md](reference/java-coding-standards.md) (local reference)
 
 **When to use Java Coding Standards format:**
 - When the project explicitly follows 《JAVA 编程规范》
