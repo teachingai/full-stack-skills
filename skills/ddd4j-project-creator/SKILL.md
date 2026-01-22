@@ -1,21 +1,66 @@
 ---
-name: ddd4j-project-builder
-description: A comprehensive skill for initializing new DDD (Domain-Driven Design) projects and checking existing project structure compliance. Supports three project types: single-module monolith, multi-module monolith, and microservices. Can identify project structure type and validate directory conventions against DDD, Hexagonal Architecture, Clean Architecture, and COLA V5 standards. Use this skill when creating new DDD projects, checking project structure compliance, or migrating existing projects to DDD architecture.
+name: ddd4j-project-creator
+description: |
+  A comprehensive skill for creating new ddd4j (Domain-Driven Design for Java) projects based on ddd4j-boot framework. 
+  Use ONLY when the user explicitly mentions creating a ddd4j project, initializing ddd4j project, or setting up 
+  ddd4j-boot project. Supports three project types: single-module monolith, multi-module monolith, and microservices. 
+  Generates project scaffolding based on ddd4j-boot architecture with DDD, Hexagonal Architecture, Clean Architecture, 
+  and COLA V5 patterns. Do NOT trigger for generic DDD projects, JPA/Hibernate projects, or other ORM frameworks 
+  without explicit ddd4j mention.
 license: Complete terms in LICENSE.txt
 ---
 
-# DDD4j Project Initialization and Structure Validation
+# DDD4j Project Creator
 
 ## When to use this skill
 
-Use this skill whenever you need to:
+**CRITICAL: This skill should ONLY be triggered when the user explicitly mentions creating a ddd4j project, initializing ddd4j project, or setting up ddd4j-boot project.**
 
-- **Initialize a new DDD project** with proper directory structure
-- **Check existing project structure** compliance with DDD standards
-- **Identify project architecture type** (single-module, multi-module, microservices)
-- **Validate directory conventions** against DDD patterns
-- **Migrate existing projects** to DDD architecture
-- **Generate project scaffolding** based on DDD principles
+**ALWAYS use this skill when the user mentions:**
+- Creating a ddd4j project (explicitly mentions "ddd4j")
+- Initializing ddd4j-boot project
+- Setting up ddd4j project structure
+- Creating ddd4j project scaffolding
+- 创建 ddd4j 项目 (explicitly mentions "ddd4j")
+- 初始化 ddd4j 项目 (initialize ddd4j project)
+- ddd4j-boot 项目创建 (create ddd4j-boot project)
+
+**Trigger phrases include:**
+- "创建 ddd4j 项目" (create ddd4j project) - **must include "ddd4j"**
+- "初始化 ddd4j 项目" (initialize ddd4j project) - **must include "ddd4j"**
+- "创建 ddd4j-boot 项目" (create ddd4j-boot project) - **must include "ddd4j"**
+- "使用 ddd4j 创建项目" (create project using ddd4j)
+- "ddd4j 项目脚手架" (ddd4j project scaffolding)
+
+**DO NOT trigger this skill for:**
+- Generic DDD projects without mentioning ddd4j
+- JPA/Hibernate projects
+- Other ORM frameworks
+- Generic project initialization without ddd4j context
+- "创建 DDD 项目" without "ddd4j" (too generic)
+- "初始化项目" without "ddd4j" (too generic)
+
+## About DDD4j Boot
+
+**DDD4j Boot** is a Java microservice development scaffold based on **Domain-Driven Design (DDD)** principles. It is built with Spring Boot 3.5.x and uses lightweight [ddd-4-java](https://github.com/fuinorg/ddd-4-java) and [cqrs-4-java](https://github.com/fuinorg/cqrs-4-java) libraries to implement Domain-Driven Design, Command Query Responsibility Segregation (CQRS), and Event Sourcing.
+
+### Core Design Principles
+
+- **Domain-Driven Design (DDD)**: Strategic design through bounded contexts, tactical design with entities, value objects, aggregates, domain services, repositories, and domain events
+- **Command Query Responsibility Segregation (CQRS)**: Separation of read and write models, independent optimization
+- **Event Sourcing**: State changes recorded as event sequences, supporting complete history and state reconstruction
+- **Diamond Architecture (COLA)**: Adapter → Application → Domain ← Infrastructure four-layer architecture
+
+### Key Features
+
+- Complete DDD layered architecture supporting COLA V5 pattern
+- Lightweight DDD implementation based on ddd-4-java and cqrs-4-java
+- Technology stack integration: Spring Boot 3.5.x, MyBatis Plus, Jackson, Guava, Swagger, SaToken
+- Dual stack support: WebMVC (traditional Servlet) and WebFlux (reactive)
+- Domain model base capabilities: BaseEntity, BaseRepository, BaseService
+- Domain event support with built-in event publishing mechanism
+- Anti-Corruption Layer (ACL) for external service integration
+- Unified exception handling mechanism
 
 ## Project Types Supported
 
@@ -47,7 +92,9 @@ Use this skill whenever you need to:
 
 ## How to use this skill
 
-### For New Project Initialization
+**CRITICAL: This skill should ONLY be triggered when the user explicitly mentions creating a ddd4j project. Do NOT trigger for generic DDD project creation requests without ddd4j context.**
+
+### For New DDD4j Project Creation
 
 1. **Identify the project type** from user requirements:
    - Single-module monolith → `single-module`
@@ -61,13 +108,14 @@ Use this skill whenever you need to:
    - `examples/architecture-patterns.md` - DDD, Hexagonal, Clean, COLA V5 patterns
 
 3. **Collect project information**:
-   - `groupId`: Maven group ID (e.g., `io.ddd4j.base`)
-   - `artifactId`: Maven artifact ID (e.g., `ddd4j-douyin`)
+   - `groupId`: Maven group ID (e.g., `com.github.hiwepy` or `io.ddd4j.base`)
+   - `artifactId`: Maven artifact ID (e.g., `ddd4j-douyin` or `my-ddd4j-service`)
    - `version`: Project version (e.g., `1.0.0-SNAPSHOT`)
-   - `parentVersion`: Parent POM version (e.g., `2023.0.x.20251205-SNAPSHOT`)
-   - `packageBase`: Base package name (e.g., `io.ddd4j.douyin`)
+   - `parentVersion`: Parent POM version (e.g., `2023.0.x.20251205-SNAPSHOT` or reference to `ddd4j-boot-parent`)
+   - `packageBase`: Base package name (e.g., `io.ddd4j.douyin` or `com.example.service`)
    - `modules`: List of business modules (for multi-module/microservices)
    - `architecture`: Architecture pattern (DDD Classic, Hexagonal, Clean, COLA V5)
+   - `ddd4jBootVersion`: DDD4j Boot version (if using ddd4j-boot-bom)
 
 4. **Generate project structure**:
    - Create directory structure based on selected type
@@ -225,4 +273,10 @@ See the `examples/` directory for:
 
 ## Keywords
 
-ddd, domain-driven design, ddd project, project initialization, project structure, architecture validation, single-module, multi-module, microservices, hexagonal architecture, clean architecture, cola v5, maven project, java project, 领域驱动设计, DDD项目, 项目初始化, 项目结构, 架构验证, 单体单模块, 单体多模块, 微服务, 六边形架构, 整洁架构, COLA架构
+**English keywords:**
+ddd4j, ddd4j-boot, ddd4j project, create ddd4j project, initialize ddd4j project, ddd4j project creator, ddd4j project scaffolding, ddd4j-boot project, ddd4j project structure, ddd4j-boot initialization, ddd4j microservice, ddd4j monolith
+
+**Chinese keywords (中文关键词):**
+ddd4j, ddd4j-boot, ddd4j 项目, 创建 ddd4j 项目, 初始化 ddd4j 项目, ddd4j 项目创建, ddd4j 项目脚手架, ddd4j-boot 项目, ddd4j 项目结构, ddd4j-boot 初始化, ddd4j 微服务, ddd4j 单体应用
+
+**IMPORTANT**: All keywords must include "ddd4j" to avoid false triggers. Generic terms like "DDD 项目" (DDD project) or "创建项目" (create project) without "ddd4j" should NOT trigger this skill.

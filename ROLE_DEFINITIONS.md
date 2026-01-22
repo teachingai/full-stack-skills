@@ -622,7 +622,7 @@
 
 **Agent Skills：**
 - ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
-- ddd4j-project-builder（DDD项目构建）
+- ddd4j-project-creator（DDD4j项目创建）
 - plantuml（PlantUML）
 - drawio-architecture（架构图绘制）
 - api-doc-generator（API文档生成）
@@ -758,7 +758,7 @@
 - mysql, postgresql, oracle, mongodb, redis, elasticsearch（数据库）
 - navicat, dbeaver（数据库工具）
 - ddd-cola, ddd-microservices, ddd-event-driven, ddd-hexagonal-architecture, ddd-clean-architecture（DDD架构）
-- ddd4j-project-builder（DDD项目构建）
+- ddd4j-project-creator（DDD4j项目创建）
 - code-generator（代码生成）
 - api-doc-generator（API文档生成）
 - documentation-builder（文档构建）

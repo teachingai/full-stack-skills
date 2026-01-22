@@ -6,14 +6,14 @@
 
 ![Version](https://img.shields.io/badge/Version-0.0.1-red)
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Skills](https://img.shields.io/badge/Skills-170-orange)
+![Skills](https://img.shields.io/badge/Skills-171-orange)
 ![Plugins](https://img.shields.io/badge/Plugins-12-brightgreen)
 
 </div>
 
 ## 📖 简介
 
-**Full-Stack-Skills（Alpha）** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **170 个技能集合**，按**技能种类**组织为 **12 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
+**Full-Stack-Skills（Alpha）** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **171 个技能集合**，按**技能种类**组织为 **12 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
 
 > **⚠️ 注意：** 当前项目处于 Alpha 阶段，尚未经过严格测试，还在自测中。欢迎反馈问题和建议。
 
@@ -43,7 +43,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **持续更新**：社区驱动，持续添加新技能和改进现有技能
 
 #### 2. 全栈覆盖
-- **170 个技能集合**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
+- **171 个技能集合**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
 - **12 个插件类别**：按技能种类组织，而非按岗位划分，便于灵活组合使用
 - **跨平台支持**：支持 Claude Code、Claude.ai、Claude API 及其他 AI 平台
 
@@ -88,7 +88,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **插件化**：12 个插件类别，可按需安装
 
 #### **全栈覆盖**
-- **170 个技能**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
+- **171 个技能**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
 - **跨平台支持**：支持 Claude Code、Claude.ai、Claude API 及其他 AI 平台
 - **持续更新**：社区驱动，持续添加新技能和改进现有技能
 
@@ -123,7 +123,7 @@ full-stack-skills/
 │   │   └── LICENSE.txt           # 许可证
 │   ├── vue3/
 │   ├── react/
-│   └── ...                       # 170 个技能
+│   └── ...                       # 171 个技能
 ├── adapters/                     # 跨平台适配器
 │   ├── cursor/                   # Cursor 适配器
 │   ├── trae/                     # Trae 适配器
@@ -279,7 +279,7 @@ python convert_all.py ../skills ../adapters-output
 
 ## 可用插件和技能
 
-本仓库的技能按**技能种类**分为 **12 个插件类别**，共包含 **170 个技能**。
+本仓库的技能按**技能种类**分为 **12 个插件类别**，共包含 **171 个技能**。
 
 ---
 
@@ -324,14 +324,14 @@ python convert_all.py ../skills ../adapters-output
 
 **安装命令：** `/plugin install development-skills-utils@full-stack-skills`
 
-**技能数量：** 12 个技能
+**技能数量：** 13 个技能
 
-**描述：** 开发工具技能集合，包含代码生成、测试编写、文档构建等基础工具；DDD 项目构建器、项目文档生成、MCP 构建器等。帮助 AI 助手掌握开发工具链和工程化实践。
+**描述：** 开发工具技能集合，包含代码生成、测试编写、文档构建等基础工具；DDD 项目构建器、项目文档生成、MCP 构建器；Maven 组件检索等。帮助 AI 助手掌握开发工具链和工程化实践。
 
 **技能列表：**
 - `code-generator` - 代码生成器
 - `test-writer` - 测试编写工具
-- `ddd4j-project-builder` - DDD 项目构建器（支持单体单模块、单体多模块、微服务架构）
+- `ddd4j-project-creator` - DDD4j 项目创建器（基于 ddd4j-boot，支持单体单模块、单体多模块、微服务架构）
 - `documentation-builder` - 文档构建工具
 - `full-stack-doc` - 全栈文档生成（14种文档模板，覆盖产品到运维全生命周期）
 - `mcp-builder` - MCP 构建器
@@ -341,6 +341,7 @@ python convert_all.py ../skills ../adapters-output
 - `theme-factory` - 主题工厂
 - `nvm` - Node.js 版本管理
 - `agent-browser` - 浏览器自动化
+- `maven-search` - Maven 组件检索（从 Maven Central Repository 搜索和检索 Maven 依赖）
 
 ---
 
@@ -558,7 +559,7 @@ python convert_all.py ../skills ../adapters-output
 | 项目 | 当前版本          |
 |---|---------------|
 | full-stack-skills | 0.0.1 (Alpha) |
-| 技能总数 | 170           |
+| 技能总数 | 171           |
 | 插件类别 | 12            |
 | Agent Skills 规范 | 最新版本          |
 
