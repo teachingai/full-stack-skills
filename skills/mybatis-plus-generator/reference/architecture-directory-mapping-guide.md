@@ -265,7 +265,7 @@ src/main/java/{package}/
 
 - 快速参考表：`architecture-directory-quick-reference.md`
 - 详细示例：`../examples/architecture-directory-mapping.md`
-- DDD 架构参考：`../../ddd4j-project-builder/docs/1、DDD 经典分层架构目录结构.md`
-- 六边形架构参考：`../../ddd4j-project-builder/docs/2、六边形架构详细目录结构参考.md`
-- 整洁架构参考：`../../ddd4j-project-builder/docs/3、整洁架构详细目录结构参考.md`
-- COLA V5 架构参考：`../../ddd4j-project-builder/docs/4、COLA V5 架构详细目录结构参考.md`
+- DDD 架构参考：`../../ddd4j-project-creator/docs/1、DDD 经典分层架构目录结构.md`
+- 六边形架构参考：`../../ddd4j-project-creator/docs/2、六边形架构详细目录结构参考.md`
+- 整洁架构参考：`../../ddd4j-project-creator/docs/3、整洁架构详细目录结构参考.md`
+- COLA V5 架构参考：`../../ddd4j-project-creator/docs/4、COLA V5 架构详细目录结构参考.md`

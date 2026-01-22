@@ -101,7 +101,7 @@
       "skills": [
         "./skills/code-generator",
         "./skills/test-writer",
-        "./skills/ddd4j-project-builder",
+        "./skills/ddd4j-project-creator",
         "./skills/documentation-builder",
         "./skills/full-stack-doc",
         "./skills/mcp-builder",

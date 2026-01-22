@@ -331,7 +331,7 @@ python convert_all.py ../skills ../adapters-output
 **技能列表：**
 - `code-generator` - 代码生成器
 - `test-writer` - 测试编写工具
-- `ddd4j-project-builder` - DDD 项目构建器（支持单体单模块、单体多模块、微服务架构）
+- `ddd4j-project-creator` - DDD4j 项目创建器（基于 ddd4j-boot，支持单体单模块、单体多模块、微服务架构）
 - `documentation-builder` - 文档构建工具
 - `full-stack-doc` - 全栈文档生成（14种文档模板，覆盖产品到运维全生命周期）
 - `mcp-builder` - MCP 构建器
