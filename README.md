@@ -31,6 +31,17 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - [用 Agent Skills 为现实世界装备智能体](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 - [Agent Skills 规范](https://agentskills.io/)
 
+### 各平台 Agent Skills 文档
+
+- Antigravity Agent Skills: https://antigravity.google/docs/skills
+- Claude Agent Skills: https://code.claude.com/docs/en/skills
+- Cursor Agent Skills: https://cursor.com/cn/docs/context/skills
+- Codex Agent Skills: https://developers.openai.com/codex/skills
+- Codex Agent Skills (Create Skill): https://developers.openai.com/codex/skills/create-skill
+- Codebuddy Agent Skills: https://www.codebuddy.ai/docs/zh/ide/Features/Skills
+- Qoder Agent Skills: https://docs.qoder.com/extensions/skills
+- Trae Agent Skills: https://docs.trae.ai/ide/skills?_lang=en
+
 ## 关于本仓库
 
 **full-stack-skills** 是一个面向**期望成为全栈技能人才的群体**的开源技能集合，严格遵循 [Agent Skills 规范](https://agentskills.io/)，按**技能种类**组织技能库，而非按岗位划分。

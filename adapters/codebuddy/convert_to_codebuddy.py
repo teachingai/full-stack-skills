@@ -175,7 +175,7 @@ def convert_to_codebuddy_workflow(skill_path, output_dir=None):
         workflows_dir.mkdir(parents=True, exist_ok=True)
         
         # Write manifest
-        manifest_file = plugin_dir / "manifest.json"
+        manifest_file = plugin_dir / "plugin.json"
         with open(manifest_file, "w", encoding="utf-8") as f:
             json.dump(plugin_manifest, f, indent=2, ensure_ascii=False)
         
@@ -189,6 +189,16 @@ def convert_to_codebuddy_workflow(skill_path, output_dir=None):
         skills_dir.mkdir(parents=True, exist_ok=True)
         import shutil
         shutil.copy2(skill_file, skills_dir / "SKILL.md")
+        
+        # Copy resource directories
+        resource_dirs = ["scripts", "references", "assets", "api", "templates", "examples"]
+        for res_dir in resource_dirs:
+            src_dir = skill_path / res_dir
+            if src_dir.exists() and src_dir.is_dir():
+                dest_dir = skills_dir / res_dir
+                if dest_dir.exists():
+                    shutil.rmtree(dest_dir)
+                shutil.copytree(src_dir, dest_dir)
         
         print(f"✅ Converted to CodeBuddy plugin: {plugin_dir}")
         return plugin_dir

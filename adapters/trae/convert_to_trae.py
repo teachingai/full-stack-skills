@@ -96,12 +96,10 @@ def convert_to_trae_plugin(skill_path, output_dir=None):
     }
     
     # Check for additional resources
-    if (skill_path / "scripts").exists():
-        plugin_manifest["skills"][0]["resources"].append("scripts/")
-    if (skill_path / "references").exists():
-        plugin_manifest["skills"][0]["resources"].append("references/")
-    if (skill_path / "assets").exists():
-        plugin_manifest["skills"][0]["resources"].append("assets/")
+    resource_dirs = ["scripts", "references", "assets", "api", "templates", "examples"]
+    for res_dir in resource_dirs:
+        if (skill_path / res_dir).exists():
+            plugin_manifest["skills"][0]["resources"].append(f"{res_dir}/")
     
     # Write output
     if output_dir:
@@ -120,6 +118,15 @@ def convert_to_trae_plugin(skill_path, output_dir=None):
         # Copy SKILL.md
         import shutil
         shutil.copy2(skill_file, plugin_dir / "SKILL.md")
+        
+        # Copy resource directories
+        for res_dir in resource_dirs:
+            src_dir = skill_path / res_dir
+            if src_dir.exists():
+                dest_dir = plugin_dir / res_dir
+                if dest_dir.exists():
+                    shutil.rmtree(dest_dir)
+                shutil.copytree(src_dir, dest_dir)
         
         print(f"✅ Converted to Trae plugin: {plugin_dir}")
         return plugin_dir

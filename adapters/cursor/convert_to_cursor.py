@@ -14,6 +14,7 @@ Example:
 
 import sys
 import re
+import shutil
 from pathlib import Path
 
 try:
@@ -54,6 +55,50 @@ def extract_frontmatter(content):
         return {}, content.strip()
 
 
+def rewrite_markdown_links(content, skill_name, resource_dirs):
+    """
+    Rewrite markdown links to point to assets directory
+    
+    Args:
+        content: Markdown content
+        skill_name: Name of the skill
+        resource_dirs: List of resource directories that were copied
+    
+    Returns:
+        Updated content
+    """
+    def replace_link(match):
+        text = match.group(1)
+        url = match.group(2)
+        
+        # Skip absolute links, anchors, or existing asset links
+        if url.startswith(('http://', 'https://', '#', '/')):
+            return match.group(0)
+            
+        # Check if link points to a resource directory
+        for res_dir in resource_dirs:
+            if url.startswith(res_dir + '/') or url == res_dir:
+                return f"[{text}](assets/{skill_name}/{url})"
+                
+        return match.group(0)
+    
+    # Replace [text](url) links
+    content = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', replace_link, content)
+    
+    # Replace `path` references (common in our skills)
+    def replace_code_path(match):
+        path = match.group(1)
+        # Check if path points to a resource directory
+        for res_dir in resource_dirs:
+            if path.startswith(res_dir + '/') or path == res_dir:
+                return f"`assets/{skill_name}/{path}`"
+        return match.group(0)
+
+    content = re.sub(r'`([^`\n]+)`', replace_code_path, content)
+    
+    return content
+
+
 def convert_to_cursor_rule(skill_path, output_dir=None):
     """
     Convert Agent Skill to Cursor custom instruction format
@@ -80,8 +125,37 @@ def convert_to_cursor_rule(skill_path, output_dir=None):
         print(f"Warning: No frontmatter found in {skill_file}")
         frontmatter = {"name": skill_path.name, "description": ""}
     
-    # Create Cursor rule format
-    cursor_rule = f"""# {frontmatter.get('name', skill_path.name).replace('-', ' ').title()}
+    skill_name = frontmatter.get('name', skill_path.name)
+    
+    # Handle resources
+    resource_dirs = ["scripts", "references", "assets", "api", "templates", "examples"]
+    copied_resources = []
+    
+    if output_dir:
+        output_dir = Path(output_dir)
+        assets_dir = output_dir / "assets" / skill_name
+        
+        for res_dir in resource_dirs:
+            src_dir = skill_path / res_dir
+            if src_dir.exists() and src_dir.is_dir():
+                dest_dir = assets_dir / res_dir
+                if dest_dir.exists():
+                    shutil.rmtree(dest_dir)
+                shutil.copytree(src_dir, dest_dir)
+                copied_resources.append(res_dir)
+    
+    # Rewrite links in body
+    if copied_resources:
+        body = rewrite_markdown_links(body, skill_name, copied_resources)
+    
+    # Create Cursor rule format (MDC)
+    # See: https://docs.nvidia.com/nemo/agent-toolkit/1.2/extend/cursor-rules-developer-guide.html
+    mdc_content = f"""---
+description: {frontmatter.get('description', 'No description available')}
+globs: {frontmatter.get('globs', ['**/*'])}
+---
+
+# {skill_name.replace('-', ' ').title()}
 
 ## Description
 {frontmatter.get('description', 'No description available')}
@@ -96,15 +170,19 @@ Use this skill when the user asks about: {frontmatter.get('description', 'relate
     
     # Write output
     if output_dir:
-        output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
-        output_file = output_dir / f"{frontmatter.get('name', skill_path.name)}.md"
+        # Use .mdc extension for Cursor rules
+        output_file = output_dir / f"{skill_name}.mdc"
         with open(output_file, "w", encoding="utf-8") as f:
-            f.write(cursor_rule)
-        print(f"✅ Converted to Cursor format: {output_file}")
+            f.write(mdc_content)
+        
+        log_msg = f"✅ Converted to Cursor format: {output_file}"
+        if copied_resources:
+            log_msg += f" (Resources copied: {', '.join(copied_resources)})"
+        print(log_msg)
         return output_file
     else:
-        return cursor_rule
+        return mdc_content
 
 
 def convert_all_skills(skills_dir, output_dir):
