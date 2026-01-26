@@ -53,7 +53,7 @@ There are two ways to install plugins:
 **Method 1: Install via UI**
 
 1. Select `Browse and install plugins`
-2. Select `teaching-ai-skills`
+2. Select `teachingai-skills`
 3. Select the plugin you want to install (see available plugins list below)
 4. Select `Install now`
 
@@ -62,13 +62,13 @@ There are two ways to install plugins:
 Install plugins directly using commands:
 
 ```
-/plugin install teaching-skills@teaching-ai-skills
-/plugin install document-skills@teaching-ai-skills
-/plugin install markdown-skills@teaching-ai-skills
-/plugin install development-skills@teaching-ai-skills
-/plugin install design-skills@teaching-ai-skills
-/plugin install social-skills@teaching-ai-skills
-/plugin install utility-skills@teaching-ai-skills
+/plugin install teaching-skills@teachingai-skills
+/plugin install document-skills@teachingai-skills
+/plugin install markdown-skills@teachingai-skills
+/plugin install development-skills@teachingai-skills
+/plugin install design-skills@teachingai-skills
+/plugin install social-skills@teachingai-skills
+/plugin install utility-skills@teachingai-skills
 ```
 
 #### 3. Use Skills
@@ -560,6 +560,7 @@ Skills are a great way to teach Claude how to get better at using specific piece
 - [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 - [Anthropic Skills examples](https://github.com/anthropics/skills)
 - [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill)
+- [Agent Skills CLI](https://github.com/teachingai/agent-skills-cli)
 
 ## Contact
 

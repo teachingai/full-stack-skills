@@ -178,8 +178,9 @@ def convert_to_qoder_agent(skill_path, output_dir=None):
         "workflow": workflow_steps,
         "instructions": "SKILL.md",
         "metadata": {
-            "source": "teaching-ai-skills",
-            "original_skill": frontmatter.get("name", skill_path.name)
+            "source": "teachingai-skills",
+            "original_skill": frontmatter.get("name", skill_path.name),
+            "repo": "https://github.com/teachingai/agent-skills-cli"
         }
     }
     

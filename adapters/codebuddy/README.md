@@ -18,6 +18,7 @@ python convert_to_codebuddy.py --all ../../skills codebuddy-plugins/
 
 ## 输出格式
 
+
 转换后会创建 CodeBuddy 插件目录结构：
 
 ```

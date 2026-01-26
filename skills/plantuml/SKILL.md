@@ -27,14 +27,16 @@ license: Complete terms in LICENSE.txt
 
 PlantUML and Mermaid are two different diagramming tools with different purposes:
 
-- **PlantUML**: A component that allows you to create various UML diagrams through simple textual descriptions. From sequence diagrams to deployment diagrams and beyond, PlantUML provides an easy way to create visual representations of complex systems. PlantUML is primarily focused on UML standards and is ideal for UML diagrams, enterprise architecture, C4 models, and diagrams requiring precise UML notation.
+- **PlantUML**: A component that allows you to create various UML diagrams through simple textual descriptions. From sequence diagrams to deployment diagrams and beyond, PlantUML provides an easy way to create visual representations of complex systems. PlantUML is primarily focused on UML standards and is ideal for UML diagrams, enterprise architecture, C4 models, and diagrams requiring precise UML notation. Output format is `@startuml`/`@enduml` blocks or `.puml` files.
 
-- **Mermaid**: A JavaScript-based diagramming and charting tool that uses Markdown-inspired text definitions. The main purpose of Mermaid is to help documentation catch up with development. Mermaid is particularly well-suited for use in Markdown documents, GitHub, GitLab, wikis, and blogs.
+- **Mermaid**: A JavaScript-based diagramming and charting tool that uses Markdown-inspired text definitions. The main purpose of Mermaid is to help documentation catch up with development. Mermaid is particularly well-suited for use in Markdown documents, GitHub, GitLab, wikis, and blogs. Output format is fenced Markdown code blocks with the `mermaid` language tag.
 
 **When both PlantUML and Mermaid skills are matched:**
-- If the user explicitly mentions "PlantUML" or "UML diagram", use this skill (PlantUML)
+- If the user explicitly mentions "PlantUML", "UML diagram", or "C4 model", use this skill (PlantUML)
 - If the user explicitly mentions "Mermaid" or "Markdown diagram", use the Mermaid skill instead
-- If the user mentions both or neither, **ALWAYS ask the user to choose**: "I can create this diagram using either PlantUML or Mermaid. PlantUML is focused on UML diagrams and enterprise architecture. Mermaid is a JavaScript-based tool designed for Markdown documentation and renders directly in GitHub/GitLab. Which would you prefer?"
+- If the user references UML standards or `.puml`, default to PlantUML
+- If the user references Markdown contexts (README, wiki, GitHub/GitLab, blog), default to Mermaid
+- If the user mentions both or neither, **ALWAYS ask the user to choose**: "I can create this diagram using either PlantUML (@startuml) or Mermaid (Markdown code block). Which output format do you prefer?"
 
 ## How to use this skill
 
