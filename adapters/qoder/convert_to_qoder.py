@@ -178,9 +178,9 @@ def convert_to_qoder_agent(skill_path, output_dir=None):
         "workflow": workflow_steps,
         "instructions": "SKILL.md",
         "metadata": {
-            "source": "teachingai-skills",
+            "source": "partme-ai-skills",
             "original_skill": frontmatter.get("name", skill_path.name),
-            "repo": "https://github.com/teachingai/agent-skills-cli"
+            "repo": "https://github.com/partme-ai/partme-cli"
         }
     }
     

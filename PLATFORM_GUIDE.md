@@ -19,13 +19,13 @@
 在 Claude Code 中运行以下命令，将本仓库注册为插件市场：
 
 ```bash
-/plugin marketplace add https://github.com/teachingai/full-stack-skills.git
+/plugin marketplace add https://github.com/partme-ai/full-stack-skills.git
 ```
 
 或者使用简写形式：
 
 ```bash
-/plugin marketplace add teachingai/full-stack-skills
+/plugin marketplace add partme-ai/full-stack-skills
 ```
 
 ### 2. 安装插件

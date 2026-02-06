@@ -6,6 +6,8 @@
 
 面向 Claude.ai 与 Claude Code 的一组技能集合，用于处理与 Vercel 部署相关的工作。技能是经过打包的说明与脚本，用于扩展 Claude 的能力。
 
+本仓库为全链路**阶段映射**与**基础技能**的主入口；关联 t2ui-skills、stitch-skills、pencil-skills、tauri-skills 等。阶段与技能映射见 [docs/pipeline-stage-to-skills.md](docs/pipeline-stage-to-skills.md)，生态总览见 [docs/skills-ecosystem.md](docs/skills-ecosystem.md)。已整合 Spec Kit（speckit-*）技能，见 [docs/speckit-agent-skills.md](docs/speckit-agent-skills.md)。
+
 ## 创建新技能
 
 ### 目录结构
