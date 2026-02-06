@@ -6,14 +6,14 @@
 
 ![Version](https://img.shields.io/badge/Version-0.0.1-red)
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Skills](https://img.shields.io/badge/Skills-171-orange)
+![Skills](https://img.shields.io/badge/Skills-176-orange)
 ![Plugins](https://img.shields.io/badge/Plugins-12-brightgreen)
 
 </div>
 
 ## 📖 简介
 
-**Full-Stack-Skills（Alpha）** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **171 个技能集合**，按**技能种类**组织为 **12 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
+**Full-Stack-Skills（Alpha）** 是一个开源的 Agent Skills 集合，严格遵循 Agent Skills 规范，提供 **176 个技能集合**，按**技能种类**组织为 **12 个插件类别**，覆盖软件开发全生命周期。在 AI 时代，它赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现**"一个人 = 一个公司"**的愿景，让独立开发者能够独立完成从产品设计、开发、测试到部署运维的全流程工作。
 
 > **⚠️ 注意：** 当前项目处于 Alpha 阶段，尚未经过严格测试，还在自测中。欢迎反馈问题和建议。
 
@@ -54,7 +54,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **持续更新**：社区驱动，持续添加新技能和改进现有技能
 
 #### 2. 全栈覆盖
-- **171 个技能集合**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
+- **176 个技能集合**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
 - **12 个插件类别**：按技能种类组织，而非按岗位划分，便于灵活组合使用
 - **跨平台支持**：支持 Claude Code、Claude.ai、Claude API 及其他 AI 平台
 
@@ -74,7 +74,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 
 - **开发类**：前端开发（Vue、React、Angular）、后端开发（Spring、Node.js、Python、Go）、移动端开发（UniApp、React Native、Flutter）、开发工具
 - **设计类**：UI设计工具、AI设计工具、原型工具
-- **文档类**：文档生成、文档处理、图表绘制（Mermaid、PlantUML）
+- **文档类**：文档生成、文档处理、OCR 识别（OCRmyPDF）、图表绘制（Mermaid、PlantUML）
 - **架构类**：DDD、微服务、事件驱动、六边形架构、整洁架构、COLA
 - **测试类**：单元测试、集成测试、E2E测试、移动端测试
 - **运维类**：CI/CD、容器化、IaC
@@ -103,7 +103,7 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **插件化**：12 个插件类别，可按需安装
 
 #### **全栈覆盖**
-- **171 个技能**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
+- **176 个技能**：覆盖前端、后端、移动端、数据库、测试、DevOps、云平台、设计等全栈开发领域
 - **跨平台支持**：支持 Claude Code、Claude.ai、Claude API 及其他 AI 平台
 - **持续更新**：社区驱动，持续添加新技能和改进现有技能
 
@@ -138,7 +138,7 @@ full-stack-skills/
 │   │   └── LICENSE.txt           # 许可证
 │   ├── vue3/
 │   ├── react/
-│   └── ...                       # 171 个技能
+│   └── ...                       # 176 个技能
 ├── adapters/                     # 跨平台适配器
 │   ├── cursor/                   # Cursor 适配器
 │   ├── trae/                     # Trae 适配器
@@ -155,7 +155,7 @@ full-stack-skills/
 | development-skills | 76 | 全栈开发技能集合 |
 | development-skills-utils | 12 | 开发工具技能集合 |
 | design-skills | 16 | 设计技能集合 |
-| document-skills | 10 | 文档处理技能集合 |
+| document-skills | 15 | 文档处理技能集合 |
 | architecture-skills | 7 | 架构技能集合 |
 | testing-skills | 9 | 测试技能集合 |
 | devops-skills | 9 | 运维技能集合 |
@@ -284,6 +284,7 @@ python convert_all.py ../skills ../adapters-output
 
 ### 4. 文档处理
 - **办公文档**：支持 Word、PowerPoint、Excel、PDF 等文档处理
+- **OCR 识别**：支持 OCRmyPDF 扫描件 OCR（100+ 语言、图像处理、优化压缩、批量处理、Python API、多引擎插件）
 - **图表绘制**：支持 Mermaid、PlantUML、Draw.io 等图表绘制
 - **文档协作**：支持多人协作编辑
 
@@ -294,7 +295,7 @@ python convert_all.py ../skills ../adapters-output
 
 ## 可用插件和技能
 
-本仓库的技能按**技能种类**分为 **12 个插件类别**，共包含 **171 个技能**。
+本仓库的技能按**技能种类**分为 **12 个插件类别**，共包含 **176 个技能**。
 
 ---
 
@@ -383,15 +384,22 @@ python convert_all.py ../skills ../adapters-output
 
 **安装命令：** `/plugin install document-skills@full-stack-skills`
 
-**技能数量：** 10 个技能
+**技能数量：** 15 个技能
 
-**描述：** 文档处理技能集合，包含办公文档的创建、编辑和处理；文档协作；API 文档生成；流程图和思维导图绘制；Mermaid 和 PlantUML 图表绘制等。帮助 AI 助手掌握文档处理、图表绘制、文档协作等办公自动化技能。
+**描述：** 文档处理技能集合，包含办公文档的创建、编辑和处理；OCRmyPDF 扫描件 OCR 识别（核心 OCR、图像处理、优化压缩、批量处理、Python API 及插件）；文档协作；API 文档生成；流程图和思维导图绘制；Mermaid 和 PlantUML 图表绘制等。帮助 AI 助手掌握文档处理、OCR 识别、图表绘制、文档协作等办公自动化技能。
 
 #### 办公文档处理
 - `docx` - Word 文档处理
 - `pptx` - PowerPoint 演示文稿处理
 - `pdf` - PDF 文档处理
 - `xlsx` - Excel 电子表格处理
+
+#### OCR 识别（OCRmyPDF）
+- `ocrmypdf` - OCRmyPDF 核心 OCR（安装、基本 OCR、多语言、OCR 模式）
+- `ocrmypdf-image` - 图像处理（纠偏、旋转、去噪、清理扫描件）
+- `ocrmypdf-optimize` - 优化与输出（压缩级别、PDF/A、JBIG2 编码）
+- `ocrmypdf-batch` - 批量处理与自动化（Shell 脚本、Docker、CI/CD）
+- `ocrmypdf-api` - Python API 与插件（编程调用、EasyOCR、PaddleOCR）
 
 #### 文档协作与生成
 - `doc-coauthoring` - 文档协作（多人协作编辑）
@@ -574,7 +582,7 @@ python convert_all.py ../skills ../adapters-output
 | 项目 | 当前版本          |
 |---|---------------|
 | full-stack-skills | 0.0.1 (Alpha) |
-| 技能总数 | 171           |
+| 技能总数 | 176           |
 | 插件类别 | 12            |
 | Agent Skills 规范 | 最新版本          |
 

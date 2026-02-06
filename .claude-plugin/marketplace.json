@@ -5,7 +5,7 @@
     "email": "partmeai@gmail.com"
   },
   "metadata": {
-    "description": "PartMeAI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合。严格遵循 Agent Skills 规范，提供 169 个技能集合，按技能种类组织为 12 个插件类别，覆盖软件开发全生命周期。在 AI 时代，赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现\"一个人 = 一个公司\"的愿景。",
+    "description": "PartMeAI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合。严格遵循 Agent Skills 规范，提供 174 个技能集合，按技能种类组织为 12 个插件类别，覆盖软件开发全生命周期。在 AI 时代，赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现\"一个人 = 一个公司\"的愿景。",
     "version": "0.0.1"
   },
   "plugins": [
@@ -141,7 +141,7 @@
     },
     {
       "name": "document-skills",
-      "description": "文档处理技能集合（10个技能）：包含 Word（docx）、PowerPoint（pptx）、Excel（xlsx）、PDF 等办公文档的创建、编辑和处理；文档协作（多人协作编辑）；API 文档生成器；Draw.io 流程图绘制；ProcessOn 思维导图绘制；Mermaid 图表绘制；PlantUML 架构图绘制。帮助 AI 助手掌握文档处理、图表绘制、文档协作等办公自动化技能。",
+      "description": "文档处理技能集合（15个技能）：包含 Word（docx）、PowerPoint（pptx）、Excel（xlsx）、PDF 等办公文档的创建、编辑和处理；OCRmyPDF 扫描件 OCR 识别（核心 OCR、图像处理、优化压缩、批量处理、Python API 及插件）；文档协作（多人协作编辑）；API 文档生成器；Draw.io 流程图绘制；ProcessOn 思维导图绘制；Mermaid 图表绘制；PlantUML 架构图绘制。帮助 AI 助手掌握文档处理、OCR 识别、图表绘制、文档协作等办公自动化技能。",
       "source": "./",
       "strict": false,
       "skills": [
@@ -149,6 +149,11 @@
         "./skills/pptx",
         "./skills/pdf",
         "./skills/xlsx",
+        "./skills/ocrmypdf",
+        "./skills/ocrmypdf-image",
+        "./skills/ocrmypdf-optimize",
+        "./skills/ocrmypdf-batch",
+        "./skills/ocrmypdf-api",
         "./skills/doc-coauthoring",
         "./skills/api-doc-generator",
         "./skills/drawio-flowchart",
