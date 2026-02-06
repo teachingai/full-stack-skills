@@ -1,11 +1,11 @@
 {
   "name": "full-stack-skills",
   "owner": {
-    "name": "TeachingAI",
-    "email": "teachingai@163.com"
+    "name": "PartMeAI",
+    "email": "partmeai@gmail.com"
   },
   "metadata": {
-      "description": "Teaching AI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合。严格遵循 Agent Skills 规范，提供 169 个技能集合，按技能种类组织为 12 个插件类别，覆盖软件开发全生命周期。在 AI 时代，赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现\"一个人 = 一个公司\"的愿景。",
+    "description": "PartMeAI 免费技能市场 - 面向期望成为全栈技能人才的群体，提供按技能种类组织的实用工具技能集合。严格遵循 Agent Skills 规范，提供 169 个技能集合，按技能种类组织为 12 个插件类别，覆盖软件开发全生命周期。在 AI 时代，赋能全栈独立开发者，通过 AI 助手掌握专业技能，实现\"一个人 = 一个公司\"的愿景。",
     "version": "0.0.1"
   },
   "plugins": [
@@ -107,6 +107,7 @@
         "./skills/mcp-builder",
         "./skills/webapp-testing",
         "./skills/frontend-design",
+        "./skills/cli-ascii-logo",
         "./skills/web-artifacts-builder",
         "./skills/theme-factory",
         "./skills/nvm",
@@ -267,11 +268,13 @@
     },
     {
       "name": "utility-skills",
-      "description": "工具与实用技能集合（1个技能）：包含技能创建器，指导如何创建有效的 Agent Skills，扩展 Claude 的能力。帮助 AI 助手和开发者掌握技能设计、技能结构、最佳实践等技能创建技能，支持自定义技能开发。",
+      "description": "工具与实用技能集合（3个技能）：包含技能创建器，指导如何创建有效的 Agent Skills，扩展 Claude 的能力；SOP 创建器，指导如何创建标准作业程序（SOP）和复合技能，支持将多个原子技能组合成可靠的业务流程；技能安装器，支持通过自然语言搜索、安装、管理 PartMe 生态中的各种技能包（原子技能和复合技能）。帮助 AI 助手和开发者掌握技能设计、流程编排、SOP 制作、生态管理等实用技能。",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/skill-creator"
+        "./skills/skill-creator",
+        "./skills/skill-sop-creator",
+        "./skills/skill-installer"
       ]
     }
   ]

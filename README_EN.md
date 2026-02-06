@@ -1,4 +1,4 @@
-# Teaching AI Skills Marketplace
+# PartMeAI Skills Marketplace
 
 A free skills marketplace providing various practical AI skill collections that can be used in Claude Code.
 
@@ -37,13 +37,13 @@ Many skills in this repo are open source (Apache 2.0). We've also included the d
 Run the following command in Claude Code to register this repository as a Claude Code plugin marketplace:
 
 ```
-/plugin marketplace add https://github.com/teachingai/agent-skills.git
+/plugin marketplace add https://github.com/partme-ai/full-stack-skills.git
 ```
 
 Or use the short form:
 
 ```
-/plugin marketplace add teachingai/agent-skills
+/plugin marketplace add partme-ai/full-stack-skills
 ```
 
 #### 2. Install Plugins
@@ -53,7 +53,7 @@ There are two ways to install plugins:
 **Method 1: Install via UI**
 
 1. Select `Browse and install plugins`
-2. Select `teaching-ai-skills`
+2. Select `full-stack-skills`
 3. Select the plugin you want to install (see available plugins list below)
 4. Select `Install now`
 
@@ -62,13 +62,13 @@ There are two ways to install plugins:
 Install plugins directly using commands:
 
 ```
-/plugin install teaching-skills@teaching-ai-skills
-/plugin install document-skills@teaching-ai-skills
-/plugin install markdown-skills@teaching-ai-skills
-/plugin install development-skills@teaching-ai-skills
-/plugin install design-skills@teaching-ai-skills
-/plugin install social-skills@teaching-ai-skills
-/plugin install utility-skills@teaching-ai-skills
+/plugin install teaching-skills@full-stack-skills
+/plugin install document-skills@full-stack-skills
+/plugin install markdown-skills@full-stack-skills
+/plugin install development-skills@full-stack-skills
+/plugin install design-skills@full-stack-skills
+/plugin install social-skills@full-stack-skills
+/plugin install utility-skills@full-stack-skills
 ```
 
 #### 3. Use Skills
@@ -502,7 +502,7 @@ The `.claude-plugin/marketplace.json` file defines the marketplace metadata and 
 
 ## How It Works
 
-1. **Marketplace Registration**: When you run `/plugin marketplace add https://github.com/teachingai/agent-skills.git`, Claude Code will:
+1. **Marketplace Registration**: When you run `/plugin marketplace add https://github.com/partme-ai/full-stack-skills.git`, Claude Code will:
    - Fetch the `.claude-plugin/marketplace.json` file from the GitHub repository
    - Parse the marketplace configuration
    - Add the marketplace to the available list
@@ -560,6 +560,7 @@ Skills are a great way to teach Claude how to get better at using specific piece
 - [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 - [Anthropic Skills examples](https://github.com/anthropics/skills)
 - [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill)
+- [Agent Skills CLI](https://github.com/partme-ai/partme-cli)
 
 ## Contact
 

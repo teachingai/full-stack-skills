@@ -15,6 +15,7 @@ Example:
 import sys
 import json
 import re
+import shutil
 from pathlib import Path
 
 try:
@@ -52,6 +53,50 @@ def extract_frontmatter(content):
         body = content[body_start:].strip()
         return frontmatter, body
     return {}, content.strip()
+
+
+def rewrite_markdown_links(content, skill_name, resource_dirs):
+    """
+    Rewrite markdown links to point to assets directory
+    
+    Args:
+        content: Markdown content
+        skill_name: Name of the skill
+        resource_dirs: List of resource directories that were copied
+    
+    Returns:
+        Updated content
+    """
+    def replace_link(match):
+        text = match.group(1)
+        url = match.group(2)
+        
+        # Skip absolute links, anchors, or existing asset links
+        if url.startswith(('http://', 'https://', '#', '/')):
+            return match.group(0)
+            
+        # Check if link points to a resource directory
+        for res_dir in resource_dirs:
+            if url.startswith(res_dir + '/') or url == res_dir:
+                return f"[{text}](assets/{skill_name}/{url})"
+                
+        return match.group(0)
+    
+    # Replace [text](url) links
+    content = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', replace_link, content)
+    
+    # Replace `path` references (common in our skills)
+    def replace_code_path(match):
+        path = match.group(1)
+        # Check if path points to a resource directory
+        for res_dir in resource_dirs:
+            if path.startswith(res_dir + '/') or path == res_dir:
+                return f"`assets/{skill_name}/{path}`"
+        return match.group(0)
+
+    content = re.sub(r'`([^`\n]+)`', replace_code_path, content)
+    
+    return content
 
 
 def extract_workflow_steps(body):
@@ -133,8 +178,9 @@ def convert_to_qoder_agent(skill_path, output_dir=None):
         "workflow": workflow_steps,
         "instructions": "SKILL.md",
         "metadata": {
-            "source": "teaching-ai-skills",
-            "original_skill": frontmatter.get("name", skill_path.name)
+            "source": "partme-ai-skills",
+            "original_skill": frontmatter.get("name", skill_path.name),
+            "repo": "https://github.com/partme-ai/partme-cli"
         }
     }
     
@@ -153,14 +199,74 @@ def convert_to_qoder_agent(skill_path, output_dir=None):
             json.dump(agent_config, f, indent=2, ensure_ascii=False)
         
         # Copy SKILL.md
-        import shutil
         shutil.copy2(skill_file, agent_dir / "SKILL.md")
+        
+        # Copy resources to agent dir
+        resource_dirs = ["scripts", "references", "assets", "api", "templates", "examples"]
+        for res_dir in resource_dirs:
+            src_dir = skill_path / res_dir
+            if src_dir.exists() and src_dir.is_dir():
+                dest_dir = agent_dir / res_dir
+                if dest_dir.exists():
+                    shutil.rmtree(dest_dir)
+                shutil.copytree(src_dir, dest_dir)
         
         # Create Python agent module
         python_module = agent_dir / f"{frontmatter.get('name', skill_path.name).replace('-', '_')}_agent.py"
         create_python_agent_module(frontmatter, body, python_module)
+
+        # Create Qoder rules directory if requested
+        # Qoder supports project-specific rules in .qoder/rules/
+        # We force creation of this directory to ensure rules are generated
+        rules_dir = output_dir.parent / ".qoder" / "rules"
+        rules_dir.mkdir(parents=True, exist_ok=True)
         
-        print(f"✅ Converted to Qoder agent: {agent_dir}")
+        # Copy resources to rules assets dir
+        rule_assets_dir = rules_dir / "assets" / frontmatter.get('name', skill_path.name)
+        copied_rule_resources = []
+        for res_dir in resource_dirs:
+            src_dir = skill_path / res_dir
+            if src_dir.exists() and src_dir.is_dir():
+                dest_dir = rule_assets_dir / res_dir
+                if dest_dir.exists():
+                    shutil.rmtree(dest_dir)
+                shutil.copytree(src_dir, dest_dir)
+                copied_rule_resources.append(res_dir)
+        
+        # Prepare rule content with rewritten links
+        rule_body = body
+        if copied_rule_resources:
+            rule_body = rewrite_markdown_links(body, frontmatter.get('name', skill_path.name), copied_rule_resources)
+        
+        # Create rule file in .qoder/rules/
+        rule_content = f"""# {frontmatter.get('name', skill_path.name)}
+
+{frontmatter.get('description', '')}
+
+## Instructions
+{rule_body}
+"""
+        rule_file = rules_dir / f"{frontmatter.get('name', skill_path.name)}.md"
+        with open(rule_file, "w", encoding="utf-8") as f:
+            f.write(rule_content)
+        
+        # Also create a local rule file in the agent directory for reference/usage
+        # For the local agent copy, we use the original body since resources are local
+        local_rule_content = f"""# {frontmatter.get('name', skill_path.name)}
+
+{frontmatter.get('description', '')}
+
+## Instructions
+{body}
+"""
+        local_rule_file = agent_dir / f"{frontmatter.get('name', skill_path.name)}.md"
+        with open(local_rule_file, "w", encoding="utf-8") as f:
+            f.write(local_rule_content)
+        
+        log_msg = f"✅ Converted to Qoder agent: {agent_dir}"
+        if copied_rule_resources:
+            log_msg += f" (Resources copied to rules: {', '.join(copied_rule_resources)})"
+        print(log_msg)
         return agent_dir
     else:
         return agent_config

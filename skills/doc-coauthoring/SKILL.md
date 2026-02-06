@@ -287,7 +287,6 @@ Loop back to refinement for problematic sections.
 
 ---
 
-**If no access to sub-agents (e.g., claude.ai web interface):**
 
 The user will need to do the testing manually.
 

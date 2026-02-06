@@ -31,6 +31,17 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - [用 Agent Skills 为现实世界装备智能体](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 - [Agent Skills 规范](https://agentskills.io/)
 
+### 各平台 Agent Skills 文档
+
+- Antigravity Agent Skills: https://antigravity.google/docs/skills
+- Claude Agent Skills: https://code.claude.com/docs/en/skills
+- Cursor Agent Skills: https://cursor.com/cn/docs/context/skills
+- Codex Agent Skills: https://developers.openai.com/codex/skills
+- Codex Agent Skills (Create Skill): https://developers.openai.com/codex/skills/create-skill
+- Codebuddy Agent Skills: https://www.codebuddy.ai/docs/zh/ide/Features/Skills
+- Qoder Agent Skills: https://docs.qoder.com/extensions/skills
+- Trae Agent Skills: https://docs.trae.ai/ide/skills?_lang=en
+
 ## 关于本仓库
 
 **full-stack-skills** 是一个面向**期望成为全栈技能人才的群体**的开源技能集合，严格遵循 [Agent Skills 规范](https://agentskills.io/)，按**技能种类**组织技能库，而非按岗位划分。
@@ -72,6 +83,10 @@ Skills 是由说明、脚本和资源组成的文件夹，Claude 会按需动态
 - **其他**：社交协作、教学教育、工具技能
 
 每个技能都自包含在单独的文件夹中，并包含一个 `SKILL.md` 文件，里面有 Claude 使用的说明和元数据。你可以浏览这些技能来获取灵感，或理解不同的模式与实现方式。
+
+### 技能生态与主文档入口
+
+本仓库提供全链路**阶段→技能**权威映射与**基础技能**（文档、DDD/架构、测试、部署、nvm 等）。关联技能库：t2ui-skills、stitch-skills、pencil-skills、tauri-skills。阶段与技能映射见 [docs/pipeline-stage-to-skills.md](docs/pipeline-stage-to-skills.md)，生态总览见 [docs/skills-ecosystem.md](docs/skills-ecosystem.md)。
 
 本仓库中的许多技能是开源的（Apache 2.0）。我们还在 [`skills/docx`](skills/docx)、[`skills/pdf`](skills/pdf)、[`skills/pptx`](skills/pptx) 和 [`skills/xlsx`](skills/xlsx) 子目录中包含了用于支撑 [Claude 文档能力](https://www.anthropic.com/news/create-files) 的文档创建与编辑技能。这些技能是"可查看源码"的（source-available），但并非开源；我们希望将其作为更复杂技能的参考示例，因为它们已在生产级 AI 应用中实际使用。
 
@@ -170,7 +185,7 @@ full-stack-skills/
 在 Claude Code 中运行以下命令，将本仓库注册为 Claude Code 的插件市场：
 
 ```
-/plugin marketplace add https://github.com/teachingai/full-stack-skills.git
+/plugin marketplace add https://github.com/partme-ai/full-stack-skills.git
 ```
 
 ![add_marketplace.png](./media/add_marketplace.png)
@@ -182,7 +197,7 @@ full-stack-skills/
 或者使用简写形式：
 
 ```
-/plugin marketplace add teachingai/full-stack-skills
+/plugin marketplace add partme-ai/full-stack-skills
 # 删除插件
 /plugin marketplace remove full-stack-skills
 ```
@@ -627,6 +642,6 @@ python convert_all.py ../skills ../adapters-output
 
 **如果这个项目对你有帮助，请给我们一个 ⭐️**
 
-Made with ❤️ by TeachingAI Team
+Made with ❤️ by partme-ai Team
 
 </div>

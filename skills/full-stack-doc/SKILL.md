@@ -50,7 +50,7 @@ description: Provides comprehensive guidance for Chinese product documentation g
 
 2. **指定项目信息**
    ```
-   基于模板生成系统架构设计文档，项目名称是 TeachingAI 教学平台
+   基于模板生成系统架构设计文档，项目名称是 partme-ai 教学平台
    ```
 
 3. **批量生成文档**
@@ -118,7 +118,7 @@ AI: 我将基于 PRD 文档模板为您生成产品需求文档...
 ### 示例 2: 生成架构设计文档
 
 ```
-用户: 基于模板生成系统架构设计文档，项目名称是 TeachingAI 教学平台，使用 Spring Boot 和 Vue 3
+用户: 基于模板生成系统架构设计文档，项目名称是 partme-ai 教学平台，使用 Spring Boot 和 Vue 3
 
 AI: 我将基于系统架构设计模板为您生成架构文档...
 ```
